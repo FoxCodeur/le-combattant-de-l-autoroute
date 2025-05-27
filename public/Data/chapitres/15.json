@@ -1,0 +1,19 @@
+{
+  "id": "15",
+  "title": "Chapitre 15",
+  "text": "Vous avancez vers l'homme et vous l'interpellez. Celui-ci éteint calmement son chalumeau en vous disant : « Ce n'est vraiment pas un travail à faire dans ce désert torride, mais, au moins, les gens me laissent tranquille et je peux travailler en paix ! Tous les clients sont les bienvenus et je répare le véhicule de qui veut. Si vous voulez que je m'occupe de votre voiture, cela vous coûtera 200 Crédits.»",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous pouvez payer cette somme et si vous desirez faire reparer votre voiture...",
+      "next": "169",
+      "modificateursNarratifs": {
+        "credits": -200
+      }
+    },
+    {
+      "label": "Si vous preferez decliner l'offre de cet homme, remettez-vous en route vers l'est...",
+      "next": "259"
+    }
+  ]
+}

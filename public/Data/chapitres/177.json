@@ -1,0 +1,9 @@
+{
+  "id": "177",
+  "title": "Chapitre 177",
+  "text": "Vous longez les étendues arides du désert sur près de quatre-vingts kilomètres, le paysage défilant sans grand changement. Finalement, vous parvenez à un carrefour majeur. Devant vous, le bitume est complètement obstruée par un entassement d'épaves métalliques rouillées, vestiges de l'ancien monde. Dans l'incapacité de continuer tout droit, vous prenez la décision de bifurquer sur la droite et de repartir vers le sud.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "46" }
+  ]
+}

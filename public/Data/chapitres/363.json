@@ -1,0 +1,9 @@
+{
+  "id": "363",
+  "title": "Chapitre 363",
+  "text": "L'homme réagit trop lentement et il ne peut éviter le coup. Il s'effondre au sol, inconscient. Vous courez aussi vite que vous le pouvez vers l'Interceptor pour fuir avant que ses amis comprennent ce qui s'est passé. A votre grand soulagement, l'Interceptor démarre au quart de tour et, dans une accélération foudroyante, vous filez sur la route défoncée pour rejoindre la route nationale, que vous empruntez pour vous diriger vers le sud.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Avancer vers la lumière", "next": "207" }
+  ]
+}

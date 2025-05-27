@@ -1,0 +1,23 @@
+{
+  "id": "203",
+  "title": "Chapitre 203",
+  "text": "La route est dégagée et les voitures accidentées sont peu nombreuses. Le compteur indique que vous roulez largement au-dessus de la vitesse autorisée auparavant sur cette route mais vous savez que vous êtes à l'abri de tout contrôle à l'heure actuelle. Votre joie cependant est de courte durée car vous apercevez bientôt un barrage formé de voitures et de camions renversés. Vous ralentissez pour observer la scène et vous avez le sentiment d'un danger imminent. Qu'allez-vous faire?",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "S'il vous reste une roquette...",
+      "next": "372",
+      "modificateursNarratifs": {
+        "roquette": -1
+      }
+    },
+    {
+      "label": "Essayer de contourner le barrage...",
+      "next": "317"
+    },
+    {
+      "label": "Faire demi-tour et rouler en sens inverse vers le sud...",
+      "next": "278"
+    }
+  ]
+}

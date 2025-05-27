@@ -1,0 +1,10 @@
+{
+  "id": "149",
+  "title": "Chapitre 149",
+  "text": "La route départementale s'étire en ligne droite sur une longue distance et vous permet de parcourir vite, et sans incident, une bonne partie de votre itinéraire, car il y a relativement peu de voitures abandonnées. Après une heure de route, vous arrivez à un embranchement.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez continuer a rouler vers le sud...", "next": "255" },
+    { "label": "Si vous voulez maintenant prendre a gauche pour vous diriger vers l'est...", "next": "114" }
+  ]
+}

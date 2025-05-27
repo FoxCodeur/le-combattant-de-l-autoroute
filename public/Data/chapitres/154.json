@@ -1,0 +1,14 @@
+{
+  "id": "154",
+  "title": "Chapitre 154",
+  "text": "Ambre parvient à éliminer ses deux adversaires, mais vous ignorez qu'une cinquième personne, cachée à l'intérieur du break, a suivi toute la bataille des yeux. Il s'agit de l'Animal en personne qui, voyant les derniers membres de sa bande étendus raides morts, s'élance soudain hors du véhicule et se précipite sur vous en soufflant comme un taureau en furie. Se découpant dans la pâle lueur de la lune, sa silhouette offre un aspect terrifiant : c'est un homme gigantesque dont le torse nu révèle une puissante musculature. Il n'est pas armé, mais il porte un masque noir sur le visage, de hautes bottes de cuir dont le bout est renforcé par de l'acier, et ses poings serrés sont protégés par des gants cloutés. Avant que vous n'ayez pu esquisser le moindre geste, il vous enserre le cou de son puissant bras et augmente progressivement son étreinte. Vous commencez à suffoque et vous perdez 2 points d'endurance. Ambre, pendant ce temps, n'ose pas prendre le risque de tirer, car elle pourrait vous blesser. Elle cherche désespérément autour d'elle un objet avec lequel elle pourrait le frapper et finit par trouver, à l'arrière de la voiture, une grosse clé à molette dont elle s'empare. Jetez un dé.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": " 1, 2 ou 3...", "next": "245" },
+    { "label": "4, 5 ou 6...", "next": "376" }
+  ]
+}

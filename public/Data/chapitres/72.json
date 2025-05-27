@@ -1,0 +1,17 @@
+{
+  "id": "72",
+  "title": "Chapitre 72",
+  "text": "Cette porte est piégée : lorsque vous l'ouvrez, vous tirez sur un fil la reliant à une arbalète fixée sur le mur d'en face. La tension du fil actionne la détente de l'arbalète qui vous décoche soudain une flèche dans l'épaule. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE. Si votre ENDURANCE tombe à zéro ou moins, votre aventure s'arrête ici.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "endurance",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous survivez à cette blessure, rendez-vous au", "next": "233" }
+  ]
+}

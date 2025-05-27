@@ -1,0 +1,14 @@
+{
+  "id": "250",
+  "title": "Chapitre 250",
+  "text": "L'homme vous a vu mettre la main à votre poche et il vous ordonne de continuer à marcher les mains sur la tête. Tandis que vous approchez du groupe qui fête votre victoire sous les arbres, vous comprenez que c'est le moment ou jamais de tenter une évasion. Vous faites semblant de trébucher puis, brusquement, vous faites un croc-en-jambe à l'homme tatoué.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": " 1, 2 ou 3...", "next": "192" },
+    { "label": "4, 5 ou 6...", "next": "347" }
+  ]
+}

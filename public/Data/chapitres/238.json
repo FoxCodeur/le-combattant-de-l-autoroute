@@ -1,0 +1,9 @@
+{
+  "id": "238",
+  "title": "Chapitre 238",
+  "text": "Le pneu n'est pas sérieusement touché, et vous pouvez le réparer avec votre Bombe Anticrevaison. Peu de temps après, vous roulez à nouveau vers l'est",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "119" }
+  ]
+}

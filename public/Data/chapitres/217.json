@@ -1,0 +1,20 @@
+{
+  "id": "217",
+  "title": "Chapitre 217",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabileté": {
+    "required": true,
+    "description": "Tentez votre HABILETE en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "285"
+    },
+    "failure": {
+      "next": "50"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "308",
+  "title": "Chapitre 308",
+  "text": "Vous avez fait mouche : le loup est tué net, avant même qu'il ne s'effondre au sol. L'autre loup, terrifié par le coup de feu, disparaît dans les ténèbres",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "286" }
+  ]
+}

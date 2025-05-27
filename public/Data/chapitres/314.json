@@ -1,0 +1,13 @@
+{
+  "id": "314",
+  "title": "Chapitre 314",
+  "text": "Vous vous arrêtez dans un crissement de pneus et vous passez la marche arrière. Des pierres, des blocs de rocher tombent sur la route devant vous, mais aucune ne s'écrase sur le toit de votre voiture. Ajoutez 1 point à votre total de CHANCE. Heureusement, l'éboulement n'est pas assez important pour bloquer complètement la voie et vous pouvez bientôt reprendre la route",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": 1
+  },
+  "choices": [
+    { "label": "Next...", "next": "351" }
+
+  ]
+}

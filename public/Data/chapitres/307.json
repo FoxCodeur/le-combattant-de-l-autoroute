@@ -1,0 +1,10 @@
+{
+  "id": "307",
+  "title": "Chapitre 307",
+  "text": "Vous pouvez maintenant vous diriger vers les motos de vos assaillants. L'une d'entrés elles a une sacoche fermée à clé.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez ouvrir cette sacoche...", "next": "206" },
+    { "label": "Si vous preferez changer la roue de l'Interceptor sans perdre plus de temps...", "next": "346" }
+  ]
+}

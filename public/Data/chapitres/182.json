@@ -1,0 +1,20 @@
+{
+  "id": "182",
+  "title": "Chapitre 182",
+  "text": "Vous vous traînez péniblement jusqu’au couvert des hautes herbes et vous y dissimulez tant bien que mal. Puis vous attendez. Bientôt, des pas se font entendre, se rapprochant lentement. À travers la végétation, vous apercevez une silhouette : un homme hirsute, armé d’un fusil, à quelques mètres à peine. Le cigare accroché au coin des lèvres, un bandeau rouge serré autour du front. Il s’agit sans doute de l'individu qui a piégé l’ambulance. Soudain, son regard se fixe. Il a repéré les traces de sang qui mènent droit à votre cachette. Il se tourne brusquement… et tire à l’aveugle dans les hautes herbes. Que va-t-il advenir de vous ?",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez deux dés. Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "227"
+    },
+    "failure": {
+      "next": "116"
+    }
+  }
+}

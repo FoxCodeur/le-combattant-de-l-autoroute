@@ -1,0 +1,9 @@
+{
+  "id": "234",
+  "title": "Chapitre 234",
+  "text": "Le conducteur est incapable de contrôler son véhicule blindé qui dérape puis sort de la route pour finir sa course dans le fossé. Vous souriez et vous accélérez, laissant derrière vous le véhicule immobilisé",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "47" }
+  ]
+}

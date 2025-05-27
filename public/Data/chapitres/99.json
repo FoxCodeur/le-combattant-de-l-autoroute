@@ -1,0 +1,10 @@
+{
+  "id": "99",
+  "title": "Chapitre 99",
+  "text": "Vous vous arrêtez pour vider un bidon d'essence dans votre réservoir. Vous constatez alors que l'Interceptor a l'air en assez mauvais état. Vous vous demandez avec inquiétude si elle résistera jusqu'à la fin du voyage.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez effectuer, des a present, quelques reparations de fortune...", "next": "21" },
+    { "label": "Si vous preferez repartir immediatement...", "next": "221" }
+  ]
+}

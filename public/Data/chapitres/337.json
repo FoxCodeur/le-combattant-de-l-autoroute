@@ -1,0 +1,9 @@
+{
+  "id": "337",
+  "title": "Chapitre 337",
+  "text": "Vous êtes bientôt de retour au croisement, au pied des collines et vous continuez droit vers l'ouest.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "211" }
+  ]
+}

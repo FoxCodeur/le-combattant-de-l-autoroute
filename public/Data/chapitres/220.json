@@ -1,0 +1,36 @@
+{
+  "id": "220",
+  "title": "Chapitre 220",
+  "text": "Le motard parvient malgré tout à éviter les clous et son passager ouvre le feu sur vous. Vous décidez de riposter en utilisant la mitrailleuse de l'Interceptor, bien que cette cible mobile soit difficile à atteindre.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorise",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "SIDE-CAR",
+        "puissance": 9,
+        "blindage": 8,
+        "image": "/images/ennemis/gangster.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "143"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

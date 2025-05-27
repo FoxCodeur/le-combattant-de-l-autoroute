@@ -1,0 +1,10 @@
+{
+  "id": "379",
+  "title": "Chapitre 379",
+  "text": "Lorsque vous n'êtes plus qu'à quelques kilomètres du pont, le pilote de la Ford flanche et freine brusquement. Vous en profitez pour le dépasser. Irrité par votre sang-froid, votre adversaire essaye avec rage de vous doubler avant que vous ne franchissiez la ligne d'arrivée. Dans une accélération fulgurante, la Ford, grâce à son surcompresseur, se retrouve collée à votre pare-chocs arrière. Vous apercevez la ligne d'arrivée à moins de cent mètres. La Ford peut maintenant vous doubler à chaque instant et vous savez que vous devez tout faire pour l'en empêcher.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Allez-vous bloquer le côté gauche de la route", "next": "20" },
+    { "label": "ou le côté droit", "next": "80" }
+  ]
+}

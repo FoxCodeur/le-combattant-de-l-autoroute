@@ -1,0 +1,23 @@
+{
+  "id": "148",
+  "title": "Chapitre 148",
+  "text": "Vous enfoncez la pédale de l'accélérateur tout en débrayant. Les roues arrière patinent, mais votre véhicule n'avance pas d'un pouce. Lorsque vous réussissez enfin à vous arracher au bitume, la Ford est déjà loin devant vous. Vous perdez 1 point de CHANCE. Soudain, votre adversaire pile brusquement et vous en profitez pour prendre la tête de la course. Dans votre rétroviseur, vous observez attentivement la Ford : celle-ci se rapproche rapidement et ne tardera sûrement pas à percuter l'Interceptor par l'arrière ! Vous ne pouvez rien faire pour éviter cette manoeuvre, car la Ford est certainement équipée d'un surcompresseur qui lui donne une puissance bien supérieure à la vôtre. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": -1
+  },
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez deux dé. Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "354"
+    },
+    "failure": {
+      "next": "247"
+    }
+  }
+}

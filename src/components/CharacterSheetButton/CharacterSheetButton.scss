@@ -1,0 +1,19 @@
+.character-sheet-btn {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+
+  &:hover {
+    background: #4c8cff;
+    color: #000;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 4px 4px 0 #ffcc00, 8px 8px 0 #000;
+  }
+}

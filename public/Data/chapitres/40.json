@@ -1,0 +1,14 @@
+{
+  "id": "40",
+  "title": "Chapitre 40",
+  "text": "Dans l'intervalle, le Chien de la Mort profite du temps que vous mettez à atteindre le camion-citerne pour en faire démarrer le moteur. D'un bond, vous saisissez la poignée de la portière au moment où l'homme s'apprête à dégainer. Le total d'HABILETÉ du Chien de la Mort s'élève à 6.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Si votre propre total d'HABILETÉ est supérieur ou égal à celui du Chien de la Mort, rendez-vous au", "next": "81" },
+    { "label": "Si votre total d'HABILETÉ est inférieur, rendez-vous au", "next": "296" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "219",
+  "title": "Chapitre 219",
+  "text": "De votre ton le plus convaincant, vous lui assurez que vous n'êtes pour rien dans la mort de sa femme et de son fils. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez deux dés. Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "288"
+    },
+    "failure": {
+      "next": "236"
+    }
+  }
+}

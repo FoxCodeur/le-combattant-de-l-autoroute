@@ -1,0 +1,17 @@
+{
+  "id": "37",
+  "title": "Chapitre 37",
+  "text": "Un énorme rocher vient s'écraser sur le toit de l'Interceptor. Jetez deux dés et déduisez le total obtenu de vos points de BLINDAGE.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous survivez à ce choc, rendez-vous au", "next": "261" }
+  ]
+}

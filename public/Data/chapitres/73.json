@@ -1,0 +1,10 @@
+{
+  "id": "73",
+  "title": "Chapitre 73",
+  "text": "Vous écrasez la pédale de l'accélérateur et vous réussissez à échapper de justesse au souffle provoqué par l'explosion de la grenade.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous voulez toujours rejoindre la nationale pour continuer vers le sud...", "next": "207" },
+    { "label": "Si, en revanche, vous etes maintenant resolu a relever le defi et a participer a la Course de l'Enfer...", "next": "330" }
+  ]
+}

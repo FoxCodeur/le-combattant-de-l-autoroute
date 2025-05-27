@@ -1,0 +1,9 @@
+{
+  "id": "8",
+  "title": "Chapitre 8",
+  "text": "Vous feignez de vouloir doubler la Ford par la gauche, attirant l’attention de votre adversaire. Mais au tout dernier instant, vous changez brusquement de trajectoire et la dépassez par la droite. La manœuvre est audacieuse, mais elle fonctionne : vous accélérez et laissez la voiture jaune derrière vous.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next..", "next": "340" }
+  ]
+}

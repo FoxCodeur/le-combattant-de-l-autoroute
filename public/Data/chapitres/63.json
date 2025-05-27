@@ -1,0 +1,38 @@
+{
+  "id": "63",
+  "title": "Chapitre 63",
+  "text": "La boîte s'ouvre brusquement et des multitudes de clous se répandent sur la chaussée. La Ford est équipée d'un puissant ventilateur fixé sous le châssis. Une fois mis en action, l'appareil repousse tous les clous mais à une exception près qui suffit à entamer légèrement la gomme très résistante des pneus.\n\nVotre adversaire se trouve contraint de ralentir, ce qui vous permet de le distancer et de vous mettre hors de portée de son lance-grenades pour l'instant.\n\nEn voyant se dresser devant vous la maison blanche que vous devez contourner, vous écrasez la pédale des freins et vous donnez un violent coup de volant sur la gauche. Dans un nuage de poussière, vous faites demi-tour sur quelques mètres, puis vous enclenchez sèchement la première et vous foncez en direction de la ligne d'arrivée. La Ford effectue la même manœuvre que vous et se retrouve à nouveau roue dans roue avec vous.\n\nSoudain, votre adversaire fait une brusque embardée afin de faire sortir l'Interceptor de la route. Il paraît bel et bien déterminé à mettre un terme à ce duel en faisant du stock-car.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorisé",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "reglesSpeciales": "Si l'un de vous parvient à emboutir la voiture de l'autre, la victime perdra, à chaque Assaut, 2 points de BLINDAGE.",
+    "ennemis": [
+      {
+        "nom": "Ford Jaune",
+        "puissanceDeFeu": 8,
+        "blindage": 16,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "334"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+

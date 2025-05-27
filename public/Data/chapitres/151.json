@@ -1,0 +1,10 @@
+{
+  "id": "151",
+  "title": "Chapitre 151",
+  "text": "A la sortie du pont, vous vous dirigez à nouveau vers l'ouest et vous atteignez bientôt une bifurcation qui vous offre le choix entre deux directions.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez continuer vers l'ouest...", "next": "179" },
+    { "label": "Si vous optez pour la route menant vers le sud...", "next": "362" }
+  ]
+}

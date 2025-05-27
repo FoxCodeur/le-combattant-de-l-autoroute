@@ -1,0 +1,9 @@
+{
+  "id": "161",
+  "title": "Chapitre 161",
+  "text": "Vous secouez la tête et vous vous concentrez sur la route de toutes vos forces. Après avoir failli maintes et maintes fois vous endormir sur le volant, votre fatigue s'évanouit lorsque les premiers rayons du soleil éclairent l'horizon. Et c'est avec un enthousiasme renouvelé que vous continuez à descendre vers le sud, en direction de San Angelo",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "128" }
+  ]
+}

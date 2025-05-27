@@ -1,0 +1,13 @@
+{
+  "id": "16",
+  "title": "Chapitre 16",
+  "text": "Vous vous réveillez tôt le lendemain matin, après avoir passé une excellente nuit. Ajoutez 2 points à votre total d'ENDURANCE.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "endurance": 2
+  },
+  "choices": [
+    { "label": "Si vous desirez maintenant inspecter le cafe...", "next": "26" },
+    { "label": "Si vous preferez repartir immediatement...", "next": "254" }
+  ]
+}

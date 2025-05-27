@@ -1,0 +1,37 @@
+{
+  "id": "116",
+  "title": "Chapitre 116",
+  "text": "La balle vous atteint à l'épaule. Jetez un dé et déduisez le chiffre obtenu de votre total d'endurance. Méprisant la douleur, vous vous relevez et vous ripostez :\n\nBANDIT DE GRAND\nCHEMIN HABILETÉ: 8 ENDURANCE: 12\n\nMenez ce combat en suivant les règles de Tir. Cependant, vous êtes terriblement handicapé par vos blessures et vous devez retrancher 2 points de votre total d'habileté pour toute la durée de l'affrontement.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "tir",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Bandit de Grand Chemin",
+        "habilete": 8,
+        "endurance": 12,
+        "image": "/images/ennemis/bandit-rouge.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "131"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+

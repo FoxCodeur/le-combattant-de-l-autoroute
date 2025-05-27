@@ -1,0 +1,12 @@
+{
+  "id": "287",
+  "title": "Chapitre 287",
+  "text": "Le conducteur de la Ford vous observe attentivement puis il fait un brusque écart au moment où vous vous apprêtez à le doubler. Son pare-chocs renforcé heurte violement le côté de l'Interceptor et fait un trou dans la portière. Vous perdez 2 points de BLINDAGE. Vous maintenez la pédale d'accélérateur collée au plancher et vous parvenez enfin à passer devant la Ford",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "blindage": -2
+  },
+  "choices": [
+    { "label": "Next...", "next": "340" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "189",
+  "title": "Chapitre 189",
+  "text": "Sur votre droite part une route en mauvais état, portant les empreintes de plusieurs pneus. Ces traces ont l'air assez fraîches.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous voulez emprunter cette route...", "next": "24" },
+    { "label": "Si vous preferez continuer sur la meme voie, en direction de San Angelo...", "next": "207" }
+  ]
+}

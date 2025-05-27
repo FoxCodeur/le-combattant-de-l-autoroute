@@ -1,0 +1,10 @@
+{
+  "id": "138",
+  "title": "Chapitre 138",
+  "text": "Vous faites un bond en arrière pour vous écarter du gangster qui s'écroule lourdement au sol. A ce moment, sa complice fait brusquement démarrer le hot-rod. Une odeur acre de caoutchouc brûlé se répand dans l'atmosphère, tandis qu'elle s'éloigne vers l'autoroute dans un rugissement de moteur.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous voulez vous lancez a sa poursuite...", "next": "75" },
+    { "label": "Si vous preferez fouiller le garage...", "next": "146" }
+  ]
+}

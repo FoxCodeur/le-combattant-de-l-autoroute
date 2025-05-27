@@ -1,0 +1,20 @@
+{
+  "id": "59",
+  "title": "Chapitre 59",
+  "text": "Alors que vous vous éloignez, vous entendez 1’homme assis sur la barrière vous crier : « Espèce de lâche ! » En regardant dans le rétroviseur, vous le voyez fouiller dans un sac de cuir accroché près de lui et en sortir une grenade. Il la dégoupille et la jette violemment en direction de l'Interceptor. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "73"
+    },
+    "failure": {
+      "next": "121"
+    }
+  }
+}

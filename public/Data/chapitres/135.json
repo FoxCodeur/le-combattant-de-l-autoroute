@@ -1,0 +1,20 @@
+{
+  "id": "135",
+  "title": "Chapitre 135",
+  "text": "Alors que les flammes s'éteignent, vous regardez le bandit contourner lentement la voiture en proférant, à votre adresse, une suite d'insultes et de grossièretés. L'homme ne semble avoir pour toute arme qu'un poignard, qu'il tient à la main droite. Immobilisé à l'intérieur de l'Interceptor, vous n'avez pas d'autre solution que d'en sortir pour affronter l'homme. Vous dégainez votre revolver et vous ouvrez votre portière, mais au moment où vous mettez un pied dehors, l'homme en profite pour lancer son poignard. Jetez deux dés.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "193"
+    },
+    "failure": {
+      "next": "36"
+    }
+  }
+}

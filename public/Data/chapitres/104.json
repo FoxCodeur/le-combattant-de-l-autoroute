@@ -1,0 +1,10 @@
+{
+  "id": "104",
+  "title": "Chapitre 104",
+  "text": "Vous ne trouvez rien d'intéressant dans la cabine du camion et la remorque est vide. Par réflexe, vous tapotez sur le réservoir pour vérifier s'il reste du carburant à l'intérieur et vous constatez avec joie que c'est effectivement le cas ! Mais le réservoir est en acier renforcé et vous ne savez pas comment vous y prendre pour récupérer l'essence.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous avez en votre possession un morceau de tuyau en plastique...", "next": "306" },
+    { "label": "Si vous ne possedez pas de tuyau en plastique...", "next": "187" }
+  ]
+}

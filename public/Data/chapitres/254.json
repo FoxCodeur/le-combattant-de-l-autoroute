@@ -1,0 +1,14 @@
+{
+  "id": "254",
+  "title": "Chapitre 254",
+  "text": "Le paysage est pittoresque dans la lumière du petit matin, mais vous n'avez aucune conscience des dangers qui vous attendent plus loin. En effet, des hors-la-loi ont miné la route pour voler quiconque s'y aventurerait.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": " 1, 2 ou 3...", "next": "129" },
+    { "label": "4, 5 ou 6...", "next": "101" }
+  ]
+}

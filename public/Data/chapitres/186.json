@@ -1,0 +1,13 @@
+{
+  "id": "186",
+  "title": "Chapitre 186",
+  "text": "Vous bâillez sans arrêt et vous vous efforcez de vous concentrer sur votre conduite le long de cette route départementale. Mais après tous les efforts que vous avez dû fournir dans la journée, la fatigue finit par avoir raison de vous et vous vous endormez sur le volant. Soudain, vous percutez l'arrière d'un camion abandonné qui obstrue la moitié de la route ! Jetez deux dés et déduisez le total obtenu des points de BLINDAGE de l'Interceptor.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "choices": [
+    { "label": "Next...", "next": "348" }
+  ]
+}

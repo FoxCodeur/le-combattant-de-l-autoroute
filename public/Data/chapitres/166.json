@@ -1,0 +1,10 @@
+{
+  "id": "166",
+  "title": "Chapitre 166",
+  "text": "Il reste une roue en assez bon état sur cette Interceptor accidentée. Le pneu est à plat, mais il devrait être facile de le regonfler grâce à votre Bombe Anticrevaison. Il ne vous faut pas longtemps pour démontrer la roue et la charger à bord de votre propre Interceptor.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez a présent inspecter l'intérieur de la voiture accidentee...", "next": "253" },
+    { "label": "Si vous préférez plutot reprendre la route sans plus tarder...", "next": "13" }
+  ]
+}

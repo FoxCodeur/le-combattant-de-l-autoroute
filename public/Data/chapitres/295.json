@@ -1,0 +1,23 @@
+{
+  "id": "295",
+  "title": "Chapitre 295",
+  "text": "Vous arrêtez votre voiture dans un nuage de poussière. Dans votre rétroviseur vous observez les deux motards courir se mettre à l'abri. Soudain, la mine explose. Une roue est endommagée mais, de l'intérieur de l'Interceptor, vous n'entendez qu'un bruit assourdi. Vous perdez 2 points de BLINDAGE. A peine la poussière est-elle retombée que les motards commencent à ouvrir le feu avec les mitrailleuses montées de leurs motos. Vous êtes pour eux une cible fixe. Lancez un dé et déduisez le chiffre obtenu de votre total de BLINDAGE. Vous allez devoir sortir de la voiture pour traiter avec eux. Vous pressez la gâchette de la mitrailleuse de l'Interceptor et, couvert par le tir automatique, vous plongez hors de votre voiture puis vous courez vous accroupir derrière un buisson, non loin de là, un revolver à la main.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "blindage": -2
+  },
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "122"
+    },
+    "failure": {
+      "next": "329"
+    }
+  }
+}

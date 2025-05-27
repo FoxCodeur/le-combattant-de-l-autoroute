@@ -1,0 +1,12 @@
+{
+  "id": "241",
+  "title": "Chapitre 241",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "endurance": -1
+  },
+  "choices": [
+    { "label": "Avancer vers la lumière", "next": "218" }
+  ]
+}

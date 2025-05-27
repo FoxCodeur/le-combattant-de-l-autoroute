@@ -1,0 +1,9 @@
+{
+  "id": "261",
+  "title": "Chapitre 261",
+  "text": "L'arrière du toit se retrouve pratiquement écrasé sur les sièges arrière mais la place du conducteur est intacte. L'éboulement n'a pas totalement obstrué le passage et vous pouvez reprendre la route dès que les pierres ont cessé de tomber",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "351" }
+  ]
+}

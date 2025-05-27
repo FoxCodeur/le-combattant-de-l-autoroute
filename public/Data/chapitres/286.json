@@ -1,0 +1,9 @@
+{
+  "id": "286",
+  "title": "Chapitre 286",
+  "text": "Lorsque vous vous dirigez à nouveau vers le motel, vous apercevez une faible lueur à l'une des fenêtres des étages supérieurs. Votre coup de feu a dû déranger quelqu'un. Vous ne voulez pas prendre le risque d'une autre mauvaise rencontre et vous regagnez rapidement le camion-citerne. Vous roulez pendant quelques kilomètres avant de repérer un endroit où vous pouvez vous garez. Vous restez dans la cabine du camion-citerne pour y passer la nuit",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "218" }
+  ]
+}

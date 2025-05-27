@@ -1,0 +1,9 @@
+{
+  "id": "87",
+  "title": "Chapitre 87",
+  "text": "L'homme a des réflexes très rapides et il réussit à esquiver votre coup de poing. Soudain, votre regard se pose sur le canon de la mitraillette qu'il tient pointée sur vous : il est évident que vous n'allez plus vous attaquer à lui ! L'homme vous ordonne de vous retourner, puis il vous abat violemment la crosse de son arme sur la nuque. Vous perdez connaissance et vous vous effondrez à terre",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "100" }
+  ]
+}

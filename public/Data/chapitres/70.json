@@ -1,0 +1,20 @@
+{
+  "id": "70",
+  "title": "Chapitre 70",
+  "text": "Les roues entrent violemment en contact avec l'autre partie du pont et vous devez fermement maintenir le volant pour garder l'Interceptor sur une trajectoire rectiligne. Mais une fois le pont traversé, vous réalisez avec horreur que vous vous dirigez à vive allure sur un poids lourd couché en travers de la route. Jetez deux dés.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous réussissez. Sinon, vous n'avez pas réussi.",
+    "success": {
+      "next": "62"
+    },
+    "failure": {
+      "next": "133"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "280",
+  "title": "Chapitre 280",
+  "text": "Vous constatez avec stupéfaction que le conducteur de la voiture blindée parvient à maintenir son véhicule dans sa trajectoire et à passer la flaque d'huile sans problème ! Vous décidez immédiatement de risquer un brusque tête-à-queue en tirant fortement sur le frein à main, pour faire face à votre adversaire",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "77" }
+  ]
+}

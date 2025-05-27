@@ -1,0 +1,10 @@
+{
+  "id": "258",
+  "title": "Chapitre 258",
+  "text": "Vous sortez de la maison en courant et vous allez chercher votre Trousse de Secours dans la voiture. Vous prenez une unité de médicament mais cela ne vous restitue aucun point d'ENDURANCE. Le traitement empêche seulement la propagation du venin dans le sang. Vous n'avez pas l'intention de passer le reste de la nuit dans le hangar et vous devez prendre une décision.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez passer la nuit à l'intérieur de la voiture...", "next": "297" },
+    { "label": "Si vous preferez mettre votre moteur en marche et continuer a conduire de nuit...", "next": "144" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "320",
+  "title": "Chapitre 320",
+  "text": "L'obus explose quelque trente mètres derrière vous. Vous êtes hors d'atteinte mais vous sentez que bientôt ils reprendront leurs tirs. En revanche, un éclat a déchiré le pneu avant de votre voiture, ce qui vous oblige à vous arrêter.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous avez une roquette disponible...",
+      "next": "31",
+      "modificateursNarratifs": {
+        "roquette": -1      }
+    },
+    {
+      "label": "Si vous n'avez plus de roquette dans votre equipement,...",
+      "next": "173"
+    }
+  ]
+}

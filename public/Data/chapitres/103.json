@@ -1,0 +1,10 @@
+{
+  "id": "103",
+  "title": "Chapitre 103",
+  "text": "Vous marchez prudemment vers la moto accidentée, le revolver dans une main et la Trousse de Secours dans l'autre. L'un des deux hommes est mort et l'autre à l'agonie. D'un coup de pied, vous écartez le pistolet qui traîne à ses côtés et vous l'examinez pour voir si vous pouvez faire quelque chose pour lui. L'homme ouvre lentement les yeux et vous dit dans un rictus haineux : « Le Gros Jack et sa bande te feront payer ça ! » Ce sont ses dernières paroles. Il bascule en arrière et reste inanimé. Votre Trousse de Secours ne lui sera plus d'aucune utilité. Vous inspectez la moto et vous remarquez une sacoche fermée à clé.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez ouvrir la sacoche...", "next": "206" },
+    { "label": "Si vous preferez plutot changer la roue de l'Interceptor et repartir sans perdre de temps...", "next": "346" }
+  ]
+}

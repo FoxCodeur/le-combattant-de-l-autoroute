@@ -1,0 +1,14 @@
+{
+  "id": "35",
+  "title": "Chapitre 35",
+  "text": "Une véritable guerre des nerfs commence entre le conducteur de la Ford et vous-même. Les deux voitures s'élancent de front vers le pont. Jetez un dé et ajoutez le chiffre obtenu à votre total d'HABI-LETÉ. Puis lancez à nouveau le dé et additionnez le chiffre obtenu aux 8 points représentant le total d'HABILETÉ du conducteur de la Ford.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Si votre total d'HABILETÉ est supérieur ou égal à celui de votre adversaire, rendez-vous au", "next": "379" },
+    { "label": "Si votre total d'HABILETÉ est inférieur à celui de votre adversaire, rendez-vous au", "next": "51" }
+  ]
+}

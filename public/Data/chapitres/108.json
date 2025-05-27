@@ -1,0 +1,9 @@
+{
+  "id": "108",
+  "title": "Chapitre 108",
+  "text": "A votre grand soulagement, vous ne manquez pas votre cible et le chien est tué sur le coup",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "89" }
+  ]
+}

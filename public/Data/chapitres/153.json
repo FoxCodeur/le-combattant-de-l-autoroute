@@ -1,0 +1,9 @@
+{
+  "id": "153",
+  "title": "Chapitre 153",
+  "text": "Vous continuez à rouler vite et sans incident sur la route départementale. Vous voyez, de part et d'autre de la voie, les champs en friche s'étendre à perte de vue et vous vous demandez avec mélancolie si le jour viendra où ils seront à nouveau labourés et cultivés. Peu après, la route aboutit à une bifurcation et vous décidez de prendre à gauche pour rouler droit vers le sud, en direction de San Angelo",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "225" }
+  ]
+}

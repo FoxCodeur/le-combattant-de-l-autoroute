@@ -1,0 +1,20 @@
+{
+  "id": "93",
+  "title": "Chapitre 93",
+  "text": "Vous essayez de faire redémarrer l'Interceptor et de repartir avant que les rançonneurs ne viennent identifier leur victime. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez un dé. Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "268"
+    },
+    "failure": {
+      "next": "178"
+    }
+  }
+}

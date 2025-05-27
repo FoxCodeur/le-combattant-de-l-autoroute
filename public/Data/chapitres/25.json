@@ -1,0 +1,9 @@
+{
+  "id": "25",
+  "title": "Chapitre 25",
+  "text": "La force de l'explosion vous fait perdre conscience.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "100" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "74",
+  "title": "Chapitre 74",
+  "text": "Bien que votre adversaire soit rompu à l'art de la lutte, vous parvenez tout de même à le plaquer sur le dos et à le faire basculer du haut du toit de la remorque. Vous le voyez s'écraser au sol et rester inanimé, au pied du véhicule. C'est le moment de vous remettre en route sans perdre de temps. Vous roulez toute la journée à vitesse de croisière et vous faites un parcours sans incident si ce n'est, en fin d'après-midi, une tentative d'embuscade mal organisée à laquelle vous échappez sans dommage grâce à votre camion blindé. Il fait presque nuit lorsque vous atteignez les environs de Nouvelle Espérance. Ses hauts remparts se profilant dans la demi-obscurité vous offre un spectacle étrange mais néanmoins réconfortant !",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous avez ete mordu par un rat lors de votre voyage de retour...", "next": "275" },
+    { "label": "Si vous n'avez jamais ete mordu durant le voyage...", "next": "380" }
+  ]
+}

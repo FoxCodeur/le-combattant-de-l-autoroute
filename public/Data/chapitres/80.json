@@ -1,0 +1,12 @@
+{
+  "id": "80",
+  "title": "Chapitre 80",
+  "text": "Soudain, la Ford déboîte sur la gauche pour vous doubler. Vous avez mal anticipé ses intentions et vous faites une embardée sur la droite. La Ford vous double dans une puissante accélération et précède l'Interceptor d'une demi-longueur sur la ligne d'arrivée.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": -2
+  },
+  "choices": [
+    { "label": "Déduisez 2 points de votre total de CHANCE et rendez-vous au", "next": "232" }
+  ]
+}

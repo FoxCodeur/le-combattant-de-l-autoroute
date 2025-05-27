@@ -1,0 +1,20 @@
+{
+  "id": "338",
+  "title": "Chapitre 338",
+  "text": "Au fur et à mesure que vous approchez de la ferme, vous apercevez d'autres éclairs aveuglants. On est en train de tirer au bazooka depuis une fenêtre des étages supérieurs. Vous faites un brusque écart sur la gauche pour éviter l'explosion.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "320"
+    },
+    "failure": {
+      "next": "105"
+    }
+  }
+}

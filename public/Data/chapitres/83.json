@@ -1,0 +1,36 @@
+{
+  "id": "83",
+  "title": "Chapitre 83",
+  "text": "Vous plongez à l'intérieur de l'Interceptor et vous faites feu sur les pirates du ciel qui ripostent immédiatement.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorisé",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Hélicoptère",
+        "puissanceDeFeu": 8,
+        "blindage": 11,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "305"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

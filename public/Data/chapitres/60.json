@@ -1,0 +1,17 @@
+{
+  "id": "60",
+  "title": "Chapitre 60",
+  "text": "Vos deux pneus arrière sont crevés et vous vous voyez contraint de vous arrêter sur le bas-côté. Soudain, un homme émerge du fossé longeant la route en brandissant une bouteille bouchée par un torchon enflammé. Vous réalisez avec horreur qu'il s'agit d'un cocktail Molotov, mais vous ne pouvez rien faire pour l'empêcher de le lancer sur votre voiture. Jetez deux dés et retranchez la somme obtenue de votre total de blindage.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous etes encore en vie apres l'explosion...", "next": "135" }
+  ]
+}

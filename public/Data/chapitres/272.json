@@ -1,0 +1,10 @@
+{
+  "id": "272",
+  "title": "Chapitre 272",
+  "text": "La route coupe à travers des champs en friche, mais il n'y a aucun obstacle. Vous vérifiez au compteur le nombre de kilomètres que vous avez parcourus et vous remarquez que la jauge d'essence indique que le réservoir est presque vide.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous avez emporte un bidon d'essence au cours de votre voyage", "next": "323" },
+    { "label": "Sinon...", "next": "364" }
+  ]
+}

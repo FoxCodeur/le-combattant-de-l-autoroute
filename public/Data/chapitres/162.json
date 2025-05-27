@@ -1,0 +1,21 @@
+{
+  "id": "162",
+  "title": "Chapitre 162",
+  "text": "Vous entr'apercevez la surprise qui se peint sur le visage de Léonardi au moment où vous essayez de contourner sa voiture arrêtée en travers de la voie.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "94"
+    },
+    "failure": {
+      "next": "123"
+    }
+  }
+}
+

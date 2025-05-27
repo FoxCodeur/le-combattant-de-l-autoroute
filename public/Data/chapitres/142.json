@@ -1,0 +1,20 @@
+{
+  "id": "142",
+  "title": "Chapitre 142",
+  "text": "Vous vous arrêtez dans un crissement de pneus, mais vous laissez tourner le moteur. Par le haut-parleur, vous ordonnez à l'homme de lever les mains en l'air et de ne pas essayer de faire le malin. Vous remarquez que sa moto est couchée sur le bas-côté de la route. Revolver au poing, vous descendez prudemment de l'Interceptor. Soudain, l'homme en blue-jean s'écarte de la route et plonge dans le fossé au moment où un projectile fend l'air et rebondit sur l'asphalte, entre vous et votre voiture. Vous constatez avec effroi qu'il s'agit d'une grenade ! Un éclair aveuglant précède de peu une explosion assourdissante qui vous projette à terre. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez un dé. Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "299"
+    },
+    "failure": {
+      "next": "25"
+    }
+  }
+}

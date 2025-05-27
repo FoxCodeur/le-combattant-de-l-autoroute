@@ -1,0 +1,10 @@
+{
+  "id": "228",
+  "title": "Chapitre 228",
+  "text": "« Menteur ! Je n'ai pas cru un seul instant que tu faisais partie de cette bande. Voyons ce que les autres en pensent. » Et il agite le canon de sa mitraillette en direction de ses amis assis sous les arbres.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous avez un coup de poing américain...", "next": "273" },
+    { "label": "Dans le cas contraire...", "next": "214" }
+  ]
+}

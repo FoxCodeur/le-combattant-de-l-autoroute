@@ -1,0 +1,19 @@
+{
+  "id": "313",
+  "title": "Chapitre 313",
+  "text": "Vous réussissez à regonfler un des pneus avec la Bombe Anticrevaison, mais l'autre pneu ne peut être réparé.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous pouvez payer cette somme et si vous desirez faire reparer votre voiture...",
+      "next": "Si vous avez une roue de secours...",
+      "modificateursNarratifs": {
+        "roueDeSecours": -1      }
+    },
+    {
+      "label": "Si vous avez deje utilise vous deux roues de secours...",
+      "next": "336"
+    }
+  ]
+}
+

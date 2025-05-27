@@ -1,0 +1,9 @@
+{
+  "id": "330",
+  "title": "Chapitre 330",
+  "text": "Vous faites demi-tour et vous retournez à la barrière de bois où se tient le garde qui pointe sa mitraillette dans votre direction. « Ah ! Ah ! Alors, on a changé d'avis ! » ricane-t-il. Ne désirant pas montrer votre colère, vous inclinez lentement la tête en signe d'acquiescement. Il ouvre la barrière, vous rappelant où se trouve l'endroit où vous devez vous rendre",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "300" }
+  ]
+}

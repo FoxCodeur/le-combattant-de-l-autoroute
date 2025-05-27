@@ -1,0 +1,9 @@
+{
+  "id": "378",
+  "title": "Chapitre 378",
+  "text": "Léonardi sort de la Jaguar, s'avance vers l'Interceptor, puis il vous dit : « Vous êtes un bon pilote mais vous avez encore des progrès à faire pour me battre. Cela dit, maintenant vous feriez mieux de revenir sur vos pas pour rejoindre le canyon. » Vous lui obéissez. Vous voilà bientôt sur la route tortueuse qui traverse le canyon. Vous passez facilement les éboulements et, dès que vous entrez dans le tunnel, vous apercevez avec surprise la clarté du jour à son extrémité. Vous passez le tunnel et, un kilomètre plus loin, vous voyez l'autocar qui en bouchait l'entrée à votre précédent passage. Vous le dépassez puis vous roulez jusqu'à ce que vous arriviez à un embranchement. Vous tournez à gauche et vous vous dirigez vers le sud, en longeant le désert.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Rendez-vous au", "next": "301" }
+  ]
+}

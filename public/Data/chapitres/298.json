@@ -1,0 +1,9 @@
+{
+  "id": "298",
+  "title": "Chapitre 298",
+  "text": "Vous longez le désert pendant environ quatre-vingts kilomètres, jusqu'à ce que la route se termine à un embranchement. Vous choisissez de tourner à gauche vers le sud et de vous diriger vers San Angelo en traversant le désert",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "271" }
+  ]
+}

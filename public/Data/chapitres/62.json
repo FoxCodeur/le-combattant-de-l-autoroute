@@ -1,0 +1,9 @@
+{
+  "id": "62",
+  "title": "Chapitre 62",
+  "text": "Vous réussissez à garder le contrôle de l'Interceptor lancée à grande vitesse et vous faites un brusque écart pour éviter le camion retourné sur la route.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "151" }
+  ]
+}

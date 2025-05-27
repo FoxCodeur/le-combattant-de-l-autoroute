@@ -1,0 +1,20 @@
+{
+  "id": "304",
+  "title": "Chapitre 304",
+  "text": "Alors que vous ralentissez, un homme apparaît, surgissant du fossé qui longe la route. Il semble prêt à lancer une bouteille en direction de l'Interceptor et vous pouvez voir au chiffon enflammé qui sort du goulot qu'il s'agit d'un cocktail Molotov. Heureusement, un seul pneu est crevé et vous pouvez accélérer pour éviter la bombe. Mais au bout de quelques kilomètres, conduire devient vraiment difficile et vous êtes contraint de vous arrêter. Vous sortez de voiture pour examiner le pneu crevé. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "238"
+    },
+    "failure": {
+      "next": "370"
+    }
+  }
+}

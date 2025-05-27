@@ -1,0 +1,11 @@
+{
+  "id": "128",
+  "title": "Chapitre 128",
+  "text": "La route est bien dégagée et vous prenez un réel plaisir à rouler dans la lumière naissante du petit matin. Soudain, vous êtes mis en alerte en voyant, dans votre rétroviseur, une voiture blindée se rapprocher régulièrement de vous. Dans un jaillissement de flammes aveuglantes, le canon dont elle est munie vient de lâcher un obus qui explose juste sur votre gauche. L'Interceptor fait une brusque embardée, mais vous réussissez à en garder le contrôle. Qu'allez-vous faire à présent :",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Jeter une boîte de clous...", "next": "312" },
+    { "label": "Pulveriser de l'huile sur la route...", "next": "165" },
+    { "label": "Faire un tete-a-queue pour affronter la voiture blindée...", "next": "77" }
+  ]
+}

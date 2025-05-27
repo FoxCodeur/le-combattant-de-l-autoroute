@@ -1,0 +1,9 @@
+{
+  "id": "349",
+  "title": "Chapitre 349",
+  "text": "Vous réussissez à assommer le garde et vous le rattrapez dans vos bras avant qu'il ne s'effondre au sol, inconscient. En espérant que ses amis ne vous ont pas remarqué, vous le ligotez avec sa propre ceinture puis vous l'abandonnez à flanc de colline. Ils ne vont sûrement pas tarder à s'apercevoir de son absence, aussi grimpez-vous rapidement la colline vers la clôture.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "198" }
+  ]
+}

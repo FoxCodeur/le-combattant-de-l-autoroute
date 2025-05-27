@@ -1,0 +1,10 @@
+{
+  "id": "354",
+  "title": "Chapitre 354",
+  "text": "L’Interceptor part sur la gauche, mais vous contre-braquez et vous parvenez à maintenir votre voiture dans sa trajectoire. Vous devez maintenant penser rapidement à la tactique que vous allez adopter.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Allez-vous accelerer...", "next": "183" },
+    { "label": "ou bien allez-vous freiner et laisser la Ford vous doubler...", "next": "27" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "359",
+  "title": "Chapitre 359",
+  "text": "A l'intérieur du coffre d'une vieille Ford, vous trouvez quelque chose qui vous fait pousser des cris de joie : un bidon plein d'essence ! Ajoutez 1 point à votre total de CHANCE. Vous emportez le bidon et l'arbalète, et vous marchez à longues enjambées sur les toits des voitures pour retourner à l'Interceptor. Heureusement, elle est toujours là.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": 1,
+    "bidonEssence": 1
+  },
+  "choices": [
+    {
+      "label": "Rendez-vous au",
+      "next": "149"
+    }
+  ]
+}

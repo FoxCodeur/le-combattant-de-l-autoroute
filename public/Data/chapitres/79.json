@@ -1,0 +1,10 @@
+{
+  "id": "79",
+  "title": "Chapitre 79",
+  "text": "Votre moteur tourne toujours et ne semble pas avoir été endommagé.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous voulez vous arreter pour faire face a votre agresseur...", "next": "281" },
+    { "label": "Si vous preferez poursuivre votre route vers le sud...", "next": "150" }
+  ]
+}

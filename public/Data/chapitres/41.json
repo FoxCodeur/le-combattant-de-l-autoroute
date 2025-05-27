@@ -1,0 +1,10 @@
+{
+  "id": "41",
+  "title": "Chapitre 41",
+  "text": "Le conducteur de la voiture blindée a d'excellents réflexes car il sort brusquement de la route pour éviter les clous éparpillés sur la chaussée, puis roule sur l'accotement envahi par les herbes en faisant rugir son moteur et rejoint ensuite la route afin de continuer la poursuite.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez lacher une pulverisation d'huile...", "next": "165" },
+    { "label": "Si vous voulez plutot tenter de faire un brusque tete-a-queue en tirant violemment sur le frein à main, afin de vous retrouver face à face avec la voiture blindée...", "next": "77" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "172",
+  "title": "Chapitre 172",
+  "text": "Par miracle, vous parvenez à franchir la zone d’éboulement sans subir de dégât. Les pierres et les blocs s’écrasent tout autour de vous, mais l’Interceptor file entre les obstacles avec une précision presque irréelle. Une fois le danger derrière vous, vous laissez échapper un profond soupir de soulagement. Puis, reprenant vos esprits, vous levez le pied de l’accélérateur pour aborder les virages de la route sinueuse avec davantage de prudence.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "351" }
+  ]
+}

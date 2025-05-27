@@ -1,0 +1,10 @@
+{
+  "id": "109",
+  "title": "Chapitre 109",
+  "text": "Les occupants de la voiture en question ont dû tout emporter avec eux avant de repartir à pied, à la suite d'une panne d'essence. Vous faites le tour de la voiture et vous essayez d'en ouvrir le coffre, mais celui-ci est fermé à clé.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous possedez une barre de fer et désirez forcer la serrure du coffre...", "next": "277" },
+    { "label": "Si vous preferez ne plus vous occuper de la voiture de police et continuer votre voyage vers le sud...", "next": "49" }
+  ]
+}

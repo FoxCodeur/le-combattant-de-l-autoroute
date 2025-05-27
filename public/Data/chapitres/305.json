@@ -1,0 +1,9 @@
+{
+  "id": "305",
+  "title": "Chapitre 305",
+  "text": "L'hélicoptère plonge vers le sol et prend feu en s'écrasant. Il ne vous reste plus qu'à mettre votre moteur en marche et à continuer vers l'ouest",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "216" }
+  ]
+}

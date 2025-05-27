@@ -1,0 +1,18 @@
+{
+  "id": "90",
+  "title": "Chapitre 90",
+  "text": "Vous voici enfin hors du désert. Ambre s'agite fiévreusement lorsque vous arrivez en vue des flammes de la raffinerie de San Angelo, qui sont pour vous autant de signes de bienvenue. Au pied de la ville-raffinerie, Ambre ouvre sa portière et fait un geste de la main à la sentinelle en faction sur les remparts. Les énormes portes d'acier s'ouvrent lentement pour vous livrer passage. Vous pénétrez dans la ville où vous êtes chaleureusement accueillis par les habi-tants. Vous passez le restant de la journée à leur raconter les multiples aventures qui vous sont arrivées en traversant les contrées sauvages et, à la fin de ce récit, l'assistance tout entière vous considère comme un véritable héros ! On prend soin de vous, puis on vous conduit à la cabine la plus confortable qu'on puisse vous offrir dans l'enceinte de cette ville-raffinerie. Vous passez une excellente nuit et vous gagnez 1 point d'HABILETÉ et 4 points d'ENDURANCE. Le lendemain, vous êtes réveillé par un coup de feu. Vous sortez précipitamment de votre cabine, et on vous apprend alors que les survivants du gang des Chiens de la Mort sont en train de livrer une ultime attaque contre la raffinerie. Vous montez en courant les marches qui donnent accès aux remparts pour voir ce qui se passe à l'extérieur : un petit camion se dirige à vive allure vers les portes de la ville et vous voyez le conducteur en sauter au dernier moment avant le choc. Une formidable explosion arrache l'un des battants de ses gonds et les Chiens de la Mort en profitent aussitôt pour s'engouffrer dans la brèche. En voyant pénétrer les motos et les voitures du gang tant redouté, la panique s'empare des citoyens de San Angelo. Vous réalisez qu'il vous faut immédiatement prendre la direction des opérations. Jetez deux dés.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "endurance": 4,
+    "habilete": 1
+  },
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Si le total obtenu est inférieur ou égal à vos points d'HABILETÉ, rendez-vous au", "next": "147" },
+    { "label": "Si ce total est supérieur à vos points d'HABILETÉ, rendez-vous au", "next": "18" }
+  ]
+}

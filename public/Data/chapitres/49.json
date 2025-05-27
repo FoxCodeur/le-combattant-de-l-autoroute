@@ -1,0 +1,37 @@
+{
+  "id": "49",
+  "title": "Chapitre 49",
+  "text": "Vous apercevez soudain devant vous un étrange véhicule arrêté au beau milieu de la route. On dirait une dépanneuse transformée en une espèce de char romain. Il n'y manque même pas les éperons fixés aux essieux !\n\nÀ l'arrière du véhicule se tient un homme, dont le torse nu révèle une musculature impressionnante. Son visage est protégé par un casque de gladiateur et il tient, appuyée contre la hanche, une mitraillette à double canon. L'homme fait signe au conducteur de démarrer et de passer à l'attaque. Vous n'avez pas le choix : vous devez affronter ces gladiateurs des temps modernes.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorisé",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Char",
+        "puissanceDeFeu": 9,
+        "blindage": 15,
+        "image": "/images/ennemis/char.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "91"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+

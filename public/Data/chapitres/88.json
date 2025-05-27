@@ -1,0 +1,10 @@
+{
+  "id": "88",
+  "title": "Chapitre 88",
+  "text": "Peu après, le paysage verdoyant fait place à une terre sombre et rocailleuse parsemée de maigres touffes d'herbe desséchée. Vous arrivez bientôt en bordure du désert et votre route croise une nationale filant vers l'est.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez tourner a gauche pour prendre cette route...", "next": "177" },
+    { "label": "Si vous preferez continuer droit vers le sud, en passant par le desert...", "next": "271" }
+  ]
+}

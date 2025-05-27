@@ -1,0 +1,14 @@
+{
+  "id": "42",
+  "title": "Chapitre 42",
+  "text": "Alors que la nuit tombe sur la région, vous allumez vos feux de route et vous poursuivez votre voyage à vitesse de croisière en évitant adroitement les obstacles. De temps à autre, vous apercevez, l'espace d'un instant, le regard apeuré d'une bête sauvage paralysée par la lumière de vos phares. Au fur et à mesure que la nuit s'avance, vous commencez à ressentir les effets de la fatigue. Jetez deux dés.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Si le total obtenu est inférieur ou égal à vos points d'HABILETÉ, rendez-vous au", "next": "161" },
+    { "label": "Si ce total est supérieur à vos points d'HABILETÉ, rendez-vous au", "next": "186" }
+  ]
+}

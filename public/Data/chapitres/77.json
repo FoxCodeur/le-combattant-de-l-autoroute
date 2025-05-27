@@ -1,0 +1,20 @@
+{
+  "id": "77",
+  "title": "Chapitre 77",
+  "text": "Vous braquez violemment le volant vers la gauche et vous tirez simultanément de toutes vos forces sur le frein à main. La voiture fait un tête-à-queue et vous enfoncez alors la pédale d'accélérateur pour arrêter le dérapage. Jetez deux dés.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez deux dés. Si la somme obtenue est inférieure ou égale à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "290"
+    },
+    "failure": {
+      "next": "352"
+    }
+  }
+}

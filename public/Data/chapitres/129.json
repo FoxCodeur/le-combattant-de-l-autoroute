@@ -1,0 +1,17 @@
+{
+  "id": "129",
+  "title": "Chapitre 129",
+  "text": "Une déflagration assourdissante retentit soudain et l'Interceptor se trouve brusquement projetée sur le côté de la route. Vous venez de percuter une mine ! Jetez deux dés et déduisez le total obtenu des points de BLINDAGE de l'Interceptor.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous êtes encore en vie après cette explosion, rendez-vous au", "next": "93" }
+  ]
+}

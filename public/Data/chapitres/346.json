@@ -1,0 +1,10 @@
+{
+  "id": "346",
+  "title": "Chapitre 346",
+  "text": "Heureusement, l'essieu n'est pas endommagé et vous pouvez rapidement mettre la roue de secours. Vous repartez bientôt à toute allure, secouant la tête en pensant au monde de fous dans lequel vous êtes obligé de vivre. Vous arrivez bientôt en vue d'un panneau indicateur dont la flèche indique une piste en terre étroite qui conduit à la ville de Rocville.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez vous diriger vers Rocville...", "next": "157" },
+    { "label": "Si vous preferez continuer tout droit...", "next": "45" }
+  ]
+}

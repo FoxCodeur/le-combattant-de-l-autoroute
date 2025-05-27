@@ -1,0 +1,9 @@
+{
+  "id": "69",
+  "title": "Chapitre 69",
+  "text": "Après la défaite que vous venez d'infliger aux Chiens de la Mort, vous vous accordez quelques instants de repos. Le soleil est déjà haut dans le ciel lorsque vous finissez de dégager l'Interceptor du break et, baigné par la douce chaleur de ses rayons, vous avez désormais le sentiment que votre mission sera couronnée de succès. C'est dans un élan d'optimisme que vous vous remettez en route vers le sud",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "90" }
+  ]
+}

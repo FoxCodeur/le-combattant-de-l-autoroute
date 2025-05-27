@@ -1,0 +1,10 @@
+{
+  "id": "150",
+  "title": "Chapitre 150",
+  "text": "Peu après, le paysage verdoyant fait place à une terre aride et rocailleuse où ne poussent que de rares petites touffes d'herbes desséchée. Vous arrivez ensuite en vue d'un carrefour, à la limite du désert. Une fois parvenu à cet embranchement, vous stoppez et vous constatez que la route filant vers l'est est obstruée par une file de voitures abandonnées.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez aller droit vers le sud, en empruntant la route qui traverse le desert...", "next": "46" },
+    { "label": "Si vous preferez tourner a droite, vers l'ouest...", "next": "298" }
+  ]
+}

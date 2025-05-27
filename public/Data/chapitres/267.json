@@ -1,0 +1,10 @@
+{
+  "id": "267",
+  "title": "Chapitre 267",
+  "text": "Vous garez votre Interceptor et vous retournez à pied vers l'ambulance. La cabine du conducteur est vide, bien que la voiture semble avoir été conduite tout récemment.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez ouvrir la porte arriere pour examiner l'interieur...", "next": "195" },
+    { "label": "Si vous preferez plutot retourner a l'Interceptor et vous diriger vers l'est...", "next": "22" }
+  ]
+}

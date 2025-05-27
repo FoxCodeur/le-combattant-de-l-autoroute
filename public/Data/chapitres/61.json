@@ -1,0 +1,9 @@
+{
+  "id": "61",
+  "title": "Chapitre 61",
+  "text": "La route mène droit vers l'est et vous la parcourez sans incident jusqu'à ce que vous arriviez à un autre croisement. Vous décidez de tourner à droite de façon à rouler plein sud vers San Angelo",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "272" }
+  ]
+}

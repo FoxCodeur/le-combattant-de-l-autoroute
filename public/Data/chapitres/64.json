@@ -1,0 +1,20 @@
+{
+  "id": "64",
+  "title": "Chapitre 64",
+  "text": "Après avoir fouillé les vêtements du bandit sans trouver quoi que ce soit d'intéressant, vous inspectez les pneus de l'Interceptor pour voir s'ils sont réparables. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "242"
+    },
+    "failure": {
+      "next": "313"
+    }
+  }
+}

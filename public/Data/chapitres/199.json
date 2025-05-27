@@ -1,0 +1,10 @@
+{
+  "id": "199",
+  "title": "Chapitre 199",
+  "text": "La ferme est une cible facile et la roquette atteint son but. L'explosion détruit le bâtiment, projetant en l'air des morceaux de bois et des briques dans un énorme nuage de poussière. Quand la poussière est retombée, vous roulez prudemment vers la ferme, un doigt sur la détente de la mitrailleuse. Vous vous arrêtez près du bâtiment en flammes, mais vous ne voyez aucun signe de vie. Vous arrêtez le moteur et vous baissez la fenêtre de l'Interceptor. C'est alors que vous entendez un homme appeler désespérément au secours.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez sortir de la voiture pour examiner les lieux", "next": "262" },
+    { "label": "Si vous préférez continuer à rouler vers le sud et sortir de la ville", "next": "353" }
+  ]
+}

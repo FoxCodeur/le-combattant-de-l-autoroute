@@ -1,0 +1,9 @@
+{
+  "id": "375",
+  "title": "Chapitre 375",
+  "text": "Vous décidez de vous emparer du Magnum du hors-la-loi car c'est une arme plus efficace que votre propre revolver. Cela vous permettra dorénavant d'ajouter 1 point à votre total d'HABlLETÉ pour tous les prochains combats à armes à feu que vous devrez livrer. Vous tournez la clé de contact et le moteur rugit. Bientôt, vous faites route vers le sud à vive allure.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Rendez-vous au", "next": "303" }
+  ]
+}

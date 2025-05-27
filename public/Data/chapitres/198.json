@@ -1,0 +1,24 @@
+{
+  "id": "198",
+  "title": "Chapitre 198",
+  "text": "Vous atteignez les fils barbelés de la clôture et vous apercevez huit véhicules garés à l'intérieur de l'enceinte. Les mailles du fil de fer sont trop serrées et vous ne pouvez tenter de vous frayer un passage sans risquer de vous accrocher.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous avez une paire de pinces coupantes...",
+      "next": "85",
+      "condition": {
+        "item": "pincesCoupantes",
+        "hasItem": true
+      }
+    },
+    {
+      "label": "Si vous n'en avez pas...",
+      "next": "255",
+      "condition": {
+        "item": "poing_americain",
+        "hasItem": false
+      }
+    }
+  ]
+}

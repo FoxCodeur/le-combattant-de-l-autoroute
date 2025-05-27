@@ -1,0 +1,12 @@
+{
+  "id": "21",
+  "title": "Chapitre 21",
+  "text": "Vous procédez tant bien que mal aux réparations d'urgence : il vous faut plus d'une demi-heure pour nettoyer les bougies, vérifier le niveau d'huile, régler le carburateur et vous assurer qu'aucun organe essentiel n'a été atteint. Vous constatez que trois boulons sont desserrés sur l'une des roues arrière et vous les revissez à fond. Ajoutez 2 points à votre total de BLINDAGE. Satisfait de voir que tout est à peu près remis en ordre, vous vous remettez en route vers le sud.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "blindage": 2
+  },
+  "choices": [
+    { "label": "Next...", "next": "221" }
+  ]
+}

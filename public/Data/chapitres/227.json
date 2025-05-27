@@ -1,0 +1,36 @@
+{
+  "id": "227",
+  "title": "Chapitre 227",
+  "text": "La balle s'enfonce dans le sol avec un bruit sourd, à un mètre de vous seulement. Vous vous relevez et vous répliquez immédiatement en ouvrant le feu.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "tir",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "BANDIT DE GRAND CHEMIN",
+        "habilete": 8,
+        "endurance": 12,
+        "image": "/images/ennemis/chien2.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "131"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

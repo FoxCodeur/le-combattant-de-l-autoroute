@@ -1,0 +1,36 @@
+{
+  "id": "290",
+  "title": "Chapitre 290",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorisé",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "VOITURE BLINDEE",
+        "puissanceDeFeu": 9,
+        "blindage": 20,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "106"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

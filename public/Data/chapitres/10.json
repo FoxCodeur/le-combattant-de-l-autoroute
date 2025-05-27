@@ -1,0 +1,16 @@
+{
+  "id": "10",
+  "title": "Chapitre 10",
+  "text": "Quelle qu’en ait été la cause, ce bouchon a semé la panique. Les conducteurs, déboussolés, ont tenté de fuir le chaos en forçant le passage, provoquant une série de collisions qui n’ont fait qu’aggraver la situation. Vous progressez lentement entre les carcasses de véhicules, à la recherche de quelque chose d’utile. Dans un camion, vous trouvez une barre de fer, que vous utilisez pour forcer les coffres de plusieurs véhicules. Mais alors que vous remontez la file, un frisson vous parcourt l’échine : vous venez de réaliser que vous avez laissé l’Interceptor sans surveillance…",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous desirez retourner en courant vers votre voiture",
+      "next": "264"
+    },
+    {
+      "label": "Si vous preferez continuer a fouiller les epaves qui jalonnent la route",
+      "next": "359"
+    }
+  ]
+}

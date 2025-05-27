@@ -1,0 +1,9 @@
+{
+  "id": "19",
+  "title": "Chapitre 19",
+  "text": "Il ne vous faut pas longtemps pour changer la roue, et vous pouvez bientôt vous remettre en route vers l'est.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "119" }
+  ]
+}

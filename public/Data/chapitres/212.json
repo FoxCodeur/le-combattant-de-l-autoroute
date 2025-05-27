@@ -1,0 +1,13 @@
+{
+  "id": "212",
+  "title": "Chapitre 212",
+  "text": "Vous arrêtez la voiture dans un dérapage qui fait voler la poussière puis vous en sortez d'un bond en faisant feu de votre revolver. Les deux motards ripostent et vous vous hâtez de vous éloigner de l'Interceptor avant que la mine explose. Au moment où vous plongez derrière un buisson pour vous cacher, la détonation déchire le silence. L'une de vos roues est endommagée, vous perdez 2 points de BLINDAGE. La poussière retombe lentement puis tout redevient silencieux jusqu'à ce que l'un des motards vous ordonne sèchement : « Jette ton fusil et tes clés, nous voulons seulement la voiture. »",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "blindage": -2
+  },
+  "choices": [
+    { "label": "Si vous obtemperez...", "next": "283" },
+    { "label": "Si vous preferez vous battre avec lui...", "next": "6" }
+  ]
+}

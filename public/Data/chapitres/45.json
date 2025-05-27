@@ -1,0 +1,20 @@
+{
+  "id": "45",
+  "title": "Chapitre 45",
+  "text": "Filant à vive allure sur la route déserte, vous roulez sans vous en apercevoir sur des clous que des bandits de grand chemin ont semés sur la chaussée. Vous ne réalisez que vous avez crevé qu'en sentant soudain le volant vibrer entre vos mains. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "304"
+    },
+    "failure": {
+      "next": "60"
+    }
+  }
+}

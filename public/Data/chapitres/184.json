@@ -1,0 +1,44 @@
+{
+  "id": "184",
+  "title": "Chapitre 184",
+  "text": "Les Chiens de la Mort sont trop enragés pour respecter leur parole d'honneur. Ils dégainent leurs armes et la fusillade commence. Vous vous chargez de deux d'entre eux tandis qu'Ambre fait feu sur les deux autres.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "corps-à-corps",
+    "combatMode": "sequentiel",
+    "ordreDesEnnemis": "choixJoueur",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Premier CHIEN DE LA MORT",
+        "habilete": 7,
+        "endurance": 13,
+        "image": "/images/ennemis/gangster.jpg"
+      },
+      {
+        "nom": "Deuxième CHIEN DE LA MORT",
+        "habilete": 8,
+        "endurance": 14,
+        "image": "/images/ennemis/gangster.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "69"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

@@ -1,0 +1,9 @@
+{
+  "id": "76",
+  "title": "Chapitre 76",
+  "text": "Le garde ne semble pas entendre le bruit que fait la pierre en roulant, car il est en train de prêter une oreille attentive aux plaisanteries que s'échangent ses camarades autour du feu. Il s'éloigne de l'endroit où vous êtes tapi, et vous pouvez maintenant vous mettre à ramper vers la clôture",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "198" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "132",
+  "title": "Chapitre 132",
+  "text": "Vous sortez vainqueur du duel et vous regardez votre adversaire s'effondrer à terre au moment où votre balle l'atteint en plein coeur. Puis vous remontez dans la cabine du camion-citerne et vous repartez vers le nord. Vous roulez toute la journée, pied au plancher et, excepté, en fin d'après-midi, une tentative d'embuscade mal organisée que vous n'avez aucune peine à déjouer, vous ne rencontrez aucun incident sur la route. Il fait presque nuit lorsque vous atteignez les environs de Nouvelle Espérance et vous vous sentez rassuré en voyant ses hauts remparts se dresser étrangement dans la pénombre.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous avez ete mordu par un rat lors de votre voyage de retour...", "next": "275" },
+    { "label": "Dans le cas contraire...", "next": "380" }
+  ]
+}

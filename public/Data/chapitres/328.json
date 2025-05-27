@@ -1,0 +1,36 @@
+{
+  "id": "328",
+  "title": "Chapitre 328",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorise",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "TOYOTA",
+        "puissance": 9,
+        "blindage": 15,
+        "image": "/images/ennemis/gangster.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "265"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

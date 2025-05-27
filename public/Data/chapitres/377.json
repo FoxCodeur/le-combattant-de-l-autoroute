@@ -1,0 +1,20 @@
+{
+  "id": "377",
+  "title": "Chapitre 377",
+  "text": "Vous ripostez en faisant feu de vos mitrailleuses tout en zigzaguant sur la route pour tenter d'éviter les balles de votre adversaire.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous réussissez. Sinon, vous échouez.",
+    "success": {
+      "next": "338"
+    },
+    "failure": {
+      "next": "191"
+    }
+  }
+}

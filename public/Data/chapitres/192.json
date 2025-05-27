@@ -1,0 +1,9 @@
+{
+  "id": "192",
+  "title": "Chapitre 192",
+  "text": "L'homme aux tatouages ne tombe pas dans le piège et d'un saut de côté esquive facilement votre attaque de karaté. Il pointe la mitrailleuse sur vous et vous ordonne d'avancer mais, dès que vous êtes près de lui, il vous donne un violent coup de crosse sur la nuque. Vous vous effondrez au sol, inconscient",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "100" }
+  ]
+}

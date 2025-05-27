@@ -1,0 +1,20 @@
+{
+  "id": "43",
+  "title": "Chapitre 43",
+  "text": "Vous retenez votre souffle avec anxiété lorsque l'Interceptor passe en vrombissant au-dessus de la grenade. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "175"
+    },
+    "failure": {
+      "next": "201"
+    }
+  }
+}

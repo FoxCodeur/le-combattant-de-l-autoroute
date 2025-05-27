@@ -1,0 +1,10 @@
+{
+  "id": "26",
+  "title": "Chapitre 26",
+  "text": "Vous pénétrez dans le café par la porte de derrière et vous constatez au premier regard que l'endroit a été mis à sac depuis un bon moment. Il y a de la vaisselle brisée éparpillée sur le sol, tout le mobilier est sens dessus dessous et les placards à provisions ont été dévalisés. Un escalier mène à l'appartement du premier étage, qui a également été pillé. Après avoir vérifié qu'il n'y a rien d'intéressant, vous vous dirigez vers la sortie, mais vous vous arrêtez net sur le seuil de la porte en apercevant un homme, vêtu d'une longue tunique blanche, verser un bidon d'essence sur l'Interceptor ! L'homme s'éloigne ensuite de votre voiture en marmonnant des paroles incompréhensibles, sort une boîte d'allumettes et en gratte une qu'il brandit en l'air.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez l'interpeller...", "next": "260" },
+    { "label": "Si vous pensez qu'il vaut mieux vous ruer sur lui afin de lui arracher l'allumette des mains...", "next": "217" }
+  ]
+}

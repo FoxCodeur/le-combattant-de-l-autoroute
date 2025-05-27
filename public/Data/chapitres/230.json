@@ -1,0 +1,10 @@
+{
+  "id": "230",
+  "title": "Chapitre 230",
+  "text": "A une trentaine de mètres en retrait de la route se trouve un petit baraquement blanc envahi par des pièces détachées provenant de différents véhicules. Roues, pare-chocs, portières, essieux, boîtes de vitesses, moteurs, sièges sont entassés pêle-mêle un peu partout. Debout, au milieu de cet amas, un homme répare une portière à l'aide d'un chalumeau à l'oxyacétylène qui envoie des gerbes d'étincelles tout autour de lui. Il est si absorbé par son travail qu'il ne vous entend même pas arriver.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez vous entretenir avec lui au sujet de l'Interceptor...", "next": "15" },
+    { "label": "Si vous préférez poursuivre votre chemin...", "next": "259" }
+  ]
+}

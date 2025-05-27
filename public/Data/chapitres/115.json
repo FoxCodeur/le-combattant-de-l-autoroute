@@ -1,0 +1,46 @@
+{
+  "id": "115",
+  "title": "Chapitre 115",
+  "text": "Vous roulez depuis une heure sans discerner le moindre signe de vie quand, soudain, vous remarquez deux nuages de poussière s'élevant au loin de chaque côté de la route. En vous rapprochant, vous constatez qu'il s'agit de deux Buggies des Sables, équipées chacune d'une mitrailleuse. Leurs occupants ouvrent le feu dès que vous vous trouvez à leur portée.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorisé",
+    "combatMode": "sequentiel",
+    "ordreDesEnnemis": "choixJoueur",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Premier BUGGY DES SABLES",
+        "puissanceDeFeu": 7,
+        "blindage": 10,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      },
+      {
+        "nom": "Deuxieme BUGGY DES SABLES",
+        "puissanceDeFeu": 8,
+        "blindage": 11,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "194"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+
+

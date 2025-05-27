@@ -1,0 +1,9 @@
+{
+  "id": "171",
+  "title": "Chapitre 171",
+  "text": "Heureusement, aucune balle ne vous atteint. Mais l’incident vous laisse songeur : si le voyage continue à être aussi périlleux, vos réserves de médicaments risquent de ne pas suffire. Une inquiétude sourde vous gagne. Lorsque vous vous sentez suffisamment remis pour reprendre la route, vous vous levez en boitillant, regagnez péniblement l’Interceptor, et repartez sans tarder vers l’est.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "22" }
+  ]
+}

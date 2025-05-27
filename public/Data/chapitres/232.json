@@ -1,0 +1,9 @@
+{
+  "id": "232",
+  "title": "Chapitre 232",
+  "text": "Le petit groupe de spectateurs se précipite vers la Ford pour féliciter le pilote. Vous passez devant lu; en lui faisant un petit signe de la main pour saluer sa victoire, mais vous ne vous arrêtez pas. Vous ressentez amèrement votre échec et c'est avec soulagement que vous retournez vers la grande route pour vous diriger vers le sud",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "207" }
+  ]
+}

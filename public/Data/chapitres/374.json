@@ -1,0 +1,36 @@
+{
+  "id": "374",
+  "title": "Chapitre 374",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "corps-à-corps",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 1,
+      "degatsAdversaire": 1
+    },
+    "ennemis": [
+      {
+        "nom": "CHIEN SAUVAGE",
+        "puissance": 7,
+        "blindage": 5,
+        "image": "/images/ennemis/gangster.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "89"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

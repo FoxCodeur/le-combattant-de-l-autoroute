@@ -1,0 +1,18 @@
+{
+  "id": "300",
+  "title": "Chapitre 300",
+  "text": "Suivant les instructions de l'homme aux tatouages, vous suivez la route de terre vers la maison calcinée. Quatre voitures customisées sont garées en rang, exhibant chacune un nombre impressionnant d'armes. Vous apercevez quelques personnes plongées dans une discussion animée qui se retournent lorsque vous vous garez. Vous avancez vers elles et vous leur posez quelques questions sur la prochaine course. Un petit homme à la joue balafrée, vous sourit puis vous dit : « Une nouvelle recrue, hein ? Vous n'avez jamais participé à une Course de l'Enfer auparavant? Ecoutez, ce n'est pas compliqué. Défiez l'un d'entre nous et payez un droit d'inscription de 200 Crédits. Si vous gagnez, la récompense est un grand jerricane d'essence. »",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous souhaitez participer a la Course de l'Enfer...",
+      "next": "240",
+      "modificateursNarratifs": {
+        "credits": -200      }
+    },
+    {
+      "label": "Si vous preferez y assister en spectateur...",
+      "next": "224"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "222",
+  "title": "Chapitre 222",
+  "text": "Quelqu'un vient de tirer au bazooka dans votre direction, mais l'obus explose à quelques mètres sur votre gauche et ne vous atteint pas.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "53" }
+  ]
+}

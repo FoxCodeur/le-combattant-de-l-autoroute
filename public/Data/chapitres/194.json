@@ -1,0 +1,10 @@
+{
+  "id": "194",
+  "title": "Chapitre 194",
+  "text": "Laissant derrière vous les carcasses encore fumantes des Buggies des Sables, vous repartez le plus vite possible. Quatre-vingts kilomètres plus au sud, le paysage est barré par un plateau aux parois abruptes. Votre route s'achève ici, mais en regardant à droite et à gauche vous apercevez qu'une autre route longe le plateau d'est en ouest.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez prendre a gauche...", "next": "257" },
+    { "label": " a droite...", "next": "211" }
+  ]
+}

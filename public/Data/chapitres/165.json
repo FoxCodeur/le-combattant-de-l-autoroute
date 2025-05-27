@@ -1,0 +1,14 @@
+{
+  "id": "165",
+  "title": "Chapitre 165",
+  "text": "Vous vous penchez vers le tableau de bord pour appuyer sur le bouton déclenchant la pulvérisation d'huile. La voiture blindée se dirige droit vers la nappe glissante et vous observez avec amusement les efforts frénétiques du conducteur pour reprendre le contrôle de son véhicule.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": " 1, 2 ou 3...", "next": "234" },
+    { "label": "4, 5 ou 6...", "next": "280" }
+  ]
+}

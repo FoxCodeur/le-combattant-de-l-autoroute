@@ -1,0 +1,17 @@
+{
+  "id": "121",
+  "title": "Chapitre 121",
+  "text": "La grenade roule sous l'Interceptor et explose dans un fracas assourdissant. Jetez deux dés et déduisez leur somme du total de BLINDAGE de votre voiture.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "substract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous survivez à l'explosion, rendez-vous au", "next": "134" }
+  ]
+}

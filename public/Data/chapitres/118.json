@@ -1,0 +1,10 @@
+{
+  "id": "118",
+  "title": "Chapitre 118",
+  "text": "Les kilomètres défilent et votre réservoir ne va pas tarder à être vide à nouveau.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous disposez d'un jerricane plein d'essence...", "next": "99" },
+    { "label": "Si vous etes e sec...", "next": "364" }
+  ]
+}

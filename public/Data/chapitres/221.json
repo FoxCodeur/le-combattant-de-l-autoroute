@@ -1,0 +1,20 @@
+{
+  "id": "221",
+  "title": "Chapitre 221",
+  "text": "Le ruban noir et rectiligne de la route coupe en deux le paysage cauchemardesque. Des brumes de chaleur s'élèvent par vagues scintillantes et votre ventilateur d'air conditionné ronfle bruyamment en tentant de vous procurer un peu de fraîcheur. A la radio, ce ne sont que parasites et grésillements continuels. Le pied au plancher, vous roulez à vive allure à travers les contrées sauvages. Un peu plus loin, vous voyez des volutes de fumée noire s'élever dans l'air en tournoyant. Vous ralentissez puis vous vous arrêtez près d'une voiture en feu. C'est une vieille voiture de sport datant du siècle dernier : une Corvette avec son moteur de 200 chevaux et ses 8 cylindres en V. Un bolide du passé dont la carrière s'achève brusquement dans les flammes. A l'écart de la carcasse en feu, une jeune femme blonde, vêtue d'une combinaison noire, est négligemment appuyée contre un rocher et tient un fusil à la main. Lorsqu'elle aperçoit l'Interceptor qui se rapproche, elle se précipite sur la route et vous fait signe de ralentir. Vous vous arrêtez devant elle, la main sur la crosse de votre revolver, au cas où elle tenterait de s'emparer de l'Interceptor. Vous lui demandez où elle va et elle vous répond, d'une voix sèche : « Vers le sud, et vous allez m'y conduire, c'est tout ce que je vous demande, à moins que vous aussi vous ne fassiez partie de la bande des guerriers de grand chemin qui m'ont sauvagement attaquée? » Vous lui répondez que vous êtes en mission pour San Angelo. « San Angelo ! s'écrie-t-elle. Alors, vous devez être la personne de Nouvelle Espérance que nous attendions. » Elle saute dans la voiture et se présente : « Je m'appelle Ambre et je suis de San Angelo. Toutes les patrouilles circulant dans le secteur ont reçu l'ordre de rechercher l'Interceptor, mais je devais m'assurer que vous étiez bien celui que vous prétendiez être. Depuis deux jours, San Angelo est constamment assailli par une bande de guerriers connus sous le nom de CHIENS DE LA MORT et dirigés par un homme appelé l'Animal. Ce sont eux qui m'ont attaquée il y a moins d'une heure, et ils sont décidés à massacrer les habitants de San Angelo pour avoir accès aux réserves de pétrole. Il est maintenant quasi impossible d'entrer ou de sortir de San Angelo sans être agressé par leurs motos et leurs voitures puissamment armées. Il n'y a qu'une solution pour nous débarrasser d'eux : pénétrer dans le camp de nuit et saboter leurs véhicules. » Le regard déterminé d'Ambre vous convainc qu'il n'y a pas de choix et vous acceptez de l'aider. Dans un geste d'exaltation, elle frappe le tableau de bord puis vous enjoint de rouler vers le sud le plus rapidement possible. Une demi-heure plus tard, elle vous demande de vous arrêter. Vous apercevez des fumées qui s'élèvent dans le lointain. « C'est la raffinerie de San Angelo, dit-elle d'une voix fière. Nous préférons mourir plutôt que de laisser la vermine s'emparer de notre essence. Tournez à gauche et quittez la route. Dans une heure, il fera nuit et nous pourrons sortir de la voiture pour nous diriger vers le camp des Chiens de la Mort. » Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "222"
+    },
+    "failure": {
+      "next": "223"
+    }
+  }
+}

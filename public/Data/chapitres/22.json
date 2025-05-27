@@ -1,0 +1,10 @@
+{
+  "id": "22",
+  "title": "Chapitre 22",
+  "text": "Vous passez comme un éclair devant un poteau indicateur annonçant une bifurcation vers le sud, quelques dizaines de mètres plus loin.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez prendre cette direction...", "next": "311" },
+    { "label": "Si vous preferez continuer a rouler vers l'est...", "next": "203" }
+  ]
+}

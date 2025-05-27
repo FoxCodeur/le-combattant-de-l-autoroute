@@ -1,0 +1,17 @@
+{
+  "id": "201",
+  "title": "Chapitre 201",
+  "text": "Soudain une explosion sourde retentit et l'Interceptor part en zigzaguant sur la route.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Next...", "next": "266" }
+  ]
+}

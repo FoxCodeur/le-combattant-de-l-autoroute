@@ -1,0 +1,12 @@
+{
+  "id": "206",
+  "title": "Chapitre 206",
+  "text": "Vous tirez sur la sacoche : trois coups suffisent pour venir à bout de la serrure. A l'intérieur vous trouvez une paire de menottes, une carte de la région, et 200 Crédits. Après avoir placé les menottes et les Crédits dans la poche de votre veste, vous examinez la carte. On a tracé un cercle rouge autour de Nouvelle Espérance : il ne fait pas de doute que ces hommes faisaient partie de la bande qui vient d'attaquer Nouvelle Espérance. Au sud-est de l'endroit où vous êtes se trouve une petite ville appelée Rocville, elle est marquée d'une croix rouge et il s'agit sûrement du repaire provisoire des motards. Vous décidez de changer la roue de l'Interceptor avant que le reste de la bande n'arrive",
+  "image": "/images/chap1.jpg",
+    "modificateursNarratifs": {
+    "credits": 200
+  },
+  "choices": [
+    { "label": "Next...", "next": "346" }
+  ]
+}

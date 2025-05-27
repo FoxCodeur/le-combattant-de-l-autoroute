@@ -1,0 +1,17 @@
+{
+  "id": "315",
+  "title": "Chapitre 315",
+  "text": "Quelqu'un vous a tiré dessus avec un bazooka et l'obus arrive droit sur vous. Lancez deux dés et déduisez le chiffre obtenu du total de BLINDAGE de l'Interceptor.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Next...", "next": "53" }
+  ]
+}

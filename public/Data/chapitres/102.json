@@ -1,0 +1,44 @@
+{
+  "id": "102",
+  "title": "Chapitre 102",
+  "text": "Vous faites signe à Ambre d'ouvrir sa portière et de commencer à tirer. De votre côté, à peine avez-vous entrebâillé votre porte que celle-ci se retrouve criblée de balles : les quatre Chiens de la Mort viennent de déclencher un puissant tir de barrage. Profitant de l'abri offert par les véhicules — chacun de vous est bien protégé —, vous dirigez votre tir vers deux des Chiens de la Mort, tandis qu'Ambre fait feu sur les deux autres.Durant ce combat, que vous mènerez en suivant les règles de Tir, les deux Chiens de la Mort tireront sur vous séparément. Affrontez-les en vous reportant à la règle : Combat avec plus d'un adversaire.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "tir",
+    "combatMode": "sequentiel",
+    "ordreDesEnnemis": "choixJoueur",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 1
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Premier Chien de la Mort",
+        "habilete": 7,
+        "endurance": 13,
+        "image": "/images/ennemis/chien1.jpg"
+      },
+      {
+        "nom": "Deuxième Chien de la Mort",
+        "habilete": 8,
+        "endurance": 14,
+        "image": "/images/ennemis/chien2.jpg"
+      }
+    ],
+ "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "154"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+}

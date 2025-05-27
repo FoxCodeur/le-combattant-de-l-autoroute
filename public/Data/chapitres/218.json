@@ -1,0 +1,20 @@
+{
+  "id": "218",
+  "title": "Chapitre 218",
+  "text": "Bien que vous ne dormiez que d'un oeil, vous réveillant au moindre bruit, la nuit se passe tranquillement et vous vous remettez en route aux premières lueurs du jour. Tout se passe bien pendant environ une heure, jusqu'au moment où vous voyez dans votre rétroviseur latéral deux motos s'approcher de vous. Malheureusement, le camion-citerne ne dispose d'aucun moyen de défense à l'arrière, mais il est muni d'une mitrailleuse mobile fixée sur le toit de la cabine. Tandis qu'ils se rapprochent, vous constatez que les deux motards sont armés d'arbalètes. Ils accélèrent, viennent se placer de chaque côté du camion-citerne et visent ses pneus avant. Vous ripostez en tirant à la mitrailleuse sur le motard de gauche.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabileté": {
+    "required": true,
+    "description": "Tentez votre HABILETE en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "52"
+    },
+    "failure": {
+      "next": "324"
+    }
+  }
+}

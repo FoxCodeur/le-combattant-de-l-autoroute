@@ -1,0 +1,9 @@
+{
+  "id": "380",
+  "title": "Chapitre 380",
+  "text": "Vous roulez en direction de Nouvelle Espérance. Vous apercevez bientôt les remparts de la ville et c'est avec soulagement que vous voyez les portes de la cité grandes ouvertes. Des centaines de citoyens accourent lorsque vous pénétrez dans la ville et vous accueillent en véritable héros. Le pétrole que vous rapportez aidera à construire l'avenir. Grâce à vous, le premier pas pour le renouveau de la civilisation vient d'être franchi. Si, de plus, vous avez réussi à délivrer Sinclair, vous pouvez considérer votre mis-sion comme un triomphe.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Savoure la victoire", "next": "381" }
+  ]
+}

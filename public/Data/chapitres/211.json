@@ -1,0 +1,10 @@
+{
+  "id": "211",
+  "title": "Chapitre 211",
+  "text": "Vous laissez bientôt les collines derrière vous, mais la route continue vers l'ouest. Une demi-heure plus tard, le moteur commence à avoir des ratées puis, quelques mètres plus loin, il s'arrête complètement. Vous sortez de la voiture pour examiner le moteur. Vous trouvez l'origine de la panne : du sable dans le carburateur ! Tandis que vous finissez de le nettoyer, vous entendez le vrombissement profond d'un moteur au-dessus de votre tête. En levant les yeux, vous apercevez un hélicoptère en train de tourner juste au-dessus de vous ! Sa carlingue est recouverte de larges taches de peinture jaune fluorescent et vous notez la présence d'un mitrailleur assis à côté du pilote dans le cockpit. L'un deux vous ordonne par haut-parleur de déposer tous vos projectiles sur la route.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez obtemperez...", "next": "11" },
+    { "label": "Si vous preferez sauter dans l'Interceptor et ouvrir le feu sur l'helicoptere...", "next": "83" }
+  ]
+}

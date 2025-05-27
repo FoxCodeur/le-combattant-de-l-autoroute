@@ -1,0 +1,36 @@
+{
+  "id": "12",
+  "title": "Chapitre 12",
+  "text": "Vous savez pertinemment que vous avez très peu de chances de réussir, mais vous n'avez pas d'autre choix car ce bandit vous a pris de court. Ignorant la douleur fulgurante que vous ressentez, vous sortez de sous l'ambulance en roulant sur le côté et vous tirez au jugé sur votre adversaire à deux reprises. Malheureusement, les deux coups manquent leur but et vous voyez soudain surgir de derrière un rocher un homme débraillé, portant un bandeau rouge autour de la tête. L'homme fait feu sur vous et vous devez l'affronter. Menez ce combat à bien selon les règles de Tir.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "tir",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Bandit de Grand Chemin",
+        "habilete": 8,
+        "endurance": 12,
+        "image": "/images/ennemis/bandit-rouge.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "307"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

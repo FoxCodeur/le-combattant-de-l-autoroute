@@ -1,0 +1,10 @@
+{
+  "id": "1",
+  "title": "Chapitre 1",
+  "text": "La première chose qui vous frappe, alors que vous roulez à vive allure sur la route qui s'ouvre devant vous, est la rapidité à laquelle tout s'est dégradé. Vous n'aviez jamais réalisé, jusqu'à présent, combien l'entretien régulier du matériel, des routes et des constructions était indispensable au maintien de la civilisation. Tout autour de vous, des bâtiments tombent en ruine, les carcasses rouillées de voitures abandonnées encombrent la voie dans un désordre indescriptible, l'herbe et le chiendent, désormais livrés à eux-mêmes, ont envahi la chaussée, et des hordes de chiens sauvages rôdent en toute liberté. A quinze kilomètres environ de Nouvelle Espérance, vous faites halte dans une petite ville et vous coupez le contact. Seul, le hurlement lugubre d'un chien solitaire vient rompre le silence de mort qui plane sur l'agglomération. Vous êtes tenté de descendre de voiture pour explorer les lieux, mais vous savez que ce serait prendre là un risque inutile, aussi préférez-vous quitter cet endroit sans plus tarder. Mais au moment où vous vous apprêtez à redémarrer, une détonation déchire le silence. ",
+  "image": "/images/FordFalcon.png",
+  "choices": [
+    { "label": "Si vous desirez sortir de l'Interceptor pour essayer de savoir d'ou provient le tir", "next": "126" },
+    { "label": "Si vous preferez demarrer et quitter la ville immediatement", "next": "34" }
+  ]
+}

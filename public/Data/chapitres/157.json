@@ -1,0 +1,20 @@
+{
+  "id": "157",
+  "title": "Chapitre 157",
+  "text": "La piste que vous empruntez est en très mauvais état et vous réalisez qu'on doit vous voir arriver à des kilomètres à la ronde, avec la poussière que soulève l'Interceptor en roulant à grande vitesse. Néanmoins, vous êtes résolu à atteindre Rocville et vous continuez à avancer sans faiblir. Soudain, vous apercevez un éclair aveuglant au sommet d'un gros rocher dans le lointain. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Lancez deux dés. Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
+    "success": {
+      "next": "222"
+    },
+    "failure": {
+      "next": "315"
+    }
+  }
+}

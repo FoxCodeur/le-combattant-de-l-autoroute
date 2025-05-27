@@ -1,0 +1,9 @@
+{
+  "id": "89",
+  "title": "Chapitre 89",
+  "text": "Vous trouvez que cette ville est décidément trop dangereuse et qu'il vaut mieux la quitter le plus vite possible ! Vous clopinez péniblement vers l'Interceptor mais, une fois assis au volant, vous reprenez courage en entendant ronronner le moteur et, relâchant l'embrayage, vous reprenez la route sans tarder.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "34" }
+  ]
+}

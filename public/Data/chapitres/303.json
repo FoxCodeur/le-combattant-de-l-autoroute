@@ -1,0 +1,10 @@
+{
+  "id": "303",
+  "title": "Chapitre 303",
+  "text": "Au fur et à mesure que la matinée s'écoule, la chaleur devient de plus en plus accablante. Plus vous vous enfoncez vers le sud, plus la végétation se raréfie. Les champs en friche font bientôt place à des broussailles et, d'ici peu, vous entrerez dans le désert. Quelques kilomètres plus loin, vous arrivez à un grand carrefour.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous voulez vous diriger vers l'est en tournant a gauche...", "next": "140" },
+    { "label": "Si vous preferez continuer vers le sud...", "next": "189" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "178",
+  "title": "Chapitre 178",
+  "text": "Vous tournez nerveusement la clé de contact et vous appuyez frénétiquement sur la pédale d'accélérateur, mais l'Interceptor ne démarre pas. Vous sortez et vous soulevez le capot pour examiner le moteur : vous constatez alors que la durite d'essence est déconnectée du carburateur. Vous la remettez en place et vous vous apprêtez à remonter'en voiture, lorsqu'un sixième sens vous avertit d'un danger imminent. En vous retournant, vous apercevez un homme debout, les jambes écartées en position de tir, pointant sur vous le canon d'un Magnum. L'homme est vêtu comme un cow-boy, avec des bottes pointues, un Stetson à larges bords et même un cigare rivé au coin des lèvres. Il vous défie en duel d'une voix grave.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "tir",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 1
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "HORS-LA-LOI",
+        "habilete": 9,
+        "endurance": 12,
+        "image": "/images/ennemis/chien1.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "375"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

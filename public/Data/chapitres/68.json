@@ -1,0 +1,9 @@
+{
+  "id": "68",
+  "title": "Chapitre 68",
+  "text": "TGrâce à votre extrême concentration et à votre remarquable habileté, vous parvenez à éviter tous les obstacles qui encombrent la chaussée. Aux premières lueurs du jour, la fatigue de la nuit disparaît peu à peu, et c'est avec une énergie nouvelle que vous continuez votre route vers San Angelo",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "254" }
+  ]
+}

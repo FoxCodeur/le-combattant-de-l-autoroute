@@ -1,0 +1,12 @@
+{
+  "id": "285",
+  "title": "Chapitre 285",
+  "text": "Vous plongez sur l'homme et vous le projetez au sol. Vous roulez par terre tous les deux, puis vous lancez au loin l'allumette enflammée empêchant ainsi votre voiture de prendre feu. Ajoutez 1 point à votre total de CHANCE. L'homme vous maudit d'une voix stridente puis il s'enfuit. Vous ne vous lancez pas à sa poursuite car vous avez mieux à faire en protégeant l'Interceptor contre d'autres maniaques de la sorte. Sans perdre une minute de plus, vous démarrez vers le sud",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": 1
+  },
+  "choices": [
+    { "label": "Next...", "next": "254" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "97",
+  "title": "Chapitre 97",
+  "text": "Vous vous levez et vous vous dirigez vers le fossé où gisent les deux motards. Vous trouvez sur l'un d'eux un poignard de jet que vous glissez dans votre botte de cuir. Puis vous vous reposez quelques instants jusqu'à ce que vous vous sentiez tout à fait prêt à reprendre le volant",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "215" }
+  ]
+}

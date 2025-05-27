@@ -1,0 +1,10 @@
+{
+  "id": "351",
+  "title": "Chapitre 351",
+  "text": "Finalement la route quitte le canyon et, parfaitement rectiligne, se perd à l'infini. Vous regardez votre compas magnétique et vous constatez que vous vous dirigez vers le sud à nouveau. Cependant, à peine avez-vous parcouru quelques kilomètres que vous êtes contraint de vous arrêter devant un barrage que forment deux voitures garées en travers de la route. Deux hommes armés, vêtus d'un uniforme en cuir, marchent vers vous. Arrivés à votre niveau, ils vous disent que le seul moyen que vous ayez de continuer votre chemin vers le sud est de remporter une course de vitesse contre leur meilleur pilote. Si vous perdez l'épreuve, vous serez obligé de faire demi-tour. Brusquement, une voiture se range aux côtés de l'Interceptor. Vous reconnaissez aussitôt la Jaguar Type-E, une voiture classique du siècle dernier. Assis au volant, un homme mince, aux cheveux noirs taillés court et l'air très sûr de lui, vous adresse la parole : « Salut ! je m'appelle Léonardi. Je jouais au base-ball dans l'équipe des Mets, et maintenant, je fais des courses automobiles. Vous êtes mal parti avec ce vieux tacot, mais bonne chance quand même. » On dégage les deux voitures qui barraient la voie, et vous apercevez plusieurs autres véhicules stationnés le long de la route. Un homme apparaît, un drapeau à la main, prêt à donner le signal du départ. Il abaisse son drapeau d'un mouvement brusque et la course commence. Avant même que vous n'ayez le temps de comprendre ce qui se passe. la Jaguar effectue un départ canon et passe devant vous en rugissant.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si votre moteur est equipe d'un surcompresseur...", "next": "210" },
+    { "label": "Sinon...", "next": "358" }
+  ]
+}

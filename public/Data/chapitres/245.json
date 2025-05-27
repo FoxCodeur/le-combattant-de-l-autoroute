@@ -1,0 +1,17 @@
+{
+  "id": "245",
+  "title": "Chapitre 245",
+  "text": "Tandis qu'Ambre essaye d'assommer l'Animal avec la clé à molette, celui-ci roule sur le sol en vous maintenant toujours prisonnier d'une poigne de fer. Vous perdez 2 points d'ENDURANCE. A nouveau, Ambre tente de frapper le géant.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "endurance": -2
+  },
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": " 1, 2 ou 3...", "next": "360" },
+    { "label": "4, 5 ou 6...", "next": "376" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "187",
+  "title": "Chapitre 187",
+  "text": "Vous n'avez malheureusement rien pour siphonner l'essence qui se trouve dans le réservoir du semi-remorque et vous devez donc reprendre la route vers le sud sans plus tarder",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "118" }
+  ]
+}

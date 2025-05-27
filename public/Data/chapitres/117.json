@@ -1,0 +1,9 @@
+{
+  "id": "117",
+  "title": "Chapitre 117",
+  "text": "Vous roulez pendant quatre-vingts kilomètres environ avant d'arriver à un croisement. Vous décidez de prendre à gauche, dans la direction de San Angelo",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "189" }
+  ]
+}

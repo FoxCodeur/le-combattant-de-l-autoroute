@@ -1,0 +1,36 @@
+{
+  "id": "158",
+  "title": "Chapitre 158",
+  "text": "Vous faites démarrer l'Interceptor et vous effectuez une manoeuvre pour faire face à vos agresseurs. Vos phares éclairent alors un break customisé dont la carosserie est recouverte de plaques d'acier et dont le pare-chocs est muni d'un éperon devant la calandre. La gueule des mitrailleuses dissimulées de part et d'autre du pare-chocs se met soudain à cracher des flammes tandis que le conducteur de l'engin ouvre le feu sur vous.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorisé",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "BREAK CUSTOMISE",
+        "puissanceDeFeu": 10,
+        "blindage": 19,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "67"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

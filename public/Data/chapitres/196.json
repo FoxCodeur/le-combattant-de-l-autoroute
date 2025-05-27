@@ -1,0 +1,9 @@
+{
+  "id": "196",
+  "title": "Chapitre 196",
+  "text": "Suivant le conseil de l'homme, vous surveillez d'un oeil attentif les éventuelles chutes de pierres et vous vous engagez très lentement dans le canyon. Soudain vous entendez le bruit inquiétant d'un tremblement. Vous négociez un virage serré et vous constatez qu'un éboulement vient de se produire : des pierres, des rochers s'écrasent sur la route. Quelques instants plus tard, tout s'arrête et vous pouvez continuer car la route n'est pas complètement obstruée",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "351" }
+  ]
+}

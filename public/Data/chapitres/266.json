@@ -1,0 +1,9 @@
+{
+  "id": "266",
+  "title": "Chapitre 266",
+  "text": "La Ford vous dépasse tandis que vous essayez de continuer à rouler avec votre voiture accidentée. Comme vous n'êtes pas autorisé à utiliser vos arrhes à feu avant, vous décidez de tenter d'emboutir la Ford",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "139" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "14",
+  "title": "Chapitre 14",
+  "text": "Le lit est très confortable et vous vous réveillez tard le lendemain matin, frais et dispos après ce repos salutaire. Vous gagnez 3 points d'ENDURANCE. Vous descendez l'escalier d'un pas alerte et vous vous dirigez vers la porte de sortie, mais vous vous arrêtez net sur le seuil en apercevant un homme, vêtu d'une longue tunique blanche, verser un bidon d'essence sur l'Interceptor, tout en marmonnant des paroles incompréhensibles ! L'homme fait ensuite un pas en arrière, sort une boîte d'allumettes de sa poche et, après en avoir enflammé une, la brandit en l'air.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "endurance": 3
+  },
+  "choices": [
+    { "label": "Si vous desirez interpeller cet homme", "next": "260" },
+    { "label": "A moins que vous ne preferiez vous precipiter sur lui afin de lui arracher l'allumette des mains", "next": "217" }
+  ]
+}

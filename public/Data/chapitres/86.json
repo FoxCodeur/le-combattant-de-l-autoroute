@@ -1,0 +1,18 @@
+{
+  "id": "86",
+  "title": "Chapitre 86",
+  "text": "Votre revolver est à moitié sorti de son étui lorsque l'étranger presse la gâchette de son fusil. Vous voyez s'élever un mince filet de fumée et vous ressentez, au même instant, une douleur fulgurante à la cuisse droite. Vous êtes projeté en arrière contre le mur et l'écho de la détonation résonne encore dans votre tête lorsque vous vous affalez sur le sol. Jetez un dé, ajoutez 2 au chiffre obtenu et déduisez cette somme de votre total d'ENDURANCE. L'homme tourne les talons et vous abandonne à la férocité des chiens affamés qui rôdent dans les parages. Si vous voulez immédiatement soigner votre blessure, rendez-vous au 38. Si vous préférez ramper vers votre voiture pour vous y réfugier.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "endurance",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous voulez immédiatement soigner votre blessure...", "next": "256" },
+    { "label": "Si vous préférez ramper vers votre voiture pour vous y réfugier...", "next": "256" }
+  ]
+}

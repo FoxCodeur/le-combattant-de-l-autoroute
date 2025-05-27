@@ -1,0 +1,10 @@
+{
+  "id": "31",
+  "title": "Chapitre 31",
+  "text": "La ferme est une cible facile à atteindre et la programmation électronique du lance-roquettes s'effectue en quelques secondes. Vous appuyez sur le bouton de mise à feu et la roquette, en effet, ne manque pas son but : l'explosion pulvérise la ferme, projetant des éclats de brique et de bois dans les airs. Vous saisissez votre Bombe Anticrevaison et vous vous empressez de réparer votre pneu avant. Après que la poussière soulevée par la déflagration fut retombée, vous roulez avec prudence vers les décombres, le doigt sur la détente de la mitrailleuse. Vous stoppez près de la ferme en flammes, mais vous ne distinguez pas le moindre signe de vie. Vous coupez alors le contact et vous baissez la vitre de l'Intercep-tor. C'est alors que vous entendez un homme appeler désespérément au secours.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez sortir du vehicule pour inspecter les lieux...", "next": "262" },
+    { "label": "Si vous preferez repartir sans tarder et sortir de la ville en reprenant la direction du sud...", "next": "353" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "236",
+  "title": "Chapitre 236",
+  "text": "L'homme vous regarde puis il crache par terre avant de vous dire : « Dégaine, je te dis, misérable assassin ! » Vous n'avez pas d'autre choix que de lui obéir",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "333" }
+  ]
+}

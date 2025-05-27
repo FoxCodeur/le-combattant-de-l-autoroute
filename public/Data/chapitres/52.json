@@ -1,0 +1,10 @@
+{
+  "id": "52",
+  "title": "Chapitre 52",
+  "text": "Votre mitrailleuse à tir ultrarapide ne rate pas sa cible et vous voyez soudain la moto déraper et quitter la route avant d'aller s'écraser contre un arbre. Mais le motard ne meurt pas sans une ultime attaque : le carreau de son arbalète transperce l'un de vos pneus avant, et le camion-citerne se met soudain à louvoyer dangereusement sur la route. Vous luttez avec le volant afin de reprendre le contrôle du véhicule et vous parvenez enfin à l'immobiliser après un long dérapage. Assis à l'intérieur de la cabine de votre camion, vous attendez de voir ce que l'autre motard a l'intention de faire à présent. Celui-ci vient se garer derrière vous et vous crie de sortir de la cabine. Vous lui rétorquez quelques mots qui ne lui laissent aucun doute quant à ce que vous pensez de sa proposition. « Que dirais-tu d'un duel, alors ? Le vainqueur emportera tout ! » reprend l'homme.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous acceptez de vous battre avec lui...", "next": "164" },
+    { "label": "Si vous jugez plus prudent de rester a l'interieur de la cabine et d'attendre la suite des evenements...", "next": "190" }
+  ]
+}

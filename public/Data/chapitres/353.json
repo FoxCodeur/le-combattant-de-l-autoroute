@@ -1,0 +1,10 @@
+{
+  "id": "353",
+  "title": "Chapitre 353",
+  "text": "Vous suivez les sinuosités de la route qui court à travers la campagne, puis vous arrivez enfin à un carrefour d'où part une route plus praticable. Vous regardez de chaque côté de la chaussée mais vous ne voyez aucun véhicule, ni aucun signe de vie.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Allez-vous vous diriger vers l'est...", "next": "61" },
+    { "label": "vers l'ouest...", "next": "371" }
+  ]
+}

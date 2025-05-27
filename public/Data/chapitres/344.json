@@ -1,0 +1,9 @@
+{
+  "id": "344",
+  "title": "Chapitre 344",
+  "text": "quelques instants. La route est pratiquement dégagée, et vous pouvez rouler assez vite. Cependant, cet avantage est de courte durée car la route arrive à un pont qui enjambait une rivière, mais qui est maintenant coupé en deux. Vous calculez qu'en abordant le pont à 130 km/h, vous aurez suffisamment d'élan pour franchir l'espace vide entre les deux parties du pont et vous retrouver de l'autre côté. Vous décidez de faire un essai.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "270" }
+  ]
+}

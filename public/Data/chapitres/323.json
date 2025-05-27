@@ -1,0 +1,10 @@
+{
+  "id": "323",
+  "title": "Chapitre 323",
+  "text": "Vous vous arrêtez sur le bas-côté de la route et vous videz le contenu du bidon d'essence dans le réservoir. Celui-ci ne contient que peu de carburant et vous vous rendez compte que, si vous voulez arriver à San Angelo, il faudra que vous vous en procuriez davantage. Vous repartez en début de soirée et vous pouvez voir le soleil se coucher par la vitre de droite. Il fera bientôt nuit et vous devez prendre une nouvelle décision.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez quitter la route et trouver un endroit pour passer la nuit à l'intérieur de l'Interceptor...", "next": "276" },
+    { "label": "Si vous preferez continuer à rouler de nuit...", "next": "42" }
+  ]
+}

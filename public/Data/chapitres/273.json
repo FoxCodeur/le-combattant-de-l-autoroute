@@ -1,0 +1,20 @@
+{
+  "id": "273",
+  "title": "Chapitre 273",
+  "text": "Tout en marchant devant l'homme aux tatouages, vous mettez la main dans la poche de votre veste pour prendre votre coup de poing américain. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "170"
+    },
+    "failure": {
+      "next": "250"
+    }
+  }
+}

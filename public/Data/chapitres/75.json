@@ -1,0 +1,12 @@
+{
+  "id": "75",
+  "title": "Chapitre 75",
+  "text": "Alors que vous relâchez l'embrayage, vous entendez un claquement sonore résonner dans l'étrange silence des lieux : un de vos pneus vient d'éclater. En effet, la fille avait placé une petite mine sous l'une des roues pendant que vous luttiez contre son complice. La roue est maintenant hors d'usage et vous devrez la remplacer par la roue de secours. Vous perdez 1 point de CHANCE. Vous vous promettez intérieurement de ne plus adresser la parole à n'importe qui dorénavant, puis vous rejoignez l'autoroute sans plus tarder.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": -1
+  },
+  "choices": [
+    { "label": "Next...", "next": "167" }
+  ]
+}

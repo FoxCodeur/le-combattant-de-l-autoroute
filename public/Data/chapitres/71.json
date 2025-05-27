@@ -1,0 +1,20 @@
+{
+  "id": "71",
+  "title": "Chapitre 71",
+  "text": "Vous enfoncez la pédale de l'accélérateur tandis qu'une grêle de pierres et de blocs de rocher s'abat sur la route. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "172"
+    },
+    "failure": {
+      "next": "37"
+    }
+  }
+}

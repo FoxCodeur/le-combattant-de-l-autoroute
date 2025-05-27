@@ -1,0 +1,10 @@
+{
+  "id": "293",
+  "title": "Chapitre 293",
+  "text": "Est-ce que vous avez en votre un coup de poing américain ?...",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Oui !", "next": "56" },
+    { "label": "Non !", "next": "125" }
+  ]
+}

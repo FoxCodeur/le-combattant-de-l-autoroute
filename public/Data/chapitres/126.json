@@ -1,0 +1,10 @@
+{
+  "id": "126",
+  "title": "Chapitre 126",
+  "text": "Nous traversez la rue en courant et vous vous aplatissez contre le mur d'un immeuble, vous attendant, a tout instant, à entendre claquer une autre détonation. Le coeur battant la chamade, vous rampez prudemment jusqu'à l'angle du bâtiment et vous observez les alentours : il n'y a personne en vue dans ^étroite ruelle. Alors que vous avancez à découvert, vous entendez soudain une voix crier : « Ne faites pas un pas de plus, ou vous êtes un homme mort! D'où venez-vous ? »",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous desirez avouer que vous etes de Nouvelle Esperance...", "next": "274" },
+    { "label": "Si vous preferez pretendre etre un guerrier de la route, solitaire et sans point d'attache particulier...", "next": "155" }
+  ]
+}

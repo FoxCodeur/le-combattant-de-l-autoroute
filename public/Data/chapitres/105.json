@@ -1,0 +1,13 @@
+{
+  "id": "105",
+  "title": "Chapitre 105",
+  "text": "Une balle traverse l'un de vos pneus avant et la voiture s'immobilise dans un grincement de freins, à l'endroit même où l'obus explose. Jetez deux dés et déduisez le total obtenu des points de BLINDAGE de votre véhicule.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "choices": [
+    { "label": "Si vous êtes encore en vie après une telle explosion, rendez-vous au", "next": "292" }
+  ]
+}

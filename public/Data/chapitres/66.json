@@ -1,0 +1,10 @@
+{
+  "id": "66",
+  "title": "Chapitre 66",
+  "text": "Il y a relativement peu d'obstacles sur la route et vous roulez droit vers l'ouest à vive allure. Malheureusement, cette conduite aisée ne sera que de courte durée : la route aboutit à une rivière, mais ie pont à bascule qui permet de la traverser n'est pas complètement abaissé. Après avoir réfléchi, vous calculez qu'en vous engageant sur le pont à 180 km/h environ, l'Interceptor devrait avoir suffi-samment d'élan pour franchir l'espace vide et retomber sans trop de problèmes de l'autre côté du pont. Mais vous n'êtes pas sûr de réussir. Qu'allez-vous faire ?",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous voulez tenter de traverser le pont...", "next": "270" },
+    { "label": "Si vous jugez plus sage de faire demi-tour et de vous diriger vers l'est...", "next": "159" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "125",
+  "title": "Chapitre 125",
+  "text": "Vous vous élancez et vous sautez sur la sentinelle. Malgré la pénombre qui vous environne, vous parvenez à discerner la stupeur qui se dessine soudain sur son visage, et vous bénéficiez de l'effet de >urprise pour réduire l'homme au silence avant qu'il ne donne l'alarme. Jetez deux dés.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous avez réussi. Sinon, vous échouez.",
+    "success": {
+      "next": "349"
+    },
+    "failure": {
+      "next": "202"
+    }
+  }
+}

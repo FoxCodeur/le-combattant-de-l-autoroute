@@ -1,0 +1,9 @@
+{
+  "id": "283",
+  "title": "Chapitre 283",
+  "text": "L'un des motards avance et ramasse votre revolver ainsi que vos clés. Puis il vous ordonne de vous lever et faire demi-tour. Il lève la main et vous assène un violent coup sur la nuque avec la crosse de son revolver. Vous tombez au sol inconscient",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "100" }
+  ]
+}

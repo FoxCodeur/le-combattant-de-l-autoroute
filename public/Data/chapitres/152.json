@@ -1,0 +1,12 @@
+{
+  "id": "152",
+  "title": "Chapitre 152",
+  "text": "Vous écrasez la pédale des freins et l'Interceptor s'arrête dans un crissement de pneus. La Ford vous emboutit par l'arrière en même temps que la grenade explose devant vous, mais sans occasionner de dommages. Toutefois, la collision, elle, vous fait perdre 2 points de BLINDAGE. Vous accélérez et vous freinez à nouveau brusquement, mais la Ford fait un brusque écart et parvient à prendre la tête. Puisque vous n'avez pas le droit de faire usage de vos mitrailleuses avant, vous allez essayer de percuter la Ford par l'arrière à votre tour",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "blindage": -2
+  },
+  "choices": [
+    { "label": "next...", "next": "139" }
+  ]
+}

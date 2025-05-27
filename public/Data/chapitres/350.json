@@ -1,0 +1,37 @@
+{
+  "id": "350",
+  "title": "Chapitre 350",
+  "text": "Vous manquez votre tir et le chien continue à se rapprocher. Soudain, il se jette sur vous, et vous devez saisir votre poignard pour vous défendre.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "corps-à-corps",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 1,
+      "degatsAdversaire": 1
+    },
+    "ennemis": [
+      {
+        "nom": "CHIEN SAUVAGE",
+        "habilete": 7,
+        "endurance": 5,
+        "image": "/images/ennemis/chien2.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "89"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+

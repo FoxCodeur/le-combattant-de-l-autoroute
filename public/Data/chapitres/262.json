@@ -1,0 +1,14 @@
+{
+  "id": "262",
+  "title": "Chapitre 262",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": 1
+  },
+  "choices": [
+    { "label": "Avancer vers la lumière", "next": "112" },
+    { "label": "Avancer vers la lumière", "next": "252" },
+    { "label": "Fouiller la pièce", "next": "353" }
+  ]
+}

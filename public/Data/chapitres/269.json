@@ -1,0 +1,38 @@
+{
+  "id": "269",
+  "title": "Chapitre 269",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "corps-à-corps",
+    "combatMode": "sequentiel",
+    "ordreDesEnnemis": "choixJoueur",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "L'ANIMAL",
+        "habilete": 11,
+        "endurance": 16,
+        "image": "/images/ennemis/gangster.jpg"
+      }
+    ]
+  },
+  "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "355"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }

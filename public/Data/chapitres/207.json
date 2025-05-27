@@ -1,0 +1,10 @@
+{
+  "id": "207",
+  "title": "Chapitre 207",
+  "text": "Vous passez à vive allure devant un panneau où est écrit à la main : « Peter prend soin de votre moteur ! Un kilomètre à gauche. » Vous ralentissez à l'appro che d'une bâtisse en pierre prolongée par un atelier en tôle ondulée surmonté d'un panneau portant cette inscription : « Chez Peter - Mécanique générale. » Quelques voitures sont garées sur le terre-plein devant le garage. Tandis que vous arrêtez votre véhicule, un homme pâle et mince, vêtu d'un bleu de travail et coiffé d'une casquette de base-ball, sort de l'atelier. Il vous adresse un petit salut de la main puis vous dit : « Belle voiture, probablement rapide, mais pas autant qu'après un petit séjour chez le vieux Peter ! J'accepte les Crédits et les paiements en nature et si cela vous intéresse, je peux vous faire du bon travail. » ",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez vous arreter et laisser votre vehicule aux mains expertes du mecanicien...", "next": "28" },
+    { "label": "Si vous preferez decliner l'offre et poursuivre votre voyage vers le sud...", "next": "88" }
+  ]
+}

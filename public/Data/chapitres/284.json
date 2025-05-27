@@ -1,0 +1,50 @@
+{
+  "id": "284",
+  "title": "Chapitre 284",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "motorise",
+    "combatMode": "sequentiel",
+    "ordreDesEnnemis": "choixJoueur",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 1
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Toyota",
+        "puissance": 9,
+        "blindage": 15,
+        "image": "/images/ennemis/chien1.jpg"
+      },
+      {
+        "nom": "JAGUAR TYPE-E",
+        "puissance": 10,
+        "blindage": 12,
+        "image": "/images/ennemis/chien2.jpg"
+      },
+      {
+        "nom": "COMMODORE",
+        "puissance": 8,
+        "blindage": 15,
+        "image": "/images/ennemis/chien2.jpg"
+      }   
+    ],
+ "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "265"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+}

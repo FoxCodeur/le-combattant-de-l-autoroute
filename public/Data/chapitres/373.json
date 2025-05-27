@@ -1,0 +1,9 @@
+{
+  "id": "373",
+  "title": "Chapitre 373",
+  "text": "Le side-car roule sur les clous. Deux de ses pneus crèvent et le véhicule quitte la route, finissant sa course dans le sable. En quelques secondes, ils sont déjà très loin.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Rendez-vous au", "next": "96" }
+  ]
+}

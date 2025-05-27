@@ -1,0 +1,44 @@
+{
+  "id": "6",
+  "title": "Chapitre 6",
+  "text": "Les deux motards dégainent chacun un pistolet. Vous sortez votre revolver : le duel commence. À chaque assaut, chacun d'eux tire sur vous séparément. Vous devez choisir lequel des deux vous affrontez en priorité. Une fois le premier vaincu, vous affronterez le second.",
+  "image": "/images/chap1.jpg",
+  "combat": {
+    "type": "tir",
+    "combatMode": "sequentiel",
+    "ordreDesEnnemis": "choixJoueur",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "Premier Motard",
+        "habilete": 6,
+        "endurance": 15,
+        "image": "/images/ennemis/gangster.jpg"
+      },
+      {
+        "nom": "Deuxième Motard",
+        "habilete": 7,
+        "endurance": 17,
+        "image": "/images/ennemis/gangster.jpg"
+      }
+    ],
+    "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "307"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
+    }
+  }
+}

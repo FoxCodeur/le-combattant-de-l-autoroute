@@ -1,0 +1,9 @@
+{
+  "id": "204",
+  "title": "Chapitre 204",
+  "text": "Les balles ne vous atteignent pas et vous faites démarrer votre moteur sans plus attendre. Dans un nuage de poussière, vous descendez la route accidentée afin de rejoindre l'autoroute du sud où vous vous engagez à vive allure.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "207" }
+  ]
+}

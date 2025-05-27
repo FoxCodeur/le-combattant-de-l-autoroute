@@ -1,0 +1,9 @@
+{
+  "id": "56",
+  "title": "Chapitre 56",
+  "text": "Vous glissez le coup de poing américain à vos doigts et vous bondissez sur la sentinelle en essayant de faire le moins de bruit possible. Malgré la demi-obscurité qui règne, vous pouvez distinguer l'expression de surprise qui apparaît sur le visage du garde lorsque votre poing l'atteint dans toute sa puissance. La force du choc l'assomme instantanément et vous le rattrapez avant qu'il ne s'effondre, en espérant que ses acolytes ne se sont pas rendu compte de la scène qui vient de se passer. Vous lui liez les mains à aide de son propre ceinturon et vous le laissez étendu sur le flanc de la colline. Son absence ne passera pas longtemps inaperçue, aussi vous hâtez-vous d'escalader en rampant les quelques mètres qui vous séparent de la clôture",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "198" }
+  ]
+}

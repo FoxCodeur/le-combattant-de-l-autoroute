@@ -1,0 +1,20 @@
+{
+  "id": "29",
+  "title": "Chapitre 29",
+  "text": "Une balle perdue vous atteint à l'épaule. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE. Tandis que vous soignez votre blessure, vous vous demandez avec inquiétude si vous n'allez pas vous trouver bientôt à court de médicaments si l'expédition continue à être aussi dangereuse... Après avoir pansé votre plaie, vous remontez dans l'Interceptor et vous repartez vers l'est à vive allure.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "endurance",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    {
+      "label": "Next...",
+      "next": "22"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "240",
+  "title": "Chapitre 240",
+  "text": "Vous sortez 200 Crédits de votre poche et vous les tendez vers l'homme à la cicatrice. Il s'en empare aussitôt et dit : « Il y a vraiment des gens naïfs ! Montez dans votre voiture et allons-y. Voilà comment va se dérouler l'épreuve : nous allons suivre pendant huit kilomètres la piste en terre battue puis, arrivés à la bâtisse blanche, nous ferons demi-tour et nous reprendrons la route en sens inverse. Et rappelez-vous, tous les coups sont permis dans une course de l'Enfer, mais interdiction d'utiliser des armes à feu ou des roquettes. » Vous grimpez dans l'Interceptor, puis vous faites démarrer le moteur. Vous roulez lentement à côté de la Ford jaune vif de votre adversaire, en direction de la ligne de départ. Vous remarquez que sa voiture est armée de deux mitrailleuses et d'un lance-grenades. Une jeune femme, debout entre les deux automobiles tient en l'air un drapeau blanc qu'elle baisse brusquement pour donner le signal de départ de la course.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "credits": -200
+  },
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "choices": [
+    { "label": "Avancer vers la lumière", "next": "3" },
+    { "label": "Fouiller la pièce", "next": "148" }
+  ]
+}

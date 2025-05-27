@@ -1,0 +1,15 @@
+{
+  "id": "170",
+  "title": "Chapitre 170",
+  "text": "Vous parvenez à glisser le coup de poing américain à vos doigts sans que l'homme s'en aperçoive et, pivotant sur vous-même, vous lui assenez un violent coup en plein visage.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Si vous obtenez un total inferieur ou egal à vos points d'HABILETÉ...", "next": "363" },
+    { "label": "Si ce total est superieur à vos points d'HABILETE...", "next": "87" }
+  ]
+}
+

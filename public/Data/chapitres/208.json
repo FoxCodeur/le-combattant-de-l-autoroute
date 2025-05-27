@@ -1,0 +1,9 @@
+{
+  "id": "208",
+  "title": "Chapitre 208",
+  "text": "L'homme vous dit que ce fut un grand honneur pour lui de se battre avec vous de si noble façon. Il poursuit en vous disant qu'après le tunnel la route serpente à travers un canyon et que vous devrez faire attention aux éboulements. Puis il monte dans l'autocar et il effectue une marche arrière pour dégager l'entrée du tunnel. Après avoir remercié cet homme étrange pour le conseil qu'il vous a donné, vous vous engagez sous le tunnel. Vous n'allez pas tarder à rouler sur la route sinueuse qui passe à travers le canyon.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "2" }
+  ]
+}

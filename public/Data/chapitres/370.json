@@ -1,0 +1,20 @@
+{
+  "id": "370",
+  "title": "Chapitre 370",
+  "text": "Le pneu est trop endommagé pour être réparé.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous avez une roue de secours...",
+      "next": "19",
+      "roueDeSecours": {
+        "credits": -1
+      }
+    },
+    {
+      "label": "Dans le cas contraire...",
+      "next": "336"
+    }
+  ]
+}
+

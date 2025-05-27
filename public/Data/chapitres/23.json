@@ -1,0 +1,20 @@
+{
+  "id": "23",
+  "title": "Chapitre 23",
+  "text": "Nous approchez d'un pont de chemin de fer sous lequel vous allez devoir passer, sans remarquer qu'un homme étrange vous regarde arriver du haut du pont. Cet homme se tient debout, près d'un pilier de pierre qu'il maintient en équilibre sur le parapet. Alors que vous vous engagez sous le pont, il se met a ricaner comme un enfant et lâche le pilier qui vient écraser sur la route, juste devant l'Interceptor.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous réussissez. Sinon, vous échouez.",
+    "success": {
+      "next": "137"
+    },
+    "failure": {
+      "next": "342"
+    }
+  }
+}

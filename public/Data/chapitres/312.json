@@ -1,0 +1,20 @@
+{
+  "id": "312",
+  "title": "Chapitre 312",
+  "text": "Vous appuyez sur le bouton qui commande le largage des clous. Ils s'éparpillent sur toute la largeur de la chaussée et vous observez le véhicule blindé rouler dessus dans votre rétroviseur. Tentez votre Chance.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "181"
+    },
+    "failure": {
+      "next": "41"
+    }
+  }
+}

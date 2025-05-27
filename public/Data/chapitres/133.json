@@ -1,0 +1,17 @@
+{
+  "id": "133",
+  "title": "Chapitre 133",
+  "text": "Vous n'arrivez plus à contrôler la vitesse de l'Interceptor et vous venez vous écraser contre le camion. Jetez deux dés et déduisez leur montant du total de BLINDAGE de votre voiture.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
+  },
+  "choices": [
+    { "label": "Si vous êtes toujours en vie après la collision, rendez-vous au", "next": "151" }
+  ]
+}

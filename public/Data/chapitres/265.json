@@ -1,0 +1,10 @@
+{
+  "id": "265",
+  "title": "Chapitre 265",
+  "text": "TVous ne vous arrêtez pas au cas où d'autres amis de Léonardi feraient leur apparition. Vous continuez à rouler à plein régime pendant quinze kilomètres, jusqu'à ce que vous passiez devant un semi-remorque qui semble être garé là depuis peu.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez vous arreter et examiner le camion...", "next": "104" },
+    { "label": "Si vous preferez au contraire continuer à rouler...", "next": "118" }
+  ]
+}

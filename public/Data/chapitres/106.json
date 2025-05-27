@@ -1,0 +1,9 @@
+{
+  "id": "106",
+  "title": "Chapitre 106",
+  "text": "La voiture de votre adversaire n'est plus qu'une carcasse en flammes que vous contournez avant de repartir à nouveau vers le sud à vive allure",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "47" }
+  ]
+}

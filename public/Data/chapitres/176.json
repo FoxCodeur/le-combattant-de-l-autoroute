@@ -1,0 +1,14 @@
+{
+  "id": "176",
+  "title": "Chapitre 176",
+  "text": "Il est temps de vous mesurer au destin !",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "choices": [
+    { "label": "Si vous obtenez un total inferieur ou egal à vos points d'HABILETÉ...", "next": "108" },
+    { "label": "Si ce total est superieur à vos points d'HABILETE...", "next": "350" }
+  ]
+}

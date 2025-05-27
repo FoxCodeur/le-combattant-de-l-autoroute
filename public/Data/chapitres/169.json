@@ -1,0 +1,12 @@
+{
+  "id": "169",
+  "title": "Chapitre 169",
+  "text": "L’homme s’affaire pendant près d’une heure autour de l’Interceptor, maniant la torche à souder avec habileté. Il fixe des plaques d’acier supplémentaires sur la carrosserie, colmate les ouvertures béantes du mieux qu’il peut, et renforce chaque point faible qu’il repère. À l’issue de l'intervention, le véhicule affiche un air encore plus cabossé qu’auparavant, rafistolé de toutes parts, mais sa protection s’en trouve nettement améliorée. Vous gagnez 10 points de BLINDAGE. Vous le remerciez chaleureusement pour son travail, lui remettez son dû, puis reprenez la route en direction de l’est.",
+  "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "blindage": 10
+  },
+  "choices": [
+    { "label": "Next...", "next": "259" }
+  ]
+}

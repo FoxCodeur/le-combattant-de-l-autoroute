@@ -1,0 +1,10 @@
+{
+  "id": "252",
+  "title": "Chapitre 252",
+  "text": "Vous ouvrez la porte d'entrée de la maison et vous pénétrez à l'intérieur. Dans le vestibule, vous voyez deux portes se faisant face.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez ouvrir celle de gauche...", "next": "185" },
+    { "label": "Celle de droite...", "next": "72" }
+  ]
+}

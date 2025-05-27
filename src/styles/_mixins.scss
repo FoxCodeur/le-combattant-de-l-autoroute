@@ -1,0 +1,143 @@
+@mixin flex {
+  display: flex;
+}
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+// Ces mixins sont dédiées à l'alignement (align-items) et la justification
+// (justify-content) des éléments dans le conteneur Flexbox.
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-center {
+  @include flex-justify-center;
+  align-items: center;
+}
+// Ces mixins gèrent la direction des éléments en row (ligne) dans le conteneur
+// Flexbox.
+//pour la typographie, les mixins sont BEAUCOUP plus utiles et performants que les classes.
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@mixin flex-between {
+  @include flex-row;
+  justify-content: space-between;
+}
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-evenly {
+  @include flex-row;
+  justify-content: space-evenly;
+}
+@mixin flex-around {
+  @include flex-row;
+  justify-content: space-around;
+}
+
+// Ce sont les mixins de flexbox pour les cas de flexbox en colonne.
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-column-center {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column-between {
+  @include flex-column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-column-around {
+  @include flex-column;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-column-evenly {
+  @include flex-column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// Ce mixin permet de personnaliser à la fois l'alignement et la justification
+// des éléments dans une colonne.
+@mixin flex-column-adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-column;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-row-reverse-adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-row-reverse;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-row--adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-row;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+// -------------background commun à toutes les pages----------------
+@mixin grid-background {
+  background-color: #1e1e2f;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 45px 45px;
+}

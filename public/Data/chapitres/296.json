@@ -1,0 +1,24 @@
+{
+  "id": "296",
+  "title": "Chapitre 296",
+  "text": "L'homme s'empare de son fusil et vous tire dessus à bout portant.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    {
+      "label": "Si vous avez un gilet pare-balles...",
+      "next": "174",
+      "condition": {
+        "item": "giletPareBalles",
+        "hasItem": true
+      }
+    },
+    {
+      "label": "Si vous n'en avez pas...",
+      "next": "263",
+      "condition": {
+        "item": "poing_americain",
+        "hasItem": false
+      }
+    }
+  ]
+}

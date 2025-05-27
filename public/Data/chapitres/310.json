@@ -1,0 +1,9 @@
+{
+  "id": "310",
+  "title": "Chapitre 310",
+  "text": "Vous vous arrêtez et vous versez le contenu du jerricane dans le réservoir d'essence. Néanmoins, vous savez que vous n'aurez pas assez de carburant pour atteindre San Angelo et vous vous demandez avec inquiétude si vous parviendrez à en trouver au beau milieu de ces terres sauvages. Vous vous remettez en route, découragé par cette sombre perspectice",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "115" }
+  ]
+}

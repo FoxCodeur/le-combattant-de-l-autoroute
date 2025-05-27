@@ -1,0 +1,14 @@
+{
+  "id": "345",
+  "title": "Chapitre 345",
+  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Avancer vers la lumière", "next": "74" },
+    { "label": "Fouiller la pièce", "next": "226" }
+  ]
+}

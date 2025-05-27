@@ -1,0 +1,11 @@
+{
+  "id": "111",
+  "title": "Chapitre 111",
+  "text": "Un petit groupe de spectateurs entoure l'Interceptor pour vous féliciter. Le conducteur de la Ford, quant à lui, émerge de sa voiture, en claquant violemment la portière et s'éloigne à grands pas. « Il a plutôt l'air mauvais perdant, dit quelqu'un dans la foule. Et de plus, c'est la première fois que je le vois perdre ! » Peu après, la fille qui avait donné le départ de la course vous remet votre prix : un bidon rempli d'essence que vous vous empressez de placer à l'arrière de l'Interceptor. « La prochaine course ne débutera pas avant une demi-heure, dit-elle. Voulez-vous venir vous asseoir un moment avec nous à l'ombre des arbres ? » Vous déclinez poliment sa proposition, car vous êtes désormais impatient de reprendre la route de San Angelo. Les badauds s'éloignent et vous inspectez l'Interceptor pour voir si elle n'a pas subi de dégâts importants. Alors que vous êtes penché au-dessus du moteur, quelqu'un vous donne une petite tape sur l'épaule. En vous retournant, vous vous trouvez nez à nez avec l'homme aux tatouages qui était assis sur la barrière en bois. « Tu m'as dit que tu appartenais à quelle bande, déjà ? » vous demande-t-il d'une voix hostile. Qu'allez-vous lui répondre :",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "les Hurricanes...", "next": "44" },
+    { "label": "Les Jones Street Boys...", "next": "156" },
+    { "label": "Les Orphans...", "next": "228" }
+  ]
+}

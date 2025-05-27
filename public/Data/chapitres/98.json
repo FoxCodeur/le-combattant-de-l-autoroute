@@ -1,0 +1,13 @@
+{
+  "id": "98",
+  "title": "Chapitre 98",
+  "text": "A votre grand désespoir, la boîte de clous ne s'ouvre pas et la Ford passe au-dessus sans le moindre inconvénient. Le conducteur riposte à votre vaine attaque en vous lançant une grenade, qui vient atterrir juste devant l'Interceptor. Il se produit une détonation sourde lorsque le châssis blindé de votre voiture subit l'impact de l'explosion. Jetez deux dés et déduisez le chiffre obtenu de votre total de BLINDAGE. Si vous survivez à l'explosion.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "rendez-vous au", "next": "294" }
+  ]
+}

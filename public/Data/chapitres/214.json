@@ -1,0 +1,14 @@
+{
+  "id": "214",
+  "title": "Chapitre 214",
+  "text": "Tandis que vous approchez des arbres, vous vous rendez compte que c'est le moment ou jamais de tenter de vous enfuir. Vous faites semblant de trébucher puis vous lancez violemment la jambe de côté pour déséquilibrer l'homme aux tatouages.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": " 1, 2 ou 3...", "next": "192" },
+    { "label": "4, 5 ou 6...", "next": "347" }
+  ]
+}

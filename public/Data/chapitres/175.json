@@ -1,0 +1,9 @@
+{
+  "id": "175",
+  "title": "Chapitre 175",
+  "text": "Par un incroyable coup du sort, la grenade reste muette — un clic sans suite. Profitant de ce miracle, vous parvenez à conserver une cinquantaine de mètres d'avance sur la voiture jaune qui vous poursuit.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "340" }
+  ]
+}

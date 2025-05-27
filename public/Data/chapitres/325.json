@@ -1,0 +1,10 @@
+{
+  "id": "325",
+  "title": "Chapitre 325",
+  "text": "Vous jetez votre revolver devant l'ambulance. Vous voyez une paire de bottes en cuir s'avancer puis une main se baisser et saisir le pistolet. Vous sortez en rampant de dessous l'ambulance puis vous vous redressez, les bras en l'air. Un homme débraillé, portant un bandeau rouge, et un cigare vissé sous la moustache, se tient devant vous, le revolver braqué dans votre direction. Il vous ordonne de lancer les clés de l'Interceptor.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous obtemperez...", "next": "366" },
+    { "label": "Si vous preferez prendre votre couteau et le lui lancer...", "next": "82" }
+  ]
+}

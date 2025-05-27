@@ -1,0 +1,10 @@
+{
+  "id": "271",
+  "title": "Chapitre 271",
+  "text": "Vous vous enfoncez dans le désert dont les couleurs tournent peu à peu à un brun rougeâtre. La route file droit vers le sud comme une flèche et vous rencontrez peu de voitures abandonnées. En chemin, quelque chose que vous reconnaissez attire votre regard. C'est une Interceptor renversée qui a dû quitter la route puis faire un tonneau après que son pilote ait trouvé la mort au volant.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Si vous souhaitez vous arreter pour voir s'il y a des pieces detachees qui pourrait vous interesser...", "next": "166" },
+    { "label": "Si vous preferez poursuivre votre route...", "next": "13" }
+  ]
+}

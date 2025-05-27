@@ -1,0 +1,10 @@
+{
+  "id": "362",
+  "title": "Chapitre 362",
+  "text": "La départementale s'enfonce droit devant, et vous pouvez progresser rapidement, la route étant relativement peu encombrée par des véhicules abandonnés. Mais après une heure de conduite à vive allure, la route se termine à un croisement.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Allez-vous tourner a gauche...", "next": "92" },
+    { "label": "ou a droite...", "next": "153" }
+  ]
+}

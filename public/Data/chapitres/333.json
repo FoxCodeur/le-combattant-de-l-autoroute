@@ -1,0 +1,20 @@
+{
+  "id": "333",
+  "title": "Chapitre 333",
+  "text": "Il va maintenant falloir tester ton habileté.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre habileté, vous réussissez. Sinon, vous échouez.",
+    "success": {
+      "next": "57"
+    },
+    "failure": {
+      "next": "86"
+    }
+  }
+}

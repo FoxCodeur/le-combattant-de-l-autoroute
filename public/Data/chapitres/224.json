@@ -1,0 +1,9 @@
+{
+  "id": "224",
+  "title": "Chapitre 224",
+  "text": "La première course oppose une Ford jaune et une Porsche rouge. Elles démarrent à toute allure, s'entrechoquent violemment et utilisent tout l'arsenal d'armes dont elles disposent. Six minutes plus tard, elles sont de retour, la Ford l'emportant de quelques secondes. Les deux voitures sont maintenant complètement cabossées ! Le conducteur de la Ford sort de son véhicule, le sourire aux lèvres et, pendant qu'il savoure sa victoire, vous regagnez l'Interceptor et vous retournez à la grande route. Vous vous dirigez vers le sud à nouveau",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "207" }
+  ]
+}

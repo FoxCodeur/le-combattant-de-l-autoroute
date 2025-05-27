@@ -1,0 +1,9 @@
+{
+  "id": "27",
+  "title": "Chapitre 27",
+  "text": "Vous enfoncez violemment la pédale de freins et l'Interceptor s'immobilise presque dans un crissement de pneus. La Ford fait une embardée pour vous éviter et prend la tête. Puisque vous n'avez pas le droit d'utiliser les mitrailleuses avant de votre voiture, vous décidez de percuter la Ford à grands coups de pare-chocs",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "139" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "39",
+  "title": "Chapitre 39",
+  "text": "Vous avez encore de bons réflexes en dépit de votre blessure : d'un geste rapide, vous dégagez votre poignard de son étui et vous le lancez vers l'homme qui ricane avec mépris. Une expression de surprise se dessine sur ses traits lorsqu'il tombe à genoux en portant la main au manche du couteau planté dans son ventre. Puis l'homme s'affale, face contre terre, après avoir désespérément vidé son chargeur dans un dernier sursaut d'énergie.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
+    "success": {
+      "next": "171"
+    },
+    "failure": {
+      "next": "29"
+    }
+  }
+}

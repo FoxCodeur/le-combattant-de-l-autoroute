@@ -1,8 +1,8 @@
 {
   "id": "24",
   "title": "Chapitre 24",
-  "text": "Vous suivez la route cahoteuse jusqu'à ce qu'une barrière en bois entourée de fils de fer barbelés vous coupe le passage. Assis avec désinvolture sur la barrière, un homme, dont le torse nu exhibe de nombreux tatouages, braque sur vous une mitraillette et vous dit d'un ton rogue : « Je n'ai pas l'impression de te reconnaître... A quelle bande appartiens-tu ? » Vous lui répondez alors à brûle-pourpoint : « Aux Rats Noirs.» « Jamais entendu parler d'eux ! rétorque l'homme. Mais, de toute façon, tout le monde a le droit de participer à la course. Suis la route jusqu'à la maison brûlée et tu verras les autres voitures garées dans les parages. La première course va commencer dans cinq minutes environ. Il y a d'impor-tants paris engagés aujourd'hui, et ça promet d'être amusant ! »",
-  "image": "/images/chap1.jpg",
+  "text": "Vous poursuivez la route cahoteuse quand une barrière en bois, hérissée de fil barbelé, vous oblige à freiner. Assis nonchalamment dessus, un type torse nu, bardé de tatouages, vous braque avec un revolver. D’un ton sec, il lâche : « Je t’ai jamais vu par ici… Tu fais partie de quelle bande ? » Vous lui répondez du tac au tac : « Les Rats Noirs.» Il plisse les yeux, sceptique. « Connais pas. Mais bon, tout le monde peut tenter sa chance à la course. Continue sur la route jusqu’à la maison brûlée. Tu verras les autres bagnoles garées dans le coin.» Il marque une pause, puis ajoute avec un sourire en coin : « La première course démarre d'ici cinq minutes. Y a de gros paris aujourd’hui… ça va être chaud.»",
+  "image": "/images/chapter24.png",
   "choices": [
     { "label": "Si vous voulez franchir la barriere et participer à la course...", "next": "300" },
     { "label": "Si vous preferez faire demi-tour sans tarder et rejoindre la grande route en direction du sud, rendez-vous au", "next": "59" }

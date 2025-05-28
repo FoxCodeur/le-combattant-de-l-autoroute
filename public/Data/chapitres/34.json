@@ -1,8 +1,8 @@
 {
   "id": "34",
   "title": "Chapitre 34",
-  "text": "Vous sortez rapidement de la ville, zigzaguant entre es épaves de voitures et les arbres abattus qui encombrent la voie. Un peu plus loin, vous voyez que la route rejoint l'autoroute du sud. Il y a une petite station-service à la jonction, portant comme enseigne « le Garage du Sud ». Vous vous y arrêtez, car vous êtes fort intrigué par un hot-rod d'un rouge éclatant, garé le long du bâtiment. Le bolide a l'air bien entretenu et en état de marche. Soudain, une jeune fille, vêtue d'un blue-jean et d'un T-shirt, sort du bureau et vous demande en souriant : « Salut ! Est-ce que je peux vous être utile ? »",
-  "image": "/images/chap1.jpg",
+  "text": "Vous quittez rapidement la ville, slalomant entre les carcasses de voitures et les arbres abattus qui encombrent la route. Un peu plus loin, la voie rejoint l’autoroute du Sud. Là, une petite station-service arbore l’enseigne « le Garage du Sud ». Vous vous y arrêtez, intrigué par une voiture garée près du bâtiment. Celle-ci semble impeccablement entretenue, prête à rouler. Soudain, une jeune fille en blue-jean et T-shirt sort du bureau et vous lance avec un sourire : **« Salut ! Est-ce que je peux vous être utile ? »**",
+  "image": "/images/chapter34.png",
   "choices": [
     { "label": "Si vous desirez engager la conversation...", "next": "302" },
     { "label": "Si vous preferez quitter cet endroit et rejoindre l'autoroute sans tarder...", "next": "167" }

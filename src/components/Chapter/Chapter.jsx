@@ -81,11 +81,7 @@ const Chapter = () => {
           // Cherche un label qui contient "echec", "echou" ou "malchance" (sans accent)
           matchedChoice = chapterData.choices.find((choice) => {
             const label = normalize(choice.label.toLowerCase());
-            return (
-              label.includes("echec") ||
-              label.includes("echou") ||
-              label.includes("malchance")
-            );
+            return label.includes("echec");
           });
         }
       }

@@ -2,9 +2,9 @@
   "nom": "Skarr",
   "image": "/images/Skarr.png",
   "caractéristiques": {
-    "habileté": 11,
+    "habilete": 10,
     "endurance": 33,
-    "chance": 10
+    "chance": 9
   },
   "équipement": {
     "trousse_de_secours": 10,

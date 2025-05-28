@@ -5,11 +5,14 @@
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
-    "numberOfDice": 1
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
   },
   "choices": [
-    { "label": "Si vous obtenez un total inferieur ou egal à vos points d'HABILETÉ...", "next": "363" },
-    { "label": "Si ce total est superieur à vos points d'HABILETE...", "next": "87" }
+    { "label": "Test reussi...", "next": "363" },
+    { "label": "Test echoue...", "next": "87" }
   ]
 }
-

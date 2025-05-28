@@ -7,15 +7,12 @@
     "required": true,
     "numberOfDice": 2
   },
-  "testChance": {
+  "testHabilete": {
     "required": true,
-    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
-    "success": {
-      "next": "94"
-    },
-    "failure": {
-      "next": "123"
-    }
-  }
+    "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "94" },
+    { "label": "Test echoué...", "next": "123" }
+  ]
 }
-

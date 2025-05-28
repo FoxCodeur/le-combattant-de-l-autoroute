@@ -9,16 +9,10 @@
   },
   "testChance": {
     "required": true,
-    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
-    "success": {
-      "next": "354"
-    },
-    "failure": {
-      "next": "247"
-    }
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
   },
   "choices": [
-    { "label": "Si vous reussissez le test de chance, rendez-vous au 354", "next": "354" },
-    { "label": "Si vous echouez au test de chance, rendez-vous au 247", "next": "247" }
+    { "label": "Test reussi...", "next": "354" },
+    { "label": "Test echoue...", "next": "247" }
   ]
 }

@@ -10,8 +10,12 @@
     "required": true,
     "numberOfDice": 2
   },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
+  },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "3" },
-    { "label": "Fouiller la pièce", "next": "148" }
+    { "label": "Test reussi...", "next": "3" },
+    { "label": "Test echoue...", "next": "148" }
   ]
 }

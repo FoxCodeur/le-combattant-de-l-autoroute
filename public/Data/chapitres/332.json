@@ -1,6 +1,6 @@
 {
-  "id": "312",
-  "title": "Chapitre 312",
+  "id": "332",
+  "title": "Chapitre 332",
   "text": "Le hangar est plongé dans l'obscurité et il y fait très chaud. Vous vous faites une petite place au milieu des rondins qui y sont entreposés pour l'alimentation de la cheminée du café. Tandis que la lumière du jour commence à baisser, vous mangez quelques rations de votre repas et vous repensez aux événements de la journée. Demain, peut-être, à cette heure-ci vous serez à San Angelo. Lorsque la nuit est complètement tombée, vous vous installez pour dormir.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
@@ -9,12 +9,10 @@
   },
   "testChance": {
     "required": true,
-    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
-    "success": {
-      "next": "16"
-    },
-    "failure": {
-      "next": "84"
-    }
-  }
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "16" },
+    { "label": "Test echoue", "next": "84" }
+  ]
 }

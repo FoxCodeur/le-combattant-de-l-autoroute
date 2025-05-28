@@ -8,12 +8,11 @@ import "./Chapter.scss";
 import CharacterSheetButton from "../CharacterSheetButton/CharacterSheetButton";
 import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
-import characterData from "../../../public/Data/chapitres/CharacterData.json";
 
 const Chapter = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { chapterData, fetchChapter, loading, error } =
+  const { chapterData, fetchChapter, loading, error, characterData } =
     useContext(ChapterContext);
 
   const [diceTotal, setDiceTotal] = useState(null);
@@ -36,12 +35,39 @@ const Chapter = () => {
   const normalize = (str) =>
     str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-  // Gère test de hasard ET test de chance
+  // Gère test de hasard, test de chance et test d'habileté
   const handleDiceResult = (total) => {
     setDiceTotal(total);
 
+    // Test d'habileté (si présent dans le chapitre)
+    if (chapterData.testHabilete?.required && characterData) {
+      const habilete = characterData.caractéristiques.habilete;
+      let matchedChoice = null;
+
+      if (chapterData.choices && Array.isArray(chapterData.choices)) {
+        if (total <= habilete) {
+          // Cherche un label qui contient "reuss" (sans accent)
+          matchedChoice = chapterData.choices.find((choice) =>
+            normalize(choice.label.toLowerCase()).includes("reuss")
+          );
+        } else {
+          // Cherche un label qui contient "echec", "echou" ou "maladresse" (sans accent)
+          matchedChoice = chapterData.choices.find((choice) => {
+            const label = normalize(choice.label.toLowerCase());
+            return (
+              label.includes("echec") ||
+              label.includes("echou") ||
+              label.includes("maladresse")
+            );
+          });
+        }
+      }
+      setValidChoice(matchedChoice || null);
+      return;
+    }
+
     // Test de chance (si présent dans le chapitre)
-    if (chapterData.testChance?.required) {
+    if (chapterData.testChance?.required && characterData) {
       const chance = characterData.caractéristiques.chance;
       let matchedChoice = null;
 
@@ -81,7 +107,11 @@ const Chapter = () => {
     <div className="chapter" role="region" aria-label="Chapitre interactif">
       {/* Modale fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
-        <CharacterSheet data={characterData} />
+        {characterData ? (
+          <CharacterSheet data={characterData} />
+        ) : (
+          <p>Chargement de la fiche personnage...</p>
+        )}
       </Modal>
 
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
@@ -111,14 +141,20 @@ const Chapter = () => {
             {renderFormattedText(chapterData.text)}
           </section>
 
-          {/* Section du test de chance (si requis) */}
+          {/* Section du test de chance, d'habileté ou de hasard (si requis) */}
           {chapterData.diceRoll?.required && (
             <section className="chapter-dice-test">
-              {chapterData.testChance?.description && (
-                <p className="chance-description">
-                  {chapterData.testChance.description}
+              {chapterData.testHabilete?.description && (
+                <p className="habilete-description">
+                  {chapterData.testHabilete.description}
                 </p>
               )}
+              {!chapterData.testHabilete?.description &&
+                chapterData.testChance?.description && (
+                  <p className="chance-description">
+                    {chapterData.testChance.description}
+                  </p>
+                )}
               <DiceRoll
                 numberOfDice={chapterData.diceRoll.numberOfDice || 2}
                 onResult={handleDiceResult}

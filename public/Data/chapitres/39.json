@@ -9,12 +9,10 @@
   },
   "testChance": {
     "required": true,
-    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.",
-    "success": {
-      "next": "171"
-    },
-    "failure": {
-      "next": "29"
-    }
-  }
+    "description": "Tentez votre Chance en lançant un dé. Si vous obtenez un résultat inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "171" },
+    { "label": "Test echoue", "next": "29" }
+  ]
 }

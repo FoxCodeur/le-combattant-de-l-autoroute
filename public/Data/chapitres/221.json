@@ -9,12 +9,10 @@
   },
   "testChance": {
     "required": true,
-    "description": "Si le résultat est inférieur ou égal à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
-    "success": {
-      "next": "222"
-    },
-    "failure": {
-      "next": "223"
-    }
-  }
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "7" },
+    { "label": "Test echoue", "next": "331" }
+  ]
 }

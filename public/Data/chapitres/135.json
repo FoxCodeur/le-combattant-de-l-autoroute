@@ -9,12 +9,10 @@
   },
   "testHabilete": {
     "required": true,
-    "description": "Tentez votre habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous avez réussi. Sinon, vous avez échoué.",
-    "success": {
-      "next": "193"
-    },
-    "failure": {
-      "next": "36"
-    }
-  }
+    "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
+  },
+  "choices": [
+    { "label": "Test réussi...", "next": "193" },
+    { "label": "Test échoué...", "next": "36" }
+  ]
 }

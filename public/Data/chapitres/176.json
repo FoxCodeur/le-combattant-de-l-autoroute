@@ -7,8 +7,12 @@
     "required": true,
     "numberOfDice": 2
   },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
+  },
   "choices": [
-    { "label": "Si vous obtenez un total inferieur ou egal à vos points d'HABILETÉ...", "next": "108" },
-    { "label": "Si ce total est superieur à vos points d'HABILETE...", "next": "350" }
+    { "label": "Test reussi...", "next": "108" },
+    { "label": "Test echoue...", "next": "350" }
   ]
 }

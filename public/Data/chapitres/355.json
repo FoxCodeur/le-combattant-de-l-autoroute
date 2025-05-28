@@ -1,14 +1,18 @@
 {
   "id": "355",
   "title": "Chapitre 355",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Les Chiens de la Mort cessent brusquement leurs encouragements lorsque l'Animal ne parvient pas à se relever. Ils se dévisagent. Ils sont sûrement en train de décider s'ils doivent vous laisser repartir ou non.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
     "numberOfDice": 1
   },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
+  },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "316" },
-    { "label": "Fouiller la pièce", "next": "184" }
+    { "label": "Test reussi...", "next": "316" },
+    { "label": "Test echoue", "next": "184" }
   ]
 }

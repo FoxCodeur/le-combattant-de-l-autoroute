@@ -9,10 +9,14 @@
   },
   "diceRoll": {
     "required": true,
-    "numberOfDice": 1
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
   },
   "choices": [
-    { "label": "Si le total obtenu est inférieur ou égal à vos points d'HABILETÉ, rendez-vous au", "next": "147" },
-    { "label": "Si ce total est supérieur à vos points d'HABILETÉ, rendez-vous au", "next": "18" }
+    { "label": "Test reussi...", "next": "147" },
+    { "label": "Test echoué...", "next": "18" }
   ]
 }

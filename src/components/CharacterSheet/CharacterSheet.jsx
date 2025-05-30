@@ -1,15 +1,17 @@
 import React from "react";
+import defaultPicture from "../../assets/images/defaultPicture.webp";
 import "./CharacterSheet.scss";
 
 const CharacterSheet = ({ data }) => {
   if (!data) return <p>Aucune donnée personnage.</p>;
 
+  // Utilise l'image du personnage ou l'image par défaut
+  const imageSrc = data.image ? data.image : defaultPicture;
+
   return (
     <div className="character-sheet">
       <h2 className="character-name">{data.nom}</h2>
-      {data.image && (
-        <img src={data.image} alt={data.nom} className="character-image" />
-      )}
+      <img src={imageSrc} alt={data.nom} className="character-image" />
 
       <section className="character-section">
         <h3>Caractéristiques</h3>

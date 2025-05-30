@@ -1,7 +1,7 @@
 {
   "id": "368",
   "title": "Chapitre 368",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Tandis que vous tirez votre poignard, l'assaillant sort un petit revolver de son étui, dissimulé sous son épaule. Il vous faut l'affronter.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",

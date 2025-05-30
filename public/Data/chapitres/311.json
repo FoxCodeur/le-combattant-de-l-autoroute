@@ -2,7 +2,7 @@
   "id": "311",
   "title": "Chapitre 311",
   "text": "Vous parcourez quelques kilomètres puis vous arrivez à un pont de bois rudimentaire qui enjambe une étroite rivière. A l'entrée du pont, vous remarquez un panneau interdisant de franchir le pont.",
-  "image": "/images/chap1.jpg",
+  "image": "/images/chapter311.webp",
   "choices": [
     { "label": "Si vous voulez passer outre  l'interdiction...", "next": "229" },
     { "label": "Fouiller la pièce", "next": "124" }

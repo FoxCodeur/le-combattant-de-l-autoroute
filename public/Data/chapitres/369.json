@@ -1,7 +1,7 @@
 {
   "id": "369",
   "title": "Chapitre 369",
-  "text": "L'homme masqué prend les 200 Crédits puis effectue une marche arrière avec l'autocar, libérant l'accès du tunnel. Après avoir franchi le tunnel, vous suivez la route sinueuse qui traverse un canyon profondément encaissé.",
+  "text": "L'homme masqué s'empare avec avidité des **200 Crédits**, puis effectue une marche arrière avec l'autocar, libérant ainsi l'accès du tunnel. Après avoir franchi le tunnel, vous suivez la route sinueuse qui traverse un canyon profondément encaissé.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "130" }

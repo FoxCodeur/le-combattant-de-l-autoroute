@@ -1,7 +1,7 @@
 {
   "id": "257",
   "title": "Chapitre 257",
-  "text": "Un peu plus loin, vous constatez que la route est bloquée par une barricade de rondins récupérés dans un camion abandonné à proximité. Le long tube fuselé d'une espèce de canon dépasse des rondins. Vous décidez de vous arrêter pour négocier avec le propriétaire de l'arme pour qu'il vous laisse contourner la barricade. Vous ouvrez la portière et vous appelez l'homme pour lui faire part de votre demande. La réponse ne se fait pas attendre, elle est sèche et précise : « Faites demi-tour. Aucune voiture n'a le droit de circuler ici. Vous voilà prévenu ! »",
+  "text": "Un peu plus loin, vous constatez que la route est bloquée par une barricade de rondins récupérés dans un camion abandonné à proximité. Le long tube fuselé d'une espèce de canon dépasse des rondins. Vous décidez de vous arrêter pour négocier avec le propriétaire de l'arme pour qu'il vous laisse contourner la barricade. Vous ouvrez la portière et vous appelez l'homme pour lui faire part de votre demande. La réponse ne se fait pas attendre, elle est sèche et précise : **« Faites demi-tour. Aucune voiture n'a le droit de circuler ici. Vous voilà prévenu !** »",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous souhaitez obeir en faisant demi-tour vers l'ouest...", "next": "337" },

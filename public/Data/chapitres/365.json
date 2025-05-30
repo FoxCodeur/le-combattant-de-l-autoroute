@@ -1,7 +1,7 @@
 {
   "id": "365",
   "title": "Chapitre 365",
-  "text": "Tandis que vous traversez le terre-plein vers le motel, vous entendez tout à coup un hurlement derrière vous. Vous vous retournez et vous apercevez deux paires d'yeux surpris par le faisceau de votre lampe électrique. Vous constatez qu'il s'agit des yeux de deux loups qui bondissent sur vous pour vous attaquer. Vous dégainez rapidement et vous visez le plus proche.",
+  "text": "Tandis que vous traversez le terre-plein vers le motel, un grognement se fait entendre. Vous vous retournez et apercevez deux paires d'yeux jaunes surpris par le faisceau de votre lampe électrique. Dans la lueur blanche du faisceau, vous distinguez les silhouettes de deux loups qui se ramassent sur eux-mêmes, prêts à bondir. Vous dégainez rapidement et visez le plus proche.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -12,7 +12,7 @@
     "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
   },
   "choices": [
-    { "label": "Test réussi...", "next": "308" },
-    { "label": "Test échoué...", "next": "120" }
+    { "label": "Test reussi...", "next": "308" },
+    { "label": "Test echoue...", "next": "120" }
   ]
 }

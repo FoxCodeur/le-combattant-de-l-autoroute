@@ -1,14 +1,14 @@
 {
   "id": "55",
   "title": "Chapitre 55",
-  "text": "Vous entrez dans le café par la porte de derrière et vous constatez que l'endroit a été mis à sac depuis un bon moment sans doute. Des débris de vaisselle jonchent le sol, les meubles ont été renversés et les placards à provisions ont été dévalisés. Vous montez l'escalier donnant accès à l'appartement du premier étage, mais tout a été saccagé également, et vous n'y trouvez rien d'intéressant. Vous vous asseyez alors pour manger quelques-unes de vos provisions, car la nuit tombe rapidement et vous n'y verrez bientôt plus clair. Après que les ténèbres ont envahi les lieux, vous décidez d'aller vous étendre sur le lit de la chambre à coucher en prenant soin, toutefois, de conserver votre revolver à portée de la main, sous l'oreiller. Jetez un dé.",
+  "text": "Vous entrez dans le café par la porte de derrière et vous constatez que l'endroit a été mis à sac depuis un bon moment sans doute. Des débris de vaisselle jonchent le sol, les meubles ont été renversés et les placards à provisions ont été dévalisés. Vous montez l'escalier donnant accès à l'appartement du premier étage, mais tout a été saccagé également, et vous n'y trouvez rien d'intéressant. Vous vous asseyez alors pour manger quelques-unes de vos provisions, car la nuit tombe rapidement et vous n'y verrez bientôt plus clair. Après que les ténèbres ont envahi les lieux, vous décidez d'aller vous étendre sur le lit de la chambre à coucher en prenant soin, toutefois, de conserver votre revolver à portée de la main, sous l'oreiller.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
     "numberOfDice": 1
   },
   "choices": [
-    { "label": "Si vous obtenez 1, 2 ou 3, rendez-vous au", "next": "110" },
-    { "label": "Si vous obtenez 4, 5 ou 6, rendez-vous au", "next": "14" }
+    { "label": "Si vous obtenez 1, 2 ou 3...", "next": "110" },
+    { "label": "Si vous obtenez 4, 5 ou 6...", "next": "14" }
   ]
 }

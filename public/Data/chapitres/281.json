@@ -1,8 +1,8 @@
 {
   "id": "281",
   "title": "Chapitre 281",
-  "text": "Le revolver au poing, vous sautez hors de l'Interceptor et vous grimpez prudemment le talus de la voie ferrée. Une fois arrivé en haut du remblai, vous regardez vers le pont et vous apercevez, au loin, votre agresseur prendre un sac dans une des caravanes abandonnées. Il monte sur une moto et file en pétaradant vers l'est.",
-  "image": "/images/chap1.jpg",
+  "text": "Le revolver au poing, vous sautez hors de l'Interceptor et vous grimpez prudemment le talus de la voie ferrée. Une fois arrivé en haut du remblai, vous regardez vers le pont et vous apercevez, au loin, votre agresseur prendre un sac dans l'une des caravanes abandonnées. Il enfourche sa moto et file en pétaradant vers l'est.",
+  "image": "/images/chapter281.webp",
   "choices": [
     { "label": "Si vous desirez jeter un coup d'oeil dans la caravane...", "next": "58" },
     { "label": "Si vous preferez retourner rapidement vers l'Interceptor pour continuer votre chemin...", "next": "150" }

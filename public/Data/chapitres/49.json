@@ -2,7 +2,7 @@
   "id": "49",
   "title": "Chapitre 49",
   "text": "Vous apercevez soudain devant vous un étrange véhicule arrêté au beau milieu de la route. On dirait une dépanneuse transformée en une espèce de char romain. Il n'y manque même pas les éperons fixés aux essieux !\n\nÀ l'arrière du véhicule se tient un homme, dont le torse nu révèle une musculature impressionnante. Son visage est protégé par un casque de gladiateur et il tient, appuyée contre la hanche, une mitraillette à double canon. L'homme fait signe au conducteur de démarrer et de passer à l'attaque. Vous n'avez pas le choix : vous devez affronter ces gladiateurs des temps modernes.",
-  "image": "/images/chap1.jpg",
+  "image": "/images/chapter49.webp",
   "combat": {
     "type": "motorisé",
     "diceRoll": {

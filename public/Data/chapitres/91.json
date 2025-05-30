@@ -1,7 +1,7 @@
 {
   "id": "91",
   "title": "Chapitre 91",
-  "text": "Mors que vous roulez à plein régime vers le sud, vous mettez la radio dans l'espoir de pouvoir établir le contact avec San Angelo, mais vous n'entendez eue le grésillement des parasites qui encombrent les ondes. Vous laissez toutefois la radio branchée au cas où on chercherait à vous joindre. Quinze kilomètres plus loin, vous atteignez un autre embranchement où se trouve planté un panneau de bois grossier dont la flèche, pointée vers l'est, indique en caractères malhabiles : « Réparations en tout genre — Moteur et carosserie.»",
+  "text": "Alors que vous roulez à plein régime vers le sud, vous mettez la radio dans l'espoir de pouvoir établir le contact avec San Angelo, mais vous n'entendez eue le grésillement des parasites qui encombrent les ondes. Vous laissez toutefois la radio branchée au cas où on chercherait à vous joindre. Quinze kilomètres plus loin, vous atteignez un autre embranchement où se trouve planté un panneau de bois grossier dont la flèche, pointée vers l'est, indique en caractères malhabiles : **« Réparations en tout genre — Moteur et carosserie.»**",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez prendre a gauche et vous diriger vers l'est...", "next": "230" },

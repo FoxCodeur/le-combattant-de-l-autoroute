@@ -1,7 +1,7 @@
 {
   "id": "360",
   "title": "Chapitre 360",
-  "text": "Ambre manque à nouveau son coup, mais vous réussissez à dégager votre bras tandis que vous roulez au sol. L'Animal maintient sa puissante étreinte alors que vous essayez de le saisir à la gorge. Vous perdez 2 points d'ENDURANCE. La tête de l'Animal est maintenant immobilisée et, cette fois-ci, Ambre réussit son coup et assomme votre adversaire avec la clé à molette.",
+  "text": "Ambre rate une nouvelle fois sa cible, la clé à molette sifflant dans le vide à quelques centimètres d'Animal. Profitant de ce répit, vous parvenez à libérer votre bras dans un mouvement de torsion désespéré, roulant sur le sol pour échapper à l'étau mortel. Mais l'autre ne lâche rien. Ses muscles bandés comme des câbles d'acier maintiennent la pression. Vous sentez bientôt vos côtes craquer sous la contrainte tandis que vous portez vos mains à sa gorge, cherchant un point vital qui pourrait vous fournir quelque avantage. Dans un ultime effort, vous réussissez enfin à immobiliser la tête de votre adversaire, exposant sa nuque vulnérable. Cette fois-ci, Ambre ne manque pas son coup. La clé à molette s'abat avec un bruit sourd sur le crâne d'Animmal qui s'effondre instantanément, inconscient. Le silence retombe, troublé seulement pas vos respirations haletantes. Vous parvenez non sans difficulté, à dégager votre bras tandis que vous roulez au sol. **Vous perdez 2 points d'ENDURANCE**..",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": -2

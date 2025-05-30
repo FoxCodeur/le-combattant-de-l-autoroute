@@ -1,8 +1,8 @@
 {
   "id": "331",
   "title": "Chapitre 331",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
-  "image": "/images/chap1.jpg",
+  "text": "Soudain Ambre pousse un cri d'alerte et elle indique du doigt une Jeep qui roule à vive allure sur la route. **« Ce sont eux, Les Chiens de la Mort !** s'écrie-t-elle. **Les mêmes qui m'ont attaquée l'autre jour »** La Jeep a une mitrailleuse à double canon montée en tourelle à l'arrière et le mitrailleur ouvre le feu dès que vous êtes à sa portée.",
+  "image": "/images/chapter331.webp",
   "combat": {
     "type": "motorise",
     "diceRoll": {

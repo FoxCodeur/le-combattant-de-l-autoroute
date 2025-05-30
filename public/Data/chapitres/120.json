@@ -1,7 +1,7 @@
 {
   "id": "120",
   "title": "Chapitre 120",
-  "text": "Vous manquez votre cible et les loups se rapprochent, prêts à l'attaque. Vous parvenez à dégainer votre poignard juste à temps pour vous mettre en position de défense :\n\nHABILETÉ ENDURANCE\nPremier LOUP 8 7\nDeuxième LOUP 8 8\n\nMenez ce combat selon les règles de Combat Rapproché et affrontez les loups l'un après l'autre. Cependant, chaque coup de poignard que vous porterez au loup que vous combattez diminuera son total d'ENDURANCE de 2 points (au lieu de 1 point, selon les règles habituelles). De même, vous perdrez vous-même 2 points d'ENDURANCE à chaque morsure qu'un loup vous infligera.",
+  "text": "Vous manquez votre cible et les loups se rapprochent, prêts à l'attaque. Vous parvenez à dégainer votre poignard juste à temps pour vous mettre en position de défense.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "corps-à-corps",
@@ -18,15 +18,15 @@
     "ennemis": [
       {
         "nom": "Premier LOUP",
-        "habilete": 8,
-        "endurance": 7,
-        "image": "/images/ennemis/gangster.jpg"
+        "puissanceDeFeu": 8,
+        "blindage": 7,
+        "image": "/images/ennemis/ford-jaune.jpg"
       },
       {
-        "nom": "Deuxième LOUP",
-        "habilete": 8,
-        "endurance": 8,
-        "image": "/images/ennemis/gangster.jpg"
+        "nom": "Deuxieme LOUP",
+        "puissanceDeFeu": 8,
+        "blindage": 8,
+        "image": "/images/ennemis/ford-jaune.jpg"
       }
     ]
   },
@@ -42,3 +42,5 @@
       }
     }
   }
+
+

@@ -1,14 +1,15 @@
 {
   "id": "28",
   "title": "Chapitre 28",
-  "text": "Vous traversez la cour et vous garez l'Interceptor à l'intérieur de l'atelier de Peter. Celui-ci examine tranquillement votre voiture et vous dit que sa puissance pourrait être augmentée en ajoutant un surcompresseur au moteur. Il vous annonce que cela vous coûtera 100 Crédits, plus quelques médicaments. Si vous en avez les moyens — et si vous le désirez—, vous pouvez faire effectuer cette transformation sur l'Interceptor.",
+  "text": "Vous traversez la cour et vous garez l'Interceptor à l'intérieur de l'atelier de Peter. Celui-ci examine tranquillement votre voiture et vous dit que sa puissance pourrait être augmentée en ajoutant un surcompresseur au moteur. Il vous annonce que cela vous coûtera **100 Crédits**, plus quelques médicaments. Si vous en avez les moyens — et si vous le désirez—, vous pouvez faire effectuer cette transformation sur l'Interceptor.",
   "image": "/images/chap1.jpg",
   "choices": [
     {
       "label": "Si vous pouvez payer cette somme et si vous desirez faire reparer votre voiture...",
       "next": "141",
       "modificateursNarratifs": {
-        "credits": -100
+        "credits": -100,
+        "trousseDeSecours": -1
       }
     },
     {

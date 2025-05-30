@@ -1,7 +1,7 @@
 {
   "id": "249",
   "title": "Chapitre 249",
-  "text": "Vous enjambez la moto accidentée, tenant votre revolver d'une main et la Trousse de Secours de l'autre. L'un des hommes est mort et la vie de l'autre ne tient plus qu'à un fil. Vous le débarrassez de son revolver et vous l'examinez pour voir s'il peut être sauvé. Il ouvre les yeux puis vous dit avec un sourire mauvais : « Le Gros Jack et sa bande te feront payer ça ! » Il bascule en arrière, en exhalant un dernier soupir. Votre Trousse de Secours n'est plus d'aucune utilité maintenant. Vous examinez la moto et vous remarquez une sacoche fermée à clé.",
+  "text": "Vous enjambez la moto accidentée, tenant votre revolver d'une main et la Trousse de Secours de l'autre. L'un des hommes est mort et la vie de l'autre ne tient plus qu'à un fil. Vous le débarrassez de son revolver et vous l'examinez pour voir s'il peut être sauvé. Il ouvre les yeux puis s'exclame avec un sourire mauvais : **« Le Gros Jack et sa bande te feront payer ça ! »** Il bascule en arrière, en exhalant un dernier soupir. Votre Trousse de Secours n'est plus d'aucune utilité maintenant. Vous examinez la moto et vous remarquez une sacoche fermée à clé.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous voulez ouvrir la sacoche...", "next": "206" },

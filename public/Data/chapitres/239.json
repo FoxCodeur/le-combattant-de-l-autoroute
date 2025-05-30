@@ -1,7 +1,7 @@
 {
   "id": "239",
   "title": "Chapitre 239",
-  "text": "La Ford s'élance sur le pont, tandis que vous appuyez à nouveau sur la pédale d'accélérateur pour tenter de la rattraper. Vous apercevez la ligne d'arrivée à moins de deux cents mètres mais vous comprenez que vous venez de perdre la course. La Ford passe la ligne avec une longueur d'avance sur l'Interceptor. Vous perdez 1 point de CHANCE.",
+  "text": "La Ford s'élance sur le pont, tandis que vous appuyez à nouveau sur la pédale d'accélérateur pour tenter de la rattraper. Vous apercevez la ligne d'arrivée à moins de deux cents mètres mais vous comprenez que vous venez de perdre la course. La Ford passe la ligne avec une longueur d'avance sur l'Interceptor. **Vous perdez 1 point de CHANCE**.",
   "image": "/images/chap1.jpg",
   "modificateurs": {
     "chance": -1

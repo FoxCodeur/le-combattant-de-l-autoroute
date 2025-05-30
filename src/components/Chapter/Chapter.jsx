@@ -8,6 +8,7 @@ import "./Chapter.scss";
 import CharacterSheetButton from "../CharacterSheetButton/CharacterSheetButton";
 import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
+import defaultPicture from "../../assets/images/defaultPicture.webp";
 
 const Chapter = () => {
   const { id } = useParams();
@@ -35,6 +36,12 @@ const Chapter = () => {
   const normalize = (str) =>
     str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
+  // Fonction pour remplacer {hero} par le nom du personnage
+  const getPersonalizedText = (text) => {
+    if (!characterData) return text;
+    return text.replace(/\{hero\}/gi, characterData.nom);
+  };
+
   // Gère test de hasard, test de chance et test d'habileté
   const handleDiceResult = (total) => {
     setDiceTotal(total);
@@ -46,12 +53,10 @@ const Chapter = () => {
 
       if (chapterData.choices && Array.isArray(chapterData.choices)) {
         if (total <= habilete) {
-          // Cherche un label qui contient "reuss" (sans accent)
           matchedChoice = chapterData.choices.find((choice) =>
             normalize(choice.label.toLowerCase()).includes("reuss")
           );
         } else {
-          // Cherche un label qui contient "echec", "echou" ou "maladresse" (sans accent)
           matchedChoice = chapterData.choices.find((choice) => {
             const label = normalize(choice.label.toLowerCase());
             return (
@@ -73,15 +78,13 @@ const Chapter = () => {
 
       if (chapterData.choices && Array.isArray(chapterData.choices)) {
         if (total <= chance) {
-          // Cherche un label qui contient "reuss" (sans accent)
           matchedChoice = chapterData.choices.find((choice) =>
             normalize(choice.label.toLowerCase()).includes("reuss")
           );
         } else {
-          // Cherche un label qui contient "echec", "echou" ou "malchance" (sans accent)
           matchedChoice = chapterData.choices.find((choice) => {
             const label = normalize(choice.label.toLowerCase());
-            return label.includes("echec");
+            return label.includes("echou");
           });
         }
       }
@@ -100,7 +103,11 @@ const Chapter = () => {
   };
 
   return (
-    <div className="chapter" role="region" aria-label="Chapitre interactif">
+    <div
+      className={`chapter chapter-${id}`}
+      role="region"
+      aria-label="Chapitre interactif"
+    >
       {/* Modale fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (
@@ -119,22 +126,23 @@ const Chapter = () => {
             {chapterData.title || "Titre manquant"}
           </h1>
 
-          {chapterData.image && (
-            <div className="chapter-image-container">
-              <img
-                src={chapterData.image}
-                alt={`Illustration du chapitre : ${chapterData.title}`}
-                className="chapter-image"
-              />
-              {/* Bouton fiche personnage juste sous l'image */}
-              <CharacterSheetButton onClick={() => setIsSheetOpen(true)} />
-            </div>
-          )}
+          <div className="chapter-image-container">
+            <img
+              src={chapterData.image ? chapterData.image : defaultPicture}
+              alt={`Illustration du chapitre : ${chapterData.title}`}
+              className="chapter-image"
+              onError={(e) => {
+                e.target.src = defaultPicture;
+              }}
+            />
+            {/* Bouton fiche personnage juste sous l'image */}
+            <CharacterSheetButton onClick={() => setIsSheetOpen(true)} />
+          </div>
 
           <section
             className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
           >
-            {renderFormattedText(chapterData.text)}
+            {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
           {/* Section du test de chance, d'habileté ou de hasard (si requis) */}

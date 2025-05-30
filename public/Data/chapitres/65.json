@@ -1,7 +1,7 @@
 {
   "id": "65",
   "title": "Chapitre 65",
-  "text": "Vous sentez un élancement douloureux vous parcourir le bras : vous venez d'être touché par une balle ! C'est fort heureusement une blessure superficielle, mais vous perdez tout de même 2 points d'ENDURANCE. L'Interceptor démarre au quart de tour et vous repartez dans un crissement de pneus sur la route cahoteuse pour rejoindre la nationale, où vous pourrez rouler à fond vers le sud",
+  "text": "Vous sentez un élancement douloureux vous parcourir le bras : vous venez d'être touché par une balle ! C'est fort heureusement une blessure superficielle, mais **vous perdez tout de même 2 points d'ENDURANCE**. L'Interceptor démarre au quart de tour et vous repartez dans un crissement de pneus sur la route cahoteuse pour rejoindre la nationale, où vous pourrez rouler à fond vers le sud",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": -2

@@ -1,7 +1,7 @@
 {
   "id": "299",
   "title": "Chapitre 299",
-  "text": "Malgré la puissance de l'explosion, vous n'avez qu'une blessure superficielle causée par un éclat d'obus. Vous perdez 2 points d'ENDURANCE. Vous roulez au sol, derrière l'Interceptor, pour vous protéger des coups de feu de vos assaillants. Vous devez maintenant riposter.",
+  "text": "Malgré la puissance de l'explosion, vous n'avez qu'une blessure superficielle causée par un éclat d'obus. **Vous perdez 2 points d'ENDURANCE**. Vous roulez au sol, derrière l'Interceptor, pour vous protéger des coups de feu de vos assaillants. Vous devez maintenant riposter.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": -2

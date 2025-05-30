@@ -1,7 +1,7 @@
 {
   "id": "256",
   "title": "Chapitre 256",
-  "text": "Bien que vous saigniez abondamment, vous parvenez à regagner votre voiture mais vous perdez 1 point d'ENDURANCE supplémentaire. Vous vous effondrez sur le siège du conducteur et vous saisissez la Trousse de Secours. Vous ôtez les éclats de balle et vous appliquez une pellicule de peau synthétique sur la blessure, puis vous la recouvrez d'un bandage. Assis à nouveau au volant, vous retrouvez le moral. Vous relâchez l'embrayage et vous sortez de la ville en faisant rugir votre moteur.",
+  "text": "Bien que vous saigniez abondamment, vous parvenez à regagner votre voiture mais **vous perdez 1 point d'ENDURANCE supplémentaire**. Vous vous effondrez sur le siège du conducteur et vous saisissez la Trousse de Secours. Vous ôtez les éclats de balle et vous appliquez une pellicule de peau synthétique sur la blessure, puis vous la recouvrez d'un bandage. Assis à nouveau au volant, vous retrouvez le moral. Vous relâchez l'embrayage et vous sortez de la ville en faisant rugir votre moteur.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": -1

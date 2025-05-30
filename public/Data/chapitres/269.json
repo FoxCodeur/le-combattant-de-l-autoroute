@@ -1,8 +1,8 @@
 {
   "id": "269",
   "title": "Chapitre 269",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
-  "image": "/images/chap1.jpg",
+  "text": "Vous répondez en criant que vous acceptéz de défier Animal en combat singulier, à la condition de pouvoir quitter les lieux en cas de victoire. L'Animal accepte vos conditions. Vous voyez deux hommes et deux femmes descendre du break. Le groupe s'avance vers l'Interceptor et ils se mettent à cogner sur le capot avec la crosse de leurs fusils, tout en scandant le nom de leur chef : **« A-NI-MAL ! A-NI-MAL ! A-NI-MAL ! »** La porte avant du break s'ouvre lentement et un géant  de deux mètres, torse nu, un masque collé sur le visage en sort. Il porte des gants de cuir cloutés, et des hautes bottes aux extrémités renforcées par des plaques d'acier. Quand vous sortez de la voiture, l'individu commence à s'agiter comme un taureau furieux en serrant les poings, Ambre vous encourage de la voix. ",
+  "image": "/images/chapter269.webp",
   "combat": {
     "type": "corps-à-corps",
     "combatMode": "sequentiel",

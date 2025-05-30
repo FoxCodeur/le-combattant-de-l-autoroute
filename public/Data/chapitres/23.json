@@ -13,6 +13,6 @@
   },
   "choices": [
     { "label": "Test reussi...", "next": "137" },
-    { "label": "Test echoué...", "next": "342" }
+    { "label": "Test echoue...", "next": "342" }
   ]
 }

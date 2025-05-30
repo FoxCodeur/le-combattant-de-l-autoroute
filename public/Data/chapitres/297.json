@@ -1,7 +1,7 @@
 {
   "id": "297",
   "title": "Chapitre 297",
-  "text": "Vous vous réveillez le lendemain matin avec un bras endolori, mais d'une manière générale, vous vous sentez mieux. Ajoutez 2 points à votre total d'ENDURANCE.",
+  "text": "Vous vous réveillez le lendemain matin avec un bras endolori, mais d'une manière générale, vous vous sentez mieux. **Ajoutez 2 points à votre total d'ENDURANCE**.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": 2

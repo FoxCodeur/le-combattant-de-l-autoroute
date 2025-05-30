@@ -1,0 +1,24 @@
+{
+  "nom": "Gutz",
+  "image": "/images/Gutz.png",
+  "caractéristiques": {
+    "habilete": 8,
+    "endurance": 30,
+    "chance": 11
+  },
+  "équipement": {
+    "trousse_de_secours": 10,
+    "crédits": 200
+  },
+  "interceptor": {
+    "puissance_de_feu": 10,
+    "blindage": 32,
+    "roquettes": 4,
+    "clous": 3,
+    "huile": 2
+  },
+  "accessoires": {
+    "bidon_essence": 1,
+    "roues_de_secours": 2
+  }
+}

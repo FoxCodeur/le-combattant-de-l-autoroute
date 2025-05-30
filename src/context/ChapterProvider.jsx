@@ -9,16 +9,32 @@ const ChapterProvider = ({ children }) => {
   // Ajoute cet état pour la fiche personnage
   const [characterData, setCharacterData] = useState(null);
 
-  // Charge la fiche personnage une fois au montage
+  // Nouvel état pour le personnage sélectionné
+  const [selectedCharacter, setSelectedCharacter] = useState(
+    localStorage.getItem("selectedCharacter") || "Skarr"
+  );
+
+  // Surveille le localStorage à chaque navigation
   useEffect(() => {
-    fetch("/Data/chapitres/CharacterData.json")
+    const onStorage = () => {
+      const char = localStorage.getItem("selectedCharacter") || "Skarr";
+      setSelectedCharacter(char);
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
+  // Recharge la fiche personnage à chaque changement de selectedCharacter
+  useEffect(() => {
+    const fileName = `CharacterData${selectedCharacter}.json`;
+    fetch(`/Data/chapitres/${fileName}`)
       .then((res) => res.json())
       .then(setCharacterData)
       .catch((err) => {
         console.error("Erreur chargement fiche personnage :", err);
         setCharacterData(null);
       });
-  }, []);
+  }, [selectedCharacter]);
 
   const fetchChapter = useCallback(async (id) => {
     setLoading(true);
@@ -48,7 +64,7 @@ const ChapterProvider = ({ children }) => {
         fetchChapter,
         loading,
         error,
-        characterData, // <-- Ajoute la fiche personnage ici
+        characterData,
       }}
     >
       {children}

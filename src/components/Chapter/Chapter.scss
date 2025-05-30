@@ -58,7 +58,7 @@
     background-color: #fefefe;
     font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 400; // Poids normal par défaut
+    font-weight: 400;
     color: #333;
     padding: 2rem;
     line-height: 1.6;
@@ -69,9 +69,24 @@
     max-width: 700px;
     margin: 0 auto;
 
-    // Texte en gras dans les <strong>
     strong {
-      font-weight: 700; // gras
+      font-weight: 700;
+    }
+  }
+
+  // ✅ Lettrine uniquement pour le chapitre 0
+  &.chapter-0 {
+    .chapter-text {
+      p:first-of-type::first-letter {
+        float: left;
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: bold;
+        margin-right: 0.5rem;
+        margin-top: 0.3rem;
+        color: #4c8cff;
+        font-family: Georgia, serif;
+      }
     }
   }
 
@@ -106,33 +121,19 @@
     }
   }
 
-  // ✅ Lettrine uniquement pour le chapitre 1
-  &.first-chapter {
-    p:first-of-type {
-      &::first-letter {
-        float: left;
-        font-size: 3rem;
-        line-height: 1;
-        font-weight: bold;
-        margin-right: 0.5rem;
-        margin-top: 0.3rem;
-        color: #4c8cff;
-        font-family: Georgia, serif;
-      }
-    }
-  }
-
   // Responsive Design
   @media (max-width: 1024px) {
     &-content {
       padding: 1.2rem;
       max-width: 98vw;
     }
+
     &-text {
       padding: 1.2rem;
       font-size: 1.05rem;
       max-width: 95vw;
     }
+
     &-image {
       max-height: 40vh;
     }
@@ -144,28 +145,34 @@
     &-title {
       font-size: 2rem;
     }
+
     &-content {
       padding: 0.7rem;
       gap: 1.2rem;
     }
+
     &-image-container {
       gap: 0.7rem;
     }
+
     &-image {
       max-height: 30vh;
       padding: 0.2rem;
     }
+
     &-text {
       font-size: 1rem;
       padding: 1rem;
       max-width: 99vw;
     }
+
     &-choices {
       @include flex-column;
       align-items: stretch;
       gap: 1rem;
       margin-top: 1rem;
     }
+
     &-choice {
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
@@ -178,14 +185,17 @@
     &-title {
       font-size: 1.3rem;
     }
+
     &-content {
       padding: 0.3rem;
       gap: 0.7rem;
     }
+
     &-text {
       font-size: 0.95rem;
       padding: 0.5rem;
     }
+
     &-choice {
       padding: 0.7rem 1rem;
       font-size: 0.95rem;

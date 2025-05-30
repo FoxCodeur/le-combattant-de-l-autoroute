@@ -1,10 +1,10 @@
 {
   "id": "329",
   "title": "Chapitre 329",
-  "text": "L'un des motards vous a vu plonger derrière le buisson et il vous ordonne en criant : « Jette tes clés et ton pistolet ! Nous voulons juste la voiture. »",
+  "text": "L'un des motards vous a vu plonger derrière le buisson et il se met à crier : **« Jette ton pistolet vers nous ! T'inquiète, je compte pas te descendre si tu ne fais pas le fanfaron. »**",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Vous obtemperez...", "next": "283" },
-    { "label": "Mais si vous préférez vous battre avec lui...", "next": "6" }
+    { "label": "Mais si vous preferez vous battre avec lui...", "next": "6" }
   ]
 }

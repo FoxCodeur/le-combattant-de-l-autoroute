@@ -1,7 +1,7 @@
 {
   "id": "101",
   "title": "Chapitre 101",
-  "text": "Par un miracle extraordinaire, vous traversez le champ de mines sans en faire exploser une seule ! Vous gagnez 1 point de CHANCE. Totalement inconscient du danger auquel vous venez d'échapper, vous continuez à rouler tranquillement vers le sud",
+  "text": "Par un miracle extraordinaire, vous traversez le champ de mines sans en faire exploser une seule ! **Vous gagnez 1 point de CHANCE**. Totalement inconscient du danger auquel vous venez d'échapper, vous continuez à rouler tranquillement vers le sud",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "rendez-vous au", "next": "303" }

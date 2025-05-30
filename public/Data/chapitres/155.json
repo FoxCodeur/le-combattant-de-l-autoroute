@@ -1,13 +1,13 @@
 {
   "id": "155",
   "title": "Chapitre 155",
-  "text": "L'homme surgit soudain dans l'encadrement d'une porte et avance en braquant son fusil sur vous. Il vous dévisage avec dureté et dit : « Vous m'avez tout l'air d'être l'homme qui a provoqué la mort de ma femme et de mon fils en faisant exploser mon break, la semaine dernière. Je vais enfin pouvoir les venger ! Mais je me battrai selon les règles. Dégainez lorsque vous serez prêt.» Vous réalisez l'erreur que vous avez commise en mentant à cet homme et vous perdez 1 point de CHANCE.",
+  "text": "L'homme surgit soudain dans l'encadrement d'une porte et avance en braquant son fusil sur vous. Il vous dévisage avec dureté et dit : « Vous m'avez tout l'air d'être l'homme qui a provoqué la mort de ma femme et de mon fils en faisant exploser mon break, la semaine dernière. Je vais enfin pouvoir les venger ! Mais je me battrai selon les règles. Dégainez lorsque vous serez prêt.» Vous réalisez l'erreur que vous avez commise en mentant à cet homme et **vous perdez 1 point de CHANCE**.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1
   },
   "choices": [
     { "label": "Si vous desirez vous expliquer avec lui afin de le convaincre de votre innocence...", "next": "219" },
-    { "label": "Si vous preferez dégainer votre arme, selon son injonction, rendez-vous au", "next": "333" }
+    { "label": "Si vous preferez degainer votre arme, selon son injonction...", "next": "333" }
   ]
 }

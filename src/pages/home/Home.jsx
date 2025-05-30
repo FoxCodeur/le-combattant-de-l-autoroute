@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AdventureCard from "../../components/AdventureCard/AdventureCard";
+import NewGameButton from "../../components/NewGameButton/NewGameButton";
+import skarrImg from "../../assets/images/skarr.webp";
+import nyxImg from "../../assets/images/nyx.webp";
+import gutzImg from "../../assets/images/gutz.webp";
 import "./Home.scss";
 
 const Home = () => {
-  const [fadeOut, setFadeOut] = useState(false);
   const navigate = useNavigate();
+  const [showCards, setShowCards] = useState(false);
 
-  const handleStart = () => {
-    setFadeOut(true);
-
-    setTimeout(() => {
-      navigate("/chapitre/0");
-    }, 1000); // La transition dure 1 seconde
+  // Cette fonction enregistre le nom du personnage dans le localStorage
+  // et force la notification du context (utile si même onglet)
+  const handleStart = (characterName) => {
+    localStorage.setItem("selectedCharacter", characterName);
+    // On déclenche un event "storage" pour que le context réagisse même dans le même onglet
+    window.dispatchEvent(new Event("storage"));
+    navigate("/chapitre/0");
   };
+
+  const handleShowCards = () => setShowCards(true);
 
   return (
     <div className="home">
-      <div className={`home__content ${fadeOut ? "fade-out" : ""}`}>
+      <div className="home__content">
         <img
-          src="/images/le-combattant-de-l-autoroute.png"
+          src="/images/le-combattant-de-l-autoroute.webp"
           alt="Couverture du livre"
           className="home__image"
         />
@@ -27,10 +35,51 @@ const Home = () => {
           Plongez dans l'aventure et faites vos choix pour écrire votre histoire
           !
         </p>
-        <button className="home__button" onClick={handleStart}>
-          Commencer
-        </button>
+        {!showCards && (
+          <div className="home__start-button">
+            <NewGameButton onClick={handleShowCards}>Commencer</NewGameButton>
+          </div>
+        )}
       </div>
+
+      {showCards && (
+        <div className="home__cards-overlay">
+          <div className="home__cards">
+            <AdventureCard
+              image={skarrImg}
+              title="SKARR"
+              age={38}
+              description="Ancien militaire d’élite, Skarr a perdu un œil lors d’une mission qui a mal tourné. Solitaire, il s’est reconverti en instructeur d’auto-défense avant de devenir le protecteur pragmatique et loyal de Nouvelle Espérance. Dans ce nouveau monde, il sait que la moindre faiblesse se paie cher."
+            >
+              <NewGameButton onClick={() => handleStart("Skarr")}>
+                New Game
+              </NewGameButton>
+            </AdventureCard>
+
+            <AdventureCard
+              image={nyxImg}
+              title="NYX"
+              age={26}
+              description="Promise à une brillante carrière de tennis, Nyx a grandi entre les continents. Après l’épidémie, elle a mis sa discipline et son optimisme au service de la survie. Figure audacieuse de Nouvelle Espérance, elle inspire ceux qui croient encore en un avenir meilleur."
+            >
+              <NewGameButton onClick={() => handleStart("Nyx")}>
+                New Game
+              </NewGameButton>
+            </AdventureCard>
+
+            <AdventureCard
+              image={gutzImg}
+              title="GUTZ"
+              age={32}
+              description="Gutz, ancien hacker, profitait du chaos pour s'enrichir par ses arnaques. Il rejoint Nouvelle Espérance, où ses talents en piratage et bricolage high-tech sont précieux, même si ses méthodes ne plaisent pas. Ni héros ni salaud : il fait juste ce qu’il faut pour survivre dans ce nouveau monde."
+            >
+              <NewGameButton onClick={() => handleStart("Gutz")}>
+                New Game
+              </NewGameButton>
+            </AdventureCard>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

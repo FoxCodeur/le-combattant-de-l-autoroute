@@ -2,7 +2,7 @@
   "id": "321",
   "title": "Chapitre 321",
   "text": "Le premier bâtiment que vous rencontrez est un café en bord de route avec quelques voitures garées devant, mais aucune ne semble avoir été conduite depuis la catastrophe. Vous contournez la bâtisse pour cacher l'Interceptor derrière. Vous descendez de la voiture et vous examinez les environs pour vous assurer qu'il n'y a personne. Choisissez à présent un endroit pour dormir.",
-  "image": "/images/chap1.jpg",
+  "image": "/images/chapter321.webp",
   "choices": [
     { "label": "Si vous souhaitez dormir dans la piece au-dessus du cafe...", "next": "55" },
     { "label": "Si vous preferez dormir dans le hangar au rez-de-chaussee...", "next": "332" }

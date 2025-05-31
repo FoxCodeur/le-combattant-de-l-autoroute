@@ -8,7 +8,15 @@
   },
   "équipement": {
     "trousse_de_secours": 10,
-    "crédits": 200
+    "crédits": 200,
+    "morceau-de-tuyau-en-plastique": 0,
+    "lourde-chaine": 0,
+    "pneu-a-plat": 0,
+    "paire-de-pinces": 0,
+    "gilet-pare-balles": 0,
+    "arbalete": 0,
+    "coup-de-poing-americain": 0,
+    "magnum-taurus": 0
   },
   "interceptor": {
     "puissance_de_feu": 10,
@@ -19,6 +27,7 @@
   },
   "accessoires": {
     "bidon_essence": 1,
-    "roues_de_secours": 2
+    "roues_de_secours": 2,
+    "surcompresseur": 1
   }
 }

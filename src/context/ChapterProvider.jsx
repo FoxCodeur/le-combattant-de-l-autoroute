@@ -6,15 +6,19 @@ const ChapterProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Ajoute cet état pour la fiche personnage
   const [characterData, setCharacterData] = useState(null);
-
-  // Nouvel état pour le personnage sélectionné
   const [selectedCharacter, setSelectedCharacter] = useState(
     localStorage.getItem("selectedCharacter") || "Skarr"
   );
 
-  // Surveille le localStorage à chaque navigation
+  // Persistance : sauvegarde la fiche personnage à chaque modification
+  useEffect(() => {
+    if (characterData) {
+      localStorage.setItem("characterData", JSON.stringify(characterData));
+    }
+  }, [characterData]);
+
+  // Surveille les changements du personnage sélectionné (autres onglets)
   useEffect(() => {
     const onStorage = () => {
       const char = localStorage.getItem("selectedCharacter") || "Skarr";
@@ -26,16 +30,36 @@ const ChapterProvider = ({ children }) => {
 
   // Recharge la fiche personnage à chaque changement de selectedCharacter
   useEffect(() => {
-    const fileName = `CharacterData${selectedCharacter}.json`;
-    fetch(`/Data/chapitres/${fileName}`)
-      .then((res) => res.json())
-      .then(setCharacterData)
-      .catch((err) => {
-        console.error("Erreur chargement fiche personnage :", err);
-        setCharacterData(null);
-      });
+    // Si le personnage change, on efface la sauvegarde précédente
+    const saved = localStorage.getItem("characterData");
+    if (saved) {
+      setCharacterData(JSON.parse(saved));
+    } else {
+      const fileName = `CharacterData${selectedCharacter}.json`;
+      fetch(`/Data/chapitres/${fileName}`)
+        .then((res) => res.json())
+        .then((data) => {
+          // Ajoute le tableau pour le suivi si absent
+          if (!Array.isArray(data.chapitresModifies)) {
+            data.chapitresModifies = [];
+          }
+          setCharacterData(data);
+        })
+        .catch((err) => {
+          console.error("Erreur chargement fiche personnage :", err);
+          setCharacterData(null);
+        });
+    }
   }, [selectedCharacter]);
 
+  // Pour changer de personnage ET repartir d'une fiche propre
+  const selectCharacter = (characterName) => {
+    localStorage.setItem("selectedCharacter", characterName);
+    localStorage.removeItem("characterData");
+    setSelectedCharacter(characterName);
+  };
+
+  // Charge un chapitre à partir de son id
   const fetchChapter = useCallback(async (id) => {
     setLoading(true);
     setError(null);
@@ -65,6 +89,8 @@ const ChapterProvider = ({ children }) => {
         loading,
         error,
         characterData,
+        setCharacterData,
+        selectCharacter, // pour permettre la sélection ailleurs
       }}
     >
       {children}

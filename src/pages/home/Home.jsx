@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AdventureCard from "../../components/AdventureCard/AdventureCard";
 import NewGameButton from "../../components/NewGameButton/NewGameButton";
@@ -6,17 +6,23 @@ import skarrImg from "../../assets/images/skarr.webp";
 import nyxImg from "../../assets/images/nyx.webp";
 import gutzImg from "../../assets/images/gutz.webp";
 import "./Home.scss";
+import ChapterContext from "../../context/ChapterContext"; // Ajout pour récupérer selectCharacter
 
 const Home = () => {
   const navigate = useNavigate();
   const [showCards, setShowCards] = useState(false);
+  const { selectCharacter } = useContext(ChapterContext); // Ajout
 
-  // Cette fonction enregistre le nom du personnage dans le localStorage
-  // et force la notification du context (utile si même onglet)
+  // Cette fonction enregistre le nom du personnage dans le localStorage,
+  // efface l'ancienne fiche, et force la notification du context
   const handleStart = (characterName) => {
-    localStorage.setItem("selectedCharacter", characterName);
-    // On déclenche un event "storage" pour que le context réagisse même dans le même onglet
-    window.dispatchEvent(new Event("storage"));
+    if (typeof selectCharacter === "function") {
+      selectCharacter(characterName); // Utilise la fonction du provider pour tout gérer proprement
+    } else {
+      localStorage.setItem("selectedCharacter", characterName);
+      localStorage.removeItem("characterData"); // <-- indispensable pour réinitialiser la fiche
+      window.dispatchEvent(new Event("storage"));
+    }
     navigate("/chapitre/0");
   };
 

@@ -9,22 +9,58 @@ import CharacterSheetButton from "../CharacterSheetButton/CharacterSheetButton";
 import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
+import applyNarrativeModifiers from "../../utils/applyNarrativeModifiers"; // Pour appliquer les modificateurs narratifs
 
 const Chapter = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { chapterData, fetchChapter, loading, error, characterData } =
-    useContext(ChapterContext);
+  const {
+    chapterData,
+    fetchChapter,
+    loading,
+    error,
+    characterData,
+    setCharacterData,
+  } = useContext(ChapterContext);
 
   const [diceTotal, setDiceTotal] = useState(null);
   const [validChoice, setValidChoice] = useState(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
+  // Charge le chapitre en fonction de l'id
   useEffect(() => {
     fetchChapter(id);
     setDiceTotal(null);
     setValidChoice(null);
   }, [id, fetchChapter]);
+
+  // Applique les modificateurs narratifs une seule fois par chapitre
+  useEffect(() => {
+    if (
+      chapterData &&
+      chapterData.modificateursNarratifs &&
+      characterData &&
+      setCharacterData
+    ) {
+      // Sécurise le champ de suivi
+      const safeCharacter = { ...characterData };
+      if (!Array.isArray(safeCharacter.chapitresModifies)) {
+        safeCharacter.chapitresModifies = [];
+      }
+      const chapterId = String(chapterData.id ?? id);
+      if (!safeCharacter.chapitresModifies.includes(chapterId)) {
+        const updated = applyNarrativeModifiers(
+          chapterData.modificateursNarratifs,
+          safeCharacter
+        );
+        updated.chapitresModifies = [
+          ...safeCharacter.chapitresModifies,
+          chapterId,
+        ];
+        setCharacterData(updated);
+      }
+    }
+  }, [chapterData, characterData, setCharacterData, id]);
 
   const handleChoiceClick = (nextChapterId) => {
     if (nextChapterId) {
@@ -32,21 +68,21 @@ const Chapter = () => {
     }
   };
 
-  // Fonction pour normaliser les accents
+  // Normalise les accents pour la gestion des choix
   const normalize = (str) =>
     str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-  // Fonction pour remplacer {hero} par le nom du personnage
+  // Remplace {hero} par le nom du personnage
   const getPersonalizedText = (text) => {
     if (!characterData) return text;
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
-  // Gère test de hasard, test de chance et test d'habileté
+  // Gestion des tests de hasard, chance et habileté
   const handleDiceResult = (total) => {
     setDiceTotal(total);
 
-    // Test d'habileté (si présent dans le chapitre)
+    // Test d'habileté
     if (chapterData.testHabilete?.required && characterData) {
       const habilete = characterData.caractéristiques.habilete;
       let matchedChoice = null;
@@ -71,7 +107,7 @@ const Chapter = () => {
       return;
     }
 
-    // Test de chance (si présent dans le chapitre)
+    // Test de chance
     if (chapterData.testChance?.required && characterData) {
       const chance = characterData.caractéristiques.chance;
       let matchedChoice = null;

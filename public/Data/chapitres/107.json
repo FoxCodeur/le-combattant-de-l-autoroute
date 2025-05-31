@@ -1,7 +1,7 @@
 {
   "id": "107",
   "title": "Chapitre 107",
-  "text": "Vous détalez tous deux aussi vite que possible, jetant, de temps à autre, un rapide coup d'oeil par dessus votre épaule pour surveiller la progression du véhicule, qui contourne à présent la colline en essayant de repérer vos traces. Vous n'êtes plus qu'à deux cents mètres à peine de l'Interceptor, lorsque vous voyez soudain le véhicule arriver droit sur vous, tandis qu'une voix furieuse vous hurle à travers un haut-parleur : **« Arrêtez-vous ! On n'échappe pas à l'Animal ! »** Le haut-parleur continue à débiter inlassablement ces mêmes paroles au fur et à mesure que la voiture se rapproche de vous. Vous apercevez avec soulagement l'Interceptor à quelques mètres de vous et vous plongez tous deux à l'intérieur à l'instant même où vos poursuivants s'apprêtent à vous rejoindre",
+  "text": "Vous détalez tous deux aussi vite que possible, jetant, de temps à autre, un rapide coup d'oeil par dessus votre épaule pour surveiller la progression du véhicule, qui contourne à présent la colline en essayant de repérer vos traces. Vous n'êtes plus qu'à deux cents mètres à peine de l'Interceptor, lorsque vous voyez soudain le véhicule arriver droit sur vous, tandis qu'une voix furieuse vous hurle à travers un haut-parleur : **« Arrêtez-vous ! On n'échappe pas à Colossus Rex ! »** Le haut-parleur continue à débiter inlassablement ces mêmes paroles au fur et à mesure que la voiture se rapproche de vous. Vous apercevez avec soulagement l'Interceptor à quelques mètres de vous et vous plongez tous deux à l'intérieur à l'instant même où vos poursuivants s'apprêtent à vous rejoindre",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "158" }

@@ -1,12 +1,13 @@
 {
   "id": "2",
   "title": "Chapitre 2",
-  "text": "Vous courez vers votre voiture pour prendre votre Trousse de Secours et vous vous faites immédiatement une piqûre de sérum antivenimeux. Ce traitement n'augmentera pas votre total d'**ENDURANCE**, mais il neutralisera seulement les effets mortels du poison (n'oubliez pas de rayer une unité de médicament sur votre Feuille d'Aventure). Après avoir pansé votre plaie, vous vous remettez peu à peu, mais votre blessure vous a terriblement affaibli et vous perdez **1** point d'**HABILETÉ** et **2** points d'**ENDURANCE**. Vous retournez ensuite vers l'épave de l'autre Interceptor et, d'un geste vengeur, vous tirez sur le serpent dont la morsure a failli vous coûter la vie. Dans la boîte à gants, vous trouvez quelques mètres de tuyau en plastique soigneusement enroulé que vous décidez d'emporter, puis vous rejoignez votre véhicule. Vous empoignez le volant en retenant un cri de douleur car votre bras vous fait encore atrocement souffrir, mais vous démarrez et vous reprenez la route en direction du sud.",
+  "text": "Vous vous précipitez vers votre véhicule pour récupérez la Trousse de Secours et vous vous injecter au plus vite une dose de sérum antivenimeux. Ce traitement n'augmente pas votre total d'**ENDURANCE**, mais il neutralise les effets mortels du poison (n'oubliez pas de rayer une unité de médicament sur votre Feuille d'Aventure). Après avoir pansé la plaie, vous vous remettez peu à peu, mais cet incident vous a terriblement affaibli et vous perdez **1** point d'**HABILETÉ** et **2** points d'**ENDURANCE**. Vous retournez ensuite vers l'épave de l'autre Interceptor et, d'un geste vengeur, vous abattez le serpent dont la morsure a failli vous coûter la vie. Dans la boîte à gants, vous trouvez quelques mètres de tuyau en plastique soigneusement enroulé, que vous décidez d'emporter Puis, vous rejoignez votre véhicule. En serrant le volant, vous retenez un cri de douleur, votre bras vous faisant encore atrocement souffrir, mais vous démarrez et reprenez la route vers le sud.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": -2,
     "habilete": -1,
-    "TrousseSecours": -1
+    "TrousseSecours": -1,
+    "morceau-de-tuyau en plastique": 1
   },
   "choices": [
     {

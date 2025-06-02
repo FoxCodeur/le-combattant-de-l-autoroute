@@ -1,7 +1,7 @@
 {
   "id": "139",
   "title": "Chapitre 139",
-  "text": "La Ford ralentit pour négocier un virage tandis que vous continuez à accélérer à fond. Vous percutez l'arrière de la voiture jaune, mais cette manoeuvre ne réussit qu'à endommager l'Interceptor et **vous perdez 2 points de BLINDAGE**. En effet, la Ford possède des pare-chocs renforcés, spécialement étudiés pour ce genre de collision. Vous allez donc devoir la doubler afin de pouvoir utiliser contre elle vos lance-projectiles arrière. Mais comme s'il avait lu dans vos pensées, votre adversaire se met à faire valser sa voiture d'un côté et de l'autre de la route pour vous barrer le passage. Il va vous falloir déployer tous vos talents de conducteur pour le doubler ! Jetez deux dés.",
+  "text": "La Ford ralentit pour négocier un virage tandis que vous continuez à accélérer à fond. Vous percutez l'arrière de la voiture jaune, mais cette manoeuvre ne réussit qu'à endommager l'Interceptor et [danger]vous perdez 2 points de BLINDAGE.[/danger] En effet, la Ford possède des pare-chocs renforcés, spécialement étudiés pour ce genre de collision. Vous allez donc devoir la doubler afin de pouvoir utiliser contre elle vos lance-projectiles arrière. Mais comme s'il avait lu dans vos pensées, votre adversaire se met à faire valser sa voiture d'un côté et de l'autre de la route pour vous barrer le passage. Il va vous falloir déployer tous vos talents de conducteur pour le doubler ! Jetez deux dés.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "blindage": 150

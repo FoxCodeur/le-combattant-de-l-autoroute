@@ -1,7 +1,7 @@
 {
   "id": "110",
   "title": "Chapitre 110",
-  "text": "Vous vous sentez frais et dispos en vous réveillant au petit matin. **Vous gagnez 2 points d'ENDURANCE**. Vous dévalez l'escalier et vous sautez au volant de l'Interceptor pour reprendre la route sans tarder",
+  "text": "Vous vous sentez frais et dispos en vous réveillant au petit matin. [success]Vous gagnez 2 points d'ENDURANCE.[/success] Vous dévalez l'escalier et vous sautez au volant de l'Interceptor pour reprendre la route sans tarder",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": 2

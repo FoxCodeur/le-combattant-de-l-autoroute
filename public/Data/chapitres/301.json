@@ -1,7 +1,7 @@
 {
   "id": "301",
   "title": "Chapitre 301",
-  "text": "Au bout de trente kilomètres, la route se termine brusquement. Des engins de construction sont arrêtés, abandonnés et exposés aux intempéries. Il n'y a aucun signe de vie. La route que vous venez d'emprunter n'a jamais été achevée avant la grande catastrophe. **Vous perdez 1 point de CHANCE**. Sur votre gauche, le terrain est plat et pierreux. A votre droite et devant vous, du sable s'étend à perte de vue.",
+  "text": "Au bout de trente kilomètres, la route se termine brusquement. Des engins de construction sont arrêtés, abandonnés et exposés aux intempéries. Il n'y a aucun signe de vie. La route que vous venez d'emprunter n'a jamais été achevée avant la grande catastrophe. [danger]Vous perdez 1 point de CHANCE.[/danger] Sur votre gauche, le terrain est plat et pierreux. A votre droite et devant vous, du sable s'étend à perte de vue.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1

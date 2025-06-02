@@ -1,10 +1,10 @@
 {
   "id": "200",
   "title": "Chapitre 200",
-  "text": "Vous parvenez à éviter un choc de front, mais vous ne pouvez empêcher le break de vous percuter sur le côté. Son pare-chocs en pointe perfore les caissons renforcés de l'Interceptor et les deux véhicules se trouvent maintenant encastrés l'un dans l'autre. Le haut-parleur du break fait entendre la voix éraillée de l'Animal.",
+  "text": "Vous parvenez à éviter un choc de front, mais vous ne pouvez empêcher le break de vous percuter sur le côté. Son pare-chocs en pointe perfore les caissons renforcés de l'Interceptor et les deux véhicules se trouvent maintenant encastrés l'un dans l'autre. Le haut-parleur du break fait entendre la voix éraillée de COLOSSUS RED.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "vous voulez l'affronter au corps a corps, suivant les regles de Combat Rapproche...", "next": "269" },
-    { "label": "Si vous preferez le combattre revolver au poing, en suivant les regles de Tir...", "next": "102" }
+    { "label": "vous voulez l'affronter au corps a corps...", "next": "269" },
+    { "label": "Si vous preferez le combattre revolver au poing...", "next": "102" }
   ]
 }

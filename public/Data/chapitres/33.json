@@ -1,7 +1,7 @@
 {
   "id": "33",
   "title": "Chapitre 33",
-  "text": "Il vous faut longtemps pour arriver à sortir votre voiture du fossé et c'est, de plus, une tâche exténuante. **Vous perdez 1 point d'ENDURANCE**. Quand vous êtes enfin complètement dégagé, vous repartez en direction du sud en passant devant la carcasse en flammes de la voiture blindée",
+  "text": "Il vous faut longtemps pour arriver à sortir votre voiture du fossé et c'est, de plus, une tâche exténuante. [danger]Vous perdez 1 point d'ENDURANCE.[/danger] Quand vous êtes enfin complètement dégagé, vous repartez en direction du sud en passant devant la carcasse en flammes de la voiture blindée",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": -1

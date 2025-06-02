@@ -1,7 +1,7 @@
 {
   "id": "376",
   "title": "Chapitre 376",
-  "text": "L'Animal est évanoui mais, ne voulant pas prendre de risques inutiles, vous lui liez cependant les mains. Lorsque vous avez fini de dégager l'Interceptor du break, le soleil est déjà haut à l'horizon. Il déverse sa chaude lumière rouge qui vous redonne tout à coup confiance en vous et vous ne doutez plus du succès de votre mission. Vous repartez vers le sud en laissant derrière vous l'Animal, qui jure maintenant ses grands dieux et appelle ses hommes à l'aide.",
+  "text": "L'Animal est évanoui mais, ne voulant pas prendre de risques inutiles, vous lui liez cependant les mains. Lorsque vous avez fini de dégager l'Interceptor du break, le soleil est déjà haut à l'horizon. Il déverse sa chaude lumière rouge qui vous redonne tout à coup confiance en vous et vous ne doutez plus du succès de votre mission. Vous repartez vers le sud en laissant derrière vous COLOSSUS REX, qui jure maintenant ses grands dieux et appelle ses hommes à l'aide.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Rendez-vous au", "next": "90" }

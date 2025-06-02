@@ -8,7 +8,7 @@
       "label": "Si vous avez une paire de pinces coupantes...",
       "next": "85",
       "condition": {
-        "item": "pincesCoupantes",
+        "item": "paireDePinces",
         "hasItem": true
       }
     },
@@ -16,7 +16,7 @@
       "label": "Si vous n'en avez pas...",
       "next": "255",
       "condition": {
-        "item": "poing_americain",
+        "item": "paireDePinces",
         "hasItem": false
       }
     }

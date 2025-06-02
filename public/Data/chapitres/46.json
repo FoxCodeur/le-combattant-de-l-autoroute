@@ -4,7 +4,16 @@
   "text": "Les kilomètres défilent et l'aiguille de la jauge d'essence se rapproche inexorablement du zéro.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous disposez d'un jerricane d'essence plein...", "next": "310" },
-    { "label": "Si vous n'avez pas pu faire remplir votre jerricane recemment...", "next": "364" }
+    {
+      "label": "Si vous disposez d'un jerricane d'essence plein...",
+      "next": "310",
+      "modificateursNarratifs": {
+        "bidon_essence": -1
+      }
+    },
+    {
+      "label": "Si vous n'avez pas pu faire remplir votre jerricane recemment...",
+      "next": "364"
+    }
   ]
 }

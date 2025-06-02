@@ -1,7 +1,7 @@
 @use "../../styles/mixins" as *;
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 .chapter {
   @include flex-column;
   justify-content: space-between;
@@ -200,5 +200,71 @@
       padding: 0.7rem 1rem;
       font-size: 0.95rem;
     }
+  }
+  // Styles pour les balises personnalisées de texte important
+  .highlight-text {
+    font-weight: bold;
+    color: #e95420;
+    background: linear-gradient(90deg, #fffbe6 0%, #ffe0b2 100%);
+    border-radius: 4px;
+    font-family: "Oswald", Arial, sans-serif;
+    padding: 2px 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    font-size: 1.07em;
+    letter-spacing: 0.5px;
+  }
+
+  .danger-text {
+    background: linear-gradient(90deg, #fdeaea 0%, #fbbdbb 100%);
+    border-radius: 8px;
+    padding: 0 10px;
+    font-family: "Oswald", Arial, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 2px 10px 2px rgba(210, 25, 25, 0.18),
+      // ombre rouge diffuse
+      0 0 0 3px #fbbdbb inset,
+      // liseré rouge clair intérieur façon encadré
+      0 1.5px 0 #fff5f5 inset; // léger relief supérieur
+    font-size: 1.12em;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 0 #fff5f5;
+    margin: 0 2px;
+  }
+
+  .info-text {
+    color: #1976d2;
+    background: #e3f2fd;
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+
+  .success-text {
+    background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 8px;
+    padding: 0 10px;
+    font-weight: 600;
+    font-family: "Oswald", Arial, sans-serif;
+    box-shadow: 0 2px 10px 2px rgba(25, 118, 210, 0.18),
+      // ombre bleue diffuse
+      0 0 0 3px #bbdefb inset,
+      // liseré bleu clair intérieur façon encadré
+      0 1.5px 0 #eaf6ff inset; // léger relief supérieur
+    font-size: 1.12em;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 0 #eaf6ff;
+    margin: 0 2px;
+  }
+  .payment-text {
+    font-family: "Oswald", Arial, sans-serif;
+    background: linear-gradient(90deg, #eafaf1 0%, #d2f5dd 100%);
+    border-radius: 8px;
+    padding: 0 10px;
+    font-weight: 600;
+    box-shadow: 0 2px 10px 2px rgba(46, 204, 113, 0.13), 0 0 0 3px #d2f5dd inset,
+      0 1.5px 0 #f6fffa inset;
+    font-size: 1.12em;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 0 #f6fffa;
+    margin: 0 2px;
   }
 }

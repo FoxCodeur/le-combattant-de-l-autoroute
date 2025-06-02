@@ -1,7 +1,7 @@
 {
   "id": "51",
   "title": "Chapitre 51",
-  "text": "Vos nerfs lâchent alors que vous n'êtes plus qu'à quelques mètres de l'entrée du pont. Vous freinez à mort et vous voyez la Ford s'élancer devant vous. Malgré vos efforts désespérés pour regagner du terrain sur votre adversaire, vous apercevez la ligne d'arrivée à deux cents mètres tout au plus et vous réalisez que vous avez perdu la course. La Ford franchit la ligne avec une longueur d'avance sur l'Interceptor... **Déduisez 1 point de votre total de CHANCE**",
+  "text": "Vos nerfs lâchent alors que vous n'êtes plus qu'à quelques mètres de l'entrée du pont. Vous freinez à mort et vous voyez la Ford s'élancer devant vous. Malgré vos efforts désespérés pour regagner du terrain sur votre adversaire, vous apercevez la ligne d'arrivée à deux cents mètres tout au plus et vous réalisez que vous avez perdu la course. La Ford franchit la ligne avec une longueur d'avance sur l'Interceptor... [danger]Déduisez 1 point de votre total de CHANCE.[/danger]",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1

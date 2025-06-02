@@ -1,7 +1,7 @@
 {
   "id": "20",
   "title": "Chapitre 20",
-  "text": "Soudain, la Ford fait une embardée sur la gauche pour essayer de vous dépasser, mais vous vous attendiez à cette manoeuvre et vous parvenez à lui barrer le passage. **Vous gagnez 1 point de CHANCE**. Vous conservez la tête et l'Interceptor franchit la ligne d'arrivée avec une demi-longueur d'avance sur la Ford. Bravo, vous avez gagné la Course de l'Enfer.",
+  "text": "Soudain, la Ford fait une embardée sur la gauche pour essayer de vous dépasser, mais vous vous attendiez à cette manoeuvre et vous parvenez à lui barrer le passage. [success]Vous gagnez 1 point de CHANCE[/success]. Vous conservez la tête et l'Interceptor franchit la ligne d'arrivée avec une demi-longueur d'avance sur la Ford. Bravo, vous avez gagné la Course de l'Enfer.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": 1

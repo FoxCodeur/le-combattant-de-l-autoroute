@@ -1,7 +1,7 @@
 {
   "id": "13",
   "title": "Chapitre 13",
-  "text": "En regardant dans votre rétroviseur, vous apercevez un side-car qui se rapproche peu à peu de vous. Le passager braque sur vous une mitrailleuse montée à l'avant du véhicule ; il vous fait penser à un pilote des temps anciens avec ses vieilles lunettes de protection et son casque d'aviateur en cuir. Les deux hommes portent un foulard noir noué autour du visage pour se protéger de la poussière de la route. Alors qu'ils ne sont plus qu'à une cinquantaine de mètres de vous, ils vous révèlent clairement leurs intentions en tirant une rafale de mitraillette dans l'Interceptor. Vous perdez **1 point de BLINDAGE**. Qu'allez-vous faire à présent ?",
+  "text": "En regardant dans votre rétroviseur, vous apercevez un side-car qui se rapproche peu à peu de vous. Le passager braque sur vous une mitrailleuse montée à l'avant du véhicule ; il vous fait penser à un pilote des temps anciens avec ses vieilles lunettes de protection et son casque d'aviateur en cuir. Les deux hommes portent un foulard noir noué autour du visage pour se protéger de la poussière de la route. Alors qu'ils ne sont plus qu'à une cinquantaine de mètres de vous, ils vous révèlent clairement leurs intentions en tirant une rafale de mitraillette dans l'Interceptor. [danger]Vous perdez 1 point de BLINDAGE[/danger]. Qu'allez-vous faire à présent ?",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "blindage": -1

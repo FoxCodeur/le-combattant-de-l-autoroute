@@ -1,7 +1,7 @@
 {
   "id": "348",
   "title": "Chapitre 348",
-  "text": "Vous décidez de ne pas continuer plus loin pour cette nuit et vous vous arrêtez pour prendre quelque repos avant le lever du jour. Vous êtes réveillé le lendemain matin par les premiers rayons du soleil. Ajoutez **1 point à votre total d'ENDURANCE**. Vous examinez les dégâts qu'a subis l'Interceptor et vous constatez que, malgré un petit problème dans la direction, votre voiture a l'air en bon état de marche. Vous sautez sur votre siège et vous vous dirigez vers le sud, en ironisant sur l'absence de policiers trop zélés dans la région.",
+  "text": "Vous décidez de ne pas continuer plus loin pour cette nuit et vous vous arrêtez pour prendre quelque repos avant le lever du jour. Vous êtes réveillé le lendemain matin par les premiers rayons du soleil. [success]Ajoutez 1 point à votre total d'ENDURANCE[/success]. Vous examinez les dégâts qu'a subis l'Interceptor et vous constatez que, malgré un petit problème dans la direction, votre voiture a l'air en bon état de marche. Vous sautez sur votre siège et vous vous dirigez vers le sud, en ironisant sur l'absence de policiers trop zélés dans la région.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "128" }

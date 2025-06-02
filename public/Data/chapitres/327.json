@@ -1,7 +1,7 @@
 {
   "id": "327",
   "title": "Chapitre 327",
-  "text": "Vous décidez d'attendre le lendemain matin avant de reprendre la route. Vous vous réveillez à l'aube et ce court sommeil vous a fait du bien. **Ajoutez 1 point à votre total d'ENDURANCE**. Vous faites marche arrière pour vous dégager du lieu de l'accident. Et vous voilà de nouveau en route vers le sud.",
+  "text": "Vous décidez d'attendre le lendemain matin avant de reprendre la route. Vous vous réveillez à l'aube et ce court sommeil vous a fait du bien. [success]Ajoutez 1 point à votre total d'ENDURANCE[/success]. Vous faites marche arrière pour vous dégager du lieu de l'accident. Et vous voilà de nouveau en route vers le sud.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": 1

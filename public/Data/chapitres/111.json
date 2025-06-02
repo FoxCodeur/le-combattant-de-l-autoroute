@@ -4,8 +4,8 @@
   "text": "Un petit groupe de spectateurs s'approche de l'Interceptor, vous adressant des félicitations enthousiastes. Un peu à l’écart, le conducteur de la Ford sort brutalement de son véhicule, claque la portière avec colère, puis s’éloigne à grands pas. **« On dirait qu’il encaisse mal la défaite, dit quelqu'un dans la foule. C’est bien la première fois que je le vois perdre !»** ajoute un autre, visiblement impressionné. Peu après, la jeune femme qui avait donné le départ de la course vous remet votre prix : un bidon rempli d'essence que vous vous empressez de placer à l'arrière de l'Interceptor. **« La prochaine course ne débutera pas avant une bonne demi-heure**, dit-elle. **Vous voulez venir vous poser un moment avec nous, sous les arbres ? »** Vous déclinez avec courtoisie, impatient de reprendre la route vers San Angelo. Les badauds s'éloignent et vous inspectez l'Interceptor pour voir si elle n'a pas subi de dégâts importants. Alors que vous êtes penché sous le capot, une main vous tape légèrement l'épaule. Vous vous redressez et tombez nez à nez avec l’homme aux tatouages, celui qui était resté assis sur la barrière pendant toute la course. Il vous fixe d’un regard froid. **« Tu m’as dit appartenir à quelle bande, déjà ? »** vous demande-t-il d'une voix hostile. Qu'allez-vous lui répondre :",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "les Hurricanes...", "next": "44" },
-    { "label": "Les Jones Street Boys...", "next": "156" },
+    { "label": "Jones Street Boys...", "next": "44" },
+    { "label": "Les Rogues...", "next": "156" },
     { "label": "Les Orphans...", "next": "228" }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "317",
   "title": "Chapitre 317",
-  "text": "Vous quittez la route principale et vous roulez maintenant sur les terres arides et caillouteuses quand, soudain, vous êtes surpris par l'apparition de deux motards vêtus de cuir qui surgissent devant vous. L'un des deux tire avec son pistolet pour couvrir son camarade qui vient placer une mine-ventouse sous la roue arrière de l'Interceptor. **Vous perdez 1 point de CHANCE.** Les deux motards plongent se mettre à l'abri avant même que vous ayez pensé à utiliser votre mitrailleuse. Vous êtes soudain pris de panique et vous devez penser rapidement à ce que vous allez faire :",
+  "text": "Vous quittez la route principale et vous roulez maintenant sur les terres arides et caillouteuses quand, soudain, vous êtes surpris par l'apparition de deux motards vêtus de cuir qui surgissent devant vous. L'un des deux tire avec son pistolet pour couvrir son camarade qui vient placer une mine-ventouse sous la roue arrière de l'Interceptor. [danger]Vous perdez 1 point de CHANCE.[/danger] Les deux motards plongent se mettre à l'abri avant même que vous ayez pensé à utiliser votre mitrailleuse. Vous êtes soudain pris de panique et vous devez penser rapidement à ce que vous allez faire :",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1

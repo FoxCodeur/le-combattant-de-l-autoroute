@@ -1,7 +1,7 @@
 {
   "id": "15",
   "title": "Chapitre 15",
-  "text": "Vous avancez vers l'homme et vous l'interpellez. Celui-ci éteint calmement son chalumeau en vous disant : **« Ce n'est vraiment pas un travail à faire dans ce désert torride, mais, au moins, les gens me laissent tranquille et je peux travailler en paix ! Tous les clients sont les bienvenus et je répare le véhicule de qui veut. Si vous voulez que je m'occupe de votre carlingue, cela vous coûtera 200 Crédits.»**",
+  "text": "Vous avancez vers l'homme et l'interpellez. Il coupe son chalumeau, se tourne vers vous et lance avec un sourire : **« Franchement, bosser dans ce désert, c’est pas l’idéal… Mais au moins, ici, personne ne vient m’embêter, et je peux bricoler tranquille ! Je répare tout ce qui roule, pour tous ceux qui passent. Si vous voulez que je m’occupe de votre bagnole, [payment]il faudra compter 200 Crédits[/payment].»**",
   "image": "/images/chap1.jpg",
   "choices": [
     {

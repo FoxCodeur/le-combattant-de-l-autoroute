@@ -1,7 +1,7 @@
 {
   "id": "112",
   "title": "Chapitre 112",
-  "text": "A l'intérieur du supermarché, vous trouvez une boîte de pâté que vous savourez avec délice, car il y a longtemps que vous n'en aviez pas mangé. **Vous gagnez 2 points d'ENDURANCE**. De plus — et cela est encore plus appréciable —, vous découvrez un bidon plein d'essence que vous vous hâtez de charger à bord de l'Interceptor.",
+  "text": "A l'intérieur du supermarché, vous trouvez une boîte de pâté que vous savourez avec délice, car il y a longtemps que vous n'en aviez pas mangé. [success]Vous gagnez 2 points d'ENDURANCE.[/success] De plus — et cela est encore plus appréciable —, vous découvrez un bidon plein d'essence que vous vous hâtez de charger à bord de l'Interceptor.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": 2

@@ -4,7 +4,16 @@
   "text": "La route passe à travers des champs en friche mais vous ne rencontrez aucun obstacle. Vous regardez au compteur le nombre de kilomètres que vous avez parcourus puis vous jetez un coup d'oeil à l'aiguille du réservoir d'essence : elle est sur zéro à nouveau.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous vous etes procure recemment un plein bidon d'essence...", "next": "197" },
-    { "label": "Sinon...", "next": "364" }
+    {
+      "label": "Si vous vous etes procure recemment un plein bidon d'essence...",
+      "next": "197",
+      "modificateursNarratifs": {
+        "bidonEssence": -1
+      }
+    },
+    {
+      "label": "Sinon...",
+      "next": "364"
+    }
   ]
 }

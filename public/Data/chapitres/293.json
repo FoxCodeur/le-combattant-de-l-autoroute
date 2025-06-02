@@ -1,10 +1,24 @@
 {
   "id": "293",
   "title": "Chapitre 293",
-  "text": "Est-ce que vous avez en votre un coup de poing américain ?...",
+  "text": "Est-ce que vous avez en votre possession un coup de poing américain ?...",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Oui !", "next": "56" },
-    { "label": "Non !", "next": "125" }
+    {
+      "label": "Oui !",
+      "next": "56",
+      "condition": {
+        "item": "coupDePoingAmericain",
+        "hasItem": true
+      }
+    },
+    {
+      "label": "Non !",
+      "next": "125",
+      "condition": {
+        "item": "coupDePoingAmericain",
+        "hasItem": false
+      }
+    }
   ]
 }

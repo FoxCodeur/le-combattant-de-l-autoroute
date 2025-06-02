@@ -1,7 +1,7 @@
 {
   "id": "38",
   "title": "Chapitre 38",
-  "text": "**Vous prenez une unité de votre Trousse de Secours et vous soignez rapidement votre blessure** : après avoir soigneusement retiré les éclats de balle de la plaie, vous appliquez sur votre cuisse une pellicule de peau synthétique que vous protégez ensuite par un bandage. Vous vous levez, prêt à vous remettre au volant de l'Interceptor, lorsqu'un énorme chien sauvage apparaît au bout de la rue. Son pelage porte les marques de nombreux et féroces combats et sa gueule écumante de bave laisse supposer qu'il s'agit là d'une bête enragée. Soudain, le chien courbe l'échiné et s'élance rapidement vers vous en grognant.",
+  "text": "[payment]Vous prenez une unité de votre Trousse de Secours[/payment] et soignez votre blessure : les éclats de balle de la plaie sortent un par un de la plaie, non sans douleur. Il n'y a pas de rejet, la peau synthétique adhère assez bien à la cuisse. le bandage tient. Vous vous redressez. Non loin l'Interceptor vous attend, oui mais il y a un problème. Un chien vient d'apparaitre au bout de la rue, Saint Bernard. Son pelage porte les marques de nombreux combats et sa gueule écumante de bave laisse supposer qu'il s'agit là d'une bête enragée. Soudain, l'animal se ramasse sur lui même et s'élance vers vous.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "TrousseSecours": -1

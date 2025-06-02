@@ -11,7 +11,7 @@ const ChapterProvider = ({ children }) => {
     localStorage.getItem("selectedCharacter") || "Skarr"
   );
 
-  // Persistance : sauvegarde la fiche personnage à chaque modification
+  // Persistance: sauvegarde la fiche personnage à chaque modification
   useEffect(() => {
     if (characterData) {
       localStorage.setItem("characterData", JSON.stringify(characterData));

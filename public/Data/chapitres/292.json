@@ -4,7 +4,16 @@
   "text": "Vous reste-t-il une roquette ?",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Oui !", "next": "31" },
-    { "label": "Non !", "next": "173" }
+    {
+      "label": "Oui !",
+      "next": "31",
+      "modificateursNarratifs": {
+        "roquette": -1
+      }
+    },
+    {
+      "label": "Non !",
+      "next": "173"
+    }
   ]
 }

@@ -4,7 +4,16 @@
   "text": "Vous ouvrez la portière du côté du conducteur et vous montez à l'intérieur de la voiture. Vous êtes en train d'ouvrir la boîte à gants quand, tout à coup, vous entendez un sifflement aigu. Vous vous apercevez avec horreur que vous venez de déranger un serpent à sonnettes ! Il passe à l'attaque et vous mord au bras, vous injectant dans les veines son venin mortel.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous avez encore de quoi vous soigner dans votre Trousse de Secours...", "next": "2" },
-    { "label": "Si vous avez utilise toute votre pharmacie...", "next": "357" }
+    {
+      "label": "Si vous avez encore de quoi vous soigner dans votre Trousse de Secours...",
+      "next": "2",
+      "modificateursNarratifs": {
+        "trousseDeSecours": -1
+      }
+    },
+    {
+      "label": "Si vous avez utilise toute votre pharmacie...",
+      "next": "357"
+    }
   ]
 }

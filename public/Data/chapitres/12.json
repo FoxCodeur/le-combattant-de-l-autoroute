@@ -1,7 +1,7 @@
 {
   "id": "12",
   "title": "Chapitre 12",
-  "text": "Vous savez pertinemment que vous avez très peu de chances de l'emporter, hélas vous n'avez pas d'autre choix car ce pillard vous a pris de court. Ignorant la douleur fulgurante que vous ressentez, vous sortez de sous l'ambulance en roulant sur le côté et vous tirez au jugé sur votre adversaire à deux reprises. Malheureusement, les deux coups manquent leur but et vous voyez soudain surgir de derrière un rocher un homme débraillé, portant un bandeau rouge autour de la tête. Celui-ci fait feu sur vous et vous devez l'affronter.",
+  "text": "Vous savez pertinemment que vous avez très peu de chances de l'emporter, hélas vous n'avez guère le choix car ce pillard vous a pris de court. Ignorant la douleur fulgurante que vous ressentez, vous sortez de sous l'ambulance en roulant sur le côté et tirez au jugé sur votre adversaire à deux reprises. Malheureusement, les deux coups manquent leur but et vous voyez soudain surgir de derrière un rocher un homme débraillé, portant un bandeau rouge autour de la tête. Celui-ci fait feu sur vous et vous devez l'affronter.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",

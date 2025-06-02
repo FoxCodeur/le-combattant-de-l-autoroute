@@ -16,7 +16,7 @@
       "label": "Si vous n'en avez pas...",
       "next": "263",
       "condition": {
-        "item": "poing_americain",
+        "item": "giletPareBalles",
         "hasItem": false
       }
     }

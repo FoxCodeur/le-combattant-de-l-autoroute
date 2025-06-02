@@ -1,7 +1,7 @@
 {
   "id": "4",
   "title": "Chapitre 4",
-  "text": "Vous quittez la route et vous garez l'Interceptor le long d'un muret. Une fois le moteur arrêté, vous êtes frappé par le silence qui règne en ces lieux et vous vous demandez avec inquiétude si quelqu'un vous a entendu arriver. Vous vous restaurez rapidement, mais vous attendez ensuite que la nuit soit complètement tombée avant de vous endormir. Vous vous réveillez, frais et dispos, aux premières lueurs du jour. Ce repos salutaire vous fait gagner **2** points d'**ENDURANCE**. Vous faites démarrer l'Interceptor et vous repartez vers le sud.",
+  "text": "Vous quittez la route et vous garez l'Interceptor le long d'un muret. Une fois le moteur arrêté, vous êtes frappé par le silence qui règne en ces lieux et vous vous demandez avec inquiétude si on vous a entendu arriver. Vous vous restaurez rapidement, mais vous attendez ensuite que la nuit soit complètement tombée avant de vous endormir. Vous vous réveillez, frais et dispos, aux premières lueurs du jour. Ce repos salutaire vous fait [success]gagner 2 points d'ENDURANCE[/success]. Vous faites démarrer l'Interceptor et vous repartez vers le sud.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": 2

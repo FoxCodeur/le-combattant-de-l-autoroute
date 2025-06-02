@@ -1,7 +1,7 @@
 {
   "id": "3",
   "title": "Chapitre 3",
-  "text": "Vous enfoncez la pédale de l'accélérateur tout en relâchant l'embrayage. Le moteur rugit et les roues arrière patinent en dégageant un épais nuage de poussière, et l'Interceptor s'élance soudain en prenant de vitesse la Ford jaune. Dans le rétroviseur, vous distinguez la fureur qui se peint sur les traits de votre adversaire, tandis que celui-ci tente désespérément de vous rattraper en prenant un maximum de risques sur cette route étroite. Mais le moteur de la Ford doit être surcompressé car, dans une accélération foudroyante, la voiture jaune parvient à vous percuter à l'arrière à grande vitesse...",
+  "text": "Vous enfoncez la pédale de l'accélérateur tout en relâchant l'embrayage. Le moteur rugit et les roues arrière patinent en dégageant un épais nuage de poussière, et l'Interceptor s'élance soudain en prenant de vitesse la Ford jaune. Dans le rétroviseur, vous distinguez la fureur qui se peint sur les traits de votre adversaire, tandis que celui-ci tente désespérément de vous rattraper en prenant un maximum de risques sur cette route étroite. Mais le moteur de la Ford doit être surcompressé car, dans une accélération foudroyante, la voiture de l'assaillant parvient à vous percuter à l'arrière à grande vitesse...",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

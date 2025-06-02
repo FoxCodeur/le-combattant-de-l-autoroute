@@ -1,7 +1,7 @@
 {
   "id": "233",
   "title": "Chapitre 233",
-  "text": "Après avoir soigné votre blessure, vous examinez la pièce, mais vous ne trouvez que des détritus et des vieux meubles poussiéreux. La pièce était piégée uniquement dans le but de décourager d'éventuels intrus. **Vous perdez 1 point de CHANCE**.",
+  "text": "Après avoir soigné votre blessure, vous examinez la pièce, mais vous ne trouvez que des détritus et des vieux meubles poussiéreux. La pièce était piégée uniquement dans le but de décourager d'éventuels intrus. [danger]Vous perdez 1 point de CHANCE.[/danger]",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1

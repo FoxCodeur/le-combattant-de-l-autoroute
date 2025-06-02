@@ -1,13 +1,14 @@
 {
   "id": "277",
   "title": "Chapitre 277",
-  "text": "Le coffre s'ouvre brusquement et vous trouvez à l'intérieur un gilet pare-balles. Ajoutez 1 point à votre total de CHANCE et 1 point à votre total d'HABILETÉ. Vous mettez le gilet sous votre veste et vous retournez à votre voiture pour continuer votre route",
+  "text": "Le coffre s'ouvre brusquement et vous trouvez à l'intérieur un gilet pare-balles. [success]Ajoutez 1 point à votre total de CHANCE[/success] et [success]1 point à votre total d'HABILETÉ.[/success] Vous mettez le gilet sous votre veste et vous retournez à votre voiture pour continuer votre route",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": 1,
-    "habilete": 1
+    "habilete": 1,
+    "giletPareBalles": 1
   },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "49" }
+    { "label": "Next...", "next": "49" }
   ]
 }

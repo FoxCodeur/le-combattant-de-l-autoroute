@@ -4,7 +4,16 @@
   "text": "Vous regardez votre compas magnétique pour vous assurer que vous vous dirigez bien droit vers l'est. Le terrain pierreux secoue violement l'Interceptor, et soudain, vous entendez un éclatement sourd. Vous avez du mal à garder le contrôle de votre véhicule : vous avez certainement crevé ! Vous vous arrêtez pour évaluer les dégâts. Vous aviez vu juste, un des pneus a éclaté et, dans ce cas, la bombe anticrevaison ne vous est d'aucun secours.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous avez une roue de secours...", "next": "223" },
-    { "label": "Sinon...", "next": "343" }
+    {
+      "label": "Si vous avez une roue de secours...",
+      "next": "223",
+      "modificateursNarratifs": {
+        "roueDeSecours": -1
+      }
+    },
+    {
+      "label": "Sinon...",
+      "next": "343"
+    }
   ]
 }

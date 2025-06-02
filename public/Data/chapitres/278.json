@@ -1,7 +1,7 @@
 {
   "id": "278",
   "title": "Chapitre 278",
-  "text": "En retournant au croisement, vous entendez tout à coup du bruit à l'arrière de la voiture. Conduire devient de plus en plus difficile et vous devez vous arrêter. Vous descendez du véhicule et vous comprenez immédiatement ce qu'il s'est produit : un pneu crevé ! Vous perdez 1 point de CHANCE. Vous ouvrez le coffre et vous prenez votre Bombe Anticrevaison. Vous êtes bientôt à nouveau en route vers l'ouest puis vous arrivez au croisement où vous tournez à gauche",
+  "text": "En retournant au croisement, vous entendez tout à coup du bruit à l'arrière de la voiture. Conduire devient de plus en plus difficile et vous devez vous arrêter. Vous descendez du véhicule et vous comprenez immédiatement ce qu'il s'est produit : un pneu crevé ! [danger]Vous perdez 1 point de CHANCE.[/danger] Vous ouvrez le coffre et vous prenez votre Bombe Anticrevaison. Vous êtes bientôt à nouveau en route vers l'ouest puis vous arrivez au croisement où vous tournez à gauche",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1

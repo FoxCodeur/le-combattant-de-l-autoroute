@@ -1,7 +1,7 @@
 {
   "id": "24",
   "title": "Chapitre 24",
-  "text": "Vous poursuivez votre chemin sur la route cahoteuse quand une barrière en bois, hérissée de fil barbelé, vous oblige à freiner. Assis nonchalamment dessus, un type torse nu, bardé de tatouages, vous braque avec un revolver. D’un ton sec, il lâche : **« Je t’ai jamais vu par ici… Tu fais partie de quelle bande ? »** Vous lui répondez du tac au tac : **« Les Rats Noirs.»** Il plisse les yeux, sceptique. **« Connais pas. Mais bon, tout le monde peut tenter sa chance à la course. Continue sur la route jusqu’à la maison brûlée. Tu verras les autres bagnoles garées dans le coin.»** Il marque une pause, puis ajoute avec un sourire en coin : **« La première course démarre d'ici cinq minutes. Y a de gros paris aujourd’hui… ça va être chaud!»**",
+  "text": "Vous poursuivez votre chemin sur la route cahoteuse quand une barrière en bois, hérissée de fil barbelé, vous oblige à freiner. Assis nonchalamment dessus, un type torse nu, bardé de tatouages, vous braque avec un revolver. D’un ton sec, il lâche : **« Je t’ai jamais vu par ici… Tu fais partie de quelle bande ? »** Vous lui répondez du tac au tac : **« Les Rogues.»** Il plisse les yeux, sceptique. **« Connais pas. Mais bon, tout le monde peut tenter sa chance à la course. Continue sur la route jusqu’à la maison brûlée. Tu verras les autres bagnoles garées dans le coin.»** Il marque une pause, puis ajoute avec un sourire en coin : **« La première course démarre d'ici cinq minutes. Y a de gros paris aujourd’hui… ça va être chaud!»**",
   "image": "/images/chapter24.webp",
   "choices": [
     { "label": "Si vous voulez franchir la barriere et participer à la course...", "next": "300" },

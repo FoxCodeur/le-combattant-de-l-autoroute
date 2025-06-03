@@ -13,6 +13,13 @@ const CharacterSheet = ({ data }) => {
       <h2 className="character-name">{data.nom}</h2>
       <img src={imageSrc} alt={data.nom} className="character-image" />
 
+      {/* Affiche l'âge s'il est présent */}
+      {data.age && (
+        <div className="character-age">
+          <strong>Âge :</strong> {data.age}
+        </div>
+      )}
+
       <section className="character-section">
         <h3>Caractéristiques</h3>
         <ul>

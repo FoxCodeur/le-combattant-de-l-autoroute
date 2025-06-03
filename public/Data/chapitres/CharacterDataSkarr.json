@@ -1,6 +1,8 @@
 {
   "nom": "Skarr",
   "image": "/images/Skarr.png",
+  "age": 44,
+  "sexe": "Homme",
   "caractéristiques": {
     "habilete": 10,
     "endurance": 35,

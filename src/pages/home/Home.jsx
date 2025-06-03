@@ -54,7 +54,7 @@ const Home = () => {
             <AdventureCard
               image={skarrImg}
               title="SKARR"
-              age={38}
+              age={44}
               description="Ancien militaire d’élite, Skarr a perdu un œil lors d’une mission qui a mal tourné. Solitaire, il s’est reconverti en instructeur d’auto-défense avant de devenir le protecteur pragmatique et loyal de Nouvelle Espérance. Dans ce nouveau monde, il sait que la moindre faiblesse se paie cher."
             >
               <NewGameButton onClick={() => handleStart("Skarr")}>

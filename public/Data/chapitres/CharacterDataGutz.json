@@ -1,6 +1,8 @@
 {
   "nom": "Gutz",
   "image": "/images/Gutz.png",
+  "age": 32,
+  "sexe": "Homme",
   "caractéristiques": {
     "habilete": 8,
     "endurance": 30,

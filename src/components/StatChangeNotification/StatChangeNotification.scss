@@ -1,0 +1,39 @@
+@use "../../styles/mixins" as *; // ← si tes mixins sont dans styles/mixins.scss
+
+.stat-change-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
+  @include flex-column;
+  gap: 18px;
+  pointer-events: none;
+}
+
+.notif {
+  background-color: white;
+  padding: 18px 32px;
+  border-radius: 16px;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 20px #0008;
+  opacity: 1;
+  transform: scale(2);
+  transition: opacity 0.4s, transform 0.4s;
+  @include flex-align-center;
+
+  &.leaving {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    background: transparent;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: none;
+  }
+}

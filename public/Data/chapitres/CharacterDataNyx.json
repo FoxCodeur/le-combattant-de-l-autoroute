@@ -1,6 +1,8 @@
 {
   "nom": "Nyx",
   "image": "/images/Nyx.png",
+  "age": 26,
+  "sexe": "Femme",
   "caractéristiques": {
     "habilete": 11,
     "endurance": 30,

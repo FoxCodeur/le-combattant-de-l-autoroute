@@ -1,7 +1,7 @@
 {
   "id": "155",
   "title": "Chapitre 155",
-  "text": "L'homme surgit soudain dans l'encadrement d'une porte et avance en braquant son fusil sur vous. Il vous dévisage avec dureté et dit : « Vous m'avez tout l'air d'être l'homme qui a provoqué la mort de ma femme et de mon fils en faisant exploser mon break, la semaine dernière. Je vais enfin pouvoir les venger ! Mais je me battrai selon les règles. Dégainez lorsque vous serez prêt.» Vous réalisez l'erreur que vous avez commise en mentant à cet homme et [danger]vous perdez 1 point de CHANCE.[/danger]",
+  "text": "L’homme surgit brusquement dans l’encadrement de la porte, le fusil déjà braqué sur vous. Son regard dur vous transperce alors qu’il s’approche lentement : **« C’est toi… C’est toi espèce de salopard qui as causé la mort de ma femme et de mon fils, en faisant exploser mon break la semaine dernière, n’est-ce pas ? Je vais enfin pouvoir les venger. Mais je refuse de te tuer comme un lâche : on fera ça dans les règles. Prépare-toi à dégainer quand tu seras prêt. »** Vous réalisez l'erreur que vous avez commise en mentant à cet inconnu et [danger]vous perdez 1 point de CHANCE.[/danger]",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1

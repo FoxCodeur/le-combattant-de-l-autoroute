@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import renderFormattedText from "../../utils/renderFormattedText";
 import ChapterContext from "../../context/ChapterContext";
@@ -9,7 +9,11 @@ import CharacterSheetButton from "../CharacterSheetButton/CharacterSheetButton";
 import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
-import applyNarrativeModifiers from "../../utils/applyNarrativeModifiers"; // Pour appliquer les modificateurs narratifs
+import applyNarrativeModifiers from "../../utils/applyNarrativeModifiers";
+import StatChangeNotification from "../StatChangeNotification/StatChangeNotification";
+
+const NOTIF_DISPLAY_DURATION = 1000; // 1 second
+const NOTIF_TRANSITION_DURATION = 400; // 0.4 seconds (should match CSS)
 
 const Chapter = () => {
   const { id } = useParams();
@@ -26,6 +30,10 @@ const Chapter = () => {
   const [diceTotal, setDiceTotal] = useState(null);
   const [validChoice, setValidChoice] = useState(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [statNotifications, setStatNotifications] = useState([]);
+
+  // File d'attente des notifications pour affichage séquentiel
+  const notifQueue = useRef([]);
 
   // Charge le chapitre en fonction de l'id
   useEffect(() => {
@@ -34,7 +42,7 @@ const Chapter = () => {
     setValidChoice(null);
   }, [id, fetchChapter]);
 
-  // Applique les modificateurs narratifs une seule fois par chapitre
+  // Applique les modificateurs narratifs une seule fois par chapitre et affiche les notifications une à une
   useEffect(() => {
     if (
       chapterData &&
@@ -42,14 +50,13 @@ const Chapter = () => {
       characterData &&
       setCharacterData
     ) {
-      // Sécurise le champ de suivi
       const safeCharacter = { ...characterData };
       if (!Array.isArray(safeCharacter.chapitresModifies)) {
         safeCharacter.chapitresModifies = [];
       }
       const chapterId = String(chapterData.id ?? id);
       if (!safeCharacter.chapitresModifies.includes(chapterId)) {
-        const updated = applyNarrativeModifiers(
+        const { character: updated, changes } = applyNarrativeModifiers(
           chapterData.modificateursNarratifs,
           safeCharacter
         );
@@ -58,9 +65,39 @@ const Chapter = () => {
           chapterId,
         ];
         setCharacterData(updated);
+
+        // Ajoute toutes les notifications à la file d'attente
+        notifQueue.current = changes.map((change) => ({
+          ...change,
+          id: Date.now() + Math.random(),
+          leaving: false,
+        }));
+
+        // Lance l'affichage séquentiel
+        showNextNotification();
       }
     }
+    // eslint-disable-next-line
   }, [chapterData, characterData, setCharacterData, id]);
+
+  // Affiche la prochaine notification de la file d'attente
+  const showNextNotification = () => {
+    if (notifQueue.current.length === 0) return;
+    const nextNotif = notifQueue.current.shift();
+    setStatNotifications([nextNotif]);
+
+    setTimeout(() => {
+      setStatNotifications((prev) =>
+        prev.map((notif) =>
+          notif.id === nextNotif.id ? { ...notif, leaving: true } : notif
+        )
+      );
+      setTimeout(() => {
+        setStatNotifications([]);
+        showNextNotification();
+      }, NOTIF_TRANSITION_DURATION);
+    }, NOTIF_DISPLAY_DURATION);
+  };
 
   const handleChoiceClick = (nextChapterId) => {
     if (nextChapterId) {
@@ -95,11 +132,7 @@ const Chapter = () => {
         } else {
           matchedChoice = chapterData.choices.find((choice) => {
             const label = normalize(choice.label.toLowerCase());
-            return (
-              label.includes("echec") ||
-              label.includes("echou") ||
-              label.includes("maladresse")
-            );
+            return label.includes("echec") || label.includes("echou");
           });
         }
       }
@@ -144,6 +177,9 @@ const Chapter = () => {
       role="region"
       aria-label="Chapitre interactif"
     >
+      {/* Notifications de modification de stats */}
+      <StatChangeNotification notifications={statNotifications} />
+
       {/* Modale fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (

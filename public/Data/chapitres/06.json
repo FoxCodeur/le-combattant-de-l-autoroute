@@ -1,7 +1,7 @@
 {
   "id": "6",
   "title": "Chapitre 6",
-  "text": "Les deux motards dégainent chacun un pistolet. Vous sortez votre revolver : le duel commence. À chaque assaut, chacun d'eux tire sur vous séparément. Vous devez choisir lequel des deux vous affrontez en priorité. Une fois le premier vaincu, vous affronterez le second.",
+  "text": "Les deux motards dégainent chacun un pistolet. Vous sortez votre revolver : le duel commence. C'est à vous de décider lequel des deux vous affrontez en priorité.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",

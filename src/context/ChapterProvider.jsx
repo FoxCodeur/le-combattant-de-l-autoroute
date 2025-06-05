@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import ChapterContext from "./ChapterContext";
+import { fetchChapterById, fetchCharacterData } from "../utils/chapterApi";
 
 const ChapterProvider = ({ children }) => {
   const [chapterData, setChapterData] = useState(null);
@@ -30,14 +31,11 @@ const ChapterProvider = ({ children }) => {
 
   // Recharge la fiche personnage à chaque changement de selectedCharacter
   useEffect(() => {
-    // Si le personnage change, on efface la sauvegarde précédente
     const saved = localStorage.getItem("characterData");
     if (saved) {
       setCharacterData(JSON.parse(saved));
     } else {
-      const fileName = `CharacterData${selectedCharacter}.json`;
-      fetch(`/Data/chapitres/${fileName}`)
-        .then((res) => res.json())
+      fetchCharacterData(selectedCharacter)
         .then((data) => {
           // Ajoute le tableau pour le suivi si absent
           if (!Array.isArray(data.chapitresModifies)) {
@@ -65,12 +63,7 @@ const ChapterProvider = ({ children }) => {
     setError(null);
 
     try {
-      const response = await fetch(`/Data/chapitres/${id}.json`);
-      if (!response.ok) {
-        throw new Error(`Chapitre introuvable (code ${response.status})`);
-      }
-
-      const data = await response.json();
+      const data = await fetchChapterById(id);
       setChapterData(data);
     } catch (err) {
       setError(err.message || "Erreur inconnue");
@@ -90,7 +83,7 @@ const ChapterProvider = ({ children }) => {
         error,
         characterData,
         setCharacterData,
-        selectCharacter, // pour permettre la sélection ailleurs
+        selectCharacter,
       }}
     >
       {children}

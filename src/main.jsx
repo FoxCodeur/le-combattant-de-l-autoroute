@@ -5,22 +5,28 @@ import App from "./components/App/App.jsx";
 import "./styles/index.scss";
 import ChapterProvider from "./context/ChapterProvider";
 import TestProvider from "./context/TestProvider";
+import StatNotificationProvider from "./context/StatNotificationProvider"; // << Ajoute ceci
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
   <StrictMode>
-    <ChapterProvider>
-      <TestProvider>
-        <BrowserRouter
-          future={{
-            v7_startTransition: true,
-            v7_relativeSplatPath: true,
-          }}
-        >
-          <App />
-        </BrowserRouter>
-      </TestProvider>
-    </ChapterProvider>
+    <StatNotificationProvider>
+      {" "}
+      {/* << Ajoute ceci */}
+      <ChapterProvider>
+        <TestProvider>
+          <BrowserRouter
+            future={{
+              v7_startTransition: true,
+              v7_relativeSplatPath: true,
+            }}
+          >
+            <App />
+          </BrowserRouter>
+        </TestProvider>
+      </ChapterProvider>
+    </StatNotificationProvider>{" "}
+    {/* << Et ceci */}
   </StrictMode>
 );

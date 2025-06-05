@@ -11,6 +11,7 @@ import defaultPicture from "../../assets/images/defaultPicture.webp";
 import applyNarrativeModifiers from "../../utils/applyNarrativeModifiers";
 import StatChangeNotification from "../StatChangeNotification/StatChangeNotification";
 import StatNotificationContext from "../../context/StatNotificationContext";
+import CombatEnnemis from "../CombatEnnemis/CombatEnnemis";
 
 const Chapter = () => {
   const { id } = useParams();
@@ -32,7 +33,6 @@ const Chapter = () => {
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
-  // ^^^ On utilise addNotifications (pluriel) pour ajouter plusieurs notifications à la fois
 
   // Charge le chapitre en fonction de l'id
   useEffect(() => {
@@ -146,6 +146,9 @@ const Chapter = () => {
     }
   };
 
+  // --- DEBUG: Affiche chapterData en console ---
+  console.log("chapterData", chapterData);
+
   return (
     <div
       className={`chapter chapter-${id}`}
@@ -191,6 +194,11 @@ const Chapter = () => {
           >
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
+
+          {/* Apparition des ennemis lors d’un combat */}
+          {chapterData.combat?.ennemis && (
+            <CombatEnnemis ennemis={chapterData.combat.ennemis} />
+          )}
 
           {/* Section du test de chance, d'habileté ou de hasard (si requis) */}
           {chapterData.diceRoll?.required && (

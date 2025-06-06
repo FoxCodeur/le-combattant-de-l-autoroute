@@ -25,7 +25,7 @@ const DiceRoll = ({ numberOfDice = 2, onResult }) => {
           { rotate: 0, scale: 1 },
           {
             rotate: "+=360",
-            scale: 1.1, // Agrandissement plus subtil
+            scale: 1.1,
             duration: 0.5,
             ease: "power2.inOut",
             onComplete: () => {
@@ -49,14 +49,13 @@ const DiceRoll = ({ numberOfDice = 2, onResult }) => {
       }
     });
 
-    // Affiche le nouveau résultat après un petit délai (animation)
     setTimeout(() => {
       setDiceResults(results);
       setRolling(false);
 
       const total = results.reduce((sum, val) => sum + val, 0);
       if (onResult) onResult(total);
-    }, 600); // correspond à la durée de l'animation
+    }, 600);
   };
 
   return (

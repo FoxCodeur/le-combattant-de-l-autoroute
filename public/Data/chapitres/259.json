@@ -8,7 +8,9 @@
       "label": "Si vous voulez vous acquittez du droit de passage...",
       "next": "369",
       "modificateursNarratifs": {
-        "credits": -200
+        "équipement": {
+      "credits": -200
+    }
       }
     },
     {

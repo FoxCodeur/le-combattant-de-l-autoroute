@@ -1,7 +1,7 @@
 {
   "id": "64",
   "title": "Chapitre 64",
-  "text": "Après avoir fouillé les vêtements du bandit sans trouver quoi que ce soit d'intéressant, vous inspectez les pneus de l'Interceptor pour voir s'ils sont réparables. Tentez votre Chance.",
+  "text": "Vous pensez un instant à vous lancer à la poursuite de la complice du pillard, mais elle a déjà disparu, trop loin pour que vous puissiez l’atteindre. Vous vous retournez alors vers le cadavre de votre assaillant. Après avoir fouillé ses vêtements sans rien trouver d’intéressant, vous inspectez les pneus de l’Interceptor pour voir s’ils sont réparables...",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

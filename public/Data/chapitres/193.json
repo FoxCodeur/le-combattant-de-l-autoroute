@@ -1,7 +1,7 @@
 {
   "id": "193",
   "title": "Chapitre 193",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Vous plongez brusquement au sol, évitant de peu le projectile qui vient rebondir contre la carrosserie de la voiture. L’homme, frustré par votre esquive, tire un revolver de son étui, prêt à l’affrontement....",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",

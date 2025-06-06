@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import { GiBroadsword } from "react-icons/gi";
+import { GiPistolGun } from "react-icons/gi"; // <-- Remplace GiBroadsword par GiPistolGun
 import "./CombatEnnemi.scss";
 
 const CombatEnnemis = ({ ennemis }) => {
@@ -30,7 +30,7 @@ const CombatEnnemis = ({ ennemis }) => {
               <h3 className="ennemi-name">{ennemi.nom}</h3>
               <div className="ennemi-stats">
                 <span className="ennemi-stat">
-                  <GiBroadsword
+                  <GiPistolGun // <-- L'icône revolver ici
                     color="#90caf9"
                     size={18}
                     style={{ marginRight: "0.3em" }}

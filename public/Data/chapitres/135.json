@@ -1,7 +1,7 @@
 {
   "id": "135",
   "title": "Chapitre 135",
-  "text": "Alors que les flammes s'éteignent, vous regardez le bandit contourner lentement la voiture en proférant, à votre adresse, une suite d'insultes et de grossièretés. L'homme ne semble avoir pour toute arme qu'un poignard, qu'il tient à la main droite. Immobilisé à l'intérieur de l'Interceptor, vous n'avez pas d'autre solution que d'en sortir pour affronter l'homme. Vous dégainez votre revolver et vous ouvrez votre portière, mais au moment où vous mettez un pied dehors, l'homme en profite pour lancer son poignard. Jetez deux dés.",
+  "text": "Sonné par le choc, vous tentez de retrouver vos repères. Autour de vous, tout n’est plus que brouillard et bruits étouffés. Des mouvements, non loin : le complice de la femme se détache de la brume, un poignard à la main. Il se rapproche, lançant des insultes. Pris au piège, vous réalisez que vous ne pouvez pas rester là sans rien faire. Votre main se pose sur la crosse du revolver. Mais à peine avez-vous esquissé le moindre geste que l’assaillant lance son poignard dans votre direction...",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -12,7 +12,7 @@
     "description": "Testez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, le test est réussi. Sinon, il est échoué."
   },
   "choices": [
-    { "label": "Test réussi...", "next": "193" },
-    { "label": "Test échoué...", "next": "36" }
+    { "label": "Test reussi...", "next": "193" },
+    { "label": "Test echoue...", "next": "36" }
   ]
 }

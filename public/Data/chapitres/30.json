@@ -1,7 +1,7 @@
 {
   "id": "30",
   "title": "Chapitre 30",
-  "text": "Le carreau de l'arbalète vous touche à l'épaule et vous glissez de l'échelle. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE. Si vous êtes toujours en vie, vous faites fi de la douleur et vous remontez à l'échelle avant que le pirate n'ait le temps de recharger son arme. Votre blessure vous empêche d'utiliser votre revolver, aussi devez-vous vous rapprocher suffisamment pour lutter au corps à corps avec l'homme. Jetez un dé et ajoutez le chiffre obtenu à votre total d'HABILETÉ, mais retranchez 1 point de cette somme en raison de votre blessure. Jetez le dé à nouveau et ajoutez le chiffre obtenu aux 7 points représentant le total d'HABILETÉ du pirate.",
+  "text": "Le carreau de l'arbalète vous touche à l'épaule et vous glissez de l'échelle. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE. Si vous êtes toujours en vie, vous faites fi de la douleur et vous remontez à l'échelle avant que le ninja n'ait le temps de recharger son arme. Votre blessure vous empêche d'utiliser votre revolver, aussi devez-vous vous rapprocher suffisamment pour lutter au corps à corps avec l'homme. Jetez un dé et ajoutez le chiffre obtenu à votre total d'HABILETÉ, mais retranchez 1 point de cette somme en raison de votre blessure. Jetez le dé à nouveau et ajoutez le chiffre obtenu aux 7 points représentant le total d'HABILETÉ du pirate.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -13,7 +13,7 @@
   },
   
   "choices": [
-    { "label": "Si votre total d'HABILETÉ est supérieur ou égal à celui de votre adversaire, rendez-vous au", "next": "74" },
-    { "label": "Si votre total d'HABILETÉ est inférieur à celui de votre adversaire, rendez-vous au", "next": "226" }
+    { "label": "Si votre total d'HABILETE est superieur ou egal a celui de votre adversaire...", "next": "74" },
+    { "label": "Sinon...", "next": "226" }
   ]
 }

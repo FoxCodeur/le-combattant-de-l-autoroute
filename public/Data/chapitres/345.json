@@ -1,14 +1,14 @@
 {
   "id": "345",
   "title": "Chapitre 345",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "La flèche de l'arbalète passe juste au-dessus de votre tête, ce qui provoque la colère du pirate. Vous bondissez sur le toit de la remorque et vous courez vers l'homme avant qu'il ait le temps de recharger son arbalète. Lancez un dé et ajoutez le chiffre obtenu au total d'HABlLETÉ du pirate (qui est de 7 points).",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
     "numberOfDice": 1
   },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "74" },
-    { "label": "Fouiller la pièce", "next": "226" }
+    { "label": "Si votre total d'HABlLETE est superieur ou egal a celui du ninja...", "next": "74" },
+    { "label": "sinon...", "next": "226" }
   ]
 }

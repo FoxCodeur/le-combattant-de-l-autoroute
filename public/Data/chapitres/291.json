@@ -1,36 +1,18 @@
 {
   "id": "291",
   "title": "Chapitre 291",
-  "text": "L'homme au masque prend un coffret d'acajou dans la cabine de l'autocar. A l'intérieur se trouvent deux magnifiques pistolets. Il loge une balle dans chacun d'eux puis avant de s'exclamer : **« Choisis ton arme ! »** Vous saisissez l'un des pistolets et le soupesez jusqu'à l'avoir bien en main. Vous êtes maintenant debout dos contre dos, puis le duelliste vous somme d'avancer de dix pas et de faire feu quand vous serez prêt. Vous respirez profondément puis vous comptez chaque pas à haute voix. Vous faites demi-tour et vous apercevez l'homme masqué, le pistolet pointé droit sur vous. Vous faites feu tous les deux en même temps.",
+  "text": "L’homme au masque — un simple loup de velours noir — ouvre un coffret d’acajou et en sort deux Colts rutilants. Sous votre regard abasourdi, il glisse dans chacun des revolvers une unique balle dans le barillet, fait tourner la chambre et referme l’arme dans un cliquetis sec. Il pose alors les deux pistolets sur la table, avant de s’adresser à vous d’une voix posé : **« Ce soir, pas de duel classique. Je te propose la roulette russe. Refuse, si tu en as le courage… »** Vous secouez la tête, la gorge serré, prêt à reculer. C'est alors qu'une silhouette surgit derrière vous : un complice, qui vous braque aussitôt le canon d’un fusil dans le dos. **« Tu n’as pas le choix, on dirait »**, murmure-t-il d’un ton glacial. L'inconnu plante ses yeux dans les vôtres. **« S'il y a bien un fait que je ne supporte pas, c'est l'injustice et donc, je te fais cette promesse : si tu joues le jeu et que tu survis, je te laisse partir vivant. C’est ma parole! »** La tension est insoutenable. Vous sentez la sueur couler le long de votre nuque alors que votre main se tend vers un Colt au hasard. Vous vous asseyez face à lui, tandis que le complice ne vous quitte pas du regard. Il vous invite à débuter la partie. Vous portez le canon contre votre tempe, fermez un instant les yeux, retenez votre souffle… et appuyez sur la détente. Clic. Vous rouvrez les yeux, le cœur battant à tout rompre. Le duelliste saisit l'arme qu'il reste, fait tourner le barillet et pose le canon sur sa propre tempe. Clic. La partie continue, chaque rotation du barillet faisant monter la tension, la mort planant dans l’air, suspendue à chaque geste...",
   "image": "/images/chapter291.webp",
-  "combat": {
-    "type": "tir",
-    "diceRoll": {
-      "required": true,
-      "numberOfDice": 2
-    },
-    "modificateursCombat": {
-      "degatsJoueur": 2,
-      "degatsAdversaire": 2
-    },
-    "ennemis": [
-      {
-        "nom": "DUELLISTE",
-        "puissanceDeFeu": 9,
-        "blindage": 9,
-        "image": "/images/ennemis/ford-jaune.jpg"
-      }
-    ]
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
   },
-  "issue": {
-      "success": {
-        "text": "Vous sortez vainqueur du duel.",
-        "next": "208"
-      },
-      "failure": {
-        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
-        "next": null,
-        "isGameOver": true
-      }
-    }
-  }
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous survivez à la roulette russe. Sinon, le barillet s'arrête sur la balle fatale."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "208" },
+    { "label": "Test echoue...", "next": "301" }
+  ]
+}

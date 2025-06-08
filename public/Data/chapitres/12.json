@@ -15,7 +15,7 @@
     },
     "ennemis": [
       {
-        "nom": "Jax",
+        "nom": "Drax",
         "habilete": 8,
         "endurance": 12,
         "image": "/images/ch12Ennemi.webp"

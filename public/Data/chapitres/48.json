@@ -1,7 +1,7 @@
 {
   "id": "48",
   "title": "Chapitre 48",
-  "text": "Vous agrippez fermement le manche de votre poignard et vous vous ramassez sur vous-même en attendant que le lascar fasse le premier mouvement. Celui-ci pousse soudain un hurlement et se jette sur vous.",
+  "text": "Vous serrez le manche du poignard à vous en blanchir les jointures, le souffle court, prêt à bondir. Vos muscles sont tendus, chaque fibre de votre corps en alerte. En face, le type vous fixe, et durant un court instant, vous vous dévisagez comme deux chiens en faïence, immobiles, l’un guettant le mouvement de l’autre. Une seconde de silence s’étire, suspendue dans l’air. Soudain, il pousse un cri bestial et se précipite sur vous, arme levée, prêt à en découdre.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "corps-à-corps",
@@ -15,10 +15,10 @@
     },
     "ennemis": [
       {
-        "nom": "Gangster",
+        "nom": "Lascar",
         "habilete": 7,
         "endurance": 10,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/ennemis/lascar.jpg"
       }
     ]
   },

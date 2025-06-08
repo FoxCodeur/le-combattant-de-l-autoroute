@@ -1,7 +1,7 @@
 {
   "id": "26",
   "title": "Chapitre 26",
-  "text": "Vous pénétrez dans le café par la porte de derrière et vous constatez au premier regard que l'endroit a été mis à sac depuis un bon moment. Il y a de la vaisselle brisée éparpillée sur le sol, tout le mobilier est sens dessus dessous et les placards à provisions ont été dévalisés. Un escalier mène à l'appartement du premier étage, qui a également été pillé. Après avoir vérifié qu'il n'y a rien d'intéressant, vous vous dirigez vers la sortie, mais vous vous arrêtez net sur le seuil de la porte en apercevant un homme, vêtu d'une longue tunique blanche, verser un bidon d'essence sur l'Interceptor ! L'homme s'éloigne ensuite de votre voiture en marmonnant des paroles incompréhensibles, sort une boîte d'allumettes et en gratte une qu'il brandit en l'air.",
+  "text": "Vous pénétrez dans le café par la porte de service et constatez au premier regard que l’endroit a été mis à sac depuis un bon moment. De la vaisselle brisée jonche le sol, tout le mobilier est sens dessus dessous et les placards à provisions ont été dévalisés. Un escalier mène à l’appartement du premier étage, qui a lui aussi été pillé. Après avoir vérifié qu’il n’y a rien d’intéressant, vous vous dirigez vers la sortie. Mais vous vous arrêtez net sur le seuil de la porte : devant l’Interceptor, un homme vêtu d’une longue tunique blanche se tient, immobile. Il extirpe soudain une grenade de sa poche et la brandit à bout de bras, comme une menace silencieuse. Son regard exalté se pose sur vous, et ses doigts se resserrent sur la sécurité de l’engin, prêt à tout faire sauter au moindre geste de votre part...",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez l'interpeller...", "next": "260" },

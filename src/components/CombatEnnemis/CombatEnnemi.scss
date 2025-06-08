@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+
 .combat-ennemis {
   margin: 2rem 0;
 
@@ -88,10 +89,18 @@
         gap: 0.4em;
         font-weight: 600;
         svg {
-          width: 1.5em;
-          height: 1.5em;
+          width: 2em;
+          height: 2em;
           min-width: 1em;
           min-height: 1em;
+        }
+        // Classe spécifique pour l'icône coeur, à ajouter sur le FaHeart dans le JSX
+        .heart-icon {
+          width: 1.2em !important;
+          height: 1.2em !important;
+          min-width: 1em;
+          min-height: 1em;
+          vertical-align: middle;
         }
       }
     }

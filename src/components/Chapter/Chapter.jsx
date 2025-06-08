@@ -1,65 +1,56 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-// === Utils et contextes ===
-import renderFormattedText from "../../utils/renderFormattedText"; // Utilisé pour afficher le texte du chapitre avec formatage
-import ChapterContext from "../../context/ChapterContext"; // Contexte global du chapitre (données, chargement...)
-import StatNotificationContext from "../../context/StatNotificationContext"; // Pour gérer les notifications de changements de stats
-import applyNarrativeModifiers from "../../utils/applyNarrativeModifiers"; // Fonction utilitaire pour appliquer des modificateurs narratifs
+// === Imports utilitaires & contextes ===
+import renderFormattedText from "../../utils/renderFormattedText"; // Formattage du texte du chapitre (gras, italique, etc.)
+import ChapterContext from "../../context/ChapterContext"; // Fournit les données du chapitre et du personnage
+import StatNotificationContext from "../../context/StatNotificationContext"; // Pour afficher les notifications de changement de stats
+import applyNarrativeModifiers from "../../utils/applyNarrativeModifiers"; // Applique les modificateurs narratifs des chapitres
 
-// === Composants UI ===
+// === Imports composants UI ===
 import DiceRoll from "../DiceRoll/DiceRoll"; // Composant pour lancer les dés
-import CharacterSheetButton from "../CharacterSheetButton/CharacterSheetButton"; // Bouton pour ouvrir la fiche personnage
-import Modal from "../Modal/Modal"; // Modale pour afficher des contenus (ici la fiche personnage)
-import CharacterSheet from "../CharacterSheet/CharacterSheet"; // Composant fiche personnage
-import StatChangeNotification from "../StatChangeNotification/StatChangeNotification"; // Affiche des notifications lors des changements de stats
-import CombatEnnemis from "../CombatEnnemis/CombatEnnemis"; // Affiche la section combat si besoin
+import CharacterSheetButton from "../CharacterSheetButton/CharacterSheetButton"; // Affiche le bouton pour la fiche perso
+import Modal from "../Modal/Modal"; // Fenêtre modale générique
+import CharacterSheet from "../CharacterSheet/CharacterSheet"; // Affiche la fiche de personnage
+import StatChangeNotification from "../StatChangeNotification/StatChangeNotification"; // Affiche les notifications de stats
+import CombatEnnemis from "../CombatEnnemis/CombatEnnemis"; // Affiche les informations sur le(s) ennemi(s) du combat
 
-import "./Chapter.scss"; // Styles du composant
-import defaultPicture from "../../assets/images/defaultPicture.webp"; // Image de secours pour le chapitre
+import "./Chapter.scss";
+import defaultPicture from "../../assets/images/defaultPicture.webp";
 
-/**
- * Composant principal d'un chapitre.
- * Gère l'affichage du texte, les choix, les tests de dés, la fiche personnage et l'application des modificateurs narratifs.
- * Interagit avec :
- *   - ChapterContext (données du chapitre et du personnage)
- *   - StatNotificationContext (pour afficher les notifications de changements de stats)
- *   - applyNarrativeModifiers (pour appliquer les effets des choix et chapitres)
- *   - DiceRoll, CharacterSheet, CombatEnnemis (UI)
- */
 const Chapter = () => {
-  // Récupère l'id du chapitre depuis l'URL et la fonction de navigation
+  // ==== Récupération de l'ID de chapitre via l'URL et navigation ====
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Récupère les infos du contexte chapitre (provenant de ChapterContext)
+  // ==== Récupération des données et méthodes du contexte du chapitre ====
   const {
-    chapterData, // Données du chapitre courant
-    fetchChapter, // Fonction pour charger un chapitre
-    loading, // Booléen : le chapitre est-il en cours de chargement ?
-    error, // Message d'erreur s'il y a eu un problème
-    characterData, // Données du personnage courant
-    setCharacterData, // Fonction pour mettre à jour le personnage
+    chapterData,
+    fetchChapter,
+    loading,
+    error,
+    characterData,
+    setCharacterData,
   } = useContext(ChapterContext);
 
-  // États locaux du composant
-  const [diceTotal, setDiceTotal] = useState(null); // Résultat du lancer de dés (s'il y en a un)
-  const [isSheetOpen, setIsSheetOpen] = useState(false); // Fiche personnage ouverte ?
-  const [hasRolled, setHasRolled] = useState(false); // Un lancer de dés a-t-il eu lieu ?
+  // ==== Etats locaux ====
+  const [diceTotal, setDiceTotal] = useState(null); // Résultat du dernier lancer de dés
+  const [isSheetOpen, setIsSheetOpen] = useState(false); // Contrôle de l'ouverture de la fiche personnage
+  const [hasRolled, setHasRolled] = useState(false); // Indique si le joueur a lancé les dés
 
-  // Notifications pour les changements de stats (via StatNotificationContext)
+  // ==== Récupération du contexte de notification des changements de stats ====
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
 
-  // === Effet : chargement du chapitre à chaque changement d'id (URL) ===
+  // === useEffect pour charger les données du chapitre à chaque changement d'id ===
   useEffect(() => {
-    fetchChapter(id); // Récupère les données du chapitre courant
-    setDiceTotal(null); // Réinitialise le résultat des dés
-    setHasRolled(false); // Réinitialise le flag de lancer de dés
+    fetchChapter(id); // Charge le chapitre demandé
+    setDiceTotal(null); // Réinitialise le résultat du dé
+    setHasRolled(false); // Réinitialise le statut du lancer de dé
   }, [id, fetchChapter]);
 
-  // === Effet : applique les modificateurs narratifs automatiques du chapitre (si présents, et jamais appliqués) ===
+  // === useEffect pour appliquer les modificateurs narratifs du chapitre (bonus/malus automatiques) ===
   useEffect(() => {
     if (
       chapterData &&
@@ -69,45 +60,38 @@ const Chapter = () => {
       characterData &&
       setCharacterData
     ) {
-      // Clone léger pour éviter les effets de bord
+      // Clone du personnage pour éviter les mutations directes
       const safeCharacter = { ...characterData };
-      // Ajoute un tableau pour pister les chapitres déjà "modifiés"
+      // Crée la liste des chapitres déjà modifiés (évite de réappliquer les modifs)
       if (!Array.isArray(safeCharacter.chapitresModifies)) {
         safeCharacter.chapitresModifies = [];
       }
       const chapterId = String(chapterData.id ?? id);
-      // Vérifie si ce chapitre a déjà appliqué ses modifs narratives
+      // Applique les modificateurs seulement si ce chapitre ne l'a jamais fait
       if (!safeCharacter.chapitresModifies.includes(chapterId)) {
-        // Applique les modificateurs narratifs (fonction utilitaire)
         const { character: updated, changes } = applyNarrativeModifiers(
           chapterData.modificateursNarratifs,
           safeCharacter
         );
-        // Met à jour la liste des chapitres "modifiés"
+        // Ajoute l'ID du chapitre à la liste
         updated.chapitresModifies = [
           ...safeCharacter.chapitresModifies,
           chapterId,
         ];
-        setCharacterData(updated); // Met à jour le personnage (via contexte)
-
-        // Affiche les notifications de changement de stats si besoin
+        setCharacterData(updated); // Met à jour le personnage avec les nouvelles stats
         if (changes && changes.length > 0) {
-          addNotifications(changes);
+          addNotifications(changes); // Affiche les notifications pour chaque changement
         }
       }
     }
   }, [chapterData, characterData, setCharacterData, id, addNotifications]);
 
-  /**
-   * Gère le résultat d'un lancer de dés (DiceRoll)
-   * Peut appliquer un effet sur une caractéristique du personnage selon le chapitre
-   * Peut aussi servir à déterminer le choix "réussi/échoué" à afficher selon le test
-   */
+  // === Callback utilisé quand un lancer de dés est effectué ===
   const handleDiceResult = (total) => {
-    setDiceTotal(total);
-    setHasRolled(true);
+    setDiceTotal(total); // Mémorise le résultat
+    setHasRolled(true); // Indique que les dés ont été lancés
 
-    // Application directe d'un résultat de dé sur une caractéristique (ex: perte/gain d'endurance)
+    // Si le chapitre impose un effet direct sur une stat en fonction du résultat du dé
     if (
       chapterData.diceRoll?.required &&
       characterData &&
@@ -126,7 +110,7 @@ const Chapter = () => {
       const stat = chapterData.diceRoll.applyTo.stat;
       const operation = chapterData.diceRoll.applyTo.operation;
 
-      // Applique sur le bon niveau d'objet (racine, caractéristiques, interceptor)
+      // Applique le résultat du dé sur la stat appropriée
       if (stat in updatedCharacter) {
         if (operation === "add") updatedCharacter[stat] += total;
         if (operation === "subtract") updatedCharacter[stat] -= total;
@@ -152,7 +136,7 @@ const Chapter = () => {
           updatedCharacter.interceptor[stat] = 0;
       }
 
-      // Affiche une notification de changement de stat
+      // Icônes et labels pour la notification de stat
       const statIcons = {
         endurance: "/images/icons/endurance.png",
         habilete: "/images/icons/habilete.png",
@@ -166,6 +150,7 @@ const Chapter = () => {
         blindage: "Blindage",
       };
 
+      // Affiche la notification correspondante
       addNotifications([
         {
           stat,
@@ -175,10 +160,9 @@ const Chapter = () => {
           label: statLabels[stat] || stat,
         },
       ]);
-
       setCharacterData(updatedCharacter);
 
-      // Si la stat tombe à zéro ou moins : on pourrait gérer ici une conséquence (ex : game over)
+      // (Optionnel) Ici on pourrait gérer une conséquence si la stat tombe à zéro
       const currentValue =
         (stat in updatedCharacter && updatedCharacter[stat]) ||
         (updatedCharacter.caractéristiques &&
@@ -189,34 +173,22 @@ const Chapter = () => {
       }
       return;
     }
-
-    // Pour les tests spéciaux (habileté, chance), la logique de choix s'opère dans renderChoices (pas ici)
-    // Ici, on ne fait rien de plus
     return;
   };
 
-  /**
-   * Normalise une chaîne (supprime les accents) pour faciliter la recherche de mots-clés dans les labels des choix
-   */
+  // === Utilitaire pour normaliser une chaîne (pratique pour les comparaisons sans accent) ===
   const normalize = (str) =>
     str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-  /**
-   * Personnalise le texte du chapitre avec le nom du héros si besoin
-   */
+  // === Remplace {hero} dans le texte par le nom du personnage ===
   const getPersonalizedText = (text) => {
     if (!characterData) return text;
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
-  /**
-   * Gère le clic sur un choix (bouton)
-   * Applique les éventuels modificateurs narratifs liés au choix
-   * Met à jour le personnage et affiche les notifications si besoin
-   * Navigue ensuite vers le chapitre suivant
-   * Interagit avec : applyNarrativeModifiers, setCharacterData, addNotifications, navigate
-   */
+  // === Callback quand l'utilisateur clique sur un choix ===
   const handleChoiceClick = (choice) => {
+    // Applique les éventuels modificateurs du choix
     if (choice.modificateursNarratifs) {
       const { character, changes } = applyNarrativeModifiers(
         choice.modificateursNarratifs,
@@ -227,17 +199,13 @@ const Chapter = () => {
         addNotifications(changes);
       }
     }
+    // Navigue vers le chapitre suivant (next)
     navigate(`/chapitre/${choice.next}`);
   };
 
-  /**
-   * Affiche les choix possibles à la fin du chapitre :
-   * - Si test de chance/habileté : n'affiche qu'un seul bouton selon le résultat du dé
-   * - Sinon : affiche tous les choix
-   * Interagit avec : handleChoiceClick
-   */
+  // === Génère dynamiquement les boutons de choix à la fin du chapitre ===
   const renderChoices = () => {
-    // Test Chance
+    // Si le chapitre impose un test de chance
     if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -271,7 +239,7 @@ const Chapter = () => {
       }
     }
 
-    // Test Habileté (similaire)
+    // Si le chapitre impose un test d'habileté
     if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -305,7 +273,7 @@ const Chapter = () => {
       }
     }
 
-    // Sinon : tous les choix disponibles sont affichés
+    // Sinon : affiche tous les choix disponibles
     return chapterData.choices.map((choice, index) => (
       <button
         key={index}
@@ -324,10 +292,10 @@ const Chapter = () => {
       role="region"
       aria-label="Chapitre interactif"
     >
-      {/* Affiche les notifications de changement de stats */}
+      {/* Affichage des notifications de changement de stats */}
       <StatChangeNotification notifications={notifications} />
 
-      {/* Modale fiche personnage */}
+      {/* Modale pour la fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (
           <CharacterSheet data={characterData} />
@@ -340,14 +308,15 @@ const Chapter = () => {
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
       {error && <div className="error-message">Erreur : {error}</div>}
 
-      {/* Affichage du chapitre si tout est ok */}
+      {/* Affichage du chapitre si les données sont bien chargées */}
       {!loading && !error && chapterData && chapterData.title ? (
         <article className="chapter-content">
+          {/* Titre du chapitre */}
           <h1 className="chapter-title">
             {chapterData.title || "Titre manquant"}
           </h1>
 
-          {/* Illustration + bouton fiche personnage */}
+          {/* Illustration du chapitre + accès fiche personnage */}
           <div className="chapter-image-container">
             <img
               src={chapterData.image ? chapterData.image : defaultPicture}
@@ -367,15 +336,18 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Section combat si besoin */}
+          {/* Affichage du bloc combat si besoin */}
           {chapterData.combat?.ennemis && (
-            <CombatEnnemis ennemis={chapterData.combat.ennemis} />
+            <CombatEnnemis
+              ennemis={chapterData.combat.ennemis}
+              type={chapterData.combat.type}
+            />
           )}
 
-          {/* Section test de dés si besoin */}
+          {/* Bloc test de dés */}
           {chapterData.diceRoll?.required && (
             <section className="chapter-dice-test">
-              {/* Description test habileté/chance */}
+              {/* Description du test si présente */}
               {chapterData.testHabilete?.description && (
                 <p className="habilete-description">
                   {chapterData.testHabilete.description}
@@ -387,21 +359,21 @@ const Chapter = () => {
                     {chapterData.testChance.description}
                   </p>
                 )}
-              {/* Affiche le composant DiceRoll si les dés n'ont pas déjà été lancés */}
+              {/* Composant DiceRoll si pas encore lancé */}
               {!hasRolled && (
                 <DiceRoll
                   numberOfDice={chapterData.diceRoll.numberOfDice || 2}
                   onResult={handleDiceResult}
                 />
               )}
-              {/* Résultat du lancer de dés affiché après coup */}
+              {/* Affichage du résultat du lancer */}
               {diceTotal !== null && (
                 <p className="dice-result">Résultat du lancer : {diceTotal}</p>
               )}
             </section>
           )}
 
-          {/* Choix disponibles à la fin du chapitre */}
+          {/* Bloc de choix (boutons) */}
           {Array.isArray(chapterData.choices) &&
             chapterData.choices.length > 0 && (
               <nav className="chapter-choices" aria-label="Choix disponibles">
@@ -410,6 +382,7 @@ const Chapter = () => {
             )}
         </article>
       ) : (
+        // Message d'erreur si pas de données
         !loading &&
         !error && (
           <p className="error-message">
@@ -420,4 +393,5 @@ const Chapter = () => {
     </div>
   );
 };
+
 export default Chapter;

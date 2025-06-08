@@ -1,7 +1,7 @@
 {
   "id": "47",
   "title": "Chapitre 47",
-  "text": "La chaleur augmente au fur et à mesure que la matinée s'avance, et vous remarquez que la végétation se raréfie progressivement. Les champs en friche, que vous longiez jusqu'à présent, font place à une terre aride où ne poussent que de chétifs buissons. Vous ne devriez pas tarder à entrer dans le désert. Quelques kilomètres plus loin, vous arrivez à un important croisement. Quelle direction allez-vous prendre ?",
+  "text": "La chaleur devient de plus en plus accablante à mesure que la matinée avance, et la végétation autour de vous se fait rare. Les champs en friche qui bordaient la route laissent progressivement la place à une terre sèche et poussiéreuse, où seuls quelques buissons rabougris parviennent à survivre. La route, autrefois encombrée de véhicules abandonnés ou accidentés, se dégage peu à peu : il y a de moins en moins de carcasses à éviter, signe que vous vous éloignez des zones habitées. Vous ne tarderez plus à pénétrer dans le désert. Quelques kilomètres plus loin, vous parvenez à un important croisement. Quelle direction choisissez-vous ?",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez continuer droit vers le sud...", "next": "23" },

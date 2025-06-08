@@ -26,7 +26,7 @@
         "nom": "Deuxième Motard",
         "habilete": 7,
         "endurance": 17,
-        "image": "/images/ch16Ennemi.webp"
+        "image": "/images/motardEnnemi.webp"
       }
     ],
     "issue": {

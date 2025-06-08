@@ -79,7 +79,7 @@
     }
   }
 
-  // ✅ Lettrine uniquement pour le chapitre 0
+  // Lettrine uniquement pour le chapitre 0
   &.chapter-0 {
     .chapter-text {
       p:first-of-type::first-letter {
@@ -124,6 +124,11 @@
       transform: translate(2px, 2px);
       box-shadow: 2px 2px 0 #000;
     }
+  }
+
+  // Masquer les boutons non valides (hasard pur)
+  .chapter-choice.hidden {
+    display: none !important;
   }
 
   // Responsive Design
@@ -207,7 +212,7 @@
     }
   }
 
-  // Styles pour les balises personnalisées de texte important
+  // Styles pour balises de texte important
   .highlight-text {
     font-weight: bold;
     color: #e95420;

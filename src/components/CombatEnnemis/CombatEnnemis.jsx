@@ -12,22 +12,10 @@ const getCombatIcon = (type) => {
   switch (type) {
     case "tir":
       // Icône revolver pour un combat à distance (armes à feu)
-      return (
-        <GiPistolGun
-          color="#90caf9"
-          size={18}
-          style={{ marginRight: "0.3em" }}
-        />
-      );
+      return <GiPistolGun color="#90caf9" style={{ marginRight: "0.3em" }} />;
     case "corps-à-corps":
       // Icône épée pour le corps-à-corps
-      return (
-        <GiBroadsword
-          color="#90caf9"
-          size={18}
-          style={{ marginRight: "0.3em" }}
-        />
-      );
+      return <GiBroadsword color="#90caf9" />;
     case "motorise":
       // Icône voiture de course RED et GROSSE, stylée via SCSS
       return (

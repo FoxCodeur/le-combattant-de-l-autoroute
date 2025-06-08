@@ -1,14 +1,18 @@
 {
   "id": "40",
   "title": "Chapitre 40",
-  "text": "Dans l'intervalle, le Mutilateur profite du temps que vous mettez à atteindre le camion-citerne pour en faire démarrer le moteur. D'un bond, vous saisissez la poignée de la portière au moment où l'homme s'apprête à dégainer. Le total d'HABILETÉ du Chien de la Mort s'élève à 6.",
+  "text": "Dans l'intervalle, le Mutilateur profite du temps que vous mettez à atteindre le camion-citerne pour en faire démarrer le moteur. D'un bond, vous saisissez la poignée de la portière au moment où il s'apprête à dégainer. Qui va être le plus rapide ? Vous ou lui ?",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
-    "numberOfDice": 1
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Tentez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, vous êtes habile. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Si votre propre total d'HABILETÉ est supérieur ou égal à celui du Chien de la Mort, rendez-vous au", "next": "81" },
-    { "label": "Si votre total d'HABILETÉ est inférieur, rendez-vous au", "next": "296" }
+    { "label": "Test reussi...", "next": "81" },
+    { "label": "Test echoue...", "next": "296" }
   ]
 }

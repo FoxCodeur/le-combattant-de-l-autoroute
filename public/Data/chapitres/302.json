@@ -1,7 +1,7 @@
 {
   "id": "302",
   "title": "Chapitre 302",
-  "text": "Vous ouvrez la portière et descendez de l'Interceptor. Alors que vous avancez vers la jeune femme, un homme au crâne rasé surgit de derrière une pompe, tenant à la main une arbalète. Il vous crie : **« Quelle bonne surprise, un pigeon ! Allez, vite ! Aboule les clés de ta caisse, et n'essaie pas de jouer au plus malin avec moi, si tu ne veux pas être blessé ! »**",
+  "text": "Vous ouvrez la portière et descendez de l'Interceptor. Alors que vous avancez vers la jeune femme, un homme au crâne rasé surgit de derrière une pompe. Il vous crie : **« Quelle bonne surprise, un pigeon ! Allez, vite ! Aboule les clés de ta caisse, et n'essaie pas de jouer au plus malin avec moi, si tu ne veux pas être blessé ! »**",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Vous obtempérez...", "next": "209" },

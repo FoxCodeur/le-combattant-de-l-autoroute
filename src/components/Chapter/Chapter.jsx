@@ -10,6 +10,7 @@ import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
 import StatChangeNotification from "../StatChangeNotification/StatChangeNotification";
 import CombatEnnemis from "../CombatEnnemis/CombatEnnemis";
+import TestContext from "../../context/TestContext";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 
@@ -26,19 +27,20 @@ const Chapter = () => {
     setCharacterData,
   } = useContext(ChapterContext);
 
-  const [diceTotal, setDiceTotal] = useState(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [hasRolled, setHasRolled] = useState(false);
 
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
 
+  const { diceTotal, validChoice, handleDiceResult, resetTest } =
+    useContext(TestContext);
+
   useEffect(() => {
     fetchChapter(id);
-    setDiceTotal(null);
-    setHasRolled(false);
-  }, [id, fetchChapter]);
+    resetTest();
+    // eslint-disable-next-line
+  }, [id]);
 
   useEffect(() => {
     if (
@@ -69,81 +71,10 @@ const Chapter = () => {
         }
       }
     }
+    // eslint-disable-next-line
   }, [chapterData, characterData, setCharacterData, id, addNotifications]);
 
-  const handleDiceResult = (total) => {
-    setDiceTotal(total);
-    setHasRolled(true);
-
-    if (
-      chapterData?.diceRoll?.required &&
-      characterData &&
-      chapterData.diceRoll.applyTo
-    ) {
-      let updatedCharacter = {
-        ...characterData,
-        caractéristiques: characterData.caractéristiques
-          ? { ...characterData.caractéristiques }
-          : undefined,
-        interceptor: characterData.interceptor
-          ? { ...characterData.interceptor }
-          : undefined,
-      };
-
-      const stat = chapterData.diceRoll.applyTo.stat;
-      const operation = chapterData.diceRoll.applyTo.operation;
-
-      if (stat in updatedCharacter) {
-        if (operation === "add") updatedCharacter[stat] += total;
-        if (operation === "subtract") updatedCharacter[stat] -= total;
-        if (updatedCharacter[stat] < 0) updatedCharacter[stat] = 0;
-      } else if (
-        updatedCharacter.caractéristiques &&
-        stat in updatedCharacter.caractéristiques
-      ) {
-        if (operation === "add")
-          updatedCharacter.caractéristiques[stat] += total;
-        if (operation === "subtract")
-          updatedCharacter.caractéristiques[stat] -= total;
-        if (updatedCharacter.caractéristiques[stat] < 0)
-          updatedCharacter.caractéristiques[stat] = 0;
-      } else if (
-        updatedCharacter.interceptor &&
-        stat in updatedCharacter.interceptor
-      ) {
-        if (operation === "add") updatedCharacter.interceptor[stat] += total;
-        if (operation === "subtract")
-          updatedCharacter.interceptor[stat] -= total;
-        if (updatedCharacter.interceptor[stat] < 0)
-          updatedCharacter.interceptor[stat] = 0;
-      }
-
-      const statIcons = {
-        endurance: "/images/icons/endurance.png",
-        habilete: "/images/icons/habilete.png",
-        chance: "/images/icons/chance.png",
-        blindage: "/images/icons/blindage.png",
-      };
-      const statLabels = {
-        endurance: "Endurance",
-        habilete: "HABILETÉ",
-        chance: "Chance",
-        blindage: "Blindage",
-      };
-
-      addNotifications([
-        {
-          stat,
-          type: operation === "subtract" ? "loss" : "gain",
-          value: total,
-          icon: statIcons[stat] || "",
-          label: statLabels[stat] || stat,
-        },
-      ]);
-      setCharacterData(updatedCharacter);
-    }
-  };
-
+  // Utilitaire pour normaliser une chaîne (pratique pour les comparaisons sans accent)
   const normalize = (str) =>
     str && typeof str === "string"
       ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -168,113 +99,39 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
-  // Cas test de hasard pur (dé sans test de chance/habileté)
-  const isDicePure =
-    chapterData?.diceRoll?.required &&
-    !chapterData?.testHabilete?.required &&
-    !chapterData?.testChance?.required;
-
+  // Génère dynamiquement le bouton de choix à la fin du chapitre selon le contexte
   const renderChoices = () => {
-    if (!chapterData || !Array.isArray(chapterData.choices)) return null;
-
-    // Test de chance
-    if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
-      if (diceTotal === null) {
+    // Si test de dés requis, on n'affiche le choix que si validChoice existe
+    if (chapterData?.diceRoll?.required) {
+      if (!diceTotal) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
       }
-      const chance = characterData?.caractéristiques?.chance ?? 0;
-      if (diceTotal <= chance) {
-        const successChoice = chapterData.choices.find((c) =>
-          normalize(c.label?.toLowerCase()).includes("reuss")
-        );
-        return successChoice ? (
-          <button
-            className="chapter-choice"
-            onClick={() => handleChoiceClick(successChoice)}
-          >
-            {successChoice.label}
-          </button>
-        ) : null;
-      }
-      const failChoice = chapterData.choices.find((c) =>
-        normalize(c.label?.toLowerCase()).includes("echou")
-      );
-      return failChoice ? (
-        <button
-          className="chapter-choice"
-          onClick={() => handleChoiceClick(failChoice)}
-        >
-          {failChoice.label}
-        </button>
-      ) : null;
-    }
-
-    // Test d'habileté
-    if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
-      if (diceTotal === null) {
-        return <p>Veuillez lancer les dés pour continuer.</p>;
-      }
-      const habilete = characterData?.caractéristiques?.habilete ?? 0;
-      if (diceTotal <= habilete) {
-        const successChoice = chapterData.choices.find((c) =>
-          normalize(c.label?.toLowerCase()).includes("reuss")
-        );
-        return successChoice ? (
-          <button
-            className="chapter-choice"
-            onClick={() => handleChoiceClick(successChoice)}
-          >
-            {successChoice.label}
-          </button>
-        ) : null;
-      }
-      const failChoice = chapterData.choices.find((c) =>
-        normalize(c.label?.toLowerCase()).includes("echou")
-      );
-      return failChoice ? (
-        <button
-          className="chapter-choice"
-          onClick={() => handleChoiceClick(failChoice)}
-        >
-          {failChoice.label}
-        </button>
-      ) : null;
-    }
-
-    // Test de hasard pur : masquer les boutons non valides via une classe CSS
-    return chapterData.choices.map((choice, index) => {
-      let isHidden = false;
-      if (isDicePure) {
-        if (diceTotal === null) {
-          isHidden = true;
-        } else {
-          const numbers = choice.label
-            ? choice.label.match(/\d+/g)?.map(Number)
-            : null;
-          if (!numbers || numbers.length === 0) {
-            isHidden = true;
-          } else if (choice.label.includes("ou")) {
-            isHidden = !numbers.includes(diceTotal);
-          } else if (choice.label.includes("-")) {
-            const [min, max] = numbers;
-            isHidden = !(diceTotal >= min && diceTotal <= max);
-          } else {
-            isHidden = numbers[0] !== diceTotal;
-          }
-        }
+      if (!validChoice) {
+        return <p>Aucun choix disponible pour ce résultat de dé.</p>;
       }
       return (
         <button
+          className="chapter-choice"
+          onClick={() => handleChoiceClick(validChoice)}
+        >
+          {validChoice.label}
+        </button>
+      );
+    }
+
+    // Sinon, on affiche tous les choix (pas de test, ou chapitre standard)
+    if (Array.isArray(chapterData?.choices)) {
+      return chapterData.choices.map((choice, index) => (
+        <button
           key={index}
-          className={`chapter-choice${isHidden ? " hidden" : ""}`}
+          className="chapter-choice"
           onClick={() => handleChoiceClick(choice)}
-          tabIndex={isHidden ? -1 : 0}
-          aria-hidden={isHidden ? "true" : "false"}
         >
           {choice.label}
         </button>
-      );
-    });
+      ));
+    }
+    return null;
   };
 
   return (
@@ -340,10 +197,12 @@ const Chapter = () => {
                     {chapterData.testChance.description}
                   </p>
                 )}
-              {!hasRolled && (
+              {diceTotal === null && (
                 <DiceRoll
                   numberOfDice={chapterData.diceRoll.numberOfDice || 2}
-                  onResult={handleDiceResult}
+                  onResult={(total) =>
+                    handleDiceResult(total, chapterData, characterData)
+                  }
                 />
               )}
               {diceTotal !== null && (

@@ -79,6 +79,13 @@
     }
   }
 
+  // Ajout des styles pour les descriptions de test d'Habileté et de Chance
+  .habilete-description,
+  .chance-description {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
   // Lettrine uniquement pour le chapitre 0
   &.chapter-0 {
     .chapter-text {
@@ -259,9 +266,13 @@
   }
 
   .info-text {
-    color: #1976d2;
-    background: #e3f2fd;
-    border-radius: 4px;
-    padding: 2px 6px;
+    @include badge-text(
+      $info-bg,
+      $info-gradient,
+      $info-shadow,
+      $info-inset,
+      $info-relief
+    );
+    text-shadow: 1px 1px 0 $info-relief;
   }
 }

@@ -15,9 +15,11 @@ import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 
 const Chapter = () => {
+  // Récupère l'ID du chapitre depuis l'URL
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // Contextes partagés pour obtenir les données du chapitre, personnage, gestion des notifications, etc.
   const {
     chapterData,
     fetchChapter,
@@ -36,12 +38,14 @@ const Chapter = () => {
   const { diceTotal, validChoice, handleDiceResult, resetTest } =
     useContext(TestContext);
 
+  // Charge un nouveau chapitre et réinitialise le test de dés à chaque changement d'ID de chapitre
   useEffect(() => {
     fetchChapter(id);
     resetTest();
     // eslint-disable-next-line
   }, [id]);
 
+  // Applique les modificateurs narratifs (bonus/malus, etc.) du chapitre si présents
   useEffect(() => {
     if (
       chapterData &&
@@ -74,17 +78,13 @@ const Chapter = () => {
     // eslint-disable-next-line
   }, [chapterData, characterData, setCharacterData, id, addNotifications]);
 
-  // Utilitaire pour normaliser une chaîne (pratique pour les comparaisons sans accent)
-  const normalize = (str) =>
-    str && typeof str === "string"
-      ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      : "";
-
+  // Remplace le placeholder {hero} par le nom du personnage dans les textes
   const getPersonalizedText = (text) => {
     if (!characterData) return text;
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
+  // Gère le clic sur un choix (applique les modificateurs narratifs éventuels, change de chapitre)
   const handleChoiceClick = (choice) => {
     if (choice.modificateursNarratifs) {
       const { character, changes } = applyNarrativeModifiers(
@@ -99,9 +99,9 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
-  // Génère dynamiquement le bouton de choix à la fin du chapitre selon le contexte
+  // Génère les boutons de choix à la fin du chapitre (avec ou sans test de dés)
   const renderChoices = () => {
-    // Si test de dés requis, on n'affiche le choix que si validChoice existe
+    // Si test de dés requis, affiche un seul bouton selon le résultat du dé
     if (chapterData?.diceRoll?.required) {
       if (!diceTotal) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -119,7 +119,7 @@ const Chapter = () => {
       );
     }
 
-    // Sinon, on affiche tous les choix (pas de test, ou chapitre standard)
+    // Sinon, affiche tous les choix disponibles
     if (Array.isArray(chapterData?.choices)) {
       return chapterData.choices.map((choice, index) => (
         <button
@@ -140,8 +140,10 @@ const Chapter = () => {
       role="region"
       aria-label="Chapitre interactif"
     >
+      {/* Notifications de changement de stats */}
       <StatChangeNotification notifications={notifications} />
 
+      {/* Modale pour la fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (
           <CharacterSheet data={characterData} />
@@ -150,15 +152,19 @@ const Chapter = () => {
         )}
       </Modal>
 
+      {/* Gestion de l'état de chargement et d'erreur */}
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
       {error && <div className="error-message">Erreur : {error}</div>}
 
+      {/* Affichage principal du chapitre */}
       {!loading && !error && chapterData && chapterData.title ? (
         <article className="chapter-content">
+          {/* Titre du chapitre */}
           <h1 className="chapter-title">
             {chapterData.title || "Titre manquant"}
           </h1>
 
+          {/* Image du chapitre et bouton fiche personnage */}
           <div className="chapter-image-container">
             <img
               src={chapterData.image ? chapterData.image : defaultPicture}
@@ -171,12 +177,14 @@ const Chapter = () => {
             <CharacterSheetButton onClick={() => setIsSheetOpen(true)} />
           </div>
 
+          {/* Texte principal du chapitre (mise en forme custom) */}
           <section
             className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
           >
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
+          {/* Bloc combat si des ennemis sont présents */}
           {chapterData.combat?.ennemis && (
             <CombatEnnemis
               ennemis={chapterData.combat.ennemis}
@@ -184,18 +192,19 @@ const Chapter = () => {
             />
           )}
 
+          {/* Section test de dés : affiche la description du test avec le rendu custom */}
           {chapterData.diceRoll?.required && (
             <section className="chapter-dice-test">
               {chapterData.testHabilete?.description && (
-                <p className="habilete-description">
-                  {chapterData.testHabilete.description}
-                </p>
+                <div className="habilete-description">
+                  {renderFormattedText(chapterData.testHabilete.description)}
+                </div>
               )}
               {!chapterData.testHabilete?.description &&
                 chapterData.testChance?.description && (
-                  <p className="chance-description">
-                    {chapterData.testChance.description}
-                  </p>
+                  <div className="chance-description">
+                    {renderFormattedText(chapterData.testChance.description)}
+                  </div>
                 )}
               {diceTotal === null && (
                 <DiceRoll
@@ -211,6 +220,7 @@ const Chapter = () => {
             </section>
           )}
 
+          {/* Boutons de choix pour l'utilisateur */}
           <nav className="chapter-choices" aria-label="Choix disponibles">
             {renderChoices()}
           </nav>

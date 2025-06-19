@@ -21,27 +21,6 @@ import defaultPicture from "../../assets/images/defaultPicture.webp";
  * - Les tests de dés (endurance, habileté, chance, etc.)
  * - L'application des modificateurs narratifs/statistiques
  * - Les interactions utilisateur (choix, fiche personnage...)
- *
- * CAS DE FIGURE GÉRÉS PAR CE COMPOSANT :
- *
- * 1. Chapitre "normal" (pas de dé, ou juste un bouton Next, ou des choix simples)
- *    => Tous les boutons de choix sont affichés et activés.
- *
- * 2. Chapitre avec test de chance ou habileté :
- *    - Seul le bouton "réussite" OU "échec" est affiché selon le résultat du test.
- *
- * 3. Chapitre où il faut lancer un dé puis CHOISIR parmi plusieurs options (aucun label ne contient de chiffre) :
- *    - Tous les choix sont affichés, désactivés avant le lancer du dé, activés après (ex : chapitre 195)
- *
- * 4. Chapitre où il faut lancer un dé et le résultat du dé détermine QUEL choix est possible (labels contenant des chiffres) :
- *    - Tous les boutons sont affichés, mais seul celui qui correspond au résultat du dé est activé.
- *
- * 5. Chapitre où il faut lancer un dé puis cliquer sur un seul bouton "Next..." :
- *    - Le bouton est désactivé tant que le dé n'a pas été lancé, puis activé.
- *    - Ce cas est robuste même si le composant re-render (diceTotal n'est pas remis à null sauf changement de chapitre)
- *
- * 6. Chapitre avec modification de stats après le dé (ex : perte d'endurance, blindage, etc.) :
- *    - La valeur du dé est appliquée à la stat du personnage juste après le lancer.
  */
 const Chapter = () => {
   const { id } = useParams();
@@ -190,7 +169,7 @@ const Chapter = () => {
     }
   };
 
-  // Utilitaire pour normaliser les accents (utile pour trouver les bons labels)
+  // Utilitaire pour normaliser les accents
   const normalize = (str) =>
     str && typeof str === "string"
       ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -217,13 +196,27 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
-  // Fonction utilitaire pour filtrer les choix selon la condition (inventaire ou autre)
+  /**
+   * Fonction utilitaire pour filtrer les choix selon la condition (inventaire ou autre)
+   * Cette version considère d'abord characterData.inventaire s'il existe,
+   * sinon characterData.équipement (tous objets avec une valeur > 0).
+   * Elle tolère les différences d'underscore et de casse.
+   */
   const isChoiceAvailable = (choice) => {
     if (!choice.condition) return true;
-    // Condition sur un item
     if (choice.condition.item) {
-      const items = characterData?.inventaire || [];
-      const hasItem = items.includes(choice.condition.item);
+      const normalize = (str) => str.replace(/_/g, "").toLowerCase();
+      let items = [];
+      // Cherche dans 'inventaire' si présent (tableau), sinon dans 'équipement' (objet)
+      if (characterData?.inventaire) {
+        items = characterData.inventaire.map(normalize);
+      } else if (characterData?.équipement) {
+        items = Object.entries(characterData.équipement)
+          .filter(([_, v]) => v && v > 0)
+          .map(([k, _]) => normalize(k));
+      }
+      const item = normalize(choice.condition.item);
+      const hasItem = items.includes(item);
       return choice.condition.hasItem ? hasItem : !hasItem;
     }
     // Autres types de conditions possibles ici...
@@ -232,25 +225,12 @@ const Chapter = () => {
 
   /**
    * Affichage des boutons de choix selon le mode du chapitre :
-   *
-   * CAS 1 : Test de chance/habilete
-   *   - Un seul bouton affiché ("réussite" ou "échec" selon le résultat du test)
-   *
-   * CAS 2 : Dé + plusieurs choix SANS mapping chiffre/label
-   *   - Tous les boutons affichés, désactivés avant le lancer, activés après
-   *
-   * CAS 3 : Dé + plusieurs choix AVEC mapping chiffre/label
-   *   - Tous les boutons affichés, seul celui qui correspond au résultat du dé est activé
-   *
-   * CAS 4 : Dé + un seul choix ("Next...") (ex : chapitre 342)
-   *   - Le bouton est désactivé avant le lancer, activé après (résilient aux re-render)
-   *
-   * CAS 5 : Pas de dé
-   *   - Tous les choix affichés normalement
+   * - Prend en compte les conditions sur l'inventaire (filtrage en amont)
    */
   const renderChoices = () => {
     if (!chapterData || !Array.isArray(chapterData.choices)) return null;
 
+    // On filtre d'abord tous les choix selon l'inventaire/condition
     const filteredChoices = chapterData.choices.filter(isChoiceAvailable);
 
     // --- CAS 1 : Test de chance
@@ -395,7 +375,7 @@ const Chapter = () => {
       !chapterData.testHabilete?.required &&
       filteredChoices.length === 1
     ) {
-      // --- Correction anti-bug : le bouton reste activé tant que le dé a été lancé,
+      // Correction anti-bug : le bouton reste activé tant que le dé a été lancé,
       // même si un re-render intervient (grâce à diceTotal qui n'est pas remis à null hors changement de chapitre)
       return filteredChoices.map((choice, idx) => (
         <button

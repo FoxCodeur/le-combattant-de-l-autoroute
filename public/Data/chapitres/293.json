@@ -8,7 +8,7 @@
       "label": "Oui !",
       "next": "56",
       "condition": {
-        "item": "coup_De_PoingAmericain",
+        "item": "coup_De_Poing_Americain",
         "hasItem": true
       }
     },
@@ -16,7 +16,7 @@
       "label": "Non !",
       "next": "125",
       "condition": {
-        "item": "coupDePoingAmericain",
+        "item": "coup_De_Poing_Americain",
         "hasItem": false
       }
     }

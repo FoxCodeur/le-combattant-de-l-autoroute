@@ -12,6 +12,6 @@
     }
   },
   "choices": [
-    { "label": "Si vous êtes encore en vie après cette explosion, rendez-vous au", "next": "93" }
+    { "label": "Si vous etes encore en vie apres cette explosion...", "next": "93" }
   ]
 }

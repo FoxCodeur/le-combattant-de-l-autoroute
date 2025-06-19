@@ -9,7 +9,7 @@
   },
   "testChance": {
     "required": true,
-    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
   },
   "choices": [
     { "label": "Test reussi...", "next": "238" },

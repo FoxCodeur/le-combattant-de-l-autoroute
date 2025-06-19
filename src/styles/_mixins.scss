@@ -159,3 +159,15 @@
     color: $text-color;
   }
 }
+// --- Test description pour le style des classes habilete-description et chance-description ---
+@mixin test-description($border, $bg, $shadow) {
+  border-left: 6px solid $border;
+  background-color: $bg;
+  padding: 0.7rem 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  box-shadow: 0 2px 8px $shadow;
+}

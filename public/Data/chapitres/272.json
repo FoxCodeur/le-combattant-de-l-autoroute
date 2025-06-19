@@ -8,7 +8,7 @@
       "label": "Si vous avez emporte un bidon d'essence au cours de votre voyage",
       "next": "323",
       "modificateursNarratifs": {
-        "bidonEssence": -1
+        "bidon_Essence": -1
       }
     },
     {

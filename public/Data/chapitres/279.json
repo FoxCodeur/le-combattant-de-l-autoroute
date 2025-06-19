@@ -1,7 +1,7 @@
 {
   "id": "279",
   "title": "Chapitre 279",
-  "text": "Vous êtes touché au côté par une balle perdue tandis que vous courez à découvert. Lancez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE.",
+  "text": "Vous êtes touché au côté par une balle perdue tandis que vous courez à découvert. [danger]Lancez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE.[/danger]",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -12,6 +12,6 @@
     }
   },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "40" }
+    { "label": "Next...", "next": "40" }
   ]
 }

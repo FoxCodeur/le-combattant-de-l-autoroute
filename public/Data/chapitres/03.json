@@ -9,7 +9,7 @@
   },
   "testChance": {
     "required": true,
-    "description": "[info]Tentez votre Chance[/info]"
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
   },
   "choices": [
     { "label": "Test reussi...", "next": "354" },

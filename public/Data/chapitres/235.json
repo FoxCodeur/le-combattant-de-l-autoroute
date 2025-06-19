@@ -1,7 +1,7 @@
 {
   "id": "235",
   "title": "Chapitre 235",
-  "text": "Vous baissez la tête le plus possible et vous vous élancez à découvert sans être atteint par les balles qui fusent de toutes parts",
+  "text": "Vous baissez la tête au maximum et vous vous élancez à découvert, traversant la pluie de balles qui sifflent de toutes parts sans être atteint. Tandis que vous foncez, une pensée s’impose : votre mission est cruciale. Sans le camion-citerne, votre cité est condamnée. Vous n’avez pas le droit d’échouer.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "40" }

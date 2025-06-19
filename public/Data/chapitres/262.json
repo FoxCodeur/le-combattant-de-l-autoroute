@@ -7,7 +7,7 @@
     "chance": 1
   },
   "choices": [
-    { "label": "Inspecter le supermarché...", "next": "112" },
+    { "label": "Inspecter le supermarche...", "next": "112" },
     { "label": "Fouiller la maison la plus proche...", "next": "252" },
     { "label": "Poursuivre votre route vers le sud...", "next": "353" }
   ]

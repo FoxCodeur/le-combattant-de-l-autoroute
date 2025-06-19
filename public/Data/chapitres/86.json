@@ -12,7 +12,7 @@
     }
   },
   "choices": [
-    { "label": "Si vous voulez immédiatement soigner votre blessure...", "next": "256" },
-    { "label": "Si vous préférez ramper vers votre voiture pour vous y réfugier...", "next": "256" }
+    { "label": "Si vous voulez immediatement soigner votre blessure...", "next": "256" },
+    { "label": "Si vous preferez ramper vers votre voiture pour vous y réfugier...", "next": "256" }
   ]
 }

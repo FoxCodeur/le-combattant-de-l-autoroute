@@ -1,13 +1,36 @@
 {
   "id": "294",
   "title": "Chapitre 294",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Vous continuez la course. Vous apercevez maintenant devant vous la maison blanche où vous devez faire demi-tour. Vous écrasez la pédale d'accélérateur et vous tournez brusquement le volant vers la gauche. Vous faites une marche arrière pendant quelques mètres dans un nuage de poussière, puis vous enclenchez sèchement le levier de vitesse en première et l'Interceptor s'élance vers la ligne d'arrivée. La Ford fait un demi-tour identique au vôtre, vous talonne à nouveau, puis vient se mettre à côté de vous. Le conducteur tourne alors brusquement le volant et la Ford vient violemment heurter le côté de l'Interceptor. Votre adversaire semble fermement déterminé à venir à bout de vous, en vous portant de violents coups.",
   "image": "/images/chap1.jpg",
-  "diceRoll": {
-    "required": true,
-    "numberOfDice": 1
+  "combat": {
+    "type": "motorisé",
+    "diceRoll": {
+      "required": true,
+      "numberOfDice": 2
+    },
+    "modificateursCombat": {
+      "degatsJoueur": 2,
+      "degatsAdversaire": 2
+    },
+    "ennemis": [
+      {
+        "nom": "FORD JAUNE",
+        "puissanceDeFeu": 8,
+        "blindage": 16,
+        "image": "/images/ennemis/ford-jaune.jpg"
+      }
+    ]
   },
-  "choices": [
-    { "label": "Avancer vers la lumière", "next": "334" }
-  ]
+  "issue": {
+    "success": {
+      "text": "Vous sortez vainqueur du duel.",
+      "next": "334"
+    },
+    "failure": {
+      "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+      "next": null,
+      "isGameOver": true
+    }
+  }
 }

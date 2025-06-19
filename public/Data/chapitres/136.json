@@ -1,7 +1,7 @@
 {
   "id": "136",
   "title": "Chapitre 136",
-  "text": "Ambre pousse un juron, puis part d'un rire nerveux : sa poche est percée et le tube de cachets énergétiques qu'elle vous avait promis ne s'y trouve plus...",
+  "text": "Jaxxie pousse un juron, puis part d'un rire nerveux : sa poche est percée et le tube de cachets énergétiques qu'elle vous avait promis ne s'y trouve plus...",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "32" }

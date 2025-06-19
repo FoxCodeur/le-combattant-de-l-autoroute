@@ -9,12 +9,10 @@
   },
   "testChance": {
     "required": true,
-    "description": "Lancez deux dés. Si la somme obtenue est inférieure ou égale à vos points de CHANCE, vous avez réussi. Sinon, vous avez échoué.",
-    "success": {
-      "next": "290"
-    },
-    "failure": {
-      "next": "352"
-    }
-  }
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "290" },
+    { "label": "Test echoue", "next": "352" }
+  ]
 }

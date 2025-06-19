@@ -1,9 +1,18 @@
 {
   "id": "68",
   "title": "Chapitre 68",
-  "text": "TGrâce à votre extrême concentration et à votre remarquable habileté, vous parvenez à éviter tous les obstacles qui encombrent la chaussée. Aux premières lueurs du jour, la fatigue de la nuit disparaît peu à peu, et c'est avec une énergie nouvelle que vous continuez votre route vers San Angelo",
+  "text": "Grâce à votre concentration aiguisée et à votre maîtrise du volant, vous évitez de justesse les nombreux obstacles qui jalonnent la route. La nuit est tombée depuis longtemps, et le faisceau de vos phares découpe la pénombre, révélant par instants le ruban d’asphalte. Vos paupières s’alourdissent, la fatigue vous gagne peu à peu. Un instant de flottement, un sursaut : d’un geste brusque, vous redressez la trajectoire. Il s’en est fallu de peu. Vous freinez, haletant, au milieu de nulle part. Vous êtes dans une zone peu habité et sur votre droite, une allée étroite serpente. Au bout, une bâtisse : imposante, de style colonial. Vous coupez le moteur et laissez la voiture à l’écart, derrière un encart publicitaire. Peut-être trouverez-vous de quoi manger, ou simplement un abri ? Le silence est oppressant. Seuls les bruissements de la campagne — crissements d’insectes, froissements furtifs dans les herbes — troublent la nuit. Vous approchez, chaque pas résonnant dans l’obscurité. Les marches en bois du perron grincent sous votre poids. La porte d’entrée n’est pas verrouillé et une fois entré vous allumez votre lampe torche. Le faisceau balaie l’intérieur : murs défraîchis, atmosphère glaciale. Vous avancez, sur vos gardes. Au fond du hall, une porte attire votre regard. Vous l’entrouvrez : un escalier descend, avalé par les ténèbres. À chaque marche, le silence s’épaissit, bientôt rompu par des voix étouffées. En bas, une autre porte verrouillée. Juste derrière, il y a des sanglots...",
   "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
+  },
   "choices": [
-    { "label": "Next...", "next": "254" }
+    { "label": "Test reussi...", "next": "382" },
+    { "label": "Test echoue...", "next": "254" }
   ]
 }

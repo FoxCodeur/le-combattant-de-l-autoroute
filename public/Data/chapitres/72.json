@@ -12,6 +12,6 @@
     }
   },
   "choices": [
-    { "label": "Si vous survivez à cette blessure, rendez-vous au", "next": "233" }
+    { "label": "Si vous survivez a cette blessure...", "next": "233" }
   ]
 }

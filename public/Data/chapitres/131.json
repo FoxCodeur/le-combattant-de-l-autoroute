@@ -5,7 +5,7 @@
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "credits": 150,
-    "coupDePoingAmericain": 1
+    "coup_De_Poing_Americain": 1
   },
   "choices": [
     { "label": "Next...", "next": "22" }

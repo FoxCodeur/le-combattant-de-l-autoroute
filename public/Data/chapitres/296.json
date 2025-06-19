@@ -8,7 +8,7 @@
       "label": "Si vous avez un gilet pare-balles...",
       "next": "174",
       "condition": {
-        "item": "giletPareBalles",
+        "item": "gilet_Pare_Balles",
         "hasItem": true
       }
     },

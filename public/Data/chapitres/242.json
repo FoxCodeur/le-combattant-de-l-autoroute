@@ -1,9 +1,9 @@
 {
   "id": "242",
   "title": "Chapitre 242",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Les pneus ne sont pas sérieusement touchés, et vous pouvez les regonfler facilement grâce à votre Bombe Anticrevaison.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "119" }
+    { "label": "Next...", "next": "119" }
   ]
 }

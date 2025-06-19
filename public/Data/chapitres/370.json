@@ -8,7 +8,7 @@
       "label": "Si vous avez une roue de secours...",
       "next": "19",
       "modificateursNarratifs": {
-        "roueDeSecours": -1
+        "roue_De_Secours": -1
       }
     },
     {

@@ -8,7 +8,7 @@
       "label": "Si vous avez encore de quoi vous soigner dans votre Trousse de Secours...",
       "next": "2",
       "modificateursNarratifs": {
-        "trousseDeSecours": -1
+        "trousse_Secours": -1
       }
     },
     {

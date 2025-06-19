@@ -8,7 +8,7 @@
       "label": "Si vous avez une paire de pinces coupantes...",
       "next": "85",
       "condition": {
-        "item": "paireDePinces",
+        "item": "paire_De_Pinces",
         "hasItem": true
       }
     },

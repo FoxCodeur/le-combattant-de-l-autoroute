@@ -6,7 +6,7 @@
   "modificateursNarratifs": {
     "endurance": -2,
     "habilete": -1,
-    "TrousseSecours": -1,
+    "trousse_Secours": -1,
     "morceau-de-tuyau en plastique": 1
   },
   "choices": [

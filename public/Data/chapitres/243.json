@@ -1,10 +1,10 @@
 {
   "id": "243",
   "title": "Chapitre 243",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Sur le côté droit de la route, vous apercevez une voiture de police abandonnée, à moitié ensevelie dans le sable.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "109" },
-    { "label": "Fouiller la pièce", "next": "49" }
+    { "label": "Si vous desirez vous arrêter pour voir s'il y a quelque chose qui puisse vous être utile à l'intérieur...", "next": "109" },
+    { "label": "Si vous preferez continuer a rouler vers le sud sans vous arreter...", "next": "49" }
   ]
 }

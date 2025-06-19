@@ -5,7 +5,7 @@
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1,
-    "roue-de-secours": -1
+    "roue_De_Secours": -1
   },
   "choices": [
     { "label": "Next...", "next": "167" }

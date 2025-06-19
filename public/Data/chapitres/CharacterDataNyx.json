@@ -9,27 +9,28 @@
     "chance": 9
   },
   "équipement": {
-    "trousseSecours": 10,
+    "trousse_Secours": 10,
     "credits": 200,
-    "morceauDeTuyauEnPlastique": 0,
-    "lourdeChaine": 0,
-    "pneuAPlat": 0,
-    "paireDePinces": 0,
-    "giletPareBalles": 0,
+    "morceau_De_Tuyau_En_Plastique": 0,
+    "barre_De_Fer": 0,
+    "lourde_Chaine": 0,
+    "pneu_A_Plat": 0,
+    "paire_De_Pinces": 0,
+    "gilet_Pare_Balles": 0,
     "arbalete": 0,
-    "coupDePoingAmericain": 0,
-    "magnumTaurus": 0
+    "coup_De_Poing_Americain": 0,
+    "magnum_Taurus": 0
   },
   "interceptor": {
-    "puissanceDeFeu": 10,
+    "puissance_De_Feu": 10,
     "blindage": 32,
-    "roquettes": 4,
+    "roquette": 4,
     "clous": 3,
     "huile": 2
   },
   "accessoires": {
-    "bidonEssence": 1,
-    "roueDeSecours": 2,
+    "bidon_Essence": 1,
+    "roue_De_Secours": 2,
     "surcompresseur": 1
   }
 }

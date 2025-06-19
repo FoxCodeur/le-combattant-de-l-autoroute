@@ -1,14 +1,14 @@
 {
   "id": "358",
   "title": "Chapitre 358",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Lancez un dé d'abord pour la Jaguar Type-E, puis pour l'Interceptor. Continuez ainsi jusqu'à ce que l'un des véhicules atteigne un total de 24, ce qui lui permettra de passer le premier la ligne d'arrivée.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
     "numberOfDice": 1
   },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "54" },
-    { "label": "Fouiller la pièce", "next": "322" }
+    { "label": "Si vous l'emportez...", "next": "54" },
+    { "label": "Si vous perdez...", "next": "322" }
   ]
 }

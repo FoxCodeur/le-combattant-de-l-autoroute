@@ -7,6 +7,6 @@
     "endurance": 2
   },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "128" }
+    { "label": "Next...", "next": "128" }
   ]
 }

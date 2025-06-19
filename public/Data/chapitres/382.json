@@ -1,0 +1,18 @@
+{
+  "id": "382",
+  "title": "Chapitre 382",
+  "text": "Après de nombreux essais, la serrure finit par céder. Vous pénétrez dans la cave. Quelques ampoules diffusent une lumière blafarde. L’air est lourd, saturé d’une odeur âcre, presque suffocante. Des cellules grillagées occupent la pièce. À l’intérieur, des hommes, des femmes, nus. Leurs visages, marqués, se tournent vers vous. Espoir. Méfiance. Ils attendent. Vous tentez les verrous, en vain. Les prisonniers supplient, crient, pleurent, s’accrochent à votre venue. Hélas, vous ne pouvez rien, du moins pas pour l’instant. Un bruit soudain à l’étage vous arrache à l’instant. Vous remontez, haletant, les marches. Dans le couloir, un homme vous attend. Immobile. Un tablier de cuir, des taches sombres. Sa chemise, autrefois blanche, trahit un passé récent. Son visage reste fermé. Il vous scrute, sans un mot, jaugeant le moindre de vos gestes. Un sourire lent déforme sa bouche. Sa voix, basse, presque douce, brise le silence : **« Tu sais, personne ne vient ici par hasard. »** Il avance. Dans sa main, un couteau, la lame souillée. L’autre main s’ouvre, paume tendue, invitation ou menace. Son regard ne faiblit pas. **« Ceux qui entrent ici… finissent toujours par nourrir la maison. »** Il jauge la situation et tout à coup bondit dans votre direction. Vous n’avez pas le temps de dégainer. Qui de vous deux sera le plus rapide ?",
+  "image": "/images/chapter382.png",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "383" },
+    { "label": "Test echoue...", "next": "384" }
+  ]
+}

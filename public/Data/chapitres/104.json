@@ -8,7 +8,7 @@
       "label": "Si vous avez en votre possession un morceau de tuyau en plastique...",
       "next": "306",
       "modificateursNarratifs": {
-        "morceauDeTuyauEnPlastique": -1
+        "morceau_De_Tuyau_En_Plastique": -1
       }
     },
     {

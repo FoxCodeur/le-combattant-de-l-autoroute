@@ -9,7 +9,7 @@
   },
   "testChance": {
     "required": true,
-    "description": "Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous survivez à la roulette russe. Sinon, le barillet s'arrête sur la balle fatale."
+    "description": "Tentez votre Chance. Si vous obtenez un total inférieur ou égal à votre chance, vous survivez à la roulette russe. Sinon, le barillet s'arrête sur la balle fatale."
   },
   "choices": [
     { "label": "Test reussi...", "next": "208" },

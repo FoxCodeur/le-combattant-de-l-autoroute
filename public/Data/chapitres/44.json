@@ -8,7 +8,7 @@
       "label": "Si vous avez un coup de poing américain sur vous...",
       "next": "273",
       "condition": {
-        "item": "poing_americain",
+        "item": "coup_De_PoingAmericain",
         "hasItem": true
       }
     },

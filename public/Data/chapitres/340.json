@@ -8,7 +8,7 @@
       "label": "Si vous pouvez payer cette somme et si vous desirez faire reparer votre voiture...",
       "next": "318",
       "modificateursNarratifs": {
-        "boiteDeClous": -1
+        "clous": -1
       }
     },
     {

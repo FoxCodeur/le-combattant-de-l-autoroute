@@ -8,7 +8,7 @@
       "label": "Si vous possedez une barre de fer et désirez forcer la serrure du coffre...",
       "next": "277",
       "modificateursNarratifs": {
-        "barreDeFer": -1
+        "barre_De_Fer": -1
       }
     },
     {

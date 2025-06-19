@@ -8,7 +8,7 @@
       "label": "Si vous disposez d'un jerricane plein d'essence...",
       "next": "99",
       "modificateursNarratifs": {
-        "bidonEssence": -1
+        "bidon_Essence": -1
       }
     },
     {

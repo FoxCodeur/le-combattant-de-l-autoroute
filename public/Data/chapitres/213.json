@@ -8,9 +8,13 @@
   },
   "diceRoll": {
     "required": true,
-    "numberOfDice": 2
+    "numberOfDice": 2,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
   },
   "choices": [
-    { "label": "Si vous êtes encore vivant après l'explosion...", "next": "294" }
+    { "label": "Si vous etes encore vivant après l'explosion...", "next": "294" }
   ]
 }

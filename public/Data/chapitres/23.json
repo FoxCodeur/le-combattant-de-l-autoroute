@@ -9,7 +9,7 @@
   },
   "testHabilete": {
     "required": true,
-    "description": "Tentez votre Habileté en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre Habileté, vous êtes habile. Sinon, vous échouez."
+    "description": "Testez votre Habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
   },
   "choices": [
     { "label": "Test reussi...", "next": "137" },

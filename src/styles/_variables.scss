@@ -24,3 +24,12 @@ $info-gradient: #d4fbe8;
 $info-shadow: rgba(46, 204, 113, 0.11); // vert pâle
 $info-inset: #000000;
 $info-relief: #f3fff8;
+// variables plur les classes habilete-description et chance-description
+// Utilisées dans le mixin pour les textes Tentez votre Chance, Tentez votre Habileté
+$chance-border: #1976d2;
+$chance-bg: #e3f2fd;
+$chance-shadow: rgba(25, 118, 210, 0.08);
+
+$habilete-border: #43a047;
+$habilete-bg: #e8f5e9;
+$habilete-shadow: rgba(67, 160, 71, 0.08);

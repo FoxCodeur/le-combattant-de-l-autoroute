@@ -1,7 +1,7 @@
 {
   "id": "201",
   "title": "Chapitre 201",
-  "text": "Soudain une explosion sourde retentit et l'Interceptor part en zigzaguant sur la route.",
+  "text": "Soudain une explosion sourde retentit et l'Interceptor part en zigzaguant sur la route. [danger]Lancez deux dés et déduisez le chiffre obtenu du total de BLINDAGE de l'Interceptor.[/danger]",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

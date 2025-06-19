@@ -6,7 +6,7 @@
   "modificateursNarratifs": {
     "chance": 1,
     "habilete": 1,
-    "giletPareBalles": 1
+    "gilet_Pare_Balles": 1
   },
   "choices": [
     { "label": "Next...", "next": "49" }

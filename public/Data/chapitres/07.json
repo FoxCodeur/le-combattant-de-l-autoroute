@@ -1,7 +1,7 @@
 {
   "id": "7",
   "title": "Chapitre 7",
-  "text": "**Jaxxie** vous [info]conseille[/info] de quitter la route sans tarder et de rouler vers l'est, à travers le désert de pierrailles, jusqu'à ce que l'Interceptor ne puisse plus être vue de la route. Elle vous dit ensuite de vous arrêter et d'attendre que la nuit tombe. **«On doit être en forme ce soir pour notre opération-commando, aussi ai-je apporté de quoi nous permettre de rester éveillés jusqu'à cet instant !»** dit-elle joyeusement en plongeant la main dans sa poche.",
+  "text": "**Jaxxie** vous conseille de quitter la route sans tarder et de rouler vers l'est, à travers le désert de pierrailles, jusqu'à ce que l'Interceptor ne puisse plus être vue de la route. Elle vous dit ensuite de vous arrêter et d'attendre que la nuit tombe. **«On doit être en forme ce soir pour notre opération-commando, aussi ai-je apporté de quoi nous permettre de rester éveillés jusqu'à cet instant !»** dit-elle joyeusement en plongeant la main dans sa poche.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -9,7 +9,7 @@
   },
   "testChance": {
     "required": true,
-    "description": "[info]Tentez votre Chance en lançant 2 dés. Si vous obtenez un total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux.[/info]"
+    "description": "Tentez votre Chance. Total inférieur ou égal à votre chance, vous êtes chanceux. Sinon, vous êtes malchanceux."
   },
   "choices": [
     { "label": "Test reussi...", "next": "319" },

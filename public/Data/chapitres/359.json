@@ -5,7 +5,7 @@
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": 1,
-    "bidonEssence": 1
+    "bidon_Essence": 1
   },
   "choices": [
     {

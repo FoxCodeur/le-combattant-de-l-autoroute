@@ -6,6 +6,7 @@ export default function StatChangeNotification({ notifications }) {
   return (
     <div className="stat-change-notification">
       {notifications.map((notif) => {
+        // Met la première lettre en majuscule
         const type =
           notif.type.charAt(0).toUpperCase() +
           notif.type.slice(1).toLowerCase();
@@ -17,10 +18,9 @@ export default function StatChangeNotification({ notifications }) {
               isPositive ? "notif-up" : "notif-down"
             }${notif.leaving ? " leaving" : ""}`}
           >
-            <span className="stat-symbol">{isPositive ? "＋" : "−"}</span>
             <span className="stat-text">
-              {type} {notif.value > 0 ? "+" : ""}
-              {notif.value}
+              {isPositive ? "+" : ""}
+              {notif.value} {type}
             </span>
           </div>
         );

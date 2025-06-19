@@ -10,16 +10,17 @@ import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
 import StatChangeNotification from "../StatChangeNotification/StatChangeNotification";
 import CombatEnnemis from "../CombatEnnemis/CombatEnnemis";
-import TestContext from "../../context/TestContext";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 
+/**
+ * Composant principal d'un chapitre, gère l'affichage du texte, des choix, des dés, etc.
+ */
 const Chapter = () => {
-  // Récupère l'ID du chapitre depuis l'URL
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Contextes partagés pour obtenir les données du chapitre, personnage, gestion des notifications, etc.
+  // Contexts apportant les données du chapitre, personnage, notifications, etc.
   const {
     chapterData,
     fetchChapter,
@@ -29,23 +30,22 @@ const Chapter = () => {
     setCharacterData,
   } = useContext(ChapterContext);
 
+  const [diceTotal, setDiceTotal] = useState(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [hasRolled, setHasRolled] = useState(false);
 
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
 
-  const { diceTotal, validChoice, handleDiceResult, resetTest } =
-    useContext(TestContext);
-
-  // Charge un nouveau chapitre et réinitialise le test de dés à chaque changement d'ID de chapitre
+  // Recharge le chapitre à chaque changement d'id
   useEffect(() => {
     fetchChapter(id);
-    resetTest();
-    // eslint-disable-next-line
-  }, [id]);
+    setDiceTotal(null);
+    setHasRolled(false);
+  }, [id, fetchChapter]);
 
-  // Applique les modificateurs narratifs (bonus/malus, etc.) du chapitre si présents
+  // Applique les modificateurs narratifs si besoin (one-shot par chapitre)
   useEffect(() => {
     if (
       chapterData &&
@@ -75,16 +75,99 @@ const Chapter = () => {
         }
       }
     }
-    // eslint-disable-next-line
   }, [chapterData, characterData, setCharacterData, id, addNotifications]);
 
-  // Remplace le placeholder {hero} par le nom du personnage dans les textes
+  /**
+   * Callback après le lancer de dé, applique éventuellement la perte/gain de stat
+   */
+  const handleDiceResult = (total) => {
+    setDiceTotal(total);
+    setHasRolled(true);
+
+    // Si le chapitre demande de modifier une stat après le dé (ex : BLINDAGE...)
+    if (
+      chapterData?.diceRoll?.required &&
+      characterData &&
+      chapterData.diceRoll.applyTo
+    ) {
+      let updatedCharacter = {
+        ...characterData,
+        caractéristiques: characterData.caractéristiques
+          ? { ...characterData.caractéristiques }
+          : undefined,
+        interceptor: characterData.interceptor
+          ? { ...characterData.interceptor }
+          : undefined,
+      };
+
+      const stat = chapterData.diceRoll.applyTo.stat;
+      const operation = chapterData.diceRoll.applyTo.operation;
+
+      if (stat in updatedCharacter) {
+        if (operation === "add") updatedCharacter[stat] += total;
+        if (operation === "subtract") updatedCharacter[stat] -= total;
+        if (updatedCharacter[stat] < 0) updatedCharacter[stat] = 0;
+      } else if (
+        updatedCharacter.caractéristiques &&
+        stat in updatedCharacter.caractéristiques
+      ) {
+        if (operation === "add")
+          updatedCharacter.caractéristiques[stat] += total;
+        if (operation === "subtract")
+          updatedCharacter.caractéristiques[stat] -= total;
+        if (updatedCharacter.caractéristiques[stat] < 0)
+          updatedCharacter.caractéristiques[stat] = 0;
+      } else if (
+        updatedCharacter.interceptor &&
+        stat in updatedCharacter.interceptor
+      ) {
+        if (operation === "add") updatedCharacter.interceptor[stat] += total;
+        if (operation === "subtract")
+          updatedCharacter.interceptor[stat] -= total;
+        if (updatedCharacter.interceptor[stat] < 0)
+          updatedCharacter.interceptor[stat] = 0;
+      }
+
+      // Notifications pour l'utilisateur
+      const statIcons = {
+        endurance: "/images/icons/endurance.png",
+        habilete: "/images/icons/habilete.png",
+        chance: "/images/icons/chance.png",
+        blindage: "/images/icons/blindage.png",
+      };
+      const statLabels = {
+        endurance: "Endurance",
+        habilete: "HABILETÉ",
+        chance: "Chance",
+        blindage: "Blindage",
+      };
+
+      addNotifications([
+        {
+          stat,
+          type: operation === "subtract" ? "loss" : "gain",
+          value: total,
+          icon: statIcons[stat] || "",
+          label: statLabels[stat] || stat,
+        },
+      ]);
+      setCharacterData(updatedCharacter);
+    }
+  };
+
+  // Utilitaire pour normaliser les accents
+  const normalize = (str) =>
+    str && typeof str === "string"
+      ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      : "";
+
+  // Personnalise le texte du chapitre avec le nom du héros
   const getPersonalizedText = (text) => {
     if (!characterData) return text;
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
-  // Gère le clic sur un choix (applique les modificateurs narratifs éventuels, change de chapitre)
+  // Gestion du clic sur un choix (narratif ou simple navigation)
   const handleChoiceClick = (choice) => {
     if (choice.modificateursNarratifs) {
       const { character, changes } = applyNarrativeModifiers(
@@ -99,51 +182,165 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
-  // Génère les boutons de choix à la fin du chapitre (avec ou sans test de dés)
+  // Fonction utilitaire pour filtrer les choix selon la condition (inventaire ou autre)
+  const isChoiceAvailable = (choice) => {
+    if (!choice.condition) return true;
+    // Condition sur un item
+    if (choice.condition.item) {
+      const items = characterData?.inventaire || [];
+      const hasItem = items.includes(choice.condition.item);
+      return choice.condition.hasItem ? hasItem : !hasItem;
+    }
+    // Autres types de conditions possibles ici...
+    return true;
+  };
+
+  /**
+   * Affichage des boutons de choix selon le mode du chapitre :
+   * - Test de chance/habilete : bouton unique selon résultat
+   * - Hasard pur à choix multiples (ex : "si vous obtenez 1,2,3..." ou "4,5,6...") : n'affiche que le bouton correspondant au résultat
+   * - Stat à déduire ou Next... : tous les boutons affichés mais désactivés avant le dé
+   * - Pas de dé : tous les boutons visibles (filtrés par condition)
+   */
   const renderChoices = () => {
-    // Si test de dés requis, affiche un seul bouton selon le résultat du dé
-    if (chapterData?.diceRoll?.required) {
-      if (!diceTotal) {
+    if (!chapterData || !Array.isArray(chapterData.choices)) return null;
+
+    // On filtre les choix selon la condition (inventaire, etc)
+    const filteredChoices = chapterData.choices.filter(isChoiceAvailable);
+
+    // --- Test de chance
+    if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
+      if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
       }
-      if (!validChoice) {
-        return <p>Aucun choix disponible pour ce résultat de dé.</p>;
+      const chance = characterData?.caractéristiques?.chance ?? 0;
+      if (diceTotal <= chance) {
+        const successChoice = filteredChoices.find((c) =>
+          normalize(c.label?.toLowerCase()).includes("reuss")
+        );
+        return successChoice ? (
+          <button
+            className="chapter-choice"
+            onClick={() => handleChoiceClick(successChoice)}
+          >
+            {successChoice.label}
+          </button>
+        ) : null;
       }
-      return (
+      const failChoice = filteredChoices.find((c) =>
+        normalize(c.label?.toLowerCase()).includes("echou")
+      );
+      return failChoice ? (
         <button
           className="chapter-choice"
-          onClick={() => handleChoiceClick(validChoice)}
+          onClick={() => handleChoiceClick(failChoice)}
         >
-          {validChoice.label}
+          {failChoice.label}
         </button>
+      ) : null;
+    }
+
+    // --- Test d'habileté
+    if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
+      if (diceTotal === null) {
+        return <p>Veuillez lancer les dés pour continuer.</p>;
+      }
+      const habilete = characterData?.caractéristiques?.habilete ?? 0;
+      if (diceTotal <= habilete) {
+        const successChoice = filteredChoices.find((c) =>
+          normalize(c.label?.toLowerCase()).includes("reuss")
+        );
+        return successChoice ? (
+          <button
+            className="chapter-choice"
+            onClick={() => handleChoiceClick(successChoice)}
+          >
+            {successChoice.label}
+          </button>
+        ) : null;
+      }
+      const failChoice = filteredChoices.find((c) =>
+        normalize(c.label?.toLowerCase()).includes("echou")
+      );
+      return failChoice ? (
+        <button
+          className="chapter-choice"
+          onClick={() => handleChoiceClick(failChoice)}
+        >
+          {failChoice.label}
+        </button>
+      ) : null;
+    }
+
+    // --- Hasard pur à choix multiples (ex : "si vous obtenez 1,2,3..." OU "si vous obtenez 4,5,6...")
+    if (
+      chapterData.diceRoll?.required &&
+      !chapterData.testChance?.required &&
+      !chapterData.testHabilete?.required &&
+      filteredChoices.length > 1
+    ) {
+      if (diceTotal === null) {
+        return <p>Veuillez lancer le dé pour continuer.</p>;
+      }
+      const matchingChoice = filteredChoices.find((choice) => {
+        // Extrait tous les nombres du label (ex: "Si vous obtenez 1, 2 ou 3..." => [1,2,3])
+        const numbers = choice.label.match(/\d+/g)?.map(Number) || [];
+        return numbers.includes(diceTotal);
+      });
+      return matchingChoice ? (
+        <button
+          className="chapter-choice"
+          onClick={() => handleChoiceClick(matchingChoice)}
+        >
+          {matchingChoice.label}
+        </button>
+      ) : (
+        <p>Aucun choix ne correspond au résultat du dé ({diceTotal}).</p>
       );
     }
 
-    // Sinon, affiche tous les choix disponibles
-    if (Array.isArray(chapterData?.choices)) {
-      return chapterData.choices.map((choice, index) => (
+    // --- Hasard pur/stat à déduire avec un seul bouton ("Next..."), ou Next après stat à déduire
+    if (
+      chapterData.diceRoll?.required &&
+      !chapterData.testChance?.required &&
+      !chapterData.testHabilete?.required &&
+      filteredChoices.length === 1
+    ) {
+      return filteredChoices.map((choice, idx) => (
         <button
-          key={index}
+          key={idx}
           className="chapter-choice"
-          onClick={() => handleChoiceClick(choice)}
+          onClick={() => diceTotal !== null && handleChoiceClick(choice)}
+          disabled={diceTotal === null}
         >
           {choice.label}
         </button>
       ));
     }
-    return null;
+
+    // --- Cas sans test de dés : tous les choix sont affichés normalement (filtrés)
+    return filteredChoices.map((choice, index) => (
+      <button
+        key={index}
+        className="chapter-choice"
+        onClick={() => handleChoiceClick(choice)}
+      >
+        {choice.label}
+      </button>
+    ));
   };
 
+  // --- Rendu principal du composant ---
   return (
     <div
       className={`chapter chapter-${id}`}
       role="region"
       aria-label="Chapitre interactif"
     >
-      {/* Notifications de changement de stats */}
+      {/* Notifications/statistiques */}
       <StatChangeNotification notifications={notifications} />
 
-      {/* Modale pour la fiche personnage */}
+      {/* Modale fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (
           <CharacterSheet data={characterData} />
@@ -152,19 +349,18 @@ const Chapter = () => {
         )}
       </Modal>
 
-      {/* Gestion de l'état de chargement et d'erreur */}
+      {/* Loading et erreurs */}
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
       {error && <div className="error-message">Erreur : {error}</div>}
 
-      {/* Affichage principal du chapitre */}
+      {/* Corps du chapitre */}
       {!loading && !error && chapterData && chapterData.title ? (
         <article className="chapter-content">
-          {/* Titre du chapitre */}
           <h1 className="chapter-title">
             {chapterData.title || "Titre manquant"}
           </h1>
 
-          {/* Image du chapitre et bouton fiche personnage */}
+          {/* Illustration */}
           <div className="chapter-image-container">
             <img
               src={chapterData.image ? chapterData.image : defaultPicture}
@@ -174,17 +370,18 @@ const Chapter = () => {
                 e.target.src = defaultPicture;
               }}
             />
+            {/* Accès fiche personnage */}
             <CharacterSheetButton onClick={() => setIsSheetOpen(true)} />
           </div>
 
-          {/* Texte principal du chapitre (mise en forme custom) */}
+          {/* Texte principal */}
           <section
             className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
           >
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Bloc combat si des ennemis sont présents */}
+          {/* Bloc combat si besoin */}
           {chapterData.combat?.ennemis && (
             <CombatEnnemis
               ennemis={chapterData.combat.ennemis}
@@ -192,35 +389,35 @@ const Chapter = () => {
             />
           )}
 
-          {/* Section test de dés : affiche la description du test avec le rendu custom */}
+          {/* Bloc test de dés */}
           {chapterData.diceRoll?.required && (
             <section className="chapter-dice-test">
               {chapterData.testHabilete?.description && (
-                <div className="habilete-description">
-                  {renderFormattedText(chapterData.testHabilete.description)}
-                </div>
+                <p className="habilete-description">
+                  {chapterData.testHabilete.description}
+                </p>
               )}
               {!chapterData.testHabilete?.description &&
                 chapterData.testChance?.description && (
-                  <div className="chance-description">
-                    {renderFormattedText(chapterData.testChance.description)}
-                  </div>
+                  <p className="chance-description">
+                    {chapterData.testChance.description}
+                  </p>
                 )}
-              {diceTotal === null && (
+              {/* Lancer de dé */}
+              {!hasRolled && (
                 <DiceRoll
                   numberOfDice={chapterData.diceRoll.numberOfDice || 2}
-                  onResult={(total) =>
-                    handleDiceResult(total, chapterData, characterData)
-                  }
+                  onResult={handleDiceResult}
                 />
               )}
+              {/* Affichage du résultat */}
               {diceTotal !== null && (
                 <p className="dice-result">Résultat du lancer : {diceTotal}</p>
               )}
             </section>
           )}
 
-          {/* Boutons de choix pour l'utilisateur */}
+          {/* Boutons de choix */}
           <nav className="chapter-choices" aria-label="Choix disponibles">
             {renderChoices()}
           </nav>

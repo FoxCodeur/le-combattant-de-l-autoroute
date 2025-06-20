@@ -10,23 +10,20 @@ import Modal from "../Modal/Modal";
 import CharacterSheet from "../CharacterSheet/CharacterSheet";
 import StatChangeNotification from "../StatChangeNotification/StatChangeNotification";
 import CombatEnnemis from "../CombatEnnemis/CombatEnnemis";
+import GameOverModal from "../GameOverModal/GameOverModal";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 
 /**
  * Composant principal d'un chapitre du livre-jeu.
  *
- * Gère :
- * - L'affichage du texte, de l'image et des choix du chapitre
- * - Les tests de dés (endurance, habileté, chance, etc.)
- * - L'application des modificateurs narratifs/statistiques
- * - Les interactions utilisateur (choix, fiche personnage...)
+ * Le Game Over ne s'affiche plus à l'arrivée sur le chapitre, mais uniquement au clic sur un choix
+ * si les stats sont tombées à zéro ou moins (après application des modificateurs).
  */
 const Chapter = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Contexts apportant les données du chapitre, personnage, notifications, etc.
   const {
     chapterData,
     fetchChapter,
@@ -36,25 +33,49 @@ const Chapter = () => {
     setCharacterData,
   } = useContext(ChapterContext);
 
-  // État du résultat du lancer de dé
   const [diceTotal, setDiceTotal] = useState(null);
-  // État de la modale de fiche perso
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  // Savoir si l'utilisateur a lancé le dé (pour afficher/comportement du DiceRoll)
   const [hasRolled, setHasRolled] = useState(false);
+  const [isGameOver, setIsGameOver] = useState(false);
 
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
 
-  // À chaque changement d'id de chapitre, on recharge les données et on reset les états liés au dé
+  // Reset de l'état à chaque changement de chapitre
   useEffect(() => {
     fetchChapter(id);
-    setDiceTotal(null); // reset le résultat du dé
-    setHasRolled(false); // reset l'état du lancer
+    setDiceTotal(null);
+    setHasRolled(false);
+    setIsGameOver(false);
   }, [id, fetchChapter]);
 
-  // Application one-shot des modificateurs narratifs/statistiques éventuels à l'arrivée sur ce chapitre
+  /**
+   * Fonction utilitaire qui détermine si le Game Over doit être déclenché.
+   * Elle vérifie si blindage OU endurance sont tombés à 0 ou moins.
+   */
+  const mustTriggerGameOver = (character) => {
+    const blindage =
+      character.caractéristiques?.blindage ??
+      character.interceptor?.blindage ??
+      character.blindage ??
+      null;
+    const endurance =
+      character.caractéristiques?.endurance ??
+      character.interceptor?.endurance ??
+      character.endurance ??
+      null;
+    return (
+      (typeof blindage === "number" && blindage <= 0) ||
+      (typeof endurance === "number" && endurance <= 0)
+    );
+  };
+
+  /**
+   * Application one-shot des modificateurs narratifs/statistiques éventuels à l'arrivée sur ce chapitre.
+   * On applique les modificateurs mais on NE déclenche PAS le Game Over ici pour laisser le temps au lecteur
+   * de lire le texte. Le Game Over sera géré au clic sur un choix.
+   */
   useEffect(() => {
     if (
       chapterData &&
@@ -83,8 +104,10 @@ const Chapter = () => {
         if (changes && changes.length > 0) {
           addNotifications(changes);
         }
+        // NE PAS déclencher le Game Over ici !
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapterData, characterData, setCharacterData, id, addNotifications]);
 
   /**
@@ -92,12 +115,12 @@ const Chapter = () => {
    * - Met à jour le résultat du dé (diceTotal)
    * - Applique la perte/gain de stat si besoin
    * - Déclenche un affichage de notification
+   * - Déclenche le Game Over si stat vitale à 0
    */
   const handleDiceResult = (total) => {
     setDiceTotal(total);
     setHasRolled(true);
 
-    // Applique la stat concernée si besoin (ex : perte d'endurance, blindage, etc.)
     if (
       chapterData?.diceRoll?.required &&
       characterData &&
@@ -166,6 +189,11 @@ const Chapter = () => {
         },
       ]);
       setCharacterData(updatedCharacter);
+
+      // Déclencher Game Over si stat vitale tombe à 0 ou moins
+      if (mustTriggerGameOver(updatedCharacter)) {
+        setIsGameOver(true);
+      }
     }
   };
 
@@ -181,33 +209,46 @@ const Chapter = () => {
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
-  // Callback au clic sur un bouton de choix (narratif ou navigation)
+  /**
+   * Callback au clic sur un bouton de choix (narratif ou navigation)
+   * Applique les modificateurs narratifs s'il y en a, puis navigue si pas Game Over
+   * Déclenche le Game Over si besoin après modification du personnage.
+   */
   const handleChoiceClick = (choice) => {
+    // On part sur le personnage courant
+    let updatedCharacter = characterData;
+
+    // Appliquer les modificateurs narratifs du CHOIX si présents
     if (choice.modificateursNarratifs) {
       const { character, changes } = applyNarrativeModifiers(
         choice.modificateursNarratifs,
         characterData
       );
+      updatedCharacter = character;
       setCharacterData(character);
       if (typeof addNotifications === "function") {
         addNotifications(changes);
       }
     }
+
+    // Vérifie si le Game Over doit être affiché APRÈS le clic (après modifs du chapitre ou du choix)
+    if (mustTriggerGameOver(updatedCharacter)) {
+      setIsGameOver(true);
+      return; // On bloque la navigation si mort
+    }
+
+    // Navigation normale
     navigate(`/chapitre/${choice.next}`);
   };
 
   /**
    * Fonction utilitaire pour filtrer les choix selon la condition (inventaire ou autre)
-   * Cette version considère d'abord characterData.inventaire s'il existe,
-   * sinon characterData.équipement (tous objets avec une valeur > 0).
-   * Elle tolère les différences d'underscore et de casse.
    */
   const isChoiceAvailable = (choice) => {
     if (!choice.condition) return true;
     if (choice.condition.item) {
       const normalize = (str) => str.replace(/_/g, "").toLowerCase();
       let items = [];
-      // Cherche dans 'inventaire' si présent (tableau), sinon dans 'équipement' (objet)
       if (characterData?.inventaire) {
         items = characterData.inventaire.map(normalize);
       } else if (characterData?.équipement) {
@@ -219,21 +260,18 @@ const Chapter = () => {
       const hasItem = items.includes(item);
       return choice.condition.hasItem ? hasItem : !hasItem;
     }
-    // Autres types de conditions possibles ici...
     return true;
   };
 
   /**
    * Affichage des boutons de choix selon le mode du chapitre :
-   * - Prend en compte les conditions sur l'inventaire (filtrage en amont)
    */
   const renderChoices = () => {
     if (!chapterData || !Array.isArray(chapterData.choices)) return null;
 
-    // On filtre d'abord tous les choix selon l'inventaire/condition
     const filteredChoices = chapterData.choices.filter(isChoiceAvailable);
 
-    // --- CAS 1 : Test de chance
+    // Test de chance
     if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -265,7 +303,7 @@ const Chapter = () => {
       ) : null;
     }
 
-    // --- CAS 1 bis : Test d'habileté
+    // Test d'habileté
     if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -297,7 +335,7 @@ const Chapter = () => {
       ) : null;
     }
 
-    // --- CAS 2 : dé requis, plusieurs choix, SANS mapping chiffre/label (aucun label ne contient de nombre)
+    // Dé requis, plusieurs choix, SANS mapping chiffre/label
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -320,7 +358,7 @@ const Chapter = () => {
       ));
     }
 
-    // --- CAS 3 : dé requis, plusieurs choix AVEC mapping résultat/label (labels contiennent des chiffres)
+    // Dé requis, plusieurs choix AVEC mapping résultat/label
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -329,7 +367,6 @@ const Chapter = () => {
       filteredChoices.some((choice) => /\d/.test(choice.label))
     ) {
       if (diceTotal === null) {
-        // Affiche tous les boutons désactivés pour montrer les labels, même avant le lancer de dé
         return (
           <>
             {filteredChoices.map((choice, index) => (
@@ -346,7 +383,6 @@ const Chapter = () => {
           </>
         );
       }
-      // Affiche tous les boutons, seul le bon est activé
       return (
         <>
           {filteredChoices.map((choice, index) => {
@@ -368,15 +404,13 @@ const Chapter = () => {
       );
     }
 
-    // --- CAS 4 : dé requis, un seul bouton ("Next..."), ex : chapitre 342
+    // Dé requis, un seul bouton ("Next...")
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
       !chapterData.testHabilete?.required &&
       filteredChoices.length === 1
     ) {
-      // Correction anti-bug : le bouton reste activé tant que le dé a été lancé,
-      // même si un re-render intervient (grâce à diceTotal qui n'est pas remis à null hors changement de chapitre)
       return filteredChoices.map((choice, idx) => (
         <button
           key={idx}
@@ -392,7 +426,7 @@ const Chapter = () => {
       ));
     }
 
-    // --- CAS 5 : pas de test de dés, tous les choix affichés normalement (filtrés)
+    // Pas de test de dés, tous les choix affichés normalement
     return filteredChoices.map((choice, index) => (
       <button
         key={index}
@@ -423,13 +457,27 @@ const Chapter = () => {
         )}
       </Modal>
 
+      {/* Bloc Game Over (affiche l'image, bloque tout le reste) */}
+      <GameOverModal visible={isGameOver} />
+
       {/* Loading et erreurs */}
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
       {error && <div className="error-message">Erreur : {error}</div>}
 
       {/* Corps du chapitre */}
       {!loading && !error && chapterData && chapterData.title ? (
-        <article className="chapter-content">
+        <article
+          className="chapter-content"
+          style={
+            isGameOver
+              ? {
+                  filter: "grayscale(1) blur(2px)",
+                  pointerEvents: "none",
+                  userSelect: "none",
+                }
+              : {}
+          }
+        >
           <h1 className="chapter-title">
             {chapterData.title || "Titre manquant"}
           </h1>

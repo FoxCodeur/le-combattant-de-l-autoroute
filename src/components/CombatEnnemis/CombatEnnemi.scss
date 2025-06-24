@@ -77,6 +77,26 @@
       font-family: "Roboto", sans-serif;
       font-weight: bold;
     }
+    .ennemi-clan {
+      margin-bottom: 0.7em;
+      color: #e9572b;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.08em;
+      background: linear-gradient(90deg, #252c3f 50%, #e9572b22 100%);
+      border-radius: 0.7em;
+      padding: 0.25em 0.75em;
+      display: inline-block;
+      border: 1.5px solid #e9572b;
+      box-shadow: 0 1px 4px #e9572b33, 0 1px 0 #0003;
+      .clan-label {
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+      .clan-value {
+        font-style: italic;
+        margin-left: 0.3em;
+      }
+    }
     .ennemi-stats {
       @include flex-between-center;
       margin-top: 0.2em;
@@ -94,10 +114,9 @@
           min-width: 1em;
           min-height: 1em;
         }
-        // Classe spécifique pour l'icône coeur, à ajouter sur le FaHeart dans le JSX
         .heart-icon {
-          width: 1.2em !important;
-          height: 1.2em !important;
+          width: 1.2em;
+          height: 1.2em;
           min-width: 1em;
           min-height: 1em;
           vertical-align: middle;

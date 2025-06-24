@@ -9,7 +9,7 @@
     "chance": 8
   },
   "équipement": {
-    "trousseSecours": 10,
+    "trousse_Secours": 10,
     "credits": 200,
     "morceau_De_Tuyau_En_Plastique": 0,
     "barre_De_Fer": 0,

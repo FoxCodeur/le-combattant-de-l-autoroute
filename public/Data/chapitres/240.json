@@ -15,7 +15,7 @@
     "description": "Testez votre Habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Test reussi...", "next": "3" },
+    { "label": "Test reussi...", "next": "03" },
     { "label": "Test echoue...", "next": "148" }
   ]
 }

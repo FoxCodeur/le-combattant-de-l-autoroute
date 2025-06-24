@@ -4,7 +4,7 @@
   "text": "Les deux motards dégainent chacun un pistolet. Vous sortez votre revolver : le duel commence. C'est à vous de décider lequel des deux vous affrontez en priorité.",
   "image": "/images/chap1.jpg",
   "combat": {
-    "type": "motorise",
+    "type": "tir",
     "combatMode": "sequentiel",
     "ordreDesEnnemis": "choixJoueur",
     "diceRoll": {
@@ -20,13 +20,13 @@
         "nom": "Premier Motard",
         "habilete": 6,
         "endurance": 15,
-        "image": "/images/ch16Ennemi.webp"
+        "image": "/images/Chapter12Motard1.webp"
       },
       {
         "nom": "Deuxième Motard",
         "habilete": 7,
         "endurance": 17,
-        "image": "/images/motardEnnemi.webp"
+        "image": "/images/Chapter12Motard2.webp"
       }
     ],
     "issue": {

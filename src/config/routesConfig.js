@@ -1,5 +1,5 @@
 // src/routes/routesConfig.jsx
-import Chapter from "../components/Chapter/Chapter";
+import Chapter from "../pages/Chapter/Chapter";
 import Home from "../pages/home/Home";
 
 const routesConfig = [

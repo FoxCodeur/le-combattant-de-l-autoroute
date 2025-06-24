@@ -1,0 +1,18 @@
+{
+  "id": "385",
+  "title": "Chapitre 385",
+  "text": "Vous écrasez l’accélérateur, les doigts crispés sur le volant, un œil rivé sur la Ford qui vous talonne. Soudain, un claquement sec fend l’air : votre rétroviseur droit explose dans une gerbe d’éclats métalliques. Instinctivement, vous donnez un coup de volant sur la droite, manquant de peu de quitter la route. Une seconde détonation retentit : une balle siffle, frôle la carrosserie et se perd dans le hurlement du moteur. Un frisson glacé vous parcourt l’échine : un sniper vous a pris en chasse, quelque part sur le bas-côté. Chaque seconde passée dans sa ligne de mire met votre vie en jeu. La sueur perle sur votre front, votre souffle devient court. Le moindre faux mouvement, la moindre hésitation, et tout sera terminé. Que faire dans une telle situation ? Il va falloir puiser dans vos derniers réflexes, mobiliser toute votre habileté pour garder le contrôle du bolide et, peut-être, échapper à la mort qui vous guette au bout de cette ligne droite infernale. Quel dommage que certains préfèrent tricher plutôt que de relever le défi avec honnêteté… Et, au fond, vous réalisez un peu tard à quel point vous avez fait preuve de naïveté.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "387" },
+    { "label": "Test echoue...", "next": "386" }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "4",
   "title": "Chapitre 4",
-  "text": "Vous quittez la route principale et garez l’Interceptor à l’abri derrière les vestiges rouillés d’un ancien entrepôt, à moitié effondré. Lorsque le moteur s’éteint, le silence qui envahit les lieux vous semble presque surnaturel ; l’inquiétude vous étreint à l’idée qu’on ait pu entendre votre arrivée. Vous avalez un repas frugal à la hâte, puis restez sur le qui-vive, attendant que l’obscurité recouvre entièrement la zone avant de vous autoriser à prendre du repos. À l’aube, vous vous réveillez revigoré, prêt à affronter la suite du voyage. [success]gagner 2 points d'ENDURANCE[/success]. Vous remettez l’Interceptor en marche et reprenez la route vers le sud. ",
+  "text": "Vous quittez la route principale et garez l’Interceptor à l’abri derrière les vestiges rouillés d’un entrepôt, à moitié effondré. Lorsque le moteur s’éteint, le silence qui envahit les lieux vous semble presque surnaturel ; l’inquiétude vous étreint à l’idée qu’on ait pu entendre votre arrivée. Vous avalez un repas frugal à la hâte, puis restez sur le qui-vive, attendant que l’obscurité recouvre entièrement la zone avant de vous autoriser à prendre du repos. À l’aube, vous vous réveillez revigoré, prêt à affronter la suite du voyage. [success]gagner 2 points d'ENDURANCE[/success]. Vous remettez l’Interceptor en marche et reprenez la route vers le sud. ",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "endurance": 2

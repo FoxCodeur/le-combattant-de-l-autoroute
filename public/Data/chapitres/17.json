@@ -19,9 +19,10 @@
     "ennemis": [
       {
         "nom": "Moto Blindée",
+        "clan": "Asphalt Reapers",
         "puissance": 6,
         "blindage": 9,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/chapter17Ennemi.webp"
       }
     ]
   },

@@ -1,18 +1,18 @@
 {
   "id": "340",
   "title": "Chapitre 340",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Vous décidez qu'il est temps maintenant d'utiliser une de vos armes spéciales contre votre poursuivant. Vous regardez donc les boutons de commande du tableau de bord...",
   "image": "/images/chap1.jpg",
   "choices": [
     {
-      "label": "Si vous pouvez payer cette somme et si vous desirez faire reparer votre voiture...",
+      "label": "si vous voulez repandre le contenu d'une boite de clous sur la route...",
       "next": "318",
       "modificateursNarratifs": {
         "clous": -1
       }
     },
     {
-      "label": "Si vous preferez decliner l'offre de cet homme, remettez-vous en route vers l'est...",
+      "label": "Si vous preferez plutot jeter de l'huile...",
       "next": "213",
       "modificateursNarratifs": {
         "huile": -1

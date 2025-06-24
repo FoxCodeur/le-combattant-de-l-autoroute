@@ -18,17 +18,17 @@
         "nom": "Lascar",
         "habilete": 7,
         "endurance": 10,
-        "image": "/images/ennemis/lascar.jpg"
+        "image": "/images/chapter48.webp"
       }
     ]
   },
   "choices": [
     {
-      "label": "Si vous sortez vainqueur de cette lutte, rendez-vous au",
+      "label": "Si vous sortez vainqueur de cette lutte...",
       "next": "138"
     },
     {
-      "label": "Si vous sombrez dans l'inconscience, rendez-vous au",
+      "label": "Si vous sombrez dans l'inconscience...",
       "next": "100"
     }
   ]

@@ -12,12 +12,10 @@
   },
   "testHabilete": {
     "required": true,
-    "description": "Testez votre habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez.",
-    "success": {
-      "next": "193"
-    },
-    "failure": {
-      "next": "36"
-    }
-  }
+    "description": "Testez votre habileté. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "08" },
+    { "label": "Test echoue...", "next": "287" }
+  ]
 }

@@ -15,10 +15,10 @@
     },
     "ennemis": [
       {
-        "nom": "BANDIT",
+        "nom": "pillard",
         "habilete": 7,
         "endurance": 11,
-        "image": "/images/ennemis/chien2.jpg"
+        "image": "/images/ch193Ennemi.webp"
       }
     ]
   },

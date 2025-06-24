@@ -5,6 +5,6 @@
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous souhaitez obeir en faisant demi-tour vers l'ouest...", "next": "337" },
-    { "label": "Si vous preferez continuer vers l'est, sans tenir compte de l'avertissement...", "next": "9" }
+    { "label": "Si vous preferez continuer vers l'est, sans tenir compte de l'avertissement...", "next": "09" }
   ]
 }

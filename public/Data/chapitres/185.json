@@ -3,6 +3,9 @@
   "title": "Chapitre 185",
   "text": "La porte donne sur une pièce qui a dû être récemment occupée, à en juger par les tasses de café encore a moitié pleines qui traînent sur la table. De plus, il y a une roue de moto appuyée contre le mur et une chambre à air étalée sur le sol. Quelqu'un était probablement en train de réparer une crevaison il y a peu de temps. Sur la table se trouve également une trousse à outils dans laquelle **vous trouvez une paire de grosses cisailles** que vous décidez d'emporter avec vous.",
   "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "paire_De_Pinces": 1
+  },
   "choices": [
     { "label": "Si vous ne l'avez pas encore fait, et si vous le desirez, vous pouvez aller ouvrir la porte donnant sur l'autre piece...", "next": "72" },
     { "label": "Si vous preferez quitter les lieux des à present, rendez-vous au", "next": "246" }

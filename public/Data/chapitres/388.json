@@ -1,0 +1,18 @@
+{
+  "id": "388",
+  "title": "Chapitre 388",
+  "text": "D’instinct, vous plongez derrière un banc alors qu’une détonation claque dans la nef. Sur la galerie latérale, un éclat de métal miroite : le tireur, embusqué à l’étage, ajuste déjà une seconde balle. Par réflexe, vous dégainez et faites feu. L’homme s’effondre dans un fracas de balustrade brisée.\n\nÀ peine avez-vous le temps de reprendre votre souffle que le prêtre bondit depuis l’autel, robe tourbillonnante, mains gantées prêtes à frapper. Le combat est bref, brutal : il vous désarme d’un geste sec, projetant votre arme au sol. Vous vous retrouvez face à lui, vulnérable, alors qu’il se met en garde, prêt à porter le coup fatal.\n\nC’est le moment de tenter votre chance…",
+  "image": "/images/ch10Combat.webp",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal à votre score de Chance, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi…", "next": "391" },
+    { "label": "Test echoue…", "next": "392" }
+  ]
+}

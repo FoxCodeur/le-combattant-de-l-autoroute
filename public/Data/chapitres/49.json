@@ -1,7 +1,7 @@
 {
   "id": "49",
   "title": "Chapitre 49",
-  "text": "Soudain, un spectacle hallucinant se dresse sur la route : une dépanneuse stoppée en travers, mais méconnaissable, métamorphosée en un véritable char de guerre. Des plaques de métal rafistolées, des pointes acérées et des éperons fixés aux essieux lui donnent des allures de monstre mécanique échappé d’un cauchemar. À l’arrière, une plate-forme surélevée est couverte de chaînes, de crânes et d’étendards. Là-dessus se tient un homme torse nu, à la musculature démesurée, comme dopée aux stéroïdes. Il arbore un casque de gladiateur. Il beugle à pleins poumons, agitant au-dessus de sa tête un pistolet. Le colosse désigne votre véhicule d’un geste théâtral, puis ordonne à son chauffeur, hilare, de foncer droit sur vous. Les pneus crissent, le moteur rugit, et le char lance la course poursuite. Vous n’avez plus le choix : il va falloir affronter cette bande de gladiateurs fous furieux.",
+  "text": "Soudain, un spectacle hallucinant se dresse sur la route : une dépanneuse stoppée en travers, mais méconnaissable, métamorphosée en un véritable char de guerre. Des plaques de métal rafistolées, des pointes acérées et des éperons fixés aux essieux lui donnent des allures de monstre mécanique échappé d’un cauchemar. À l’arrière, une plate-forme surélevée est couverte de chaînes, de crânes et d’étendards. Là-dessus se tient un homme torse nu, à la musculature démesurée, comme dopée aux stéroïdes. Il arbore un casque de gladiateur. Il beugle à pleins poumons, agitant au-dessus de sa tête un pistolet. Le colosse désigne votre véhicule d’un geste théâtral, puis ordonne à son chauffeur, hilare, de foncer droit sur vous. Les pneus crissent, le moteur rugit, et le char lance la course poursuite. Vous n’avez plus le choix : il va falloir affronter cette bande de cinglés fous furieux.",
   "image": "/images/chapter49.webp",
   "combat": {
     "type": "motorisé",
@@ -16,6 +16,7 @@
     "ennemis": [
       {
         "nom": "Char",
+        "clan": "Asphalt Reapers",
         "puissanceDeFeu": 9,
         "blindage": 15,
         "image": "/images/ennemis/char.jpg"

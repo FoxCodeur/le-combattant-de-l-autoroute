@@ -15,7 +15,8 @@
     },
     "ennemis": [
       {
-        "nom": "Lascar",
+        "nom": "Jason",
+        "clan": "Orphans",
         "habilete": 7,
         "endurance": 10,
         "image": "/images/chapter48.webp"

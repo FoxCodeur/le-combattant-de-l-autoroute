@@ -1,0 +1,9 @@
+{
+  "id": "390",
+  "title": "Chapitre 390",
+  "text": "Par un réflexe fulgurant, vous évitez la dernière balle et maintenez le contrôle du véhicule. Vous parvenez enfin à un virage salvateur qui vous met hors de portée du sniper.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "340" }
+  ]
+}

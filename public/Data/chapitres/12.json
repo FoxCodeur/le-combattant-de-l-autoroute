@@ -1,7 +1,7 @@
 {
   "id": "12",
   "title": "Chapitre 12",
-  "text": "Vous savez pertinemment que vous avez très peu de chances de l’emporter, hélas vous n’avez guère le choix car ce pillard vous a pris de court. Ignorant la douleur fulgurante que vous ressentez, vous sortez de sous l’ambulance en roulant sur le côté et tirez au jugé sur votre adversaire à deux reprises. Malheureusement, les deux coups manquent leur but et vous voyez soudain surgir de derrière un rocher un homme à l’allure redoutable : crête orange, épaules bardées de pointes, bras couverts de cuir, et un fusil à la main. Il vous fixe d’un regard dur, prêt à en découdre, et vous comprenez que l’affrontement sera sans merci...",
+  "text": "Vous savez pertinemment que vous avez très peu de chances de l’emporter, hélas vous n’avez guère le choix car ce pillard vous a pris de court...",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",
@@ -16,22 +16,22 @@
     "ennemis": [
       {
         "nom": "Drax",
-        "clan": "Les Mutilateurs",
+        "clan": "Jones Street Boys",
         "habilete": 8,
         "endurance": 12,
         "image": "/images/ch12Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
-    "success": {
-      "text": "Vous sortez vainqueur du duel.",
-      "next": "131"
-    },
-    "failure": {
-      "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
-      "next": null,
-      "isGameOver": true
+    ],
+    "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "131"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
     }
   }
 }

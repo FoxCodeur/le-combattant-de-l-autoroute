@@ -4,7 +4,7 @@
   "text": "Bien que vous couriez le risque de rencontrer à tout instant une épave de voiture entravant le passage, la route est assez large pour vous permettre de rouler à fond. Vous prenez un réel plaisir à rouler ainsi en toute liberté, sans craindre d'être interpellé par la police pour excès de vitesse ou autre violation du Code, de la route, et vous voyez avec excitation l'aiguille indiquer 190 km/h ! Mais votre joie est de courte durée car une Chevrolet rouge, solidement blindée, arrive en sens inverse. Un homme se tient debout dans une petite tourelle aménagée sur le toit, prêt à actionner sa mitrailleuse. Vous pensez alors, en votre for intérieur, que la police du bon vieux temps n'était pas si terrible, en comparaison de ce qui vous attend à présent ! Vous retenez votre souffle et vous vous tenez prêt à appuyer sur la gâchette de votre mitrailleuse.",
   "image": "/images/chapter167.webp",
   "combat": {
-    "type": "motorise",
+    "type": "motorisé",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2

@@ -46,6 +46,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    position: relative;
   }
 
   &-image {
@@ -139,6 +140,28 @@
   .habilete-description {
     @include test-description($habilete-border, $habilete-bg, $habilete-shadow);
   }
+
+  // --- ALIGNEMENT BOUTONS FICHE/RÈGLES ---
+  .chapter-btn-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  @media (max-width: 600px) {
+    .chapter-btn-row {
+      flex-direction: column;
+      gap: 0.7rem;
+      width: 100%;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+  // ---------------------------------------
 
   // Responsive Design
   @media (max-width: 1024px) {

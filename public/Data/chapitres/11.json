@@ -4,7 +4,10 @@
   "text": "Vous devez rayer de votre liste d'équipement toutes les roquettes, les bidons d'huile et les boîtes de clous qui vous restaient. Dans un élan de magnanimité, les Pirates du Ciel vous laissent repartir, mais ils vous préviennent qu'ils n'hésiteront pas, la prochaine fois, à vous délester de toutes vos armes et à faire sauter votre véhicule. Vous les injuriez intérieurement, mais vous leur obéissez néanmoins et vous filez vers l'ouest. [danger]Vous perdez 2 points de CHANCE.[/danger]",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
-    "chance": -2
+    "chance": -2,
+    "roquette": -4,
+    "clous": -3,
+    "huile": -2
   },
   "choices": [
     { "label": "Next...", "next": "216" }

@@ -19,7 +19,7 @@
         "nom": "Ford Jaune",
         "puissanceDeFeu": 8,
         "blindage": 16,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/ch63Ennemi.webp"
       }
     ]
   },

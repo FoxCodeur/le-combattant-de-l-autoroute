@@ -3,6 +3,9 @@
   "title": "Chapitre 146",
   "text": "Tout a été saccagé à l'intérieur du garage : le bureau et l'atelier sont un véritable dépôt d'ordures et une épaisse couche de poussière recouvre les vestiges des installations. Selon toute évidence, l'homme et sa comparse ne devaient utiliser cet endroit que de temps à autre, afin de prendre au piège les voyageurs sans méfiance qui avaient le malheur de s'arrêter là... Le seul objet qui pourrait vous être utile est une lourde chaîne, que vous enroulez soigneusement avant de la ranger dans l'Interceptor. Puis vous quittez les lieux et vous rejoignez l'autoroute sans plus tarder",
   "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "chance": 1
+  },
   "choices": [
     { "label": "Next...", "next": "167" }
   ]

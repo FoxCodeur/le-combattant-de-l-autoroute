@@ -11,15 +11,17 @@ import CharacterSheet from "../../components/CharacterSheet/CharacterSheet";
 import StatChangeNotification from "../../components/StatChangeNotification/StatChangeNotification";
 import CombatEnnemis from "../../components/CombatEnnemis/CombatEnnemis";
 import GameOverModal from "../../components/GameOverModal/GameOverModal";
+import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
+import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
+import gameMap from "../../assets/images/map.webp"; // Ajoute ton image ici
 
-/**
- * Composant principal d'un chapitre du livre-jeu.
- *
- * Le Game Over ne s'affiche plus à l'arrivée sur le chapitre, mais uniquement au clic sur un choix
- * si les stats sont tombées à zéro ou moins (après application des modificateurs).
- */
+// Utilisation de GiCharacter et FcRules
+import { GiCharacter } from "react-icons/gi";
+import { FcRules } from "react-icons/fc";
+import { FaMapMarkedAlt } from "react-icons/fa"; // Icône pour la carte
+
 const Chapter = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -37,12 +39,13 @@ const Chapter = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [hasRolled, setHasRolled] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [isRulesOpen, setIsRulesOpen] = useState(false);
+  const [isMapOpen, setIsMapOpen] = useState(false); // état pour la carte
 
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
 
-  // Reset de l'état à chaque changement de chapitre
   useEffect(() => {
     fetchChapter(id);
     setDiceTotal(null);
@@ -50,10 +53,6 @@ const Chapter = () => {
     setIsGameOver(false);
   }, [id, fetchChapter]);
 
-  /**
-   * Fonction utilitaire qui détermine si le Game Over doit être déclenché.
-   * Elle vérifie si blindage OU endurance sont tombés à 0 ou moins.
-   */
   const mustTriggerGameOver = (character) => {
     const blindage =
       character.caractéristiques?.blindage ??
@@ -71,11 +70,6 @@ const Chapter = () => {
     );
   };
 
-  /**
-   * Application one-shot des modificateurs narratifs/statistiques éventuels à l'arrivée sur ce chapitre.
-   * On applique les modificateurs mais on NE déclenche PAS le Game Over ici pour laisser le temps au lecteur
-   * de lire le texte. Le Game Over sera géré au clic sur un choix.
-   */
   useEffect(() => {
     if (
       chapterData &&
@@ -90,7 +84,6 @@ const Chapter = () => {
         safeCharacter.chapitresModifies = [];
       }
       const chapterId = String(chapterData.id ?? id);
-      // On applique les mods une seule fois par chapitre
       if (!safeCharacter.chapitresModifies.includes(chapterId)) {
         const { character: updated, changes } = applyNarrativeModifiers(
           chapterData.modificateursNarratifs,
@@ -104,19 +97,11 @@ const Chapter = () => {
         if (changes && changes.length > 0) {
           addNotifications(changes);
         }
-        // NE PAS déclencher le Game Over ici !
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapterData, characterData, setCharacterData, id, addNotifications]);
 
-  /**
-   * Callback appelé après le lancer de dé (DiceRoll) :
-   * - Met à jour le résultat du dé (diceTotal)
-   * - Applique la perte/gain de stat si besoin
-   * - Déclenche un affichage de notification
-   * - Déclenche le Game Over si stat vitale à 0
-   */
   const handleDiceResult = (total) => {
     setDiceTotal(total);
     setHasRolled(true);
@@ -139,7 +124,6 @@ const Chapter = () => {
       const stat = chapterData.diceRoll.applyTo.stat;
       const operation = chapterData.diceRoll.applyTo.operation;
 
-      // Application de la stat (résilient à la structure du personnage)
       if (stat in updatedCharacter) {
         if (operation === "add") updatedCharacter[stat] += total;
         if (operation === "subtract") updatedCharacter[stat] -= total;
@@ -165,7 +149,6 @@ const Chapter = () => {
           updatedCharacter.interceptor[stat] = 0;
       }
 
-      // Notifications pour l'utilisateur (affichage icône et texte)
       const statIcons = {
         endurance: "/images/icons/endurance.png",
         habilete: "/images/icons/habilete.png",
@@ -190,35 +173,25 @@ const Chapter = () => {
       ]);
       setCharacterData(updatedCharacter);
 
-      // Déclencher Game Over si stat vitale tombe à 0 ou moins
       if (mustTriggerGameOver(updatedCharacter)) {
         setIsGameOver(true);
       }
     }
   };
 
-  // Utilitaire pour normaliser les accents
   const normalize = (str) =>
     str && typeof str === "string"
       ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
       : "";
 
-  // Remplace le {hero} par le nom du personnage dans le texte du chapitre
   const getPersonalizedText = (text) => {
     if (!characterData) return text;
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
-  /**
-   * Callback au clic sur un bouton de choix (narratif ou navigation)
-   * Applique les modificateurs narratifs s'il y en a, puis navigue si pas Game Over
-   * Déclenche le Game Over si besoin après modification du personnage.
-   */
   const handleChoiceClick = (choice) => {
-    // On part sur le personnage courant
     let updatedCharacter = characterData;
 
-    // Appliquer les modificateurs narratifs du CHOIX si présents
     if (choice.modificateursNarratifs) {
       const { character, changes } = applyNarrativeModifiers(
         choice.modificateursNarratifs,
@@ -231,19 +204,14 @@ const Chapter = () => {
       }
     }
 
-    // Vérifie si le Game Over doit être affiché APRÈS le clic (après modifs du chapitre ou du choix)
     if (mustTriggerGameOver(updatedCharacter)) {
       setIsGameOver(true);
-      return; // On bloque la navigation si mort
+      return;
     }
 
-    // Navigation normale
     navigate(`/chapitre/${choice.next}`);
   };
 
-  /**
-   * Fonction utilitaire pour filtrer les choix selon la condition (inventaire ou autre)
-   */
   const isChoiceAvailable = (choice) => {
     if (!choice.condition) return true;
     if (choice.condition.item) {
@@ -263,15 +231,11 @@ const Chapter = () => {
     return true;
   };
 
-  /**
-   * Affichage des boutons de choix selon le mode du chapitre :
-   */
   const renderChoices = () => {
     if (!chapterData || !Array.isArray(chapterData.choices)) return null;
 
     const filteredChoices = chapterData.choices.filter(isChoiceAvailable);
 
-    // Test de chance
     if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -303,7 +267,6 @@ const Chapter = () => {
       ) : null;
     }
 
-    // Test d'habileté
     if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -335,7 +298,6 @@ const Chapter = () => {
       ) : null;
     }
 
-    // Dé requis, plusieurs choix, SANS mapping chiffre/label
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -358,7 +320,6 @@ const Chapter = () => {
       ));
     }
 
-    // Dé requis, plusieurs choix AVEC mapping résultat/label
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -404,7 +365,6 @@ const Chapter = () => {
       );
     }
 
-    // Dé requis, un seul bouton ("Next...")
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -426,7 +386,6 @@ const Chapter = () => {
       ));
     }
 
-    // Pas de test de dés, tous les choix affichés normalement
     return filteredChoices.map((choice, index) => (
       <button
         key={index}
@@ -438,17 +397,14 @@ const Chapter = () => {
     ));
   };
 
-  // --- Rendu principal du composant ---
   return (
     <div
       className={`chapter chapter-${id}`}
       role="region"
       aria-label="Chapitre interactif"
     >
-      {/* Notifications/statistiques */}
       <StatChangeNotification notifications={notifications} />
 
-      {/* Modale fiche personnage */}
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (
           <CharacterSheet data={characterData} />
@@ -457,14 +413,22 @@ const Chapter = () => {
         )}
       </Modal>
 
-      {/* Bloc Game Over (affiche l'image, bloque tout le reste) */}
+      <GameRulesModal
+        isOpen={isRulesOpen}
+        onClose={() => setIsRulesOpen(false)}
+      />
+
+      <GameMapModal
+        isOpen={isMapOpen}
+        onClose={() => setIsMapOpen(false)}
+        mapImage={gameMap}
+      />
+
       <GameOverModal visible={isGameOver} />
 
-      {/* Loading et erreurs */}
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
       {error && <div className="error-message">Erreur : {error}</div>}
 
-      {/* Corps du chapitre */}
       {!loading && !error && chapterData && chapterData.title ? (
         <article
           className="chapter-content"
@@ -482,7 +446,6 @@ const Chapter = () => {
             {chapterData.title || "Titre manquant"}
           </h1>
 
-          {/* Illustration */}
           <div className="chapter-image-container">
             <img
               src={chapterData.image ? chapterData.image : defaultPicture}
@@ -492,18 +455,41 @@ const Chapter = () => {
                 e.target.src = defaultPicture;
               }}
             />
-            {/* Accès fiche personnage */}
-            <CharacterSheetButton onClick={() => setIsSheetOpen(true)} />
+            <div className="chapter-btn-row">
+              <CharacterSheetButton
+                onClick={() => setIsSheetOpen(true)}
+                label="Fiche du personnage"
+                icon={
+                  <GiCharacter size={22} style={{ verticalAlign: "middle" }} />
+                }
+                aria-label="Afficher la fiche du personnage"
+              />
+              <CharacterSheetButton
+                onClick={() => setIsRulesOpen(true)}
+                label="Règles du jeu"
+                icon={<FcRules size={22} style={{ verticalAlign: "middle" }} />}
+                aria-label="Afficher les règles du jeu"
+              />
+              <CharacterSheetButton
+                onClick={() => setIsMapOpen(true)}
+                label="Carte du jeu"
+                icon={
+                  <FaMapMarkedAlt
+                    size={22}
+                    style={{ verticalAlign: "middle" }}
+                  />
+                }
+                aria-label="Afficher la carte du jeu"
+              />
+            </div>
           </div>
 
-          {/* Texte principal */}
           <section
             className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
           >
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Bloc combat si besoin */}
           {chapterData.combat?.ennemis && (
             <CombatEnnemis
               ennemis={chapterData.combat.ennemis}
@@ -511,10 +497,8 @@ const Chapter = () => {
             />
           )}
 
-          {/* Bloc test de dés (affiché si diceRoll.required) */}
           {chapterData.diceRoll?.required && (
             <section className="chapter-dice-test">
-              {/* Affichage des descriptions de test si besoin */}
               {chapterData.testHabilete?.description && (
                 <p className="habilete-description">
                   {chapterData.testHabilete.description}
@@ -526,21 +510,18 @@ const Chapter = () => {
                     {chapterData.testChance.description}
                   </p>
                 )}
-              {/* Lancer de dé (affiché tant que le joueur ne l'a pas lancé) */}
               {!hasRolled && (
                 <DiceRoll
                   numberOfDice={chapterData.diceRoll.numberOfDice || 2}
                   onResult={handleDiceResult}
                 />
               )}
-              {/* Affichage du résultat du lancer */}
               {diceTotal !== null && (
                 <p className="dice-result">Résultat du lancer : {diceTotal}</p>
               )}
             </section>
           )}
 
-          {/* Boutons de choix (tous les cas de figure gérés dans renderChoices) */}
           <nav className="chapter-choices" aria-label="Choix disponibles">
             {renderChoices()}
           </nav>

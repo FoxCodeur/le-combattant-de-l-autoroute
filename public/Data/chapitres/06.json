@@ -18,12 +18,14 @@
     "ennemis": [
       {
         "nom": "Premier Motard",
+        "clan": "Asphalt Reapers",
         "habilete": 6,
         "endurance": 15,
         "image": "/images/Chapter12Motard1.webp"
       },
       {
         "nom": "Deuxième Motard",
+        "clan": "Asphalt Reapers",
         "habilete": 7,
         "endurance": 17,
         "image": "/images/Chapter12Motard2.webp"

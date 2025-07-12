@@ -7,7 +7,7 @@
     "blindage": -2
   },
   "combat": {
-    "type": "motorise",
+    "type": "motorisé",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2

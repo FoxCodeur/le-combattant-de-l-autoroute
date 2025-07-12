@@ -14,7 +14,7 @@ const getCombatIcon = (type) => {
       return <GiPistolGun color="#90caf9" style={{ marginRight: "0.3em" }} />;
     case "corps-à-corps":
       return <GiBroadsword color="#90caf9" />;
-    case "motorise":
+    case "motorisé":
       return (
         <GiRaceCar className="racecar-icon" style={{ marginRight: "0.3em" }} />
       );

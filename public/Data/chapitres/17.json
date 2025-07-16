@@ -24,9 +24,8 @@
         "blindage": 9,
         "image": "/images/chapter17Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "103"
@@ -38,3 +37,4 @@
       }
     }
   }
+}

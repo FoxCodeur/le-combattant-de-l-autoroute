@@ -9,18 +9,17 @@ import CharacterSheetButton from "../../components/CharacterSheetButton/Characte
 import Modal from "../../components/Modal/Modal";
 import CharacterSheet from "../../components/CharacterSheet/CharacterSheet";
 import StatChangeNotification from "../../components/StatChangeNotification/StatChangeNotification";
-import CombatEnnemis from "../../components/CombatEnnemis/CombatEnnemis";
+import Combat from "../../components/Combat/Combat";
 import GameOverModal from "../../components/GameOverModal/GameOverModal";
 import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
 import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
-import gameMap from "../../assets/images/map.webp"; // Ajoute ton image ici
+import gameMap from "../../assets/images/map.webp";
 
-// Utilisation de GiCharacter et FcRules
 import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
-import { FaMapMarkedAlt } from "react-icons/fa"; // Icône pour la carte
+import { FaMapMarkedAlt } from "react-icons/fa";
 
 const Chapter = () => {
   const { id } = useParams();
@@ -40,7 +39,7 @@ const Chapter = () => {
   const [hasRolled, setHasRolled] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [isRulesOpen, setIsRulesOpen] = useState(false);
-  const [isMapOpen, setIsMapOpen] = useState(false); // état pour la carte
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
@@ -490,10 +489,21 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {chapterData.combat?.ennemis && (
-            <CombatEnnemis
-              ennemis={chapterData.combat.ennemis}
-              type={chapterData.combat.type}
+          {/* Bloc combat principal */}
+          {chapterData.combat && (
+            <Combat
+              combatData={chapterData.combat}
+              characterData={characterData}
+              setCharacterData={setCharacterData}
+              onEnd={(result) => {
+                if (chapterData.combat.issue?.[result]?.next) {
+                  navigate(
+                    `/chapitre/${chapterData.combat.issue[result].next}`
+                  );
+                } else if (chapterData.combat.issue?.[result]?.isGameOver) {
+                  setIsGameOver(true);
+                }
+              }}
             />
           )}
 

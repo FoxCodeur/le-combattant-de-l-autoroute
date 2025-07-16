@@ -13,55 +13,61 @@ const CharacterSheet = ({ data }) => {
       <h2 className="character-name">{data.nom}</h2>
       <img src={imageSrc} alt={data.nom} className="character-image" />
 
-      {/* Affiche l'âge s'il est présent */}
-      {data.age && (
-        <div className="character-age">
-          <strong>Âge :</strong> {data.age}
-        </div>
-      )}
-
       <section className="character-section">
         <h3>Caractéristiques</h3>
         <ul>
-          {Object.entries(data.caractéristiques).map(([key, value]) => (
-            <li key={key}>
-              <strong>{key.charAt(0).toUpperCase() + key.slice(1)} :</strong>{" "}
-              {value}
-            </li>
-          ))}
+          <li>
+            <strong>Habilete :</strong> {data.caractéristiques.habilete}
+          </li>
+          <li>
+            <strong>Endurance :</strong> {data.caractéristiques.endurance}
+          </li>
+          <li>
+            <strong>Chance :</strong> {data.caractéristiques.chance}
+          </li>
+          {/* Affiche Blindage UNIQUEMENT s'il existe ET est > 0 */}
+          {"blindage" in data.caractéristiques &&
+            data.caractéristiques.blindage > 0 && (
+              <li>
+                <strong>Blindage :</strong> {data.caractéristiques.blindage}
+              </li>
+            )}
         </ul>
       </section>
 
       <section className="character-section">
         <h3>Équipement</h3>
         <ul>
-          {Object.entries(data.équipement).map(([key, value]) => (
-            <li key={key}>
-              <strong>{key.replace(/_/g, " ")} :</strong> {value}
-            </li>
-          ))}
+          {data.équipement &&
+            Object.entries(data.équipement).map(([key, value]) => (
+              <li key={key}>
+                <strong>{key.replace(/_/g, " ")} :</strong> {value}
+              </li>
+            ))}
         </ul>
       </section>
 
       <section className="character-section">
         <h3>Interceptor</h3>
         <ul>
-          {Object.entries(data.interceptor).map(([key, value]) => (
-            <li key={key}>
-              <strong>{key.replace(/_/g, " ")} :</strong> {value}
-            </li>
-          ))}
+          {data.interceptor &&
+            Object.entries(data.interceptor).map(([key, value]) => (
+              <li key={key}>
+                <strong>{key.replace(/_/g, " ")} :</strong> {value}
+              </li>
+            ))}
         </ul>
       </section>
 
       <section className="character-section">
         <h3>Accessoires</h3>
         <ul>
-          {Object.entries(data.accessoires).map(([key, value]) => (
-            <li key={key}>
-              <strong>{key.replace(/_/g, " ")} :</strong> {value}
-            </li>
-          ))}
+          {data.accessoires &&
+            Object.entries(data.accessoires).map(([key, value]) => (
+              <li key={key}>
+                <strong>{key.replace(/_/g, " ")} :</strong> {value}
+              </li>
+            ))}
         </ul>
       </section>
     </div>

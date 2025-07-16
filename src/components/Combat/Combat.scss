@@ -1,0 +1,184 @@
+.combat-ennemis {
+  margin: 2em auto 1em auto;
+  max-width: 900px;
+  padding: 0 1em;
+}
+
+.combat-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: #154360;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+.ennemis-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.ennemi-card {
+  background: #181d23;
+  border: 2.5px solid #232931;
+  border-radius: 18px;
+  width: 220px;
+  min-height: 335px;
+  box-shadow: 0 4px 18px #0002;
+  cursor: pointer;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0.5em 1.2em 0.5em;
+}
+
+.ennemi-card.selected {
+  border-color: #ffcc00;
+  box-shadow: 0 0 12px #ffcc0080;
+}
+
+.ennemi-image-wrapper {
+  height: 120px;
+  width: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1em;
+  background: #242c38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ennemi-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background: #242c38;
+}
+
+.ennemi-info {
+  width: 100%;
+  text-align: center;
+}
+
+.ennemi-name {
+  font-size: 1.18em;
+  color: #ffd700;
+  margin-bottom: 0.25em;
+  margin-top: 0;
+}
+
+.ennemi-clan {
+  color: #c0392b;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+.clan-label {
+  color: #f7cac9;
+}
+
+.ennemi-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1em;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+.ennemi-stat {
+  display: flex;
+  align-items: center;
+  min-width: 45px;
+  justify-content: center;
+}
+
+.habilete {
+  color: #90caf9;
+}
+.endurance {
+  color: #ff3860;
+  font-weight: bold;
+  position: relative;
+}
+.heart-icon {
+  margin-right: 0.2em;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.18s;
+}
+.lost-hp-effect {
+  color: #e53935;
+  font-size: 0.78em;
+  margin-left: 0.4em;
+  font-weight: bold;
+  animation: lost-hp-pop 0.6s;
+  position: absolute;
+  top: -1.2em;
+  left: 70%;
+  z-index: 1;
+}
+@keyframes lost-hp-pop {
+  0% {
+    opacity: 0;
+    transform: scale(1.4) translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.15) translateY(-8px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.04) translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98) translateY(-22px);
+  }
+}
+.lost-hp .heart-icon {
+  animation: heartbeat 0.5s;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1.28);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(1.14);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.09);
+  }
+}
+
+/* Style pour le résultat sous les dés */
+.combat-result {
+  margin-top: 1em;
+  color: #2471a3;
+  font-weight: bold;
+  font-size: 1.15em;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.combat-recap {
+  margin-top: 0.5em;
+  font-size: 1.08em;
+  color: #1a237e;
+  text-align: center;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}

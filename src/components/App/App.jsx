@@ -8,11 +8,7 @@ const App = () => {
     <div>
       <Routes>
         {routesConfig.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={<route.element />} // Utilisation de JSX pour créer une instance du composant
-          />
+          <Route key={index} path={route.path} element={<route.element />} />
         ))}
       </Routes>
     </div>

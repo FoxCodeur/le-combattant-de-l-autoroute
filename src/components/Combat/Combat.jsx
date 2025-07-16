@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DiceRoll from "../DiceRoll/DiceRoll";
 import CombatEnnemis from "../CombatEnnemis/CombatEnnemis";
+import "./Combat.scss"; // Assurez-vous que ce fichier est bien importé
 
 const Combat = ({ combatData, characterData, setCharacterData, onEnd }) => {
   const { type, ennemis, modificateursCombat, diceRoll, issue } = combatData;

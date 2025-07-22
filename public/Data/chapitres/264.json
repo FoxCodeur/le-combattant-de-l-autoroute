@@ -1,7 +1,7 @@
 {
   "id": "264",
   "title": "Chapitre 264",
-  "text": "Emportant l'arbalète, vous vous hissez sur les toits des voitures et vous vous hâtez de retourner à l'Interceptor. Par chance, elle est toujours au même endroit et vous êtes bientôt sur la route, en direction du sud.",
+  "text": "Vous vous hissez sur les toits des voitures et vous vous hâtez de retourner à l'Interceptor. Par chance, elle est toujours au même endroit et vous êtes bientôt sur la route, en direction du sud.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "149" }

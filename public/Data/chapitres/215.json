@@ -1,7 +1,7 @@
 {
   "id": "215",
   "title": "Chapitre 215",
-  "text": "Vous poursuivez votre route vers l'ouest en cherchant une grande route allant vers le sud. De toute façon, vous n'avez pas d'autre choix : car, au détour d'un virage à gauche, vous apercevez aussi loin que porte votre regard une longue file de voitures et de camions qui semblent abandonnés depuis longtemps.",
+  "text": "Vous poursuivez en direction de l'ouest à la recherche d'une route qui mène vers le sud. De toute façon, vous n'avez guère le choix : car, au détour d'un virage à gauche, vous apercevez aussi loin que porte votre regard une longue file de voitures et de camions qui semblent abandonnés depuis longtemps.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous souhaitez aller vers le sud sans vous arreter...", "next": "149" },

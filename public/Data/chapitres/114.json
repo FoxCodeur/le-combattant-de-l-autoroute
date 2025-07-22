@@ -1,7 +1,7 @@
 {
   "id": "114",
   "title": "Chapitre 114",
-  "text": "Les kilomètres défilent et vous poursuivez votre route à vive allure à travers la campagne désolée qui vous offre, de part et d'autre, le triste spectacle de champs en friche. Vous vous demandez alors avec mélancolie s'ils seront un jour labourés de nouveau. Perdu dans vos pensées, vous passez devant un embranchement sur votre gauche, mais vous n'y accordez aucune attention puisque vous ne désirez pas remonter vers le nord",
+  "text": "Les kilomètres s’enchaînent tandis que vous filez à vive allure à travers la campagne désolée. De chaque côté de la route, les champs à l’abandon offrent un spectacle mélancolique, et vous vous surprenez à imaginer s’ils connaîtront un jour à nouveau le travail du laboureur. Absorbé par vos pensées, vous dépassez un embranchement sur la gauche, l’ignorant sans regret, car l’idée de remonter vers le nord ne vous effleure même pas.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "92" }

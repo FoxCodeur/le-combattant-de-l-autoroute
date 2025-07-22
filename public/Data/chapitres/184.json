@@ -1,12 +1,10 @@
 {
   "id": "184",
   "title": "Chapitre 184",
-  "text": "Les Chiens de la Mort sont trop enragés pour respecter leur parole d'honneur. Ils dégainent leurs armes et la fusillade commence. Vous vous chargez de deux d'entre eux tandis qu'Ambre fait feu sur les deux autres.",
+  "text": "**Les Mutilators** sont trop bien trop enragés pour respecter leur parole d'honneur. Ils dégainent leurs armes et la fusillade débute. Vous vous chargez de deux d'entre eux tandis que **Jaxxie** fait feu sur les deux autres.",
   "image": "/images/chap1.jpg",
   "combat": {
-    "type": "corps-à-corps",
-    "combatMode": "sequentiel",
-    "ordreDesEnnemis": "choixJoueur",
+    "type": "tir",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2
@@ -17,16 +15,18 @@
     },
     "ennemis": [
       {
-        "nom": "Premier CHIEN DE LA MORT",
+        "nom": "1er ennemi",
+        "clan": "Mutilators",
         "habilete": 7,
         "endurance": 13,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/ch184Ennemi01.webp"
       },
       {
-        "nom": "Deuxième CHIEN DE LA MORT",
+        "nom": "2eme ennemi",
+        "clan": "Mutilators",
         "habilete": 8,
         "endurance": 14,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/ch184Ennemi02.webp"
       }
     ]
   },

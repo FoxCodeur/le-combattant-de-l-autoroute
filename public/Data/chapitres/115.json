@@ -5,8 +5,6 @@
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "motorisé",
-    "combatMode": "sequentiel",
-    "ordreDesEnnemis": "choixJoueur",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2
@@ -18,15 +16,15 @@
     "ennemis": [
       {
         "nom": "Premier BUGGY DES SABLES",
-        "puissanceDeFeu": 7,
+        "puissance": 7,
         "blindage": 10,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/ch193Ennemi1.webp"
       },
       {
         "nom": "Deuxieme BUGGY DES SABLES",
-        "puissanceDeFeu": 8,
+        "puissance": 8,
         "blindage": 11,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/ch193Ennemi2.webp"
       }
     ]
   },

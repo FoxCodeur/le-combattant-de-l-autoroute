@@ -1,7 +1,7 @@
 {
   "id": "70",
   "title": "Chapitre 70",
-  "text": "Les roues entrent violemment en contact avec l'autre partie du pont et vous devez fermement maintenir le volant pour garder l'Interceptor sur une trajectoire rectiligne. Mais une fois le pont traversé, vous réalisez avec horreur que vous vous dirigez à vive allure sur un poids lourd couché en travers de la route. Jetez deux dés.",
+  "text": "Les roues retombent brutalement sur l’autre partie du pont. L’Interceptor tangue, la carrosserie vibre, et vous serrez le volant de toutes vos forces pour garder le contrôle. Pendant un instant, tout semble basculer… Mais vous parvenez à redresser la trajectoire et le bolide file à toute allure. Soudain, votre cœur rate un battement : devant vous, un poids lourd renversé barre la route. Vous foncez droit dessus, sans aucune échappatoire visible !",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

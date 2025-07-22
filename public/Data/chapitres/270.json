@@ -1,7 +1,7 @@
 {
   "id": "270",
   "title": "Chapitre 270",
-  "text": "Vous faites marche arrière afin d'avoir suffisamment d'élan pour franchir le pont. Vous êtes quelque peu tendu et vous sentez une poussée d'adrénaline jaillir dans vos veines. Le moteur vrombit quand vous actionnez la pédale d'accélérateur, puis vous relâchez brusquement l'embrayage et vous filez droit vers le pont. Vous l'atteignez à 120 km/h et vous voyez l'aiguille du compteur marquer 130 quand les roues avant quittent le sol.",
+  "text": "Vous faites marche arrière sur une centaine de mètres. Quelque peu tendu, vous sentez une poussée d'adrénaline jaillir dans vos veines. Le moteur vrombit quand vous actionnez la pédale d'accélérateur, puis vous relâchez brusquement l'embrayage et vous filez droit vers le pont. Vous l'atteignez à 120 km/h et vous voyez l'aiguille du compteur marquer 130 lorsque les roues avant quittent le sol.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

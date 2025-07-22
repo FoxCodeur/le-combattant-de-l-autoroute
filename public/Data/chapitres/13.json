@@ -8,22 +8,22 @@
   },
   "choices": [
     {
-      "label": "Si vous pouvez payer cette somme et si vous desirez faire reparer votre voiture...",
-      "next": "169",
+      "label": "Lâcher une boîte de clous sur la route...",
+      "next": "127",
       "modificateursNarratifs": {
         "boiteDeClous": -1
       }
     },
     {
       "label": "Pulveriser de l'huile...",
-      "next": "127",
+      "next": "361",
       "modificateursNarratifs": {
         "huile": -1
       }
     },
     {
       "label": "Riposter avec la mitrailleuse fixee sur le toit de l'Interceptor...",
-      "next": "361"
+      "next": "282"
     }
   ]
 }

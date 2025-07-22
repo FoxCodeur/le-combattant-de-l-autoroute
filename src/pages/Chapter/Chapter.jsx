@@ -13,13 +13,15 @@ import Combat from "../../components/Combat/Combat";
 import GameOverModal from "../../components/GameOverModal/GameOverModal";
 import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
 import GameMapModal from "../../components/GameMapModal/GameMapModal";
+import VehiculeModal from "../../components/VehiculeModal/VehiculeModal";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
+import interceptorImage from "../../assets/images/interceptor falcon.webp"; // <--- Ajout ici !
 
 import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
-import { FaMapMarkedAlt } from "react-icons/fa";
+import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
 
 const Chapter = () => {
   const { id } = useParams();
@@ -40,6 +42,7 @@ const Chapter = () => {
   const [isGameOver, setIsGameOver] = useState(false);
   const [isRulesOpen, setIsRulesOpen] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
+  const [isVehiculeOpen, setIsVehiculeOpen] = useState(false);
 
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
@@ -423,6 +426,12 @@ const Chapter = () => {
         mapImage={gameMap}
       />
 
+      <VehiculeModal
+        isOpen={isVehiculeOpen}
+        onClose={() => setIsVehiculeOpen(false)}
+        vehicleImage={interceptorImage}
+      />
+
       <GameOverModal visible={isGameOver} />
 
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
@@ -479,6 +488,14 @@ const Chapter = () => {
                   />
                 }
                 aria-label="Afficher la carte du jeu"
+              />
+              <CharacterSheetButton
+                onClick={() => setIsVehiculeOpen(true)}
+                label="Véhicule : Interceptor"
+                icon={
+                  <FaCarSide size={22} style={{ verticalAlign: "middle" }} />
+                }
+                aria-label="Afficher le véhicule Interceptor"
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
 {
   "id": "95",
   "title": "Chapitre 95",
-  "text": "Avant que vous ayez le temps de les rattraper, les motards font demi-tour et foncent droit sur vous. La mitrailleuse fixée au-dessus du phare jette de vifs éclairs tandis qu'elle crache sur vous un chapelet de balles. Vous enfoncez l'accélérateur et vous lancez l'Interceptor à leur rencontre, le doigt fermement appuyé sur la gâchette de votre mitrailleuse.\n\nMOTO\nPUISSANCE DE FEU : 6\nBLINDAGE : 9",
+  "text": "Avant que vous ayez le temps de les rattraper, l'un des motards fait demi-tour et fonce droit sur vous. La mitrailleuse fixée au-dessus du phare jette de vifs éclairs tandis qu'elle crache sur vous un chapelet de balles. Vous enfoncez l'accélérateur et partez à leur rencontre, le doigt fermement appuyé sur la gâchette de votre mitrailleuse.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "motorisé",
@@ -16,16 +16,15 @@
     "ennemis": [
       {
         "nom": "MOTO",
-        "puissanceDeFeu": 6,
+        "puissance": 6,
         "blindage": 9,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/ch95Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
-        "next": "95"
+        "next": "249"
       },
       "failure": {
         "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
@@ -34,5 +33,4 @@
       }
     }
   }
-
-
+}

@@ -1,7 +1,7 @@
 {
   "id": "195",
   "title": "Chapitre 195",
-  "text": "Vous ouvrez la portière. Aussitôt une explosion assourdissante, accompagnée d'un éclair éblouissant, vous envoie rouler en arrière : cette porte était piégée ! [danger]Lancez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE[/danger]. La porte ne tient plus sur ses gonds et vous constatez qu'il n'y a rien dans l'ambulance. Le propriétaire ne va sûrement pas tarder à venir voir qui il a attrapé. Vous vous sentez trop faible pour rejoindre l'Interceptor et vous décidez de ramper pour vous dissimuler.",
+  "text": "Vous ouvrez la portière. Aussitôt une explosion assourdissante vous propulse en arrière : cette porte était piégée ! [danger]Lancez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE[/danger]. Dépité, vous constatez qu'il n'y a plus rien d'utile dans l'ambulance. Le propriétaire ne va sûrement pas tarder à venir voir qui il a attrapé. Trop faible pour rejoindre l'Interceptor vous décidez de ramper pour vous dissimuler.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

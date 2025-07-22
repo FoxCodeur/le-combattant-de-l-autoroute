@@ -1,15 +1,13 @@
 {
   "id": "102",
   "title": "Chapitre 102",
-  "text": "Vous faites signe à JAXXIE d'ouvrir sa portière et de commencer à tirer. De votre côté, à peine avez-vous entrebâillé votre porte que celle-ci se retrouve criblée de balles : les quatre Mutilateurs viennent de déclencher un puissant tir de barrage. Profitant de l'abri offert par les véhicules — chacun de vous est bien protégé —, vous dirigez votre tir vers deux des assaillants, tandis qu'Ambre fait feu sur les deux autres. Durant ce combat, que vous mènerez en suivant les règles de Tir, les deux Mutilateurs tireront sur vous séparément. Affrontez-les en vous reportant à la règle : Combat avec plus d'un adversaire.",
+  "text": "Vous faites signe à JAXXIE d'ouvrir sa portière et de commencer à tirer. De votre côté, à peine avez-vous entrebâillé votre porte que celle-ci se retrouve criblée de balles : les quatre Mutilateurs viennent de déclencher un puissant tir de barrage. Profitant de l'abri offert par les véhicules — chacun de vous est bien protégé —, vous dirigez votre tir vers deux des assaillants, tandis que votre équipière fait feu sur les deux autres. Durant ce combat, que vous mènerez en suivant les règles de Tir, les deux Mutilateurs tireront sur vous séparément. Affrontez-les en vous reportant à la règle : Combat avec plus d'un adversaire.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",
-    "combatMode": "sequentiel",
-    "ordreDesEnnemis": "choixJoueur",
     "diceRoll": {
       "required": true,
-      "numberOfDice": 1
+      "numberOfDice": 2
     },
     "modificateursCombat": {
       "degatsJoueur": 2,
@@ -17,16 +15,18 @@
     },
     "ennemis": [
       {
-        "nom": "Premier Mutilateur",
+        "nom": "1er ennemi",
+        "clan": "les Mutilateurs",
         "habilete": 7,
         "endurance": 13,
-        "image": "/images/ennemis/chien1.jpg"
+        "image": "/images/ch102Ennemi01.webp"
       },
       {
-        "nom": "Deuxième Mutilateur",
+        "nom": "2eme ennemi",
+        "clan": "les Mutilateurs",
         "habilete": 8,
         "endurance": 14,
-        "image": "/images/ennemis/chien2.jpg"
+        "image": "/images/ch102Ennemi02.webp"
       }
     ],
  "issue": {

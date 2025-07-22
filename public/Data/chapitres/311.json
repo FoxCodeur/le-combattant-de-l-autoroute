@@ -1,10 +1,10 @@
 {
   "id": "311",
   "title": "Chapitre 311",
-  "text": "Vous parcourez quelques kilomètres puis vous arrivez à un pont de bois rudimentaire qui enjambe une étroite rivière. A l'entrée du pont, vous remarquez un panneau interdisant de franchir le pont.",
+  "text": "Vous parcourez quelques kilomètres avant d'arriver à un pont de bois qui enjambe une rivière. A l'entrée du passage, impossible de ne pas remarquer le panneau interdisant l'accès.",
   "image": "/images/chapter311.webp",
   "choices": [
     { "label": "Si vous voulez passer outre  l'interdiction...", "next": "229" },
-    { "label": "Fouiller la pièce", "next": "124" }
+    { "label": "Si vous voulez obtemperer et faire demi-tour pour rejoindre le dernier carrefour", "next": "124" }
   ]
 }

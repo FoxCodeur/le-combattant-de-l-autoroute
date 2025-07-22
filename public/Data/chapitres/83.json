@@ -16,9 +16,9 @@
     "ennemis": [
       {
         "nom": "Hélicoptère",
-        "puissanceDeFeu": 8,
+        "puissance": 8,
         "blindage": 11,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/chapter83.webp"
       }
     ]
   },

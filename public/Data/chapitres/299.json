@@ -8,8 +8,6 @@
   },
   "combat": {
     "type": "tir",
-    "combatMode": "sequentiel",
-    "ordreDesEnnemis": "choixJoueur",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2
@@ -20,16 +18,18 @@
     },
     "ennemis": [
       {
-        "nom": "premier MOTARD",
-        "puissance": 7,
-        "blindage": 13,
-        "image": "/images/ennemis/chien1.jpg"
+        "nom": "1ère MOTARDE",
+        "clan": "Lizzies",
+        "habilete": 7,
+        "endurance": 13,
+        "image": "/images/ch299Ennemi1.webp"
       },
       {
-        "nom": "deuxième MOTARD",
-        "puissance": 5,
-        "blindage": 14,
-        "image": "/images/ennemis/chien2.jpg"
+        "nom": "2ème MOTARDE",
+        "clan": "Lizzies",
+        "habilete": 5,
+        "endurance": 14,
+        "image": "/images/ch299Ennemi2.webp"
       } 
     ],
  "issue": {

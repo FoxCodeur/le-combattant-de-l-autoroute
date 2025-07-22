@@ -1,7 +1,7 @@
 {
   "id": "178",
   "title": "Chapitre 178",
-  "text": "Vous tournez nerveusement la clé de contact, le cœur battant. L’Interceptor tousse, mais se refuse à démarrer. Vous jurez avant de sortir précipitamment du véhicule. Sous le capot, vos mains tremblent alors que vous découvrez la durite d’essence déconnectée : un simple geste, et vous la replacez, l’esprit obnubilé par l’urgence de repartir. Mais alors que vous refermez le capot, un raclement de gorge brise le silence. Vous vous retournez. Un homme s’avance à grands pas dans votre direction, décidé. Il porte un blouson de cuir, un jean maculé de terre et des santiags. Son visage est à moitié masqué par un bandana. À quelques mètres seulement, il braque sur vous un revolver. On dirait qu'il est en manque de drogue car l'individu ne cesse de de s'agiter et son regard, invisible derrière les verres fumés, semble vous transpercer. **«File-moi tout ce que t’as, connard**, gronde-t-il d’une voix rauque, tordue par la haine. **Bouge pas, ou je t’explose la tête. Pas un geste… J’te préviens, j’hésiterai pas!»** L’atmosphère se fige. A la perspective de prendre une balle, vos jambes se raidissent. Vous sentez que le moindre faux mouvement peut signer votre arrêt de mort. Négocier est futile. L’homme est prêt à tirer – le duel apparait inévitable.",
+  "text": "Vous tournez nerveusement la clé de contact, le cœur battant. L’Interceptor tousse, mais se refuse à démarrer. Vous jurez avant de sortir précipitamment du véhicule. Sous le capot, vos mains tremblent alors que vous découvrez la durite d’essence déconnectée : un simple geste, et vous la replacez, l’esprit obnubilé par l’urgence de repartir. Mais alors que vous refermez le capot, un raclement de gorge brise le silence. Vous vous retournez. Un homme s’avance à grands pas dans votre direction, décidé. Il porte un blouson de cuir, un jean maculé de terre et des santiags. Son visage est à moitié masqué par un bandana. À quelques mètres seulement, il braque sur vous un revolver. On dirait qu'il est en manque de drogue car l'individu ne cesse de s'agiter et son regard, invisible derrière les verres fumés, semble vous transpercer. **«File-moi tout ce que t’as, connard**, gronde-t-il d’une voix rauque, tordue par la haine. **Bouge pas, ou je t’explose la tête. Pas un geste… J’te préviens, j’hésiterai pas!»** L’atmosphère se fige. A la perspective de prendre une balle, vos jambes se raidissent. Vous sentez que le moindre faux mouvement peut signer votre arrêt de mort. Négocier est futile. L’homme est prêt à tirer – le duel apparait inévitable.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",
@@ -18,7 +18,7 @@
         "nom": "HORS-LA-LOI",
         "habilete": 9,
         "endurance": 12,
-        "image": "/images/ennemis/chien1.jpg"
+        "image": "/images/chapter178Ennemi.webp"
       }
     ]
   },

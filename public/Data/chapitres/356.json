@@ -1,10 +1,10 @@
 {
   "id": "356",
   "title": "Chapitre 356",
-  "text": "Allongé sous l'ambulance et sans faire le moindre bruit, vous entendez des pas se rapprocher. La douleur à votre côté est très intense et vous serrez fortement votre revolver. Soudain, une voix d'homme crie : **« Espèce d'imbécile ! Tu as cru que j'étais incapable de suivre des traces de sang ! Allez ! Jette ton pistolet et sors de là, les mains en l'air ! »**",
+  "text": "Allongé sous l'ambulance et sans faire le moindre bruit, vous attendez. En effet, quelques minutes plus tard des pas approchent. La douleur due à l'explosion est très intense et vous serrez fortement votre revolver. Soudain, une voix d'homme appelle : **« Espèce d'imbécile ! Tu as cru que j'étais incapable de suivre des traces de sang ! Allez ! Jette ton flingue et sors de là, les mains en l'air ! »**",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Vous obtemperez...", "next": "325" },
-    { "label": "Si vous préférez sortir de dessous l'ambulance en tirant avec votre arme...", "next": "12" }
+    { "label": "Si vous preferez sortir de dessous l'ambulance en tirant avec votre arme...", "next": "12" }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "id": "179",
   "title": "Chapitre 179",
-  "text": "Debout, en plein milieu de la route, un homme agite les bras avec frénésie. Il est vêtu d'une veste et d'un pantalon en blue-jean et porte sur la tête un casque de moto.",
-  "image": "/images/chap1.jpg",
+  "text": "Ca ne fait pas plus de cinq minutes que vous roulez lorsque, debout au centre de la chaussée, une femme gesticule, les bras levés dans un appel à l’aide. Son visage exprime la détresse. Pourtant, le doute s’immisce : cherche-t-elle vraiment du secours, ou joue-t-elle la comédie de la victime ?",
+  "image": "/images/chapter179.webp",
   "choices": [
-    { "label": "Si vous desirez vous arreter pour lui demander ce qu'il veut...", "next": "142" },
-    { "label": "Si vous preferez continuer a rouler sans vous soucier de lui...", "next": "215" }
+    { "label": "Si vous desirez vous arreter pour lui demander ce qu'elle veut...", "next": "142" },
+    { "label": "Si vous preferez continuer a rouler sans vous soucier d'elle...", "next": "215" }
   ]
 }

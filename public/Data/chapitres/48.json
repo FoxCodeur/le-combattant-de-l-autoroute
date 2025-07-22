@@ -21,16 +21,17 @@
         "endurance": 10,
         "image": "/images/chapter48.webp"
       }
-    ]
-  },
-  "choices": [
-    {
-      "label": "Si vous sortez vainqueur de cette lutte...",
-      "next": "138"
-    },
-    {
-      "label": "Si vous sombrez dans l'inconscience...",
-      "next": "100"
+    ],
+    "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur de cette lutte...",
+        "next": "138"
+      },
+      "failure": {
+        "text": "Vous sombrez dans l'inconscience...",
+        "next": "100",
+        "isGameOver": false
+      }
     }
-  ]
+  }
 }

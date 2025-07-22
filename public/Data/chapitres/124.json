@@ -1,7 +1,7 @@
 {
   "id": "124",
   "title": "Chapitre 124",
-  "text": "Vous vous retrouvez, peu après, au croisement et vous vous arrêtez pour réfléchir à la direction que vous allez maintenant prendre.",
+  "text": "Vous vous retrouvez, peu après, à un croisement et vous vous arrêtez pour réfléchir. Quelle direction comptez-vous prendre maintenant ?",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez prendre a droite...", "next": "203" },

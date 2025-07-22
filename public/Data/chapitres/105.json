@@ -5,9 +5,13 @@
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
-    "numberOfDice": 2
+    "numberOfDice": 2,
+    "applyTo": {
+      "stat": "blindage",
+      "operation": "subtract"
+    }
   },
   "choices": [
-    { "label": "Si vous êtes encore en vie après une telle explosion, rendez-vous au", "next": "292" }
+    { "label": "Si vous etes encore en vie...", "next": "292" }
   ]
 }

@@ -1,12 +1,10 @@
 {
   "id": "284",
   "title": "Chapitre 284",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Les trois voitures se rapprochent petit à petit et la voiture de tête, une Toyota, commence à ouvrir le feu avec ses mitrailleuses avant, situées sous les phares.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "motorise",
-    "combatMode": "sequentiel",
-    "ordreDesEnnemis": "choixJoueur",
     "diceRoll": {
       "required": true,
       "numberOfDice": 1
@@ -17,23 +15,23 @@
     },
     "ennemis": [
       {
-        "nom": "Toyota",
+        "nom": "TOYOTA",
         "puissance": 9,
         "blindage": 15,
-        "image": "/images/ennemis/chien1.jpg"
+        "image": "/images/ch284Ennemi1.webp"
       },
       {
-        "nom": "JAGUAR TYPE-E",
+        "nom": "JAGUAR",
         "puissance": 10,
         "blindage": 12,
-        "image": "/images/ennemis/chien2.jpg"
+        "image": "/images/ch284Ennemi2.webp"
       },
       {
-        "nom": "COMMODORE",
+        "nom": "SUBARU",
         "puissance": 8,
         "blindage": 15,
-        "image": "/images/ennemis/chien2.jpg"
-      }   
+        "image": "/images/ch284Ennemi3.webp"
+      }
     ],
  "issue": {
       "success": {

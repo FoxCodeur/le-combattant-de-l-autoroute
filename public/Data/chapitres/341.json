@@ -1,7 +1,7 @@
 {
   "id": "341",
   "title": "Chapitre 341",
-  "text": "Vous arrivez à la hauteur d'une ambulance stationnée sur le bas-côté droit de la route.",
+  "text": "Vous arrivez à la hauteur d'une ambulance stationnée sur le bas-côté droit de la route. Celle-ci semble abandonnée. Que comptez-vous faire ?",
   "image": "/images/chapter341.webp",
   "choices": [
     { "label": "Si vous souhaitez vous arreter pour examiner l'ambulance...", "next": "267" },

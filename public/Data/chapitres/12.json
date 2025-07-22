@@ -1,7 +1,7 @@
 {
   "id": "12",
   "title": "Chapitre 12",
-  "text": "Vous savez pertinemment que vous avez très peu de chances de l’emporter, hélas vous n’avez guère le choix car ce pillard vous a pris de court...",
+  "text": "Il y a très peu de chances de l’emporter, hélas vous n’avez guère le choix car ce pillard vous a pris de court...",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",

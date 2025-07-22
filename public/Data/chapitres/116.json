@@ -1,8 +1,11 @@
 {
   "id": "116",
   "title": "Chapitre 116",
-  "text": "La balle vous atteint à l'épaule. Jetez un dé et déduisez le chiffre obtenu de votre total d'endurance. Méprisant la douleur, vous vous relevez et vous ripostez :\n\nBANDIT DE GRAND\nCHEMIN HABILETÉ: 8 ENDURANCE: 12\n\nMenez ce combat en suivant les règles de Tir. Cependant, vous êtes terriblement handicapé par vos blessures et vous devez retrancher 2 points de votre total d'habileté pour toute la durée de l'affrontement.",
+  "text": "La balle vous atteint à l'épaule. Méprisant la douleur, vous vous relevez pour affronter l'ennemi.",
   "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "endurance": -3
+  },
   "combat": {
     "type": "tir",
     "diceRoll": {

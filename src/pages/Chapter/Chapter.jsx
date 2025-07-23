@@ -14,10 +14,11 @@ import GameOverModal from "../../components/GameOverModal/GameOverModal";
 import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
 import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import VehiculeModal from "../../components/VehiculeModal/VehiculeModal";
+import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
-import interceptorImage from "../../assets/images/interceptor falcon.webp"; // <--- Ajout ici !
+import interceptorImage from "../../assets/images/interceptor falcon.webp";
 
 import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
@@ -399,11 +400,19 @@ const Chapter = () => {
     ));
   };
 
+  // Nouvelle partie : réinitialise tout et retourne à Home
+  const handleNewGame = () => {
+    localStorage.removeItem("selectedCharacter");
+    localStorage.removeItem("characterData");
+    window.location.href = "/"; // recharge la page et va sur Home
+  };
+
   return (
     <div
       className={`chapter chapter-${id}`}
       role="region"
       aria-label="Chapitre interactif"
+      style={{ position: "relative" }}
     >
       <StatChangeNotification notifications={notifications} />
 
@@ -506,7 +515,14 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Bloc combat principal */}
+          {/* Bouton Nouvelle partie */}
+          <CharacterSheetButton
+            onClick={handleNewGame}
+            label="Nouvelle partie"
+            icon={<GiCharacter size={22} style={{ verticalAlign: "middle" }} />}
+            aria-label="Commencer une nouvelle partie"
+          />
+
           {chapterData.combat && (
             <Combat
               combatData={chapterData.combat}
@@ -561,6 +577,9 @@ const Chapter = () => {
           </p>
         )
       )}
+
+      {/* Bouton scroll vers le haut */}
+      <ScrollToTopButton />
     </div>
   );
 };

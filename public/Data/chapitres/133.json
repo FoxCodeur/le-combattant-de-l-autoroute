@@ -12,6 +12,6 @@
     }
   },
   "choices": [
-    { "label": "Si vous êtes toujours en vie après la collision, rendez-vous au", "next": "151" }
+    { "label": "Si vous etes toujours en vie apres la collision...", "next": "151" }
   ]
 }

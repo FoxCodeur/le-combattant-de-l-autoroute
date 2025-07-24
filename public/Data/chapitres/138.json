@@ -1,7 +1,7 @@
 {
   "id": "138",
   "title": "Chapitre 138",
-  "text": "Vous faites un bond en arrière pour vous écarter du gars qui s'écroule raide mort au sol. A ce moment, sa complice fait brusquement démarrer le véhicule qui était garé lors de votre arrivée. Une odeur acre de caoutchouc brûlé se répand dans l'atmosphère, tandis qu'elle s'éloigne vers l'autoroute dans un rugissement de moteur.",
+  "text": "Le gars s'écroule raide mort au sol. A ce moment, sa complice fait brusquement démarrer le véhicule qui était garé lors de votre arrivée. Une odeur acre de caoutchouc brûlé se répand dans l'atmosphère, tandis qu'elle s'éloigne vers l'autoroute dans un rugissement de moteur.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous voulez vous lancez a sa poursuite...", "next": "75" },

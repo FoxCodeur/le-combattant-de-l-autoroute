@@ -5,6 +5,6 @@
   "image": "/images/chapter341.webp",
   "choices": [
     { "label": "Si vous souhaitez vous arreter pour examiner l'ambulance...", "next": "267" },
-    { "label": "Si vous preferez continuer à rouler vers l'est...", "next": "22" }
+    { "label": "Si vous preferez continuer a rouler vers l'est...", "next": "22" }
   ]
 }

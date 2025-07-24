@@ -1,7 +1,7 @@
 {
   "id": "140",
   "title": "Chapitre 140",
-  "text": "Vous parcourez environ quatre-vingts kilomètres avant d'arriver à un croisement. Vous tournez à droite, en direction de San Angelo",
+  "text": "Vous parcourez environ quatre-vingts kilomètres avant d'arriver à un croisement. Vous tournez à droite, en direction de **HollyFrontier.**",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "23" }

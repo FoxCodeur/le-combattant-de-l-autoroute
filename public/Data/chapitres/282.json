@@ -1,7 +1,7 @@
 {
   "id": "282",
   "title": "Chapitre 282",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Le side-car fait des zigzags et il est une cible difficile à atteindre.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "motorise",
@@ -18,11 +18,10 @@
         "nom": "SIDE-CAR",
         "puissance": 9,
         "blindage": 8,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/defaultPicture.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "143"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

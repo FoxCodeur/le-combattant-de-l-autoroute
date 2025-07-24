@@ -4,6 +4,6 @@
   "text": "Par un miracle extraordinaire, vous traversez le champ de mines sans en faire exploser une seule ! [success]Vous gagnez 1 point de CHANCE.[/success] Totalement inconscient du danger auquel vous venez d'échapper, vous continuez à rouler tranquillement vers le sud",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "rendez-vous au", "next": "303" }
+    { "label": "Next...", "next": "303" }
   ]
 }

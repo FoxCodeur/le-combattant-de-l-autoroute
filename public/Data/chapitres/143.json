@@ -1,7 +1,7 @@
 {
   "id": "143",
   "title": "Chapitre 143",
-  "text": "Craignant que les deux motards ne fassent partie d'une bande, vous vous dépêchez de reprendre la route en direction du sud, au cas où leurs complices arriveraient en renfort",
+  "text": "Craignant que les deux lascars ne fassent partie d'une bande, vous vous dépêchez de reprendre la route en direction du sud, au cas où leurs complices arriveraient en renfort.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "96" }

@@ -1,7 +1,7 @@
 {
   "id": "97",
   "title": "Chapitre 97",
-  "text": "Vous vous avancez prudemment vers le bitume où reposent les deux motardes. Tandis que vous fouillez l’une d’elles, vous découvrez un poignard de jet que vous glissez dans votre botte de cuir. En prenant un moment de répit, un souvenir vous revient : on vous a déjà parlé de ce clan redouté, composé uniquement de femmes, réputées pour éliminer sans pitié tous les hommes croisant leur route. Cette pensée vous serre la gorge un instant, avant que vous ne vous ressaisissiez, prêt à reprendre le volant.",
+  "text": "Le premier bâtiment que vous apercevez sur la route est un vieux café, dont la devanture est bordée de quelques voitures abandonnées. À en juger par la poussière qui recouvre leurs carrosseries, aucune n’a été déplacée depuis la catastrophe. Prudemment, vous contournez le café afin de dissimuler l’Interceptor hors de vue, à l’abri des regards indiscrets. Vous coupez le moteur, descendez du véhicule et prenez le temps d’examiner les alentours. Le silence règne : pas âme qui vive. Rassuré, vous réfléchissez au meilleur endroit où passer la nuit. La sécurité, le confort et la discrétion sont de mise. Il ne vous reste plus qu’à choisir votre refuge pour dormir.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "215" }

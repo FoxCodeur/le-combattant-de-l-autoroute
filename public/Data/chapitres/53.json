@@ -1,7 +1,7 @@
 {
   "id": "53",
   "title": "Chapitre 53",
-  "text": "Vous écrasez la pédale de l'accélérateur et vous foncez droit sur vos agresseurs. Mais avant même que vous ayez pu les rejoindre, vous les voyez enfourcher leurs motos et prendre la fuite en vrombissant.",
+  "text": "Vous écrasez la pédale de l'accélérateur et foncez droit vers vos agresseurs, déterminé à leur faire regretter leur attaque. Mais avant même que vous puissiez les atteindre, vous les voyez bondir sur leurs motos. Dans un grondement de moteurs, ils filent au loin, disparaissant dans un nuage de poussière, vous laissant seul face à la route.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous voulez vous lancer a leur poursuite...", "next": "78" },

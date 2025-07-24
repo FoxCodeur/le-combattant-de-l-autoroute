@@ -1,10 +1,10 @@
 {
   "id": "58",
   "title": "Chapitre 58",
-  "text": "Vous montez les quelques marches qui mènent à la caravane. Après une rapide inspection, vous découvrez à l'intérieur une boîte de pâté et une grenade. Vous empochez la grenade et vous décidez de manger le pâté sur place car vous avez l'estomac dans les talons. [success]Ce repas vous fait gagner 2 points d'ENDURANCE.[/success] Puis réalisant que, de toute évidence, vous avez peu de chances de retrouver votre agresseur, vous retournez à l'Interceptor et vous démarrez à nouveau en direction du sud",
+  "text": "Vous montez les quelques marches qui mènent à la caravane. Après une rapide inspection, vous découvrez à l'intérieur une boîte de pâté et une grenade. Vous empochez la grenade et vous décidez de manger le pâté sur place car vous avez l'estomac dans les talons. [success]Ce repas vous fait gagner 2 points d'ENDURANCE.[/success] Puis réalisant que, de toute évidence, vous avez peu de chances de retrouver votre agresseur, vous retournez à l'Interceptor et vous démarrez à nouveau en direction du sud.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
-    "endurance": -2
+    "endurance": 2
   },
   "choices": [
     { "label": "Next...", "next": "150" }

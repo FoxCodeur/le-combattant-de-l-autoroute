@@ -1,7 +1,7 @@
 {
   "id": "150",
   "title": "Chapitre 150",
-  "text": "Peu après, le paysage verdoyant fait place à une terre aride et rocailleuse où ne poussent que de rares petites touffes d'herbes desséchée. Vous arrivez ensuite en vue d'un carrefour, à la limite du désert. Une fois parvenu à cet embranchement, vous stoppez et vous constatez que la route filant vers l'est est obstruée par une file de voitures abandonnées.",
+  "text": "Peu après, le paysage verdoyant cède la place à une terre aride, où seules quelques touffes d’herbes desséchées luttent pour survivre. L’air devient plus sec, le soleil tape fort, et la monotonie du décor s’installe. Après plusieurs kilomètres, vous parvenez en vue d’un carrefour isolé, à la lisière du désert. Le silence est pesant, comme si ce lieu était oublié du monde. Une fois parvenu à l’embranchement, vous immobilisez l’Interceptor et observez les alentours. La route qui part vers l’est est bloquée par une longue file de voitures abandonnées, vestiges d’une fuite précipitée ou d’un drame passé. Impossible de poursuivre dans cette direction sans trouver un autre chemin.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez aller droit vers le sud, en empruntant la route qui traverse le desert...", "next": "46" },

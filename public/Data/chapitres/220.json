@@ -18,11 +18,10 @@
         "nom": "SIDE-CAR",
         "puissance": 9,
         "blindage": 8,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/defaultPicture.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "143"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

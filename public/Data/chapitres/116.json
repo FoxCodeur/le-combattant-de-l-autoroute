@@ -18,10 +18,11 @@
     },
     "ennemis": [
       {
-        "nom": "Bandit de Grand Chemin",
+        "nom": "Drax",
+        "clan": "Jones Street Boys",
         "habilete": 8,
         "endurance": 12,
-        "image": "/images/ennemis/bandit-rouge.jpg"
+        "image": "/images/ch12Ennemi.webp"
       }
     ]
   },

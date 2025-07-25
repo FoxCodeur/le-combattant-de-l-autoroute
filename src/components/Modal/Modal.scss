@@ -17,10 +17,17 @@
   border-radius: 10px;
   min-width: 300px;
   max-width: 90vw;
+  max-height: 90vh; // Ajouté pour éviter le débordement vertical
   position: relative;
-  // Jaune en haut/gauche, noir en bas/droite
   box-shadow: -4px -4px 0 #ffcc00, 8px 8px 0 #000;
-  @include flex-column;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; // Empêche le débordement du contenu
+}
+
+.modal-body {
+  overflow-y: auto; // Rends le contenu scrollable si trop haut
+  max-height: 70vh; // Réserve de l'espace pour le bouton de fermeture
 }
 
 .modal-close {
@@ -31,4 +38,15 @@
   border: none;
   font-size: 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .modal-content {
+    padding: 1rem;
+    min-width: 220px;
+    max-height: 95vh;
+  }
+  .character-sheet {
+    font-size: 0.85rem;
+  }
 }

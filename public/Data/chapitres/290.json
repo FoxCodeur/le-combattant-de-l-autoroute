@@ -16,13 +16,12 @@
     "ennemis": [
       {
         "nom": "VOITURE BLINDEE",
-        "puissanceDeFeu": 9,
+        "puissance": 9,
         "blindage": 20,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/ch290Ennemi1.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "106"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

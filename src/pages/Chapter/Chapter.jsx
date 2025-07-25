@@ -215,37 +215,65 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
+  // Modification : vérifie partout (inventaire, équipement, accessoires, interceptor)
   const isChoiceAvailable = (choice) => {
     if (!choice.condition) return true;
+
     if (choice.condition.item) {
-      const normalize = (str) => str.replace(/_/g, "").toLowerCase();
-      let items = [];
-      if (characterData?.inventaire) {
-        items = characterData.inventaire.map(normalize);
-      } else if (characterData?.équipement) {
-        items = Object.entries(characterData.équipement)
-          .filter(([_, v]) => v && v > 0)
-          .map(([k, _]) => normalize(k));
-      }
-      const item = normalize(choice.condition.item);
-      const hasItem = items.includes(item);
+      const normalized = (str) => str.replace(/_/g, "").toLowerCase();
+      let count = 0;
+
+      // Liste des propriétés à explorer
+      const containers = [
+        "inventaire",
+        "équipement",
+        "accessoires",
+        "interceptor",
+      ];
+      containers.forEach((container) => {
+        if (characterData?.[container]) {
+          const obj = characterData[container];
+          if (Array.isArray(obj)) {
+            obj.forEach((item) => {
+              if (typeof item === "string") {
+                if (normalized(item) === normalized(choice.condition.item))
+                  count++;
+              } else if (
+                item.nom &&
+                normalized(item.nom) === normalized(choice.condition.item)
+              ) {
+                count += item.quantite ? item.quantite : 1;
+              }
+            });
+          } else if (typeof obj === "object") {
+            Object.entries(obj).forEach(([key, value]) => {
+              if (normalized(key) === normalized(choice.condition.item)) {
+                count += value;
+              }
+            });
+          }
+        }
+      });
+
+      const hasItem = count > 0;
       return choice.condition.hasItem ? hasItem : !hasItem;
     }
+
     return true;
   };
 
+  // Rendu des choix : gère à la fois les tests de dés et les conditions d'inventaire
   const renderChoices = () => {
     if (!chapterData || !Array.isArray(chapterData.choices)) return null;
 
-    const filteredChoices = chapterData.choices.filter(isChoiceAvailable);
-
+    // Cas test de chance
     if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
       }
       const chance = characterData?.caractéristiques?.chance ?? 0;
       if (diceTotal <= chance) {
-        const successChoice = filteredChoices.find((c) =>
+        const successChoice = chapterData.choices.find((c) =>
           normalize(c.label?.toLowerCase()).includes("reuss")
         );
         return successChoice ? (
@@ -257,7 +285,7 @@ const Chapter = () => {
           </button>
         ) : null;
       }
-      const failChoice = filteredChoices.find((c) =>
+      const failChoice = chapterData.choices.find((c) =>
         normalize(c.label?.toLowerCase()).includes("echou")
       );
       return failChoice ? (
@@ -270,13 +298,14 @@ const Chapter = () => {
       ) : null;
     }
 
+    // Cas test d'habileté
     if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
       }
       const habilete = characterData?.caractéristiques?.habilete ?? 0;
       if (diceTotal <= habilete) {
-        const successChoice = filteredChoices.find((c) =>
+        const successChoice = chapterData.choices.find((c) =>
           normalize(c.label?.toLowerCase()).includes("reuss")
         );
         return successChoice ? (
@@ -288,7 +317,7 @@ const Chapter = () => {
           </button>
         ) : null;
       }
-      const failChoice = filteredChoices.find((c) =>
+      const failChoice = chapterData.choices.find((c) =>
         normalize(c.label?.toLowerCase()).includes("echou")
       );
       return failChoice ? (
@@ -301,39 +330,18 @@ const Chapter = () => {
       ) : null;
     }
 
+    // Cas test de dés avec choix numérotés
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
       !chapterData.testHabilete?.required &&
-      filteredChoices.length > 1 &&
-      filteredChoices.every((choice) => !/\d/.test(choice.label))
-    ) {
-      return filteredChoices.map((choice, index) => (
-        <button
-          key={index}
-          className="chapter-choice"
-          disabled={diceTotal === null}
-          onClick={() => handleChoiceClick(choice)}
-          style={
-            diceTotal === null ? { opacity: 0.6, cursor: "not-allowed" } : {}
-          }
-        >
-          {choice.label}
-        </button>
-      ));
-    }
-
-    if (
-      chapterData.diceRoll?.required &&
-      !chapterData.testChance?.required &&
-      !chapterData.testHabilete?.required &&
-      filteredChoices.length > 1 &&
-      filteredChoices.some((choice) => /\d/.test(choice.label))
+      chapterData.choices.length > 1 &&
+      chapterData.choices.some((choice) => /\d/.test(choice.label))
     ) {
       if (diceTotal === null) {
         return (
           <>
-            {filteredChoices.map((choice, index) => (
+            {chapterData.choices.map((choice, index) => (
               <button
                 key={index}
                 className="chapter-choice"
@@ -349,7 +357,7 @@ const Chapter = () => {
       }
       return (
         <>
-          {filteredChoices.map((choice, index) => {
+          {chapterData.choices.map((choice, index) => {
             const numbers = choice.label.match(/\d+/g)?.map(Number) || [];
             const isMatch = numbers.includes(diceTotal);
             return (
@@ -368,13 +376,14 @@ const Chapter = () => {
       );
     }
 
+    // Cas test de dés avec un seul choix
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
       !chapterData.testHabilete?.required &&
-      filteredChoices.length === 1
+      chapterData.choices.length === 1
     ) {
-      return filteredChoices.map((choice, idx) => (
+      return chapterData.choices.map((choice, idx) => (
         <button
           key={idx}
           className="chapter-choice"
@@ -389,15 +398,21 @@ const Chapter = () => {
       ));
     }
 
-    return filteredChoices.map((choice, index) => (
-      <button
-        key={index}
-        className="chapter-choice"
-        onClick={() => handleChoiceClick(choice)}
-      >
-        {choice.label}
-      </button>
-    ));
+    // Cas général : choix avec/condition inventaire
+    return chapterData.choices.map((choice, index) => {
+      const available = isChoiceAvailable(choice);
+      return (
+        <button
+          key={index}
+          className="chapter-choice"
+          onClick={() => available && handleChoiceClick(choice)}
+          disabled={!available}
+          style={!available ? { opacity: 0.6, cursor: "not-allowed" } : {}}
+        >
+          {choice.label}
+        </button>
+      );
+    });
   };
 
   // Nouvelle partie : réinitialise tout et retourne à Home

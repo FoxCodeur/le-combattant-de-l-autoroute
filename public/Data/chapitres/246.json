@@ -1,10 +1,10 @@
 {
   "id": "246",
   "title": "Chapitre 246",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Maintenant, que comptez vous faire ?",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "112" },
-    { "label": "Fouiller la pièce", "next": "353" }
+    { "label": "Si vous ne l'avez pas encore fait, vous pouvez inspecter le supermarche...", "next": "112" },
+    { "label": "Sinon, vous n’avez rien d'autre à faire que de vous mettre en route vers le sud...", "next": "353" }
   ]
 }

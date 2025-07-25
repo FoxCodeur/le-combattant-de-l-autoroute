@@ -1,7 +1,7 @@
 {
   "id": "371",
   "title": "Chapitre 371",
-  "text": "Vous poursuivez votre route vers l'ouest pendant de nombreux kilomètres et vous ne rencontrez que l'embranchement d'une route étroite partant vers le nord. Vous arrivez enfin à un croisement où vous pouvez prendre la direction du sud vers San Angelo.",
+  "text": "Vous poursuivez votre route vers l'ouest pendant de nombreux kilomètres et vous ne rencontrez que l'embranchement d'une route étroite partant vers le nord. Vous arrivez enfin à un croisement où vous pouvez prendre la direction du sud vers **HollyFrontier.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "225" }

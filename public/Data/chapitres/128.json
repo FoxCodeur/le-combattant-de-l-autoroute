@@ -5,7 +5,7 @@
   "image": "/images/chap1.jpg",
   "choices": [
     {
-      "label": "Jeter une boîte de clous...",
+      "label": "Jeter une boite de clous...",
       "next": "312",
       "modificateursNarratifs": {
         "clous": -1

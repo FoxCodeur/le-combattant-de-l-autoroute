@@ -55,7 +55,7 @@ const Home = () => {
               image={skarrImg}
               title="SKARR"
               age={44}
-              description="Ancien militaire d’élite, Skarr a perdu un œil lors d’une mission qui a mal tourné. Solitaire, il s’est reconverti en instructeur d’auto-défense avant de devenir le protecteur pragmatique et loyal de Nouvelle Espérance. Dans ce nouveau monde, il sait que la moindre faiblesse se paie cher."
+              description="Ancien militaire d’élite, Skarr a perdu un œil lors d’une mission qui a mal tourné. Solitaire, il s’est reconverti en instructeur d’auto-défense avant de devenir le protecteur pragmatique et loyal de Waco. Dans ce nouveau monde, il sait que la moindre faiblesse se paie cher."
             >
               <NewGameButton onClick={() => handleStart("Skarr")}>
                 New Game
@@ -66,7 +66,7 @@ const Home = () => {
               image={nyxImg}
               title="NYX"
               age={30}
-              description="Promise à une brillante carrière de tennis, Nyx a grandi entre les continents. Après l’épidémie, elle a mis sa discipline et son optimisme au service de la survie. Figure audacieuse de Nouvelle Espérance, elle inspire ceux qui croient encore en un avenir meilleur."
+              description="Promise à une brillante carrière de tennis, Nyx a grandi entre les continents. Après l’épidémie, elle a mis sa discipline et son optimisme au service de la survie. Figure audacieuse de Waco, elle inspire ceux qui croient encore en un avenir meilleur."
             >
               <NewGameButton onClick={() => handleStart("Nyx")}>
                 New Game
@@ -77,7 +77,7 @@ const Home = () => {
               image={gutzImg}
               title="GUTZ"
               age={34}
-              description="Gutz, ancien hacker, profitait du chaos pour s'enrichir par ses arnaques. Il rejoint Nouvelle Espérance, où ses talents en piratage et bricolage high-tech sont précieux, même si ses méthodes ne plaisent pas. Ni héros ni salaud : il fait juste ce qu’il faut pour survivre dans ce nouveau monde."
+              description="Gutz, ancien hacker, profitait du chaos pour s'enrichir par ses arnaques. Il rejoint Waco, où ses talents en piratage et bricolage high-tech sont précieux, même si ses méthodes ne plaisent pas. Ni héros ni salaud : il fait juste ce qu’il faut pour survivre dans ce nouveau monde."
             >
               <NewGameButton onClick={() => handleStart("Gutz")}>
                 New Game

@@ -5,6 +5,6 @@
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous souhaitez sortir de la voiture pour examiner les lieux", "next": "262" },
-    { "label": "Si vous préférez continuer à rouler vers le sud et sortir de la ville", "next": "353" }
+    { "label": "Si vous preferez continuer a rouler vers le sud et sortir de la ville", "next": "353" }
   ]
 }

@@ -7,9 +7,8 @@
     {
       "label": "Si vous vous etes procure recemment un plein bidon d'essence...",
       "next": "197",
-      "modificateursNarratifs": {
-        "bidon_Essence": -1
-      }
+      "modificateursNarratifs": { "bidon_Essence": -1 },
+      "condition": { "item": "bidon_Essence", "hasItem": true }
     },
     {
       "label": "Sinon...",

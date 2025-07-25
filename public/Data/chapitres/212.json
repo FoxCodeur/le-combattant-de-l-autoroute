@@ -8,6 +8,6 @@
   },
   "choices": [
     { "label": "Vous obtemperez...", "next": "283" },
-    { "label": "Si vous preferez vous battre avec lui...", "next": "06" }
+    { "label": "Si vous preferez vous battre avec lui...", "next": "6" }
   ]
 }

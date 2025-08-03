@@ -15,6 +15,7 @@ import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
 import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import VehiculeModal from "../../components/VehiculeModal/VehiculeModal";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
+import RaceGame358 from "../../components/RaceGame358/RaceGame358"; // AJOUT ICI
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
@@ -264,6 +265,9 @@ const Chapter = () => {
 
   // Rendu des choix : gère à la fois les tests de dés et les conditions d'inventaire
   const renderChoices = () => {
+    // Spécifique : pas de choix pour le chapitre 358 (mini-jeu à la place)
+    if (id === "358") return null;
+
     if (!chapterData || !Array.isArray(chapterData.choices)) return null;
 
     // Cas test de chance
@@ -422,6 +426,131 @@ const Chapter = () => {
     window.location.href = "/"; // recharge la page et va sur Home
   };
 
+  // Affichage spécial pour le chapitre 358 (mini-jeu course)
+  if (id === "358") {
+    return (
+      <div className={`chapter chapter-${id}`}>
+        <StatChangeNotification notifications={notifications} />
+
+        <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
+          {characterData ? (
+            <CharacterSheet data={characterData} />
+          ) : (
+            <p>Chargement de la fiche personnage...</p>
+          )}
+        </Modal>
+
+        <GameRulesModal
+          isOpen={isRulesOpen}
+          onClose={() => setIsRulesOpen(false)}
+        />
+
+        <GameMapModal
+          isOpen={isMapOpen}
+          onClose={() => setIsMapOpen(false)}
+          mapImage={gameMap}
+        />
+
+        <VehiculeModal
+          isOpen={isVehiculeOpen}
+          onClose={() => setIsVehiculeOpen(false)}
+          vehicleImage={interceptorImage}
+        />
+
+        <GameOverModal visible={isGameOver} />
+
+        {loading && (
+          <p className="loading-message">Chargement du chapitre...</p>
+        )}
+        {error && <div className="error-message">Erreur : {error}</div>}
+
+        {!loading && !error && chapterData && chapterData.title ? (
+          <article className="chapter-content">
+            <h1 className="chapter-title">
+              {chapterData.title || "Titre manquant"}
+            </h1>
+
+            <div className="chapter-image-container">
+              <img
+                src={chapterData.image ? chapterData.image : defaultPicture}
+                alt={`Illustration du chapitre : ${chapterData.title}`}
+                className="chapter-image"
+                onError={(e) => {
+                  e.target.src = defaultPicture;
+                }}
+              />
+              <div className="chapter-btn-row">
+                <CharacterSheetButton
+                  onClick={() => setIsSheetOpen(true)}
+                  label="Fiche du personnage"
+                  icon={
+                    <GiCharacter
+                      size={22}
+                      style={{ verticalAlign: "middle" }}
+                    />
+                  }
+                  aria-label="Afficher la fiche du personnage"
+                />
+                <CharacterSheetButton
+                  onClick={() => setIsRulesOpen(true)}
+                  label="Règles du jeu"
+                  icon={
+                    <FcRules size={22} style={{ verticalAlign: "middle" }} />
+                  }
+                  aria-label="Afficher les règles du jeu"
+                />
+                <CharacterSheetButton
+                  onClick={() => setIsMapOpen(true)}
+                  label="Carte du jeu"
+                  icon={
+                    <FaMapMarkedAlt
+                      size={22}
+                      style={{ verticalAlign: "middle" }}
+                    />
+                  }
+                  aria-label="Afficher la carte du jeu"
+                />
+                <CharacterSheetButton
+                  onClick={() => setIsVehiculeOpen(true)}
+                  label="Véhicule : Interceptor"
+                  icon={
+                    <FaCarSide size={22} style={{ verticalAlign: "middle" }} />
+                  }
+                  aria-label="Afficher le véhicule Interceptor"
+                />
+              </div>
+            </div>
+
+            <section className="chapter-text">
+              {renderFormattedText(getPersonalizedText(chapterData.text))}
+            </section>
+
+            <CharacterSheetButton
+              onClick={handleNewGame}
+              label="Nouvelle partie"
+              icon={
+                <GiCharacter size={22} style={{ verticalAlign: "middle" }} />
+              }
+              aria-label="Commencer une nouvelle partie"
+            />
+
+            <RaceGame358 chapterData={chapterData} navigate={navigate} />
+          </article>
+        ) : (
+          !loading &&
+          !error && (
+            <p className="error-message">
+              Chapitre introuvable ou données invalides.
+            </p>
+          )
+        )}
+
+        <ScrollToTopButton />
+      </div>
+    );
+  }
+
+  // Affichage normal pour les autres chapitres
   return (
     <div
       className={`chapter chapter-${id}`}
@@ -530,7 +659,6 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Bouton Nouvelle partie */}
           <CharacterSheetButton
             onClick={handleNewGame}
             label="Nouvelle partie"
@@ -593,7 +721,6 @@ const Chapter = () => {
         )
       )}
 
-      {/* Bouton scroll vers le haut */}
       <ScrollToTopButton />
     </div>
   );

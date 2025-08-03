@@ -1,7 +1,7 @@
 {
   "id": "54",
   "title": "Chapitre 54",
-  "text": "Vous jugez plus prudent de ne pas vous arrêter pour fêter votre victoire, au cas où Léonardi se révélerait mauvais perdant. Mais celui-ci ne cherche pas à vous poursuivre et la silhouette de sa voiture disparaît progressivement dans votre rétroviseur. A quelques kilomètres de là, vous dépassez un semi-remorque qui semble avoir été abandonné sur le bas-côté depuis peu de temps.",
+  "text": "Vous jugez plus prudent de ne pas vous arrêter pour fêter votre victoire, au cas où Stirling se révélerait mauvais perdant. Mais celui-ci ne cherche pas à vous poursuivre et la silhouette de sa voiture disparaît progressivement dans votre rétroviseur. A quelques kilomètres de là, vous dépassez un semi-remorque qui semble avoir été abandonné sur le bas-côté depuis peu de temps.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous voulez vous arreter pour aller inspecter ce camion...", "next": "104" },

@@ -1,0 +1,189 @@
+.race-game358 {
+  background: #16181b;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 480px;
+  color: #f3f3f3;
+  font-family: "Share Tech Mono", "Consolas", monospace;
+
+  h2 {
+    display: block;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #000;
+    letter-spacing: 1px;
+
+    .vehicule-name {
+      color: #ffbb33;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    margin: 1.1rem 0 0.8rem 0;
+    font-size: 1.13rem;
+    text-align: center;
+    color: #e6e6e6;
+  }
+
+  .race-progress-bars {
+    margin: 1.3rem 0 2rem 0;
+  }
+
+  .race-progress-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    gap: 1rem;
+
+    .vehicule-name {
+      min-width: 110px;
+      font-weight: bold;
+      color: #ffd700;
+      font-size: 1.1rem;
+      text-shadow: 0 1px 6px #0006;
+      padding-top: 14px;
+    }
+
+    .race-bar-and-car {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .race-bar-outer {
+      position: relative;
+      height: 24px;
+      background: #2b2f3b;
+      border-radius: 14px;
+      box-shadow: 0 1px 6px #0004 inset;
+      overflow: hidden;
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .race-bar-inner {
+      height: 100%;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 14px 0 0 14px;
+    }
+
+    .race-bar-inner.jaguar {
+      background: linear-gradient(90deg, #ffe066, #ffd700 80%);
+      box-shadow: 0 0 8px #ffe066;
+    }
+    .race-bar-inner.interceptor {
+      background: linear-gradient(90deg, #b3e7ff, #37a9ff 80%);
+      box-shadow: 0 0 8px #37a9ff;
+    }
+
+    .race-bar-score {
+      position: absolute;
+      right: 12px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 2px 8px #000;
+      font-size: 1.05rem;
+      pointer-events: none;
+    }
+
+    .race-car-track {
+      position: relative;
+      height: 30px;
+      width: 100%;
+    }
+    .race-car-img {
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 24px;
+      transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+      z-index: 2;
+      &.jaguar {
+        filter: drop-shadow(0 2px 6px #ffd70066);
+      }
+      &.interceptor {
+        filter: drop-shadow(0 2px 6px #37a9ff66);
+      }
+    }
+  }
+
+  ul {
+    margin: 1.2rem auto 1.3rem auto;
+    max-width: 340px;
+    padding: 0.8rem 1rem;
+    background: rgba(43, 47, 59, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    color: #e6e6e6;
+    list-style: disc inside;
+    font-size: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+
+      .vehicule-name {
+        font-weight: bold;
+        color: #ffd700;
+      }
+      .vehicule-total {
+        font-weight: bold;
+        color: #ffbb33;
+      }
+    }
+  }
+
+  .score-summary {
+    text-align: center;
+    margin: 1rem 0 0.8rem 0;
+    font-size: 1.2rem;
+
+    .vehicule-name {
+      font-weight: bold;
+      color: #ffd700;
+    }
+    .vehicule-score {
+      font-weight: bold;
+      color: #ffbb33;
+    }
+  }
+
+  .dice-roll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.3rem 0;
+  }
+
+  strong {
+    color: #ffd700;
+    letter-spacing: 0.7px;
+  }
+
+  .race-result {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1.2rem;
+    padding: 0.8rem 0.5rem;
+    border-radius: 8px;
+    background: rgba(90, 66, 16, 0.21);
+    color: #ffecb3;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    box-shadow: 0 0 6px #ffbb33;
+  }
+}

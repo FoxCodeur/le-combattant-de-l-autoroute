@@ -1,7 +1,7 @@
 {
   "id": "322",
   "title": "Chapitre 322",
-  "text": "La Jaguar Type-E passe victorieusement la ligne d'arrivée devant vous, saluée par les acclamations des six personnes. Léonardi place la Jaguar en travers de la route pour bloquer le passage et il vous fait signe de vous arrêter.",
+  "text": "La Jaguar Type-E passe victorieusement la ligne d'arrivée devant vous, saluée par les acclamations des six personnes. **Stirling** place la Jaguar en travers de la route pour bloquer le passage et il vous fait signe de vous arrêter.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous suivez son ordre...", "next": "378" },

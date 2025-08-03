@@ -1,10 +1,10 @@
 {
   "id": "328",
   "title": "Chapitre 328",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Vous larguez le projectile de votre choix sur la route, et vous regardez avec satisfaction deux des voitures se percuter. La **Toyota** quant à elle, continue la poursuite et ouvre le feu avec ses mitrailleuses situées sous les phares.",
   "image": "/images/chap1.jpg",
   "combat": {
-    "type": "motorise",
+    "type": "motorisé",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2
@@ -18,11 +18,10 @@
         "nom": "TOYOTA",
         "puissance": 9,
         "blindage": 15,
-        "image": "/images/ennemis/gangster.jpg"
+        "image": "/images/ch328Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "265"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

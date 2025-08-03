@@ -86,13 +86,25 @@ const Combat = ({ combatData, characterData, setCharacterData, onEnd }) => {
       );
     }
     setCharacterData(updatedCharacter);
+
+    // Nouvelle logique : mort si blindage tombe à 0 en motorisé, sinon si endurance à 0
     if (
-      (!updatedCharacter.interceptor ||
-        updatedCharacter.interceptor.blindage <= 0) &&
-      updatedCharacter.caractéristiques.endurance <= 0
+      type &&
+      (type.trim().toLowerCase() === "motorisé" ||
+        type.trim().toLowerCase() === "motorise")
     ) {
-      setCombatResult("failure");
-      if (onEnd) onEnd("failure");
+      if (
+        updatedCharacter.interceptor &&
+        updatedCharacter.interceptor.blindage <= 0
+      ) {
+        setCombatResult("failure");
+        if (onEnd) onEnd("failure");
+      }
+    } else {
+      if (updatedCharacter.caractéristiques.endurance <= 0) {
+        setCombatResult("failure");
+        if (onEnd) onEnd("failure");
+      }
     }
   };
 

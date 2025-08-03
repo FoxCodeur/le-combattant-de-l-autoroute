@@ -7,13 +7,18 @@
     {
       "label": "Si vous avez en votre possession un morceau de tuyau en plastique...",
       "next": "306",
-      "modificateursNarratifs": {
-        "morceau_De_Tuyau_En_Plastique": -1
+      "condition": {
+        "item": "morceau_De_Tuyau_En_Plastique",
+        "hasItem": true
       }
     },
     {
       "label": "Si vous ne possedez pas de tuyau en plastique...",
-      "next": "187"
+      "next": "187",
+      "condition": {
+        "item": "morceau_De_Tuyau_En_Plastique",
+        "hasItem": false
+      }
     }
   ]
 }

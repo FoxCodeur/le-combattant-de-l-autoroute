@@ -7,7 +7,7 @@
     "type": "tir",
     "diceRoll": {
       "required": true,
-      "numberOfDice": 1
+      "numberOfDice": 2
     },
     "modificateursCombat": {
       "degatsJoueur": 2,
@@ -20,9 +20,8 @@
         "endurance": 12,
         "image": "/images/chapter178Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "375"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

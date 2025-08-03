@@ -165,23 +165,19 @@ const RaceGame358 = ({ chapterData, navigate }) => {
     setIsRolling(false);
     if (raceFinished) return;
     if (raceStep % 2 === 0) {
-      setJaguarScore((prev) => {
-        const newScore = prev + score;
-        setRaceLog((prevLog) => [
-          ...prevLog,
-          `Jaguar Type-E : +${score} (total ${newScore})`,
-        ]);
-        return newScore;
-      });
+      const newScore = jaguarScore + score;
+      setJaguarScore(newScore);
+      setRaceLog((prevLog) => [
+        ...prevLog,
+        `Jaguar Type-E : +${score} (total ${newScore})`,
+      ]);
     } else {
-      setInterceptorScore((prev) => {
-        const newScore = prev + score;
-        setRaceLog((prevLog) => [
-          ...prevLog,
-          `Interceptor : +${score} (total ${newScore})`,
-        ]);
-        return newScore;
-      });
+      const newScore = interceptorScore + score;
+      setInterceptorScore(newScore);
+      setRaceLog((prevLog) => [
+        ...prevLog,
+        `Interceptor : +${score} (total ${newScore})`,
+      ]);
     }
     setRaceStep((prev) => prev + 1);
   };

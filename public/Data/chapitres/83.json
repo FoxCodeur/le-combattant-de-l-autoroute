@@ -20,9 +20,8 @@
         "blindage": 11,
         "image": "/images/chapter83.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "305"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

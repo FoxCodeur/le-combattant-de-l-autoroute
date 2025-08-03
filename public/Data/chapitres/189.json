@@ -5,6 +5,6 @@
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous voulez emprunter cette route...", "next": "24" },
-    { "label": "Si vous preferez continuer sur la meme voie, en direction de San Angelo...", "next": "207" }
+    { "label": "Si vous preferez continuer sur la meme voie, en direction de HollyFrontier...", "next": "207" }
   ]
 }

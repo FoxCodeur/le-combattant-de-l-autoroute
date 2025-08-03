@@ -21,17 +21,17 @@
         "blindage": 16,
         "image": "/images/ch63Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
-    "success": {
-      "text": "Vous sortez vainqueur du duel.",
-      "next": "334"
-    },
-    "failure": {
-      "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
-      "next": null,
-      "isGameOver": true
+    ],
+    "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "334"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
     }
   }
 }

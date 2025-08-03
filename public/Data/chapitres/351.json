@@ -1,10 +1,24 @@
 {
   "id": "351",
   "title": "Chapitre 351",
-  "text": "La route abandonne finalement les confins du canyon pour s'étirer en une ligne rectiligne qui se perd à l'horizon. Un coup d'œil à votre compas magnétique confirme que vous filez plein sud. Pourtant, après seulement quelques kilomètres, vous êtes contraint de freiner brutalement devant un barrage improvisé : deux véhicules stationnent en travers de la chaussée, bloquant totalement le passage. Deux hommes en uniforme de cuir noir s'avancent vers vous, leurs armes bien visibles. Parvenus à votre hauteur, ils vous exposent leurs conditions d'un ton sans appel : seule une victoire dans une course de vitesse contre leur champion vous permettra de poursuivre vers le sud. En cas de défaite, vous devrez rebrousser chemin. À cet instant précis, une automobile vient se positionner juste à côté de l'Interceptor. Vous reconnaissez immédiatement les lignes racées d'une Jaguar Type-E, légende du siècle passé. L'homme au volant - mince, cheveux noirs impeccablement taillés, affichant une assurance désinvolte - vous interpelle avec un sourire carnassier : **« Salut, l'AMI ! Moi c'est Léonardi. Avant la fin du monde, j'étais dans l'équipe de base-ball des Mets, avant de me reconvertir dans la course automobile. Je crains hélas que tu ne partes avec un sacré handicap dans cette vieille carlingue, mais bonne chance quand même ! »** Les deux véhicules-barrages s'écartent, révélant plusieurs autres bolides alignés le long de la route tel un public de métal. Un homme surgit, brandissant un drapeau de départ. Dans un mouvement sec, il l'abaisse d'un coup. La course explose dans un rugissement de moteurs. Avant même que vous ne réalisiez pleinement ce qui se passe, la Jaguar bondit comme un fauve et vous dépasse dans un vrombissement triomphant.   ",
+  "text": "La route abandonne finalement les confins du canyon pour s'étirer en une ligne rectiligne qui se perd à l'horizon. Un coup d'œil à votre compas magnétique confirme que vous filez plein sud. Pourtant, après juste quelques kilomètres, vous êtes contraint de freiner devant un barrage improvisé : deux véhicules stationnent en travers de la chaussée, bloquant totalement le passage. Deux hommes en uniforme de cuir noir s'avancent vers vous, leurs armes bien visibles. Parvenus à votre hauteur, ils vous exposent leurs conditions d'un ton sans appel : seule une victoire dans une course de vitesse contre leur champion vous permettra de poursuivre vers le sud. En cas de défaite, vous devrez rebrousser chemin. À cet instant précis, une automobile vient se positionner juste à côté de l'Interceptor. Vous reconnaissez immédiatement les lignes racées d'une Jaguar Type-E, légende du siècle passé. L'homme au volant - mince, cheveux noirs impeccablement taillés, affichant une assurance désinvolte - vous interpelle avec un sourire carnassier : **« Salut, l'AMI ! Moi c'est Stirling. Avant que tout parte en vrille, j’étais mécano chez Park Place Jaguar, à Grapevine. Toute ma vie sous le capot à rafistoler des bagnoles pour des types qui n’y connaissaient rien... Aujourd’hui, je préfère sentir la route brûler sous les pneus. Je crains hélas que tu ne partes avec un sacré handicap dans cette vieille carlingue, mais bonne chance quand même ! »** Les deux véhicules-barrages s'écartent, révélant plusieurs autres bolides alignés le long de la route tel un public de métal. Un homme surgit, brandissant un drapeau de départ. Dans un mouvement sec, il l'abaisse d'un coup. La course explose dans un rugissement de moteurs. Avant même que vous ne réalisiez pleinement ce qui se passe, la Jaguar bondit comme un fauve et vous dépasse dans un vrombissement triomphant.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si votre moteur est equipe d'un surcompresseur...", "next": "210" },
-    { "label": "Sinon...", "next": "358" }
+    {
+      "label": "Si votre moteur est equipe d'un surcompresseur...",
+      "next": "210",
+      "condition": {
+        "item": "surcompresseur",
+        "hasItem": true
+      }
+    },
+    {
+      "label": "Sinon...",
+      "next": "358",
+      "condition": {
+        "item": "surcompresseur",
+        "hasItem": false
+      }
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "text": " C'est bientôt la fin de la course, il ne reste plus que quelques kilomètres à parcourir. Soudain, devant vous, le pilote de la Ford hésite : ses feux arrières s’allument, il freine brutalement, la carrosserie de sa voiture semblant vaciller sous la pression. Instinctivement, vous saisissez l’occasion — un éclair de lucidité dans la tempête — et vous le dépassez dans un rugissement de moteur. Mais à peine vous êtes-vous replacé devant lui que, tel le fauve blessé, votre adversaire réplique. Son moteur surcompressé hurle, la Ford surgit dans votre rétroviseur, ses phares vous aveuglant, se rapprochant, encore et encore, jusqu’à venir frôler votre pare-chocs. Le bitume vibre sous vos roues, l’air se charge d’électricité, chaque seconde s’étire à l’infini. La ligne d’arrivée est là, si proche — moins de cent mètres ! Mais la Ford, ivre de rage, tente tout pour vous doubler. C’est un duel de nerfs, une lutte à mort entre vos deux machines lancées à pleine vitesse. Vous savez qu'au moindre relâchement, la plus petite erreur, et il vous passera devant. Il ne vous reste qu’une seule option : choisir votre côté, et barrer la route à la Ford, coûte que coûte. il ne doit pas l'emporter, impossible de perdre...",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Allez-vous bloquer le côté gauche de la route", "next": "20" },
-    { "label": "ou le côté droit", "next": "80" }
+    { "label": "Allez-vous bloquer le coté gauche de la route", "next": "20" },
+    { "label": "ou le coté droit", "next": "80" }
   ]
 }

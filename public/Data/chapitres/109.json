@@ -9,6 +9,10 @@
       "next": "277",
       "modificateursNarratifs": {
         "barre_De_Fer": -1
+      },
+      "condition": {
+        "item": "barre_De_Fer",
+        "hasItem": true
       }
     },
     {

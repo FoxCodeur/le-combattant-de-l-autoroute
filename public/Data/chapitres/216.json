@@ -1,7 +1,7 @@
 {
   "id": "216",
   "title": "Chapitre 216",
-  "text": "La route se termine à un croisement. Vous tournez à gauche en direction du sud",
+  "text": "La route se termine à un croisement. Vous tournez à gauche en direction du sud.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "243" }

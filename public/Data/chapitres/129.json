@@ -1,7 +1,7 @@
 {
   "id": "129",
   "title": "Chapitre 129",
-  "text": "Une déflagration assourdissante retentit soudain et l'Interceptor se trouve brusquement projetée sur le côté de la route. Vous venez de percuter une mine ! Jetez deux dés et déduisez le total obtenu des points de BLINDAGE de l'Interceptor.",
+  "text": "Une déflagration assourdissante retentit soudain et l'Interceptor se trouve brusquement projetée sur le côté de la route. Vous venez de percuter une mine ! [danger]Jetez deux dés et déduisez le total obtenu des points de BLINDAGE de l'Interceptor.[/danger]",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

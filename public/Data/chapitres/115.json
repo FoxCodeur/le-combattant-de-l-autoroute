@@ -26,9 +26,8 @@
         "blindage": 11,
         "image": "/images/ch193Ennemi2.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "194"
@@ -40,5 +39,4 @@
       }
     }
   }
-
-
+}

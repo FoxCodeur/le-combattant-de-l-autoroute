@@ -1,7 +1,7 @@
 {
   "id": "196",
   "title": "Chapitre 196",
-  "text": "Suivant le conseil de l'homme, vous surveillez d'un oeil attentif les éventuelles chutes de pierres et vous vous engagez très lentement dans le canyon. Soudain vous entendez le bruit inquiétant d'un tremblement. Vous négociez un virage serré et vous constatez qu'un éboulement vient de se produire : des pierres, des rochers s'écrasent sur la route. Quelques instants plus tard, tout s'arrête et vous pouvez continuer car la route n'est pas complètement obstruée",
+  "text": "Vous vous engagez dans le canyon, préférant l’excès de prudence à la témérité. Les parois abruptes vous dominent, et chaque son résonne dans ce dédale minéral. Soudain, un grondement sourd, d’abord lointain, puis il monte en intensité. La roche tremble sous vos roues : un éboulement est en train de se produire. Devant vous, des pierres et de lourds blocs dévalent la pente, s’écrasant sur la chaussée dans un vacarme assourdissant. Vous vous immobilisez, le cœur battant, guettant la fin du chaos. Enfin, le silence revient, seulement troublé par quelques cailloux roulant encore sur la roche. La route n’est pas totalement bloquée : en manœuvrant, vous parvenez à contourner les obstacles et à poursuivre votre chemin, soulagé d’avoir échappé au pire.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "351" }

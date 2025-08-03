@@ -1,9 +1,9 @@
 {
   "id": "208",
   "title": "Chapitre 208",
-  "text": "L'homme vous dit que ce fut un grand honneur pour lui de se battre avec vous de si noble façon. Il poursuit en vous disant qu'après le tunnel la route serpente à travers un canyon et que vous devrez faire attention aux éboulements. Puis il monte dans l'autocar et il effectue une marche arrière pour dégager l'entrée du tunnel. Après avoir remercié cet homme étrange pour le conseil qu'il vous a donné, vous vous engagez sous le tunnel. Vous n'allez pas tarder à rouler sur la route sinueuse qui passe à travers le canyon.",
+  "text": "L’autre plante sur vous un regard solennel. Sans détourner les yeux, il lève le Colt, l’appuie contre sa tempe et presse la détente. Un coup de feu claque, sec et brutal. La tête de l’homme est propulsée en arrière sous l’impact, frappant le dossier de sa chaise dans un mouvement désarticulé. Son masque de velours noir se détache, révélant un visage figé dans la stupeur, tandis qu’une gerbe de sang éclabousse le bois verni de la table et ses vêtements. Son corps, privé de toute tension, s’effondre, projetant le revolver qui tombe sur le sol. Son complice reste figé, pétrifié d’horreur et d’incrédulité. Lentement, il abaisse son fusil. **« Tu as remporté le duel… Tu peux partir »**, dit-il sous le choc. Visiblement, il ne s'attendait pa à ce genre d'issue. Sans doute croyait-il que son comparse n'avait pas placé de balle dans son propre révolver. Encore sous le choc, la sueur perlant à vos tempes, vous vous levez avec précaution. Vos jambes vacillent tandis que vous contournez la table, sans jamais quitter l'assaillant des yeux. Mais il ne tente rien pour vous retenir. Dehors, l’air vif vous frappe au visage : vous êtes vivant. Comment est-ce possible? Vous avancez vers votre véhicule. Le complice, lui, grimpe dans l’autocar et manœuvre en marche arrière, libérant l’entrée du tunnel. Bientôt, le moteur résonne dans l’obscurité du tunnel, prélude à la route sinueuse qui vous attend à travers le canyon.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Next...", "next": "2" }
+    { "label": "Next...", "next": "196" }
   ]
 }

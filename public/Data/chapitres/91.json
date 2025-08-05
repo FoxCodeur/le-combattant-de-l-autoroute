@@ -5,6 +5,6 @@
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez prendre a gauche et vous diriger vers l'est...", "next": "230" },
-    { "label": "Si vous preferez continuer dans la même direction...", "next": "301" }
+    { "label": "Si vous preferez continuer dans la meme direction...", "next": "301" }
   ]
 }

@@ -1,7 +1,18 @@
 {
   "id": "364",
   "title": "Chapitre 364",
-  "text": "Quelques kilomètres plus loin, le moteur commence à avoir des ratés. Finalement, il s'emballe dans une dernière secousse puis il s'arrête définitivement. Le moment que vous redoutiez tant est arrivé : vous n'avez plus d'essence ! Et aucune maison ni aucun signe de vie aux alentours ! Vous vous rendez compte que votre mission est terminée. Vous avez échoué et il ne vous reste plus qu'à essayer de gagner **Waco** à pied et, de là, peut-être, rejoindre **HollyFrontier** une nouvelle fois.",
+  "text": "Il y a quelque minutes vous avez croisé plusieurs véhicules abandonnés, peut être que l'un d'eux contient encore de l'essence. Il y a peu d'espoir en vérité, mais vous n'avez pas le choix.",
   "image": "/images/chap1.jpg",
-  "choices": []
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal à votre score de Chance, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "395" },
+    { "label": "Test echoue...", "next": "394" }
+  ]
 }

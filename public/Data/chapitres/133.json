@@ -1,7 +1,7 @@
 {
   "id": "133",
   "title": "Chapitre 133",
-  "text": "Vous n'arrivez plus à contrôler la vitesse de l'Interceptor et vous venez vous écraser contre le camion. Jetez deux dés et déduisez leur montant du total de BLINDAGE de votre voiture.",
+  "text": "Vous n'arrivez plus à contrôler la vitesse de l'Interceptor et vous venez vous écraser contre le camion. [danger]Jetez deux dés et déduisez leur montant du total de BLINDAGE de votre voiture.[/danger]",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

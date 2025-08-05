@@ -1,7 +1,7 @@
 {
   "id": "243",
   "title": "Chapitre 243",
-  "text": "Sur le côté droit de la route, vous apercevez une voiture de police abandonnée.",
+  "text": "Cela ne fait pas cinq minutes que vous êtes sur la route et sur le côté droit de la route, vous apercevez une voiture de police abandonnée.",
   "image": "/images/chapter243.webp",
   "choices": [
     { "label": "Si vous desirez vous arreter pour voir s'il y a quelque chose qui puisse vous etre utile a l'interieur...", "next": "109" },

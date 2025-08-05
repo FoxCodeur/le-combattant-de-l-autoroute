@@ -4,13 +4,24 @@
   "text": "Les kilomètres défilent et la jauge d'essence indique que le réservoir est à nouveau presque vide.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous disposez d'un jerricane plein d'essence...",
-     "next": "180",
+    {
+      "label": "Si vous disposez d'un jerricane plein d'essence...",
+      "next": "180",
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": true
+      },
       "modificateursNarratifs": {
         "bidon_Essence": -1
       }
     },
-    { "label": "Si vous avez un bidon d'essence vide...", "next": "364" },
-    { "label": "Si vous n'avez pas pu vous procurer un bidon d'essence recemment...", "next": "364" }
+    {
+      "label": "Si vous n'avez pas pu vous procurer un bidon d'essence recemment...",
+      "next": "364",
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": false
+      }
+    }
   ]
 }

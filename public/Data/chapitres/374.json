@@ -15,14 +15,13 @@
     },
     "ennemis": [
       {
-        "nom": "CHIEN SAUVAGE",
-        "puissance": 7,
-        "blindage": 5,
-        "image": "/images/ennemis/gangster.jpg"
+        "nom": "COYOTTE",
+        "habilete": 7,
+        "endurance": 5,
+        "image": "/images/ch63Coyotte.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "89"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

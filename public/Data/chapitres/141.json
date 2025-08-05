@@ -3,6 +3,10 @@
   "title": "Chapitre 141",
   "text": "Vous allez vous étendre à l'ombre tandis que Peter s'attaque aux transformations de l'Interceptor. Dans une demi-somnolence, vous l'entendez cogner et taper, tout en sifflotant gaiement. Deux heures plus tard, il rabat le capot blindé et vous annonce : **« C'est bon, la voilà prête à repartir ! »** Après avoir comme convenu, **donné à Peter les 100 Crédits et les deux unités de médicaments**, vous mettez le contact et vous vous éloignez en accélérant à fond. Même à grande vitesse, vous sentez que le moteur a encore de la reprise et vous souriez avec satisfaction : Peter a fait du bon travail ! [success]Ajoutez 1 point de CHANCE à votre total.[/success]",
   "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "surcompresseur": 1,
+    "puissance_De_Feu": 1
+  },
   "choices": [
     { "label": "Next...", "next": "88" }
   ]

@@ -7,13 +7,21 @@
     {
       "label": "Si vous avez une roue de secours...",
       "next": "223",
+      "condition": {
+        "item": "roue_De_Secours",
+        "hasItem": true
+      },
       "modificateursNarratifs": {
         "roue_De_Secours": -1
       }
     },
     {
       "label": "Sinon...",
-      "next": "343"
+      "next": "343",
+      "condition": {
+        "item": "roue_De_Secours",
+        "hasItem": false
+      }
     }
   ]
 }

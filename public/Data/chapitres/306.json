@@ -4,7 +4,8 @@
   "text": "Vous placez un bidon vide sous le réservoir du camion et vous les reliez par un tuyau en plastique. Vous aspirez un peu d'air pour amorcer l'écoulement de l'essence puis vous siphonnez tout le contenu du réservoir. [success]Ajoutez 1 point à votre total de CHANCE.[/success] Vous avez presque rempli votre bidon et vous versez son contenu dans le réservoir de l'Interceptor.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
-    "chance": 1
+    "chance": 1,
+    "bidon_Essence": 1
   },
   "choices": [
     { "label": "Next...", "next": "118" }

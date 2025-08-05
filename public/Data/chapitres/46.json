@@ -7,13 +7,21 @@
     {
       "label": "Si vous disposez d'un jerricane d'essence plein...",
       "next": "310",
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": true
+      },
       "modificateursNarratifs": {
         "bidon_Essence": -1
       }
     },
     {
       "label": "Si vous n'avez pas pu faire remplir votre jerricane recemment...",
-      "next": "364"
+      "next": "364",
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": false
+      }
     }
   ]
 }

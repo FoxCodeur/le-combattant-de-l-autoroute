@@ -7,13 +7,21 @@
     {
       "label": "Si vous avez emporte un bidon d'essence au cours de votre voyage",
       "next": "323",
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": true
+      },
       "modificateursNarratifs": {
         "bidon_Essence": -1
       }
     },
     {
       "label": "Sinon...",
-      "next": "364"
+      "next": "364",
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": false
+      }
     }
   ]
 }

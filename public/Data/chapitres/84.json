@@ -1,7 +1,7 @@
 {
   "id": "84",
   "title": "Chapitre 84",
-  "text": "Vous ignorez que la chaleur et l'obscurité qui régnent dans la remise font de celle-ci le repaire favori des tarentules à dos rouge ! Alors que vous vous tournez d'un côté et de l'autre dans un sommeil agité, vous frôlez de la main un de ces redoutables insectes qui vous mord aussitôt, répandant un venin virulent dans vos veines. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE.",
+  "text": "Vous ignorez que la chaleur et l'obscurité qui régnent dans la remise font de celle-ci le repaire favori des tarentules à dos rouge ! Alors que vous vous tournez d'un côté et de l'autre dans un sommeil agité, vous frôlez de la main un de ces redoutables insectes qui vous mord aussitôt, répandant un venin virulent dans vos veines. [danger]Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE.[/danger]",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -12,6 +12,6 @@
     }
   },
   "choices": [
-    { "label": "Si vous êtes toujours en vie, rendez-vous au", "next": "258" }
+    { "label": "Si vous etes toujours en vie...", "next": "258" }
   ]
 }

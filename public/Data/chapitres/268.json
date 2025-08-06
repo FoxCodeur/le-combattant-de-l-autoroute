@@ -1,7 +1,7 @@
 {
   "id": "268",
   "title": "Chapitre 268",
-  "text": "Heureusement, le moteur n'a pas été touché par l'explosion et il démarre au quart de tour. Vous repartez aussitôt, heureux de vous en être sorti indemne",
+  "text": "Heureusement, le moteur n'a pas été touché par l'explosion et il démarre au quart de tour. Vous repartez aussitôt, heureux de vous en être sorti indemne.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "303" }

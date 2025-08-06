@@ -1,7 +1,7 @@
 {
   "id": "223",
   "title": "Chapitre 223",
-  "text": "Vous soulevez la voiture à l'aide d'un cric puis vous mettez la roue de secours. Quelques instants plus tard, vous roulez vers l'est, essayant d'éviter les pierres les plus grosses et les plus tranchantes. Pendant une heure, vous conduisez sur ce terrain accidenté jusqu'à ce que vous arriviez finalement à une route orientée nord-sud. Vous tournez à droite, content de conduire à nouveau dans de bonnes conditions. Peu après, vous dépassez un semi-remorque qui semble avoir été garé depuis peu de temps. Si vous souhaitez vous arrêter et examiner le camion",
+  "text": "Vous soulevez la voiture à l'aide d'un cric puis vous mettez la roue de secours. Quelques instants plus tard, vous roulez vers l'est, essayant d'éviter les pierres les plus grosses et les plus tranchantes. Pendant une heure, vous conduisez sur ce terrain accidenté jusqu'à ce que vous arriviez finalement à une route orientée nord-sud. Vous tournez à droite, content de conduire à nouveau dans de bonnes conditions. Peu après, vous dépassez un semi-remorque qui semble avoir été garé depuis peu de temps.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous souhaitez vous arreter et examiner le camion...", "next": "104" },

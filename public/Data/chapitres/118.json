@@ -9,10 +9,14 @@
       "next": "99",
       "modificateursNarratifs": {
         "bidon_Essence": -1
+      },
+      "condition": {
+        "item": "bidon_Essence",
+        "hasItem": true
       }
     },
     {
-      "label": "Si vous etes e sec...",
+      "label": "Si vous etes à sec...",
       "next": "364"
     }
   ]

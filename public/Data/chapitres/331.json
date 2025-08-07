@@ -21,12 +21,11 @@
         "blindage": 14,
         "image": "/images/ch331Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
-        "next": "07"
+        "next": "7"
       },
       "failure": {
         "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
@@ -35,3 +34,4 @@
       }
     }
   }
+}

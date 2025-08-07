@@ -1,7 +1,7 @@
 {
   "id": "113",
   "title": "Chapitre 113",
-  "text": "Vous tirez sans perdre une seconde sur le véhicule qui s'avance vers vous et vous réussissez à faire voler ses deux phares en éclats. Vous dites à Ambre de profiter de l'obscurité pour courir vers l'Interceptor. Vous entendez les occupants du véhicule ennemi s'invectiver mutuellement tandis qu'ils cherchent à mettre la main sur les ampoules de rechange. Pendant ce temps, vous arrivez près de l'Interceptor et vous sautez à l'intérieur au moment même où vos adversaires font irruption",
+  "text": "Vous tirez sans perdre une seconde sur le véhicule qui s'avance vers vous et vous réussissez à faire voler ses deux phares en éclats. Vous dites à votre coéquipière de profiter de l'obscurité pour courir vers l'Interceptor. Vous entendez les occupants du véhicule ennemi s'insulter mutuellement tandis qu'ils cherchent à mettre la main sur les ampoules de rechange. Pendant ce temps, vous parvenez près de l'Interceptor et sautez à l'intérieur au moment même où vos adversaires font irruption.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "158" }

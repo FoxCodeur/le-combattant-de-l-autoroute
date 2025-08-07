@@ -1,15 +1,25 @@
 {
   "id": "339",
   "title": "Chapitre 339",
-  "text": "Vous rampez jusqu'au portail et vous vous glissez subrepticement à l'intérieur du camp. Ambre passe de voiture en voiture et pose des mines-ventouses sous leurs blocs-moteurs. Lorsqu'elle a terminé, elle vous fait signe de vous éloigner. Vous dévalez la colline, courbé en deux, puis quand vous constatez que vous êtes hors de vue, vous vous relevez et vous continuez à courir. Tout à coup, les explosions commencent. Vous en comptez sept en tout. « Une des mines avait certainement un fusible déficient », dit Ambre en tentant de reprendre son souffle, tandis que vous vous précipitez à toutes jambes vers l'Interceptor. Vous entendez le bruit d'un moteur qui démarre et vous apercevez deux faisceaux de lumière s'éloigner des flammes qui s'élèvent des carcasses incendiées. Les Chiens de la Mort ont bien l'intention de poursuivre leurs assaillants.",
+  "text": "Vous rampez jusqu'au portail et vous vous glissez subrepticement à l'intérieur du camp. **Jaxxie** quant à elle slalome de voiture en voiture et pose des mines-ventouses sous leurs blocs-moteurs. Une fois ceci terminé, elle vous fait signe de vous éloigner. Vous dévalez la colline, courbé en deux, puis quand vous constatez que vous êtes hors de vue, vous vous relevez et continuez à courir. Tout à coup, les explosions retentisssent. Vous en comptez sept en tout. « Une des mines avait certainement un fusible déficient », dit votre coéquipière en tentant de reprendre son souffle, tandis que vous vous précipitez à toutes jambes vers l'Interceptor. Vous entendez le bruit d'un moteur qui démarre et vous apercevez deux faisceaux de lumière s'éloigner des flammes qui s'élèvent des carcasses incendiées. Les **Mutilateurs** ont bien l'intention de vous faire payer cet affront.",
   "image": "/images/chap1.jpg",
   "choices": [
     {
-      "label": "Next...",
-      "next": {
-        "condition": "ENDURANCE >= 10",
-        "success": "107",
-        "failure": "326"
+      "label": "Si votre ENDURANCE est superieure ou egale a 10...",
+      "next": "107",
+      "condition": {
+        "stat": "endurance",
+        "operator": ">=",
+        "value": 10
+      }
+    },
+    {
+      "label": "Si votre ENDURANCE est inferieure a 10...",
+      "next": "326",
+      "condition": {
+        "stat": "endurance",
+        "operator": "<",
+        "value": 10
       }
     }
   ]

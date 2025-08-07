@@ -16,7 +16,7 @@
       "label": "Si vous n'en avez pas...",
       "next": "214",
       "condition": {
-        "item": "poing_americain",
+        "item": "coup_De_Poing_Americain",
         "hasItem": false
       }
     }

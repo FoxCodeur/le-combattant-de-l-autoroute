@@ -1,7 +1,7 @@
 {
   "id": "125",
   "title": "Chapitre 125",
-  "text": "Vous vous élancez et vous sautez sur la sentinelle. Malgré la pénombre qui vous environne, vous parvenez à discerner la stupeur qui se dessine soudain sur son visage, et vous bénéficiez de l'effet de surprise pour réduire l'homme au silence avant qu'il ne donne l'alarme. Jetez deux dés.",
+  "text": "Vous vous élancez sur la sentinelle. Malgré la pénombre qui vous environne, vous parvenez à discerner la stupeur qui se dessine soudain sur son visage, et vous bénéficiez de l'effet de surprise pour réduire l'homme au silence avant qu'il ne donne l'alarme. Il va falloir faire vite.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,

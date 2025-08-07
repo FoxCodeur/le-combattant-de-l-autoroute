@@ -15,7 +15,9 @@ import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
 import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import VehiculeModal from "../../components/VehiculeModal/VehiculeModal";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
-import RaceGame358 from "../../components/RaceGame358/RaceGame358"; // AJOUT ICI
+import RaceGame358 from "../../components/RaceGame358/RaceGame358";
+import { isChoiceAvailable } from "../../utils/choiceConditions"; // <--- IMPORT DU HELPER
+
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
@@ -216,54 +218,7 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
-  // Modification : vérifie partout (inventaire, équipement, accessoires, interceptor)
-  const isChoiceAvailable = (choice) => {
-    if (!choice.condition) return true;
-
-    if (choice.condition.item) {
-      const normalized = (str) => str.replace(/_/g, "").toLowerCase();
-      let count = 0;
-
-      // Liste des propriétés à explorer
-      const containers = [
-        "inventaire",
-        "équipement",
-        "accessoires",
-        "interceptor",
-      ];
-      containers.forEach((container) => {
-        if (characterData?.[container]) {
-          const obj = characterData[container];
-          if (Array.isArray(obj)) {
-            obj.forEach((item) => {
-              if (typeof item === "string") {
-                if (normalized(item) === normalized(choice.condition.item))
-                  count++;
-              } else if (
-                item.nom &&
-                normalized(item.nom) === normalized(choice.condition.item)
-              ) {
-                count += item.quantite ? item.quantite : 1;
-              }
-            });
-          } else if (typeof obj === "object") {
-            Object.entries(obj).forEach(([key, value]) => {
-              if (normalized(key) === normalized(choice.condition.item)) {
-                count += value;
-              }
-            });
-          }
-        }
-      });
-
-      const hasItem = count > 0;
-      return choice.condition.hasItem ? hasItem : !hasItem;
-    }
-
-    return true;
-  };
-
-  // Rendu des choix : gère à la fois les tests de dés et les conditions d'inventaire
+  // Utilisation du helper pour savoir si un choix est dispo
   const renderChoices = () => {
     // Spécifique : pas de choix pour le chapitre 358 (mini-jeu à la place)
     if (id === "358") return null;
@@ -402,9 +357,9 @@ const Chapter = () => {
       ));
     }
 
-    // Cas général : choix avec/condition inventaire
+    // Cas général : choix avec/condition inventaire/stat
     return chapterData.choices.map((choice, index) => {
-      const available = isChoiceAvailable(choice);
+      const available = isChoiceAvailable(choice, characterData);
       return (
         <button
           key={index}
@@ -423,7 +378,7 @@ const Chapter = () => {
   const handleNewGame = () => {
     localStorage.removeItem("selectedCharacter");
     localStorage.removeItem("characterData");
-    window.location.href = "/"; // recharge la page et va sur Home
+    window.location.href = "/";
   };
 
   // Affichage spécial pour le chapitre 358 (mini-jeu course)
@@ -431,7 +386,6 @@ const Chapter = () => {
     return (
       <div className={`chapter chapter-${id}`}>
         <StatChangeNotification notifications={notifications} />
-
         <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
           {characterData ? (
             <CharacterSheet data={characterData} />
@@ -439,24 +393,20 @@ const Chapter = () => {
             <p>Chargement de la fiche personnage...</p>
           )}
         </Modal>
-
         <GameRulesModal
           isOpen={isRulesOpen}
           onClose={() => setIsRulesOpen(false)}
         />
-
         <GameMapModal
           isOpen={isMapOpen}
           onClose={() => setIsMapOpen(false)}
           mapImage={gameMap}
         />
-
         <VehiculeModal
           isOpen={isVehiculeOpen}
           onClose={() => setIsVehiculeOpen(false)}
           vehicleImage={interceptorImage}
         />
-
         <GameOverModal visible={isGameOver} />
 
         {loading && (
@@ -469,7 +419,6 @@ const Chapter = () => {
             <h1 className="chapter-title">
               {chapterData.title || "Titre manquant"}
             </h1>
-
             <div className="chapter-image-container">
               <img
                 src={chapterData.image ? chapterData.image : defaultPicture}
@@ -520,11 +469,9 @@ const Chapter = () => {
                 />
               </div>
             </div>
-
             <section className="chapter-text">
               {renderFormattedText(getPersonalizedText(chapterData.text))}
             </section>
-
             <CharacterSheetButton
               onClick={handleNewGame}
               label="Nouvelle partie"
@@ -533,7 +480,6 @@ const Chapter = () => {
               }
               aria-label="Commencer une nouvelle partie"
             />
-
             <RaceGame358 chapterData={chapterData} navigate={navigate} />
           </article>
         ) : (
@@ -544,7 +490,6 @@ const Chapter = () => {
             </p>
           )
         )}
-
         <ScrollToTopButton />
       </div>
     );
@@ -559,7 +504,6 @@ const Chapter = () => {
       style={{ position: "relative" }}
     >
       <StatChangeNotification notifications={notifications} />
-
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
         {characterData ? (
           <CharacterSheet data={characterData} />
@@ -567,24 +511,20 @@ const Chapter = () => {
           <p>Chargement de la fiche personnage...</p>
         )}
       </Modal>
-
       <GameRulesModal
         isOpen={isRulesOpen}
         onClose={() => setIsRulesOpen(false)}
       />
-
       <GameMapModal
         isOpen={isMapOpen}
         onClose={() => setIsMapOpen(false)}
         mapImage={gameMap}
       />
-
       <VehiculeModal
         isOpen={isVehiculeOpen}
         onClose={() => setIsVehiculeOpen(false)}
         vehicleImage={interceptorImage}
       />
-
       <GameOverModal visible={isGameOver} />
 
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
@@ -606,7 +546,6 @@ const Chapter = () => {
           <h1 className="chapter-title">
             {chapterData.title || "Titre manquant"}
           </h1>
-
           <div className="chapter-image-container">
             <img
               src={chapterData.image ? chapterData.image : defaultPicture}
@@ -652,20 +591,17 @@ const Chapter = () => {
               />
             </div>
           </div>
-
           <section
             className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
           >
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
-
           <CharacterSheetButton
             onClick={handleNewGame}
             label="Nouvelle partie"
             icon={<GiCharacter size={22} style={{ verticalAlign: "middle" }} />}
             aria-label="Commencer une nouvelle partie"
           />
-
           {chapterData.combat && (
             <Combat
               combatData={chapterData.combat}
@@ -682,7 +618,6 @@ const Chapter = () => {
               }}
             />
           )}
-
           {chapterData.diceRoll?.required && (
             <section className="chapter-dice-test">
               {chapterData.testHabilete?.description && (
@@ -707,7 +642,6 @@ const Chapter = () => {
               )}
             </section>
           )}
-
           <nav className="chapter-choices" aria-label="Choix disponibles">
             {renderChoices()}
           </nav>
@@ -720,7 +654,6 @@ const Chapter = () => {
           </p>
         )
       )}
-
       <ScrollToTopButton />
     </div>
   );

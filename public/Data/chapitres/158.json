@@ -1,7 +1,7 @@
 {
   "id": "158",
   "title": "Chapitre 158",
-  "text": "Vous faites démarrer l'Interceptor et vous effectuez une manoeuvre pour faire face à vos agresseurs. Vos phares éclairent alors un pick-up customisé dont la carosserie est recouverte de plaques d'acier et dont le pare-chocs est muni d'un éperon devant la calandre. La gueule des mitrailleuses dissimulées de part et d'autre du pare-chocs se met soudain à cracher des flammes tandis que le conducteur de l'engin ouvre le feu sur vous.",
+  "text": "Vous faites démarrer l'Interceptor et effectuez une manoeuvre pour faire face à vos agresseurs. Vos phares éclairent alors un pick-up customisé dont la carosserie est recouverte de plaques d'acier avec un pare-chocs muni d'un éperon devant la calandre. La gueule des mitrailleuses dissimulées de part et d'autre du pare-chocs se met soudain à cracher des flammes tandis que le conducteur de l'engin ouvre le feu sur vous.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "motorisé",
@@ -20,9 +20,8 @@
         "blindage": 19,
         "image": "/images/chapter158Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "67"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

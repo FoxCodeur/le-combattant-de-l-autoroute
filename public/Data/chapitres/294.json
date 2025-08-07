@@ -16,21 +16,21 @@
     "ennemis": [
       {
         "nom": "FORD JAUNE",
-        "puissanceDeFeu": 8,
+        "puissance": 8,
         "blindage": 16,
-        "image": "/images/ennemis/ford-jaune.jpg"
+        "image": "/images/ch63Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
-    "success": {
-      "text": "Vous sortez vainqueur du duel.",
-      "next": "334"
-    },
-    "failure": {
-      "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
-      "next": null,
-      "isGameOver": true
+    ],
+    "issue": {
+      "success": {
+        "text": "Vous sortez vainqueur du duel.",
+        "next": "334"
+      },
+      "failure": {
+        "text": "Vous avez succombé à vos blessures. Fin de l'aventure.",
+        "next": null,
+        "isGameOver": true
+      }
     }
   }
 }

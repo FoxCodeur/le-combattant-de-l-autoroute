@@ -1,7 +1,7 @@
 {
   "id": "92",
   "title": "Chapitre 92",
-  "text": "Vous roulez pendant un bon moment et vous ne croisez qu'un seul embranchement sur la gauche — une piste allant vers le nord, ce qui ne vous convient nullement. Finalement, vous arrivez à une bifurcation qui vous permet de prendre à droite, pour filer plein sud vers **HollyFrontier.**",
+  "text": "Vous roulez un long moment sans rencontrer âme qui vive, à l’exception d’un unique embranchement sur la gauche : une piste qui s’enfonce vers le nord, direction qui ne vous intéresse guère. Finalement, vous atteignez une bifurcation qui vous offre la possibilité de tourner à droite et de filer plein sud en direction de **HollyFrontier**.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "272" }

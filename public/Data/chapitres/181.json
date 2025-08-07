@@ -1,7 +1,7 @@
 {
   "id": "181",
   "title": "Chapitre 181",
-  "text": "Vous regardez avec satisfaction les roues avant de la voiture blindée passer sur les pointes que vous venez de semer. Les multiples crevaisons contraignent votre adversaire à freiner à mort. Vous vous éloignez rapidement en laissant derrière vous la voiture ennemie",
+  "text": "Vous scrutez avec satisfaction dans le rétroviseur les roues avant de la voiture blindée passer sur les pointes que vous venez de semer. Les multiples crevaisons contraignent votre adversaire à freiner à mort. Vous vous éloignez dans un vrombissement, en laissant derrière vous la voiture ennemie à son sort.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "47" }

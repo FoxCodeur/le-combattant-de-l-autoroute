@@ -1,7 +1,7 @@
 {
   "id": "27",
   "title": "Chapitre 27",
-  "text": "Vous enfoncez violemment la pédale de freins et l'Interceptor s'immobilise presque dans un crissement de pneus. La Ford fait une embardée pour vous éviter et prend la tête. Puisque vous n'avez pas le droit d'utiliser les mitrailleuses avant de votre voiture, vous décidez de percuter la Ford à grands coups de pare-chocs.",
+  "text": "Vous écrasez la pédale de frein, projetant l’Interceptor dans un crissement de pneus jusqu’à l’arrêt quasi complet. La Ford, prise de court, dévie brusquement pour vous éviter et s’empare de la tête. Puisque l’usage des mitrailleuses frontales vous est interdit, il faut opter pour une solution plus directe : percuter la Ford à coups de pare-chocs.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "139" }

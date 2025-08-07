@@ -1,7 +1,7 @@
 {
   "id": "354",
   "title": "Chapitre 354",
-  "text": "L’Interceptor part sur la gauche, mais vous contre-braquez et vous parvenez à maintenir votre voiture dans sa trajectoire. Vous devez maintenant penser rapidement à la tactique que vous allez adopter.",
+  "text": "L’Interceptor dévie soudain vers la gauche, mais d’un vif contre-braquage vous parvenez à garder le véhicule sur sa trajectoire. Il vous faut maintenant réagir sans tarder et choisir la meilleure tactique à adopter.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Allez-vous accelerer...", "next": "183" },

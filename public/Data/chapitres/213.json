@@ -1,7 +1,7 @@
 {
   "id": "213",
   "title": "Chapitre 213",
-  "text": "L'huile s'infiltre dans la terre de la route et reste sans effet sur la voiture qui vous suit.**Vous perdez 1 point de CHANCE**. Le conducteur de la Ford réplique en lançant une grenade qui atterrit sur la route juste devant vous. Le projectile explose sous le châssis blindé qui étouffe le bruit de la déflagration. Lancez deux dés et déduisez le chiffre obtenu de votre total BLINDAGE.",
+  "text": "L'huile s'infiltre dans la terre de la route et reste sans effet sur la voiture qui vous suit.**Vous perdez 1 point de CHANCE**. Le conducteur de la Ford réplique en lançant une grenade qui atterrit sur la route juste devant vous. Le projectile explose sous le châssis blindé qui étouffe le bruit de la déflagration. [danger]Lancez deux dés et déduisez le chiffre obtenu de votre total BLINDAGE.[/danger]",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "chance": -1
@@ -15,6 +15,6 @@
     }
   },
   "choices": [
-    { "label": "Si vous etes encore vivant après l'explosion...", "next": "294" }
+    { "label": "Si vous etes encore vivant apres l'explosion...", "next": "294" }
   ]
 }

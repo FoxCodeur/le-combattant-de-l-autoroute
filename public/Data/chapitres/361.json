@@ -1,9 +1,9 @@
 {
   "id": "361",
   "title": "Chapitre 361",
-  "text": "Tu te réveilles dans une pièce obscure. Une voix résonne...",
+  "text": "Vous appuyez sur le bouton du pulvérisateur, et aussitôt une flaque d'huile s'étale sur le sol. Le side-car arrive à grande vitesse, dérape, sort de la route, roule dans le sable puis disparaît de votre champ de vision, tandis que vous poursuivez votre chemin.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "96" }
+    { "label": "Next...", "next": "96" }
   ]
 }

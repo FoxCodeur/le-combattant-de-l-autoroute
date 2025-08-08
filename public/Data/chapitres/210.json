@@ -1,10 +1,9 @@
 {
   "id": "210",
   "title": "Chapitre 210",
-  "text": "Pour déterminer qui de vous ou de votre adversaire sortira vainqueur de ce combat, lancez un dé alternativement pour la Type-E puis pour l'Interceptor. L’Interceptor étant munie d'un surcompresseur, ajoutez 1 au premier chiffre que vous obtiendrez. Continuez à jeter le dé jusqu'à ce qu'une des deux voitures atteigne un total de 24 qui lui permettra de franchir en vainqueur la ligne d'arrivée.",
+  "text": "Maintenant, vous êtes paré pour la course.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous gagnez la course...", "next": "54" },
-    { "label": "Si vous perdez...", "next": "322" }
+    { "label": "Next...", "next": "358" }
   ]
 }

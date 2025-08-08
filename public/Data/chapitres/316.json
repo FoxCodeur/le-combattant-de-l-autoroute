@@ -1,7 +1,7 @@
 {
   "id": "316",
   "title": "Chapitre 316",
-  "text": "En silence, les Chiens de la Mort transportent leur maître vers le break et ils déposent son corps sur la banquette arrière. Lorsque les deux véhicules sont enfin dégagés le soleil est déjà haut à l'horizon, vous baignant de sa douce lumière rouge. Vous vous sentez tout à coup optimiste et vous ne doutez plus du succès de votre mission. Vous vous mettez en route vers le sud, laissant derrière vous les Chiens de la Mort",
+  "text": "Sans un mot, les sbires transportent leur chef jusqu’au break et l’installent délicatement sur la banquette arrière. Lorsque les deux voitures ont enfin quitté les lieux, le soleil brille déjà haut dans le ciel, inondant la scène de sa lumière rougeoyante. Un élan d’optimisme vous envahit : vous ne doutez plus désormais de la réussite de votre mission. Sans vous retourner, vous prenez la route vers le sud, abandonnant le gang à son sort.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "90" }

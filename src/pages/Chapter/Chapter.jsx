@@ -289,50 +289,11 @@ const Chapter = () => {
       ) : null;
     }
 
-    // Cas test de dés avec choix numérotés
+    // Cas test de dés avec choix numérotés (DÉSACTIVÉ)
     if (
-      chapterData.diceRoll?.required &&
-      !chapterData.testChance?.required &&
-      !chapterData.testHabilete?.required &&
-      chapterData.choices.length > 1 &&
-      chapterData.choices.some((choice) => /\d/.test(choice.label))
+      false // Désactive la détection automatique sur présence de chiffre dans le label
     ) {
-      if (diceTotal === null) {
-        return (
-          <>
-            {chapterData.choices.map((choice, index) => (
-              <button
-                key={index}
-                className="chapter-choice"
-                disabled
-                style={{ opacity: 0.6, cursor: "not-allowed" }}
-              >
-                {choice.label}
-              </button>
-            ))}
-            <p>Veuillez lancer le dé pour continuer.</p>
-          </>
-        );
-      }
-      return (
-        <>
-          {chapterData.choices.map((choice, index) => {
-            const numbers = choice.label.match(/\d+/g)?.map(Number) || [];
-            const isMatch = numbers.includes(diceTotal);
-            return (
-              <button
-                key={index}
-                className="chapter-choice"
-                disabled={!isMatch}
-                style={!isMatch ? { opacity: 0.6, cursor: "not-allowed" } : {}}
-                onClick={isMatch ? () => handleChoiceClick(choice) : undefined}
-              >
-                {choice.label}
-              </button>
-            );
-          })}
-        </>
-      );
+      // ... code spécial dés/numéros ...
     }
 
     // Cas test de dés avec un seul choix

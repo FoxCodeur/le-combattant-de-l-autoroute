@@ -4,7 +4,7 @@
   "text": "Soudain Jaxxie pousse un cri d'alerte et elle indique du doigt une moto avec deux occupants qui roule à vive allure sur la route. **« Ce sont eux, Les Mutilateurs !** s'écrie-t-elle. **Les mêmes qui m'ont attaquée l'autre jour »** La Jeep a une mitrailleuse à double canon montée en tourelle à l'arrière et le mitrailleur ouvre le feu dès que vous êtes à sa portée.",
   "image": "",
   "combat": {
-    "type": "motorise",
+    "type": "motorisé",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2

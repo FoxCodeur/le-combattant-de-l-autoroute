@@ -5,10 +5,14 @@
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
-    "numberOfDice": 1
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre chance. Lancez un dé : si le résultat est inférieur ou égal à votre score de Chance, vous réussissez le test. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Avancer vers la lumière", "next": "132" },
-    { "label": "Fouiller la pièce", "next": "205" }
+    { "label": "Test reussi...", "next": "132" },
+    { "label": "Test echoue...", "next": "205" }
   ]
 }

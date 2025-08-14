@@ -1,7 +1,7 @@
 {
   "id": "335",
   "title": "Chapitre 335",
-  "text": "Il fait nuit noire, et vous avez besoin de votre lampe électrique pour voir où vous allez. Tentez votre Chance.",
+  "text": "L'obscurité est totale : vous sortez la lampe électrique et l'allumez pour éclairer votre chemin.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -12,7 +12,7 @@
     "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Test reussi...", "next": "05" },
+    { "label": "Test reussi...", "next": "5" },
     { "label": "Test echoue", "next": "365" }
   ]
 }

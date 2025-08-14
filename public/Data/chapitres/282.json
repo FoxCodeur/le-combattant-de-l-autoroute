@@ -4,7 +4,7 @@
   "text": "Le side-car fait des zigzags et il est une cible difficile à atteindre.",
   "image": "/images/chap1.jpg",
   "combat": {
-    "type": "motorise",
+    "type": "motorisé",
     "diceRoll": {
       "required": true,
       "numberOfDice": 2
@@ -18,7 +18,7 @@
         "nom": "SIDE-CAR",
         "puissance": 9,
         "blindage": 8,
-        "image": "/images/defaultPicture.webp"
+        "image": "/images/ch282Ennemi.webp"
       }
     ],
     "issue": {

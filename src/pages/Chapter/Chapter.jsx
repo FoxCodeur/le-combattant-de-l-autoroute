@@ -220,10 +220,37 @@ const Chapter = () => {
   const isChoiceAvailable = (choice) => {
     if (!choice.condition) return true;
 
+    // ----- Ajout : gestion des conditions sur les stats -----
+    if (choice.condition.stat) {
+      const statName = choice.condition.stat;
+      // On prend la stat dans caractéristiques ou à la racine de characterData
+      const stats = characterData?.caractéristiques ?? characterData ?? {};
+      const value = Number(stats[statName]);
+      const target = Number(choice.condition.value);
+      const op = choice.condition.operator;
+      switch (op) {
+        case ">":
+          return value > target;
+        case ">=":
+          return value >= target;
+        case "<":
+          return value < target;
+        case "<=":
+          return value <= target;
+        case "==":
+        case "=":
+          return value === target;
+        case "!=":
+          return value !== target;
+        default:
+          return false;
+      }
+    }
+    // ----- Fin ajout -----
+
     if (choice.condition.item) {
       const normalized = (str) => str.replace(/_/g, "").toLowerCase();
       let count = 0;
-
       // Liste des propriétés à explorer
       const containers = [
         "inventaire",

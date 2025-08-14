@@ -68,14 +68,72 @@
     font-weight: 400;
     color: #333;
     padding: 2rem;
-    line-height: 1.6;
+    line-height: 1.7;
     text-align: justify;
     border: 2px solid #000;
     box-shadow: 2px 2px 0 #ffcc00, 4px 4px 0 #000;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     max-width: 700px;
     margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 
+    // Effet tâches de sang/huile, avec une tache supplémentaire large en haut à droite
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      pointer-events: none;
+      border-radius: 8px;
+      background:
+        /* Nouvelle tache large en haut à droite */ radial-gradient(
+          ellipse 180px 65px at 88% 7%,
+          rgba(120, 23, 23, 0.32) 0 110px,
+          rgba(120, 23, 23, 0.17) 111px 180px,
+          transparent 181px
+        ),
+        /* Sang (rouge foncé) */
+          radial-gradient(
+            circle at 18% 22%,
+            rgba(90, 16, 16, 0.3) 0 21px,
+            transparent 42px
+          ),
+        radial-gradient(
+          circle at 85% 40%,
+          rgba(120, 23, 23, 0.22) 0 16px,
+          transparent 32px
+        ),
+        radial-gradient(
+          circle at 60% 78%,
+          rgba(180, 38, 38, 0.13) 0 35px,
+          transparent 60px
+        ),
+        /* Huile (noir/bleu foncé) */
+          radial-gradient(
+            circle at 35% 58%,
+            rgba(24, 28, 36, 0.17) 0 24px,
+            transparent 50px
+          ),
+        radial-gradient(
+          circle at 74% 72%,
+          rgba(37, 44, 53, 0.16) 0 11px,
+          transparent 30px
+        ),
+        radial-gradient(
+          circle at 92% 90%,
+          rgba(44, 30, 35, 0.12) 0 17px,
+          transparent 31px
+        );
+      opacity: 0.35;
+      mix-blend-mode: multiply;
+      filter: blur(0.6px);
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
     strong {
       font-weight: 700;
     }
@@ -133,7 +191,6 @@
     display: none !important;
   }
 
-  // Ajout de la classe chance-description
   .chance-description {
     @include test-description($chance-border, $chance-bg, $chance-shadow);
   }
@@ -142,7 +199,6 @@
     @include test-description($habilete-border, $habilete-bg, $habilete-shadow);
   }
 
-  // --- ALIGNEMENT BOUTONS FICHE/RÈGLES ---
   .chapter-btn-row {
     display: flex;
     flex-direction: row;
@@ -162,7 +218,6 @@
       justify-content: flex-start;
     }
   }
-  // ---------------------------------------
 
   // Responsive Design
   @media (max-width: 1024px) {
@@ -245,7 +300,6 @@
     }
   }
 
-  // Styles pour balises de texte important
   .highlight-text {
     font-weight: bold;
     color: #e95420;

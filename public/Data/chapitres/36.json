@@ -1,7 +1,7 @@
 {
   "id": "36",
   "title": "Chapitre 36",
-  "text": "Vous ne pouvez réprimer un hurlement de douleur lorsque le poignard vous transperce les côtes. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE",
+  "text": "Vous ne pouvez réprimer un hurlement de douleur lorsque le poignard vous transperce les côtes. Jetez un dé et déduisez le chiffre obtenu de votre total d'ENDURANCE.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
@@ -12,6 +12,6 @@
     }
   },
   "choices": [
-    { "label": "Si vous êtes encore en vie, rendez-vous au", "next": "368" }
+    { "label": "Si vous etes encore en vie...", "next": "368" }
   ]
 }

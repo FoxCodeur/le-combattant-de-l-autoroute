@@ -4,7 +4,7 @@
   "text": "Vous appuyez sur le bouton de commande du lance-roquettes. L'Interceptor est violemment secouée par le tir et, dans un éclair aveuglant, la roquette explose. Lorsque la fumée se dissipe, vous constatez qu'il ne reste plus rien du barrage. Soudain, vous entendez le vrombissement d'un moteur de moto que l'on fait démarrer et vous apercevez deux motards, armés et vêtus de cuir, surgir de derrière un buisson et s'élancer à toute vitesse sur la route à la hauteur du barrage. Le passager de la moto se retourne et tire en l'air pour vous intimider. Puis la moto disparaît.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous souhaitez poursuivre la moto, rendez-vous au", "next": "95" },
-    { "label": "Si vous preferez la laisser partir, rendez-vous au", "next": "309" }
+    { "label": "Si vous souhaitez poursuivre la moto...", "next": "95" },
+    { "label": "Si vous preferez la laisser partir...", "next": "309" }
   ]
 }

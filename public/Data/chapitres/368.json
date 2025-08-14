@@ -1,7 +1,7 @@
 {
   "id": "368",
   "title": "Chapitre 368",
-  "text": "Tandis que vous tirez votre poignard, l'assaillant sort un petit revolver de son étui, dissimulé sous son épaule. Il vous faut l'affronter.",
+  "text": "La stupeur vous envahit : en effet au moment où vous dégainez votre poignard, votre adversaire tire de son fourreau un katana, lame étincelante. Il n’y a plus d’échappatoire, vous allez devoir l’affronter.",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",
@@ -18,11 +18,10 @@
         "nom": "Pilleur de la Route",
         "habilete": 7,
         "endurance": 11,
-        "image": "/images/ennemis/bandit-rouge.jpg"
+        "image": "/images/ch368Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "64"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

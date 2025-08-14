@@ -1,14 +1,18 @@
 {
   "id": "345",
   "title": "Chapitre 345",
-  "text": "La flèche de l'arbalète passe juste au-dessus de votre tête, ce qui provoque la colère du pirate. Vous bondissez sur le toit de la remorque et vous courez vers l'homme avant qu'il ait le temps de recharger son arbalète. Lancez un dé et ajoutez le chiffre obtenu au total d'HABlLETÉ du pirate (qui est de 7 points).",
+  "text": "La flèche passe juste au-dessus de votre tête, ce qui provoque la colère de l'assaillant. Vous bondissez sur le toit de la remorque et vous courez vers lui avant qu'il ait le temps de recharger son arme.",
   "image": "/images/chap1.jpg",
   "diceRoll": {
     "required": true,
-    "numberOfDice": 1
+    "numberOfDice": 2
+  },
+  "testHabilete": {
+    "required": true,
+    "description": "Testez votre Habileté. Si le total des deux dés est inférieur ou égal à votre score, test réussi. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Si votre total d'HABlLETE est superieur ou egal a celui du ninja...", "next": "74" },
-    { "label": "sinon...", "next": "226" }
+    { "label": "Test reussi...", "next": "74" },
+    { "label": "Test échou...", "next": "226" }
   ]
 }

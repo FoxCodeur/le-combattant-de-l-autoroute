@@ -1,8 +1,8 @@
 {
   "id": "164",
   "title": "Chapitre 164",
-  "text": "Le bandit vous crie de sortir du camion et de vous préparer à dégainer. Vous sautez à terre et vous vous retrouvez nez à nez avec un homme à l'aspect terrifiant. Pointant son arbalète vers le sol, il pousse un rugissement de fureur afin de vous décontenancer, mais vous restez insensible à cette tactique d'intimidation. Vous lui dites de se tenir prêt à tirer. Il lève lentement un bras pour donner le signal de départ du duel.",
-  "image": "/images/chap1.jpg",
+  "text": "Le type hurle : **« Allez, sors du camion si t'as une paire de couilles ! »** Sans hésiter, vous sautez à terre, le cœur battant. Face à vous, un pillard du désert, les yeux injectés de rage. Il pointe son arbalète vers le sol, puis pousse un rugissement bestial, cherchant l'intimidation. Mais vous restez de marbre, plantant votre regard dans le sien. D’une voix sèche, vous déclamez : **« On y va quand tu veux. »** La tension est à son comble. Le duel va commencer.",
+  "image": "/images/chapter164.webp",
   "diceRoll": {
     "required": true,
     "numberOfDice": 2

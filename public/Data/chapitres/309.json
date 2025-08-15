@@ -1,10 +1,10 @@
 {
   "id": "309",
   "title": "Chapitre 309",
-  "text": "Vous regardez la moto s'éloigner à vive allure jusqu'à ce qu'elle disparaisse complètement. Vous attendez encore quelques minutes puis vous partez vers l'est à nouveau. Bientôt vous arrivez à un panneau indicateur signalant une piste en terre menant à une ville appelée Rocville.",
+  "text": "Vous regardez la moto s'éloigner à vive allure jusqu'à ce qu'elle disparaisse complètement. Vous attendez encore quelques minutes puis vous partez vers l'est à nouveau. Bientôt vous arrivez à un panneau indicateur signalant une piste en terre menant à une ville appelée **Rocville**.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez emprunter cette piste...", "next": "157" },
-    { "label": "Si vous preferez continuer à rouler vers l'est...", "next": "45" }
+    { "label": "Si vous preferez continuer a rouler vers l'est...", "next": "45" }
   ]
 }

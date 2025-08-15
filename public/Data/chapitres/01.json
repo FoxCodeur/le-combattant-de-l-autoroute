@@ -1,11 +1,8 @@
 {
   "id": "1",
   "title": "Chapitre 1",
-  "text": "Le premier détail qui vous interpelle, alors que vous roulez à vive allure, c’est la vitesse à laquelle tout s’est effondré. Jusqu’à présent, vous n’aviez jamais mesuré combien l’entretien constant des routes, des machines et des bâtiments était essentiel à la survie de la civilisation. Désormais, tout autour de vous, les structures s’effondrent, les carcasses rouillées de voitures abandonnées obstruent la chaussée dans un chaos sinistre, et l’herbe folle, laissée sans contrainte, engloutit peu à peu l’asphalte. Des meutes de chiens redevenus sauvages rôdent dans ce décor d’abandon. À une quinzaine de kilomètres de **Waco**, vous faites halte dans une bourgace fantôme et coupez le moteur. Le silence plane sur l’agglomération, seulement troublé par le jappement lointain d’un chien solitaire. L’envie de descendre explorer les lieux vous effleure, mais l’instinct de survie l’emporte : inutile de prendre un tel risque dans ce no man’s land. Vous vous apprêtez à repartir, prêt à laisser ce lieu derrière vous, quand soudain, une détonation retentit, déchirant le silence... ",
+  "text": "Le premier détail qui vous interpelle, alors que vous roulez à vive allure, c’est la vitesse à laquelle tout s’est effondré. Jusqu’à présent, vous n’aviez jamais mesuré combien l’entretien constant des routes, des machines et des bâtiments était essentiel à la survie de la civilisation.\n Désormais, tout autour de vous, les structures s’effondrent, les carcasses rouillées de voitures abandonnées obstruent la chaussée dans un chaos sinistre, et l’herbe folle, laissée sans contrainte, engloutit peu à peu l’asphalte. Des meutes de chiens redevenus sauvages rôdent dans ce décor d’abandon.\n À une quinzaine de kilomètres de **Waco**, vous faites halte dans une bourgace fantôme et coupez le moteur. Le silence plane sur l’agglomération, seulement troublé par le jappement lointain d’un chien solitaire.\n L’envie de descendre explorer les lieux vous effleure, mais l’instinct de survie l’emporte : inutile de prendre un tel risque dans ce no man’s land. Vous vous apprêtez à repartir, prêt à laisser ce lieu derrière vous, quand soudain, une détonation retentit, déchirant le silence... ",
   "image": "/images/FordFalcon.png",
-  "modificateursNarratifs": {
-    "endurance": 1
-  },
   "choices": [
     { "label": "Si vous desirez sortir de l'Interceptor pour essayer de savoir d'ou provient le tir...", "next": "126" },
     { "label": "Si vous preferez demarrer et quitter la ville immediatement...", "next": "34" }

@@ -1,8 +1,8 @@
 {
   "id": "271",
   "title": "Chapitre 271",
-  "text": "Vous vous enfoncez dans le désert, où les teintes du paysage virent peu à peu au brun rougeâtre. La route s’étire vers le sud, rectiligne comme une flèche, et seules quelques carcasses de voitures abandonnées jalonnent votre passage. Soudain, un détail familier attire votre attention : sur le bas-côté, une Interceptor renversée gît à moitié ensevelie dans la poussière. Le véhicule a manifestement quitté la chaussée avant de faire un tonneau, scellant le destin tragique de son pilote. Face à ce spectacle, vous ressentez un mélange de tristesse et de prudence, rappelé à la fragilité de votre propre périple à travers ces terres hostiles.",
-  "image": "/images/chap1.jpg",
+  "text": "Vous progressez dans l’immensité désertique, où les couleurs du sol se muent en nuances de brun et de rouge. La route file droit vers le sud, tendue à perte de vue, ponctuée à intervalles réguliers par quelques carcasses de véhicules abandonnés. Soudain, un élément familier surgit dans votre champ de vision : là, sur le bas-côté, une Interceptor repose. Tout indique qu’elle n'a pas servi depuis longtemps. Face à cette scène, un sentiment mêlé de tristesse et de méfiance vous envahit, rappelant la précarité de votre propre traversée dans ces contrées impitoyables.",
+  "image": "/images/chapter271.webp",
   "choices": [
     { "label": "Si vous souhaitez vous arreter pour voir s'il y a des pieces detachees qui pourrait vous interesser...", "next": "166" },
     { "label": "Si vous preferez poursuivre votre route...", "next": "13" }

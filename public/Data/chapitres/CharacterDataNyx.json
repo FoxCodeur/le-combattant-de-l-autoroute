@@ -5,7 +5,7 @@
   "sexe": "Femme",
   "caractéristiques": {
     "habilete": 11,
-    "endurance": 30,
+    "endurance": 24,
     "chance": 9
   },
   "équipement": {
@@ -22,7 +22,7 @@
     "magnum_Taurus": 0
   },
   "interceptor": {
-    "puissance_De_Feu": 10,
+    "puissance_De_Feu": 9,
     "blindage": 32,
     "roquette": 4,
     "clous": 3,

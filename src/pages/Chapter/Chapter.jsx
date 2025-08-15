@@ -15,7 +15,7 @@ import GameRulesModal from "../../components/GameRulesModal/GameRulesModal";
 import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import VehiculeModal from "../../components/VehiculeModal/VehiculeModal";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
-import RaceGame358 from "../../components/RaceGame358/RaceGame358"; // AJOUT ICI
+import RaceGame358 from "../../components/RaceGame358/RaceGame358";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
@@ -246,7 +246,6 @@ const Chapter = () => {
           return false;
       }
     }
-    // ----- Fin ajout -----
 
     if (choice.condition.item) {
       const normalized = (str) => str.replace(/_/g, "").toLowerCase();
@@ -484,7 +483,7 @@ const Chapter = () => {
           vehicleImage={interceptorImage}
         />
 
-        <GameOverModal visible={isGameOver} />
+        <GameOverModal visible={isGameOver} onNewGame={handleNewGame} />
 
         {loading && (
           <p className="loading-message">Chargement du chapitre...</p>
@@ -612,7 +611,7 @@ const Chapter = () => {
         vehicleImage={interceptorImage}
       />
 
-      <GameOverModal visible={isGameOver} />
+      <GameOverModal visible={isGameOver} onNewGame={handleNewGame} />
 
       {loading && <p className="loading-message">Chargement du chapitre...</p>}
       {error && <div className="error-message">Erreur : {error}</div>}

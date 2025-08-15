@@ -4,7 +4,7 @@
   "age": 44,
   "sexe": "Homme",
   "caractéristiques": {
-    "habilete": 10,
+    "habilete": 9,
     "endurance": 30,
     "chance": 8
   },
@@ -22,7 +22,7 @@
     "magnum_Taurus": 0
   },
   "interceptor": {
-    "puissance_De_Feu": 10,
+    "puissance_De_Feu": 9,
     "blindage": 32,
     "roquette": 4,
     "clous": 3,

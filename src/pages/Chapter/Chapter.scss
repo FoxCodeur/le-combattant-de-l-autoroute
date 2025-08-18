@@ -79,7 +79,6 @@
     position: relative;
     overflow: hidden;
 
-    // Effet tâches de sang/huile, avec une tache supplémentaire large en haut à droite
     &::before {
       content: "";
       position: absolute;
@@ -87,19 +86,17 @@
       inset: 0;
       pointer-events: none;
       border-radius: 8px;
-      background:
-        /* Nouvelle tache large en haut à droite */ radial-gradient(
+      background: radial-gradient(
           ellipse 180px 65px at 88% 7%,
           rgba(120, 23, 23, 0.32) 0 110px,
           rgba(120, 23, 23, 0.17) 111px 180px,
           transparent 181px
         ),
-        /* Sang (rouge foncé) */
-          radial-gradient(
-            circle at 18% 22%,
-            rgba(90, 16, 16, 0.3) 0 21px,
-            transparent 42px
-          ),
+        radial-gradient(
+          circle at 18% 22%,
+          rgba(90, 16, 16, 0.3) 0 21px,
+          transparent 42px
+        ),
         radial-gradient(
           circle at 85% 40%,
           rgba(120, 23, 23, 0.22) 0 16px,
@@ -110,12 +107,11 @@
           rgba(180, 38, 38, 0.13) 0 35px,
           transparent 60px
         ),
-        /* Huile (noir/bleu foncé) */
-          radial-gradient(
-            circle at 35% 58%,
-            rgba(24, 28, 36, 0.17) 0 24px,
-            transparent 50px
-          ),
+        radial-gradient(
+          circle at 35% 58%,
+          rgba(24, 28, 36, 0.17) 0 24px,
+          transparent 50px
+        ),
         radial-gradient(
           circle at 74% 72%,
           rgba(37, 44, 53, 0.16) 0 11px,
@@ -139,7 +135,6 @@
     }
   }
 
-  // Lettrine uniquement pour le chapitre 0
   &.chapter-0 {
     .chapter-text {
       p:first-of-type::first-letter {
@@ -186,7 +181,6 @@
     }
   }
 
-  // Masquer les boutons non valides (hasard pur)
   .chapter-choice.hidden {
     display: none !important;
   }
@@ -219,7 +213,69 @@
     }
   }
 
-  // Responsive Design
+  // ========================
+  // Ajout pour portrait sous ENDURANCE
+  .chapter-stats-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem; // espace entre stats/colonnes
+  }
+  .stat-with-portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chapter-health-portrait {
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .chapter-health-portrait::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    border-radius: 16px;
+    background: radial-gradient(
+      circle,
+      #fffbe2 0%,
+      #e5c094 40%,
+      transparent 85%
+    );
+    z-index: 0;
+    opacity: 0.65;
+    pointer-events: none;
+  }
+  .health-portrait-img {
+    width: 6rem;
+    height: auto;
+    border: 3px solid #36291e;
+    border-radius: 4px;
+    background: #e5c094;
+    box-shadow: 0 2px 8px rgba(60, 40, 25, 0.15);
+    image-rendering: pixelated;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  @keyframes subtle-glow {
+    0%,
+    100% {
+      box-shadow: 0 2px 8px rgba(60, 40, 25, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 12px 4px #ffe4a0, 0 8px 26px 6px rgba(60, 40, 25, 0.28);
+    }
+  }
+  // ========================
+
   @media (max-width: 1024px) {
     &-content {
       padding: 1.2rem;
@@ -234,6 +290,9 @@
 
     &-image {
       max-height: 40vh;
+    }
+    .chapter-stats-row {
+      gap: 1.2rem;
     }
   }
 
@@ -277,6 +336,16 @@
       width: 100%;
       box-sizing: border-box;
     }
+    .chapter-stats-row {
+      gap: 0.5rem;
+    }
+    .health-portrait-img {
+      width: 65px;
+    }
+    .chapter-health-portrait::before {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -297,6 +366,13 @@
     &-choice {
       padding: 0.7rem 1rem;
       font-size: 0.95rem;
+    }
+    .health-portrait-img {
+      width: 48px;
+    }
+    .chapter-health-portrait::before {
+      width: 58px;
+      height: 58px;
     }
   }
 

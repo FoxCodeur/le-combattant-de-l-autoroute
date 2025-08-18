@@ -22,6 +22,11 @@ import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
 import interceptorImage from "../../assets/images/interceptor falcon.webp";
 
+import phase1 from "../../assets/images/phase1.png";
+import phase2 from "../../assets/images/phase2.png";
+import phase3 from "../../assets/images/phase3.png";
+import phase4 from "../../assets/images/phase4.png";
+
 import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
 import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
@@ -217,14 +222,11 @@ const Chapter = () => {
     navigate(`/chapitre/${choice.next}`);
   };
 
-  // Modification : vérifie partout (inventaire, équipement, accessoires, interceptor)
   const isChoiceAvailable = (choice) => {
     if (!choice.condition) return true;
 
-    // ----- Ajout : gestion des conditions sur les stats -----
     if (choice.condition.stat) {
       const statName = choice.condition.stat;
-      // On prend la stat dans caractéristiques ou à la racine de characterData
       const stats = characterData?.caractéristiques ?? characterData ?? {};
       const value = Number(stats[statName]);
       const target = Number(choice.condition.value);
@@ -251,7 +253,6 @@ const Chapter = () => {
     if (choice.condition.item) {
       const normalized = (str) => str.replace(/_/g, "").toLowerCase();
       let count = 0;
-      // Liste des propriétés à explorer
       const containers = [
         "inventaire",
         "équipement",
@@ -290,14 +291,11 @@ const Chapter = () => {
     return true;
   };
 
-  // Rendu des choix : gère à la fois les tests de dés et les conditions d'inventaire
   const renderChoices = () => {
-    // Spécifique : pas de choix pour le chapitre 358 (mini-jeu à la place)
     if (id === "358") return null;
 
     if (!chapterData || !Array.isArray(chapterData.choices)) return null;
 
-    // Cas test de chance
     if (chapterData.diceRoll?.required && chapterData.testChance?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -329,7 +327,6 @@ const Chapter = () => {
       ) : null;
     }
 
-    // Cas test d'habileté
     if (chapterData.diceRoll?.required && chapterData.testHabilete?.required) {
       if (diceTotal === null) {
         return <p>Veuillez lancer les dés pour continuer.</p>;
@@ -361,7 +358,6 @@ const Chapter = () => {
       ) : null;
     }
 
-    // Cas test de dés avec choix numérotés
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -407,7 +403,6 @@ const Chapter = () => {
       );
     }
 
-    // Cas test de dés avec un seul choix
     if (
       chapterData.diceRoll?.required &&
       !chapterData.testChance?.required &&
@@ -429,7 +424,6 @@ const Chapter = () => {
       ));
     }
 
-    // Cas général : choix avec/condition inventaire
     return chapterData.choices.map((choice, index) => {
       const available = isChoiceAvailable(choice);
       return (
@@ -446,14 +440,21 @@ const Chapter = () => {
     });
   };
 
-  // Nouvelle partie : réinitialise tout et retourne à Home
   const handleNewGame = () => {
     localStorage.removeItem("selectedCharacter");
     localStorage.removeItem("characterData");
-    window.location.href = "/"; // recharge la page et va sur Home
+    window.location.href = "/";
   };
 
-  // Affichage spécial pour le chapitre 358 (mini-jeu course)
+  // Ajout : fonction pour déterminer le portrait selon l'endurance
+  const getHealthPhaseImage = (endurance) => {
+    if (endurance > 25) return phase1;
+    if (endurance >= 16) return phase2;
+    if (endurance >= 5) return phase3;
+    return phase4;
+  };
+
+  // Affichage spécial pour le chapitre 358 (mini-jeu course) inchangé
   if (id === "358") {
     return (
       <div className={`chapter chapter-${id}`}>
@@ -552,7 +553,6 @@ const Chapter = () => {
               {renderFormattedText(getPersonalizedText(chapterData.text))}
             </section>
 
-            {/* Nouvelle stats row pour endurance/blindage */}
             <div className="chapter-stats-row">
               <StatBox
                 label="Endurance"
@@ -716,13 +716,24 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Nouvelle stats row pour endurance/blindage */}
+          {/* Ligne des stats avec portrait sous Endurance */}
           <div className="chapter-stats-row">
-            <StatBox
-              label="Endurance"
-              value={characterData?.caractéristiques?.endurance ?? 0}
-              valueClass="stat-value-green"
-            />
+            <div className="stat-with-portrait">
+              <StatBox
+                label="Endurance"
+                value={characterData?.caractéristiques?.endurance ?? 0}
+                valueClass="stat-value-green"
+              />
+              <div className="chapter-health-portrait">
+                <img
+                  src={getHealthPhaseImage(
+                    characterData?.caractéristiques?.endurance ?? 0
+                  )}
+                  alt="Portrait d'état de santé du personnage"
+                  className="health-portrait-img"
+                />
+              </div>
+            </div>
             <StatBox
               label="Blindage"
               value={

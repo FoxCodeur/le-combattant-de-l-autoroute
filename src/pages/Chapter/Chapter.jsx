@@ -16,6 +16,7 @@ import GameMapModal from "../../components/GameMapModal/GameMapModal";
 import VehiculeModal from "../../components/VehiculeModal/VehiculeModal";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 import RaceGame358 from "../../components/RaceGame358/RaceGame358";
+import StatBox from "../../components/StatBox/StatBox";
 import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
@@ -551,6 +552,36 @@ const Chapter = () => {
               {renderFormattedText(getPersonalizedText(chapterData.text))}
             </section>
 
+            {/* Nouvelle stats row pour endurance/blindage */}
+            <div className="chapter-stats-row">
+              <StatBox
+                label="Endurance"
+                value={characterData?.caractéristiques?.endurance ?? 0}
+                icon={
+                  <img
+                    src="/images/icons/endurance.png"
+                    alt="Endurance"
+                    style={{ height: 22 }}
+                  />
+                }
+              />
+              <StatBox
+                label="Blindage"
+                value={
+                  characterData?.caractéristiques?.blindage ??
+                  characterData?.interceptor?.blindage ??
+                  0
+                }
+                icon={
+                  <img
+                    src="/images/icons/blindage.png"
+                    alt="Blindage"
+                    style={{ height: 22 }}
+                  />
+                }
+              />
+            </div>
+
             <CharacterSheetButton
               onClick={handleNewGame}
               label="Nouvelle partie"
@@ -685,12 +716,23 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          <CharacterSheetButton
-            onClick={handleNewGame}
-            label="Nouvelle partie"
-            icon={<GiCharacter size={22} style={{ verticalAlign: "middle" }} />}
-            aria-label="Commencer une nouvelle partie"
-          />
+          {/* Nouvelle stats row pour endurance/blindage */}
+          <div className="chapter-stats-row">
+            <StatBox
+              label="Endurance"
+              value={characterData?.caractéristiques?.endurance ?? 0}
+              valueClass="stat-value-green"
+            />
+            <StatBox
+              label="Blindage"
+              value={
+                characterData?.caractéristiques?.blindage ??
+                characterData?.interceptor?.blindage ??
+                0
+              }
+              valueClass="stat-value-red"
+            />
+          </div>
 
           {chapterData.combat && (
             <Combat
@@ -737,6 +779,12 @@ const Chapter = () => {
           <nav className="chapter-choices" aria-label="Choix disponibles">
             {renderChoices()}
           </nav>
+          <CharacterSheetButton
+            onClick={handleNewGame}
+            label="Nouvelle partie"
+            icon={<GiCharacter size={22} style={{ verticalAlign: "middle" }} />}
+            aria-label="Commencer une nouvelle partie"
+          />
         </article>
       ) : (
         !loading &&

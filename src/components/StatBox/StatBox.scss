@@ -1,0 +1,72 @@
+.chapter-stats-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 1em 0;
+}
+
+@media (max-width: 600px) {
+  .chapter-stats-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #191d24 80%, #232a36 100%);
+  color: #fff;
+  padding: 0.6em 2.2em;
+  min-width: 150px;
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  border: 3px solid #5c7cff;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #5c7cff,
+    0 0 8px 2px #5c7cff77;
+  // Forme hexagonale
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 8px 28px 0 #5c7cffbb, 0 0 18px 4px #5c7cff88;
+    border-color: #fff07a;
+    background: linear-gradient(135deg, #22284a 70%, #393d58 100%);
+    z-index: 2;
+  }
+}
+
+.stat-box-label {
+  font-weight: 900;
+  margin-right: 0.7em;
+  text-shadow: 1px 2px 0 #111, 0 1px 10px #0008;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-box-value {
+  font-size: 1.2em;
+  margin-left: 0.8em;
+  text-shadow: 1px 1px 1px #111, 0 1px 10px #0005;
+  font-family: "Share Tech Mono", monospace;
+  min-width: 2em;
+  display: inline-block;
+}
+
+.stat-value-green {
+  color: #3efb3e;
+  text-shadow: 0 0 5px #3efb3e88, 1px 1px 1px #111;
+  font-weight: bold;
+}
+
+.stat-value-red {
+  color: #ff5454;
+  text-shadow: 0 0 5px #ff545488, 1px 1px 1px #111;
+  font-weight: bold;
+}

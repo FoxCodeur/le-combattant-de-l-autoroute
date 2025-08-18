@@ -1,7 +1,7 @@
 {
   "id": "149",
   "title": "Chapitre 149",
-  "text": "La route départementale file droit devant, s’étendant sur des kilomètres sans le moindre virage. Grâce à l’absence de véhicules abandonnés, vous avancez rapidement et sans encombre sur une grande partie de votre trajet. Après une heure de conduite paisible, le paysage change : vous arrivez à un embranchement, où de nouveaux choix s’offrent à vous.",
+  "text": "La route départementale file droit devant, s’étendant sur des kilomètres sans le moindre virage. Du fait de l’absence de véhicules abandonnés, vous avancez vite et sans encombre. Après une heure de progression, le paysage change : vous arrivez à un embranchement, où de nouveaux choix s’offrent à vous.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez continuer a rouler vers le sud...", "next": "225" },

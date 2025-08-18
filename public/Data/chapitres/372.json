@@ -1,8 +1,8 @@
 {
   "id": "372",
   "title": "Chapitre 372",
-  "text": "Vous appuyez sur le bouton de commande du lance-roquettes. L'Interceptor est violemment secouée par le tir et, dans un éclair aveuglant, la roquette explose. Lorsque la fumée se dissipe, vous constatez qu'il ne reste plus rien du barrage. Soudain, vous entendez le vrombissement d'un moteur de moto que l'on fait démarrer et vous apercevez deux motards, armés et vêtus de cuir, surgir de derrière un buisson et s'élancer à toute vitesse sur la route à la hauteur du barrage. Le passager de la moto se retourne et tire en l'air pour vous intimider. Puis la moto disparaît.",
-  "image": "/images/chap1.jpg",
+  "text": "Vous appuyez sur le bouton de commande du lance-roquettes. L’Interceptor se met à vibrer sous la puissance du tir ; un éclair jaillit alors que la roquette file droit vers sa cible. L’explosion retentit, et, lorsque la fumée se dissipe, il ne reste plus aucune trace du barrage. Soudain, le grondement d’un moteur de moto résonne : deux hommes en cuir, armés, surgissent de derrière un buisson et s’élancent à toute vitesse vers le désert. Le passager de la moto se retourne, vous adresse un regard de défi, puis l’engin fonce sur la route et disparaît rapidement dans la poussière.",
+  "image": "/images/chapterMissiles.webp",
   "choices": [
     { "label": "Si vous souhaitez poursuivre la moto...", "next": "95" },
     { "label": "Si vous preferez la laisser partir...", "next": "309" }

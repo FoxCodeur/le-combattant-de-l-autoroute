@@ -214,7 +214,7 @@
   }
 
   // ========================
-  // Ajout pour portrait sous ENDURANCE
+  // Ligne de stats avec portraits
   .chapter-stats-row {
     display: flex;
     justify-content: center;
@@ -272,6 +272,22 @@
     }
     50% {
       box-shadow: 0 0 12px 4px #ffe4a0, 0 8px 26px 6px rgba(60, 40, 25, 0.28);
+    }
+  }
+
+  // === Ajout Interceptor sous Blindage ===
+  .stat-with-interceptor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .chapter-interceptor-img-container {
+      margin-top: 3rem;
+    }
+    .interceptor-portrait-img {
+      width: 18rem;
+      border: 3px solid #26251e;
+      border-radius: 4px;
+      image-rendering: pixelated;
     }
   }
   // ========================
@@ -346,6 +362,12 @@
       width: 80px;
       height: 80px;
     }
+    .interceptor-portrait-img {
+      width: 65px;
+    }
+    .chapter-interceptor-img-container {
+      margin-top: 4px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -373,6 +395,9 @@
     .chapter-health-portrait::before {
       width: 58px;
       height: 58px;
+    }
+    .interceptor-portrait-img {
+      width: 48px;
     }
   }
 

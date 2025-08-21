@@ -21,6 +21,7 @@ import "./Chapter.scss";
 import defaultPicture from "../../assets/images/defaultPicture.webp";
 import gameMap from "../../assets/images/map.webp";
 import interceptorImage from "../../assets/images/interceptor falcon.webp";
+import interceptorPortrait from "../../assets/images/interceptor.webp";
 
 import phase1 from "../../assets/images/phase1.png";
 import phase2 from "../../assets/images/phase2.png";
@@ -716,7 +717,7 @@ const Chapter = () => {
             {renderFormattedText(getPersonalizedText(chapterData.text))}
           </section>
 
-          {/* Ligne des stats avec portrait sous Endurance */}
+          {/* Ligne des stats avec portrait sous Endurance et Interceptor sous Blindage */}
           <div className="chapter-stats-row">
             <div className="stat-with-portrait">
               <StatBox
@@ -734,15 +735,24 @@ const Chapter = () => {
                 />
               </div>
             </div>
-            <StatBox
-              label="Blindage"
-              value={
-                characterData?.caractéristiques?.blindage ??
-                characterData?.interceptor?.blindage ??
-                0
-              }
-              valueClass="stat-value-red"
-            />
+            <div className="stat-with-interceptor">
+              <StatBox
+                label="Blindage"
+                value={
+                  characterData?.caractéristiques?.blindage ??
+                  characterData?.interceptor?.blindage ??
+                  0
+                }
+                valueClass="stat-value-red"
+              />
+              <div className="chapter-interceptor-img-container">
+                <img
+                  src={interceptorPortrait}
+                  alt="Portrait de l'Interceptor"
+                  className="interceptor-portrait-img"
+                />
+              </div>
+            </div>
           </div>
 
           {chapterData.combat && (

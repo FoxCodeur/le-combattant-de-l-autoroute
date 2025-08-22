@@ -3,6 +3,13 @@ import DiceRoll from "../DiceRoll/DiceRoll";
 import CombatEnnemis from "../CombatEnnemis/CombatEnnemis";
 import "./Combat.scss"; // Assurez-vous que ce fichier est bien importé
 
+// Fonction utilitaire pour jouer un son
+const playSound = (url) => {
+  const audio = new window.Audio(url);
+  audio.volume = 0.5;
+  audio.play();
+};
+
 const Combat = ({ combatData, characterData, setCharacterData, onEnd }) => {
   const { type, ennemis, modificateursCombat, diceRoll, issue } = combatData;
 
@@ -174,11 +181,13 @@ const Combat = ({ combatData, characterData, setCharacterData, onEnd }) => {
     // Détermination du résultat du round, gestion du cas d'égalité (aucun dégât)
     if (playerVal > enemyVal) {
       damageEnemy(activeIdx, modificateursCombat?.degatsAdversaire ?? 2);
+      playSound("/sounds/gunshot.mp3");
       setRoundResult(
         `Ton score : ${playerVal} / Score ennemi : ${enemyVal} — Tu touches l’ennemi !`
       );
     } else if (enemyVal > playerVal) {
       damagePlayer(modificateursCombat?.degatsJoueur ?? 2);
+      playSound("/sounds/cri.mp3");
       setRoundResult(
         `Ton score : ${playerVal} / Score ennemi : ${enemyVal} — L’ennemi te touche !`
       );

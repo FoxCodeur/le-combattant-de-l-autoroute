@@ -16,8 +16,8 @@
     "ennemis": [
       {
         "nom": "Pick-up CUSTOMISE",
-        "puissance": 10,
-        "blindage": 19,
+        "puissance": 9,
+        "blindage": 16,
         "image": "/images/chapter158Ennemi.webp"
       }
     ],

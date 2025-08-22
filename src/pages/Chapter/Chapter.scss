@@ -265,6 +265,21 @@
     position: relative;
     z-index: 1;
   }
+  // Ajout pour effet visuel "touché"
+  .health-portrait-img.hit-effect {
+    filter: brightness(1.7) sepia(1) hue-rotate(-15deg) saturate(2)
+      drop-shadow(0 0 12px #ff2a2a);
+    animation: hitFlash 0.3s;
+  }
+  @keyframes hitFlash {
+    0% {
+      filter: brightness(2) sepia(1) hue-rotate(-30deg) saturate(5)
+        drop-shadow(0 0 16px #ff2a2a);
+    }
+    100% {
+      filter: none;
+    }
+  }
   @keyframes subtle-glow {
     0%,
     100% {

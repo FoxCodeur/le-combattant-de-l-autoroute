@@ -18,11 +18,10 @@
         "nom": "BANDIT DE GRAND CHEMIN",
         "habilete": 8,
         "endurance": 12,
-        "image": "/images/ennemis/chien2.jpg"
+        "image": "/images/ch227Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "131"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

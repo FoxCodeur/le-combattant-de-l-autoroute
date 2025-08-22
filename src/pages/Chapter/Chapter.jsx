@@ -53,6 +53,9 @@ const Chapter = () => {
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isVehiculeOpen, setIsVehiculeOpen] = useState(false);
 
+  // Ajout pour effet visuel lors d'une perte de points
+  const [isHit, setIsHit] = useState(false);
+
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
@@ -731,7 +734,7 @@ const Chapter = () => {
                     characterData?.caractéristiques?.endurance ?? 0
                   )}
                   alt="Portrait d'état de santé du personnage"
-                  className="health-portrait-img"
+                  className={`health-portrait-img${isHit ? " hit-effect" : ""}`}
                 />
               </div>
             </div>
@@ -768,6 +771,10 @@ const Chapter = () => {
                 } else if (chapterData.combat.issue?.[result]?.isGameOver) {
                   setIsGameOver(true);
                 }
+              }}
+              onPlayerHit={() => {
+                setIsHit(true);
+                setTimeout(() => setIsHit(false), 300);
               }}
             />
           )}

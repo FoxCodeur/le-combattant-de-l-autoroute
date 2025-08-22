@@ -10,7 +10,13 @@ const playSound = (url) => {
   audio.play();
 };
 
-const Combat = ({ combatData, characterData, setCharacterData, onEnd }) => {
+const Combat = ({
+  combatData,
+  characterData,
+  setCharacterData,
+  onEnd,
+  onPlayerHit,
+}) => {
   const { type, ennemis, modificateursCombat, diceRoll, issue } = combatData;
 
   // Initialisation de l'état des ennemis (blindage/endurance en cours, etc)
@@ -188,6 +194,7 @@ const Combat = ({ combatData, characterData, setCharacterData, onEnd }) => {
     } else if (enemyVal > playerVal) {
       damagePlayer(modificateursCombat?.degatsJoueur ?? 2);
       playSound("/sounds/cri.mp3");
+      if (onPlayerHit) onPlayerHit();
       setRoundResult(
         `Ton score : ${playerVal} / Score ennemi : ${enemyVal} — L’ennemi te touche !`
       );

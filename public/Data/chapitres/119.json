@@ -1,7 +1,7 @@
 {
   "id": "119",
   "title": "Chapitre 119",
-  "text": "Après avoir roulé vers l'est pendant une demi-heure, vous parvenez à un carrefour. Vous décidez d'emprunter la grande route filant vers le sud, dans l'espoir de parcourir une longue distance en peu de temps sur une voie dégagée",
+  "text": "Après avoir roulé vers l'est pendant une demi-heure, vous parvenez à un carrefour. Vous décidez d'emprunter la grande route filant vers le sud, dans l'espoir de parcourir une longue distance en peu de temps sur une voie dégagée.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "272" }

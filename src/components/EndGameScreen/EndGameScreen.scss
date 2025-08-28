@@ -1,0 +1,210 @@
+.endgame-screen {
+  background: #111;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.endgame-image-wrapper {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+.endgame-img {
+  max-width: 98vw;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85);
+  transition: opacity 0.5s;
+  opacity: 1;
+  background: #282828;
+  position: relative;
+  z-index: 1;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+/* --- Effet de chaleur : mirage & halo chaud --- */
+.heat-haze-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  z-index: 2;
+  background: transparent;
+  mix-blend-mode: screen;
+  animation: heat-haze-wave 3.5s infinite linear;
+  /* L'effet de distorsion */
+  filter: blur(0.7px) brightness(1.07) contrast(1.04);
+}
+
+@keyframes heat-haze-wave {
+  0% {
+    transform: skewY(-1deg) scaleY(1.01) translateY(0);
+  }
+  10% {
+    transform: skewY(1deg) scaleY(1.008) translateY(0.5vh);
+  }
+  20% {
+    transform: skewY(-1.8deg) scaleY(1.015) translateY(-0.7vh);
+  }
+  30% {
+    transform: skewY(1.2deg) scaleY(1.01) translateY(0.3vh);
+  }
+  40% {
+    transform: skewY(-0.7deg) scaleY(1.005) translateY(-0.2vh);
+  }
+  50% {
+    transform: skewY(0.7deg) scaleY(1.01) translateY(0.8vh);
+  }
+  60% {
+    transform: skewY(-1.3deg) scaleY(1.02) translateY(-0.7vh);
+  }
+  70% {
+    transform: skewY(1.1deg) scaleY(1.018) translateY(1vh);
+  }
+  80% {
+    transform: skewY(-0.6deg) scaleY(1.012) translateY(-0.5vh);
+  }
+  90% {
+    transform: skewY(0.9deg) scaleY(1.006) translateY(0.7vh);
+  }
+  100% {
+    transform: skewY(-1deg) scaleY(1.01) translateY(0);
+  }
+}
+
+.heat-glow-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  z-index: 3;
+  background: radial-gradient(
+    ellipse at 60% 80%,
+    rgba(255, 190, 70, 0.25) 0%,
+    rgba(255, 140, 20, 0.08) 60%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  animation: heat-glow-pulse 6s infinite alternate;
+}
+
+@keyframes heat-glow-pulse {
+  0% {
+    opacity: 0.95;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.endgame-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+.endgame-btn {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  color: #fff;
+  border: none;
+  padding: 0.9em 2.5em;
+  border-radius: 7px;
+  font-size: 1.15em;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s, transform 0.12s;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #313233 0%, #616467 100%);
+    transform: translateY(-2px) scale(1.04);
+  }
+}
+
+.endgame-progress {
+  color: #ccc;
+  font-size: 1.08em;
+  font-family: monospace;
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  user-select: none;
+}
+
+.endgame-epilogue {
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.endgame-epilogue-text {
+  color: #eee;
+  font-size: 1.25em;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 10px;
+  padding: 2.5rem 2.2rem;
+  font-family: "Fira Mono", "Consolas", monospace;
+  white-space: pre-line;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .endgame-image-wrapper {
+    height: 48vh;
+  }
+  .endgame-img {
+    max-height: 44vh;
+  }
+  .endgame-controls {
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 1.4rem;
+  }
+  .endgame-epilogue-text {
+    padding: 1.3rem 1.1rem;
+    font-size: 1em;
+  }
+  .heat-haze-overlay,
+  .heat-glow-overlay {
+    height: 48vh;
+    width: 100vw;
+  }
+}

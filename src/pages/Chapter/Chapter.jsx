@@ -31,6 +31,7 @@ import phase4 from "../../assets/images/phase4.png";
 import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
 import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
+import EndGameScreen from "../../components/EndGameScreen/EndGameScreen";
 
 const Chapter = () => {
   const { id } = useParams();
@@ -53,7 +54,6 @@ const Chapter = () => {
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isVehiculeOpen, setIsVehiculeOpen] = useState(false);
 
-  // Ajout pour effet visuel lors d'une perte de points
   const [isHit, setIsHit] = useState(false);
 
   const { notifications, addNotifications } = useContext(
@@ -450,7 +450,6 @@ const Chapter = () => {
     window.location.href = "/";
   };
 
-  // Ajout : fonction pour déterminer le portrait selon l'endurance
   const getHealthPhaseImage = (endurance) => {
     if (endurance > 25) return phase1;
     if (endurance >= 16) return phase2;
@@ -458,7 +457,6 @@ const Chapter = () => {
     return phase4;
   };
 
-  // Affichage spécial pour le chapitre 358 (mini-jeu course) inchangé
   if (id === "358") {
     return (
       <div className={`chapter chapter-${id}`}>
@@ -611,7 +609,6 @@ const Chapter = () => {
     );
   }
 
-  // Affichage normal pour les autres chapitres
   return (
     <div
       className={`chapter chapter-${id}`}
@@ -714,13 +711,16 @@ const Chapter = () => {
             </div>
           </div>
 
-          <section
-            className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
-          >
-            {renderFormattedText(getPersonalizedText(chapterData.text))}
-          </section>
+          {id === "398" ? (
+            <EndGameScreen onFinish={handleNewGame} />
+          ) : (
+            <section
+              className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}
+            >
+              {renderFormattedText(getPersonalizedText(chapterData.text))}
+            </section>
+          )}
 
-          {/* Ligne des stats avec portrait sous Endurance et Interceptor sous Blindage */}
           <div className="chapter-stats-row">
             <div className="stat-with-portrait">
               <StatBox

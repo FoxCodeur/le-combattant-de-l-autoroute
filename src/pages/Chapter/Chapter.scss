@@ -42,10 +42,8 @@
   }
 
   &-image-container {
+    @include flex-column-center;
     margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 1rem;
     position: relative;
   }
@@ -194,8 +192,7 @@
   }
 
   .chapter-btn-row {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     gap: 1rem;
     width: 100%;
     justify-content: center;
@@ -205,7 +202,7 @@
   }
   @media (max-width: 600px) {
     .chapter-btn-row {
-      flex-direction: column;
+      @include flex-column;
       gap: 0.7rem;
       width: 100%;
       align-items: stretch;
@@ -216,22 +213,19 @@
   // ========================
   // Ligne de stats avec portraits
   .chapter-stats-row {
-    display: flex;
+    @include flex-row;
     justify-content: center;
     align-items: flex-start;
-    gap: 2.5rem; // espace entre stats/colonnes
+    gap: 2.5rem;
   }
   .stat-with-portrait {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
   }
   .chapter-health-portrait {
+    @include flex-center;
     margin-top: 10px;
     margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
   }
   .chapter-health-portrait::before {
@@ -260,12 +254,10 @@
     border-radius: 4px;
     background: #e5c094;
     box-shadow: 0 2px 8px rgba(60, 40, 25, 0.15);
-    image-rendering: pixelated;
     margin: 0 auto;
     position: relative;
     z-index: 1;
   }
-  // Ajout pour effet visuel "touché"
   .health-portrait-img.hit-effect {
     filter: brightness(1.7) sepia(1) hue-rotate(-15deg) saturate(2)
       drop-shadow(0 0 12px #ff2a2a);
@@ -290,23 +282,149 @@
     }
   }
 
-  // === Ajout Interceptor sous Blindage ===
   .stat-with-interceptor {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
+
     .chapter-interceptor-img-container {
       margin-top: 3rem;
-    }
-    .interceptor-portrait-img {
-      width: 18rem;
+      background: linear-gradient(180deg, #e9edf0 80%, #b6b9bd 100%);
       border: 3px solid #26251e;
-      border-radius: 4px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px 2px #b9b7a5, 0 2px 0 #777;
+      padding: 0.5rem 0.8rem 0.8rem 0.8rem;
+      @include flex-center;
+      position: relative;
+      min-width: 330px;
+    }
+
+    .interceptor-portrait-img {
+      width: 24rem;
+      border: 3px solid #26251e;
+      border-radius: 9px;
       image-rendering: pixelated;
+      background: linear-gradient(180deg, #ececec 70%, #bababa 100%);
+      box-shadow: 0 3px 10px 2px #999;
+    }
+
+    .vehicle-inventory-block {
+      margin-top: 1.2rem;
+      @include flex-column;
+      width: 100%;
+      gap: 0.6rem;
+      align-items: center;
+      background: linear-gradient(180deg, #f5f7fa 60%, #d1d5db 100%);
+      box-shadow: 0 2px 10px #e2e0da;
+      border-radius: 13px;
+      border: 2.5px solid #bdbdbd;
+      padding: 0.9rem 0.6rem 0.6rem 0.6rem;
+      min-width: 340px;
+      max-width: 420px;
+    }
+
+    .vehicle-inventory-row {
+      @include flex-row;
+      gap: 1.3rem;
+      justify-content: center;
+      width: 100%;
     }
   }
-  // ========================
 
+  .vehicle-item-status {
+    @include flex-align-center;
+    gap: 0.6rem;
+    background: linear-gradient(180deg, #fcfcfa 70%, #d4cfc0 100%);
+    border: 2.5px solid #9e9475;
+    border-radius: 11px;
+    padding: 3px 13px 3px 7px;
+    box-shadow: 1px 1px 0 #bbb, 0 4px 8px 1px #c7c2b3;
+    min-width: 65px;
+    min-height: 47px;
+    font-size: 1.07rem;
+    position: relative;
+    transition: box-shadow 0.15s;
+
+    &:hover {
+      box-shadow: 0 0 16px 2px #ffd700, 1px 1px 0 #bbb, 0 4px 8px 1px #b4a46a;
+      z-index: 2;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .tooltiptext {
+      visibility: hidden;
+      width: max-content;
+      max-width: 200px;
+      background: #222;
+      color: #ffe16a;
+      text-align: center;
+      border-radius: 7px;
+      padding: 6px 12px;
+      position: absolute;
+      z-index: 10;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      font-size: 0.95rem;
+      font-family: "Oswald", monospace;
+      box-shadow: 0 2px 12px #111;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .tooltip:hover .tooltiptext,
+    .tooltip:focus .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    @media (pointer: coarse) {
+      .tooltip:active .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    .vehicle-item-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 7px;
+      border: 2px solid #121212;
+      background: #f0e8c6;
+      box-shadow: 0 1px 4px #ceb57a;
+      padding: 1.5px;
+      transition: filter 0.12s;
+    }
+    &:hover .vehicle-item-icon {
+      filter: brightness(1.14) drop-shadow(0 0 5px #ffe16a);
+    }
+
+    .vehicle-item-label {
+      display: none;
+    }
+    .vehicle-item-value {
+      background: #222;
+      color: #ffe16a;
+      border-radius: 7px;
+      padding: 10px 5px;
+      margin-left: 0.3rem;
+      font-size: 1.22rem;
+      min-width: 22px;
+      text-align: center;
+      font-family: "Digital-7", "Oswald", monospace;
+      border: 2px solid #e6b550;
+      box-shadow: 0 1px 3px #c1b077;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  // Responsive
   @media (max-width: 1024px) {
     &-content {
       padding: 1.2rem;
@@ -324,6 +442,27 @@
     }
     .chapter-stats-row {
       gap: 1.2rem;
+    }
+    .stat-with-interceptor .interceptor-portrait-img {
+      width: 12rem;
+    }
+    .vehicle-item-status .vehicle-item-icon {
+      width: 28px;
+      height: 28px;
+    }
+    .vehicle-item-status {
+      font-size: 0.97rem;
+      min-width: 50px;
+      min-height: 32px;
+      padding: 2px 7px 2px 2px;
+    }
+    .stat-with-interceptor .vehicle-inventory-block {
+      min-width: 210px;
+      max-width: 98vw;
+      padding: 0.6rem 0.2rem 0.2rem 0.2rem;
+    }
+    .stat-with-interceptor .chapter-interceptor-img-container {
+      min-width: 180px;
     }
   }
 
@@ -382,6 +521,26 @@
     }
     .chapter-interceptor-img-container {
       margin-top: 4px;
+      min-width: 100px;
+    }
+    .vehicle-item-status .vehicle-item-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      border-width: 1px;
+    }
+    .vehicle-item-status {
+      font-size: 0.92rem;
+      min-width: 32px;
+      min-height: 18px;
+      padding: 2px 3px 2px 1px;
+      border-radius: 6px;
+    }
+    .stat-with-interceptor .vehicle-inventory-block {
+      min-width: 110px;
+      max-width: 99vw;
+      padding: 0.3rem 0.1rem 0.1rem 0.1rem;
+      border-radius: 7px;
     }
   }
 
@@ -405,14 +564,33 @@
       font-size: 0.95rem;
     }
     .health-portrait-img {
-      width: 48px;
+      width: 38px;
     }
     .chapter-health-portrait::before {
-      width: 58px;
-      height: 58px;
+      width: 38px;
+      height: 38px;
     }
     .interceptor-portrait-img {
-      width: 48px;
+      width: 38px;
+    }
+    .vehicle-item-status .vehicle-item-icon {
+      width: 13px;
+      height: 13px;
+      border-radius: 2px;
+      border-width: 1px;
+    }
+    .vehicle-item-status {
+      font-size: 0.75rem;
+      min-width: 20px;
+      min-height: 12px;
+      padding: 1px 2px 1px 1px;
+      border-radius: 4px;
+    }
+    .stat-with-interceptor .vehicle-inventory-block {
+      min-width: 50px;
+      max-width: 99vw;
+      padding: 0.13rem 0.03rem 0.03rem 0.03rem;
+      border-radius: 4px;
     }
   }
 

@@ -4,9 +4,9 @@
   "age": 32,
   "sexe": "Homme",
   "caractéristiques": {
-    "habilete": 8,
+    "habilete": 9,
     "endurance": 28,
-    "chance": 11
+    "chance": 9
   },
   "équipement": {
     "trousse_Secours": 10,

@@ -1,7 +1,7 @@
 {
   "id": "193",
   "title": "Chapitre 193",
-  "text": "Vous plongez brusquement au sol, évitant de peu le projectile qui vient rebondir contre la carrosserie de la voiture. L’homme, frustré par votre esquive, tire un revolver de son étui, prêt à l’affrontement....",
+  "text": "...",
   "image": "/images/chap1.jpg",
   "combat": {
     "type": "tir",
@@ -20,9 +20,8 @@
         "endurance": 11,
         "image": "/images/ch193Ennemi.webp"
       }
-    ]
-  },
-  "issue": {
+    ],
+    "issue": {
       "success": {
         "text": "Vous sortez vainqueur du duel.",
         "next": "64"
@@ -34,3 +33,4 @@
       }
     }
   }
+}

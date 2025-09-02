@@ -4,9 +4,9 @@
   "age": 30,
   "sexe": "Femme",
   "caractéristiques": {
-    "habilete": 11,
-    "endurance": 24,
-    "chance": 9
+    "habilete": 10,
+    "endurance": 26,
+    "chance": 8
   },
   "équipement": {
     "trousse_Secours": 10,

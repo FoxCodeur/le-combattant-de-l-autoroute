@@ -28,10 +28,78 @@ import phase2 from "../../assets/images/phase2.png";
 import phase3 from "../../assets/images/phase3.png";
 import phase4 from "../../assets/images/phase4.png";
 
+import phase1Gutz from "../../assets/images/phase1Gutz.webp";
+import phase2Gutz from "../../assets/images/phase2Gutz.webp";
+import phase3Gutz from "../../assets/images/phase3Gutz.webp";
+import phase4Gutz from "../../assets/images/phase4Gutz.webp";
+
+import phase1Nyx from "../../assets/images/phase1Nyx.webp";
+import phase2Nyx from "../../assets/images/phase2Nyx.webp";
+import phase3Nyx from "../../assets/images/phase3Nyx.webp";
+import phase4Nyx from "../../assets/images/phase4Nyx.webp";
+
+import roquetteImg from "../../assets/images/roquette.webp";
+import clousImg from "../../assets/images/clous.webp";
+// import huileImg from "../../assets/images/huile.webp";
+import bidonEssenceImg from "../../assets/images/bidon_Essence.webp";
+import roueSecoursImg from "../../assets/images/roue_De_Secours.webp";
+import surcompresseurImg from "../../assets/images/surcompresseur.webp";
+
 import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
 import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
 import EndGameScreen from "../../components/EndGameScreen/EndGameScreen";
+
+// Mapping pour l'affichage
+const VEHICLE_ITEMS = [
+  {
+    key: "roquette",
+    label: "Roquette",
+    image: roquetteImg,
+    source: "interceptor",
+  },
+  {
+    key: "clous",
+    label: "Clous",
+    image: clousImg,
+    source: "interceptor",
+  },
+  // {
+  //   key: "huile",
+  //   label: "Huile",
+  //   image: huileImg,
+  //   source: "interceptor",
+  // },
+  {
+    key: "bidon_Essence",
+    label: "Bidon d'essence",
+    image: bidonEssenceImg,
+    source: "accessoires",
+  },
+  {
+    key: "roue_De_Secours",
+    label: "Roue de secours",
+    image: roueSecoursImg,
+    source: "accessoires",
+  },
+  {
+    key: "surcompresseur",
+    label: "Surcompresseur",
+    image: surcompresseurImg,
+    source: "accessoires",
+  },
+];
+
+// Composant d'affichage avec infobulle personnalisée
+const VehicleItemStatus = ({ label, value, icon }) => (
+  <div className="vehicle-item-status">
+    <span className="tooltip">
+      <img src={icon} alt={label} className="vehicle-item-icon" />
+      <span className="tooltiptext">{label}</span>
+    </span>
+    <span className="vehicle-item-value">{value}</span>
+  </div>
+);
 
 const Chapter = () => {
   const { id } = useParams();
@@ -450,11 +518,25 @@ const Chapter = () => {
     window.location.href = "/";
   };
 
-  const getHealthPhaseImage = (endurance) => {
-    if (endurance > 25) return phase1;
-    if (endurance >= 16) return phase2;
-    if (endurance >= 5) return phase3;
-    return phase4;
+  // Portrait dynamique pour Skarr, Gutz, Nyx
+  const getHealthPhaseImage = (endurance, characterName) => {
+    const name = (characterName || "").toLowerCase();
+    if (name === "gutz") {
+      if (endurance > 25) return phase1Gutz;
+      if (endurance >= 16) return phase2Gutz;
+      if (endurance >= 5) return phase3Gutz;
+      return phase4Gutz;
+    } else if (name === "nyx") {
+      if (endurance > 25) return phase1Nyx;
+      if (endurance >= 16) return phase2Nyx;
+      if (endurance >= 5) return phase3Nyx;
+      return phase4Nyx;
+    } else {
+      if (endurance > 25) return phase1;
+      if (endurance >= 16) return phase2;
+      if (endurance >= 5) return phase3;
+      return phase4;
+    }
   };
 
   if (id === "358") {
@@ -582,6 +664,37 @@ const Chapter = () => {
                   />
                 }
               />
+              <div className="stat-with-interceptor">
+                <div className="chapter-interceptor-img-container">
+                  <img
+                    src={interceptorPortrait}
+                    alt="Portrait de l'Interceptor"
+                    className="interceptor-portrait-img"
+                  />
+                </div>
+                <div className="vehicle-inventory-block">
+                  <div className="vehicle-inventory-row">
+                    {VEHICLE_ITEMS.slice(0, 3).map((item) => (
+                      <VehicleItemStatus
+                        key={item.key}
+                        label={item.label}
+                        value={characterData?.[item.source]?.[item.key] ?? 0}
+                        icon={item.image}
+                      />
+                    ))}
+                  </div>
+                  <div className="vehicle-inventory-row">
+                    {VEHICLE_ITEMS.slice(3, 5).map((item) => (
+                      <VehicleItemStatus
+                        key={item.key}
+                        label={item.label}
+                        value={characterData?.[item.source]?.[item.key] ?? 0}
+                        icon={item.image}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             <CharacterSheetButton
@@ -731,7 +844,8 @@ const Chapter = () => {
               <div className="chapter-health-portrait">
                 <img
                   src={getHealthPhaseImage(
-                    characterData?.caractéristiques?.endurance ?? 0
+                    characterData?.caractéristiques?.endurance ?? 0,
+                    characterData?.nom
                   )}
                   alt="Portrait d'état de santé du personnage"
                   className={`health-portrait-img${isHit ? " hit-effect" : ""}`}
@@ -754,6 +868,28 @@ const Chapter = () => {
                   alt="Portrait de l'Interceptor"
                   className="interceptor-portrait-img"
                 />
+              </div>
+              <div className="vehicle-inventory-block">
+                <div className="vehicle-inventory-row">
+                  {VEHICLE_ITEMS.slice(0, 3).map((item) => (
+                    <VehicleItemStatus
+                      key={item.key}
+                      label={item.label}
+                      value={characterData?.[item.source]?.[item.key] ?? 0}
+                      icon={item.image}
+                    />
+                  ))}
+                </div>
+                <div className="vehicle-inventory-row">
+                  {VEHICLE_ITEMS.slice(3, 5).map((item) => (
+                    <VehicleItemStatus
+                      key={item.key}
+                      label={item.label}
+                      value={characterData?.[item.source]?.[item.key] ?? 0}
+                      icon={item.image}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

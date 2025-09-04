@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { doc, getDoc, updateDoc, increment } from "firebase/firestore";
 import { db } from "../../firebase";
+import "./VisitorCounter.scss";
 
 const VisitorCounter = () => {
   const [count, setCount] = useState(null);
@@ -21,28 +22,15 @@ const VisitorCounter = () => {
     incrementAndFetch();
   }, []);
 
-  if (error) {
-    return (
-      <div
-        className="visitor-counter"
-        style={{
-          textAlign: "center",
-          margin: "1em 0",
-          fontWeight: "bold",
-          color: "red",
-        }}
-      >
-        {error}
-      </div>
-    );
-  }
-
   return (
     <div
-      className="visitor-counter"
-      style={{ textAlign: "center", margin: "1em 0", fontWeight: "bold" }}
+      className={"visitor-counter" + (error ? " visitor-counter--error" : "")}
     >
-      {count === null ? "Chargement des visites..." : `Visites : ${count}`}
+      {error
+        ? error
+        : count === null
+        ? "Chargement des visites..."
+        : `Visites : ${count}`}
     </div>
   );
 };

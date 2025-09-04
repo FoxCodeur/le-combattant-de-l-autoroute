@@ -1,0 +1,28 @@
+.visitor-counter {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  margin: 1.2rem auto 0.3rem auto;
+  letter-spacing: 0.01em;
+  background: #f8f8f8;
+  padding: 0.3rem 1.2rem;
+  width: fit-content;
+  min-width: 160px;
+
+  // Bordure triple à la manière de la couverture
+  border: 4px solid #000;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 0 #000, 0 0 0 7px #ffde66,
+    // jaune clair (ajuste si ta charte diffère)
+    0 0 0 11px #000; // 2e liseré noir
+
+  // Pour harmoniser la transition d'erreur
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.visitor-counter--error {
+  color: #c0392b;
+  font-style: italic;
+}

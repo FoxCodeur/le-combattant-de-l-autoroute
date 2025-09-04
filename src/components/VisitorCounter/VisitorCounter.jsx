@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./VisitorCounter.scss";
 
-const NAMESPACE = "foxcodeur-livre-jeu";
-const KEY = "visites";
+const COUNTER_KEY = "foxcodeur-livre-jeu"; // Change ce nom si tu veux un compteur distinct
 
 function VisitorCounter() {
   const [visits, setVisits] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+    fetch(`https://api.tallycount.app/increment?key=${COUNTER_KEY}`)
       .then((res) => res.json())
-      .then((data) => setVisits(data.value));
+      .then((data) => {
+        if (typeof data.count === "number") {
+          setVisits(data.count);
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => setError(true));
   }, []);
 
   return (
@@ -18,7 +25,9 @@ function VisitorCounter() {
       <span className="visitor-counter__icon" role="img" aria-label="👥">
         👥
       </span>
-      {visits === null ? (
+      {error ? (
+        <span className="visitor-counter__text">Compteur indisponible</span>
+      ) : visits === null ? (
         "Chargement..."
       ) : (
         <span className="visitor-counter__text">

@@ -20,18 +20,31 @@ function VisitorCounter() {
       .catch(() => setError(true));
   }, []);
 
+  if (error) {
+    // Affiche l'image SVG si le compteur est indisponible
+    return (
+      <div className="visitor-counter">
+        <img
+          src="/compteur-indisponible.svg"
+          alt="Compteur indisponible"
+          className="visitor-counter__image"
+          width={350}
+          height={50}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="visitor-counter">
       <span className="visitor-counter__icon" role="img" aria-label="👥">
         👥
       </span>
-      {error ? (
-        <span className="visitor-counter__text">Compteur indisponible</span>
-      ) : visits === null ? (
-        "Chargement..."
+      {visits === null ? (
+        <span className="visitor-counter__text">Chargement…</span>
       ) : (
         <span className="visitor-counter__text">
-          {visits} joueurs ont tenté l’aventure !
+          {visits} joueurs ont tenté l’aventure&nbsp;!
         </span>
       )}
     </div>

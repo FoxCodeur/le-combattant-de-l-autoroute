@@ -14,14 +14,12 @@ const Home = () => {
   const [showCards, setShowCards] = useState(false);
   const { selectCharacter } = useContext(ChapterContext);
 
-  // Cette fonction enregistre le nom du personnage dans le localStorage,
-  // efface l'ancienne fiche, et force la notification du context
   const handleStart = (characterName) => {
     if (typeof selectCharacter === "function") {
-      selectCharacter(characterName); // Utilise la fonction du provider pour tout gérer proprement
+      selectCharacter(characterName);
     } else {
       localStorage.setItem("selectedCharacter", characterName);
-      localStorage.removeItem("characterData"); // <-- indispensable pour réinitialiser la fiche
+      localStorage.removeItem("characterData");
       window.dispatchEvent(new Event("storage"));
     }
     navigate("/chapitre/0");

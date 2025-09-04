@@ -13,6 +13,19 @@ import ending10 from "../../assets/images/09.webp";
 import ending11 from "../../assets/images/10.webp";
 import wastelandSound from "../../assets/sons/wasteland.mp3";
 
+// Gutz endings & sounds
+// Première image retirée : gutzBegin supprimée de la liste
+import gutz00 from "../../assets/images/gutz00.webp";
+import gutz01 from "../../assets/images/gutz01.webp";
+import gutz02 from "../../assets/images/gutz02.webp";
+import gutz03 from "../../assets/images/gutz03.webp";
+import gutz04 from "../../assets/images/gutz04.webp";
+import gutz05 from "../../assets/images/gutz05.webp";
+import gutz06 from "../../assets/images/gutz06.webp";
+import gutz07 from "../../assets/images/gutz07.webp";
+import moteurCamion from "../../assets/sons/moteurCamion.mp3";
+import soloGuitare from "../../assets/sons/soloGuitare.mp3";
+
 const images = [
   ending1,
   ending2,
@@ -36,6 +49,25 @@ const epilogue = [
   "Le voyage continue…",
   "",
   "À bientôt, combattant de l’autoroute.",
+].join("\n");
+
+// Spécifique à Gutz - gutzBegin supprimé de la séquence :
+const gutzImages = [
+  gutz00,
+  gutz01,
+  gutz02,
+  gutz03,
+  gutz04,
+  gutz05,
+  gutz06,
+  gutz07,
+];
+
+const gutzEpilogue = [
+  "Gutz regarde l’horizon, le moteur du camion encore chaud.",
+  "Il sait que la route ne s’arrête jamais vraiment.",
+  "",
+  "Seul face au désert, il sourit : le voyage ne fait que commencer…",
 ].join("\n");
 
 function useTypewriter(text, speed = 50) {
@@ -64,32 +96,52 @@ function useTypewriter(text, speed = 50) {
   return [displayed, done];
 }
 
-const EndGameScreen = ({ onFinish }) => {
+const EndGameScreen = ({ onFinish, character }) => {
+  // Décide si on est sur la fin de Gutz
+  const isGutz = character && character.toLowerCase() === "gutz";
+  const usedImages = isGutz ? gutzImages : images;
+  const usedEpilogue = isGutz ? gutzEpilogue : epilogue;
+  const mainAudio = isGutz ? moteurCamion : wastelandSound;
+
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [showEpilogue, setShowEpilogue] = useState(false);
-  const audioRef = useRef(null);
+
+  const mainAudioRef = useRef(null);
+  const guitareAudioRef = useRef(null);
 
   const [typedText, typingDone] = useTypewriter(
-    showEpilogue ? epilogue : "",
+    showEpilogue ? usedEpilogue : "",
     50
   );
 
-  // Joue le son wasteland.mp3 dès que le composant est monté
+  // Joue le son d'ambiance approprié au montage
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play();
+    if (mainAudioRef.current) {
+      mainAudioRef.current.currentTime = 0;
+      mainAudioRef.current.play();
+      // Baisse le volume du camion si Gutz
+      if (isGutz) {
+        mainAudioRef.current.volume = 0.3; // Volume réduit à 30%
+      }
     }
-  }, []);
+  }, [mainAudio, isGutz]);
+
+  // Joue la guitare sur l'image gutz06 (index 6 de gutzImages, car début à gutz00)
+  useEffect(() => {
+    if (isGutz && index === 6 && guitareAudioRef.current) {
+      guitareAudioRef.current.currentTime = 0;
+      guitareAudioRef.current.play();
+    }
+  }, [isGutz, index]);
 
   const handleNext = () => {
-    if (index === images.length - 1) {
+    if (index === usedImages.length - 1) {
       setShowEpilogue(true);
     } else {
       setFade(false);
       setTimeout(() => {
-        setIndex((i) => Math.min(i + 1, images.length - 1));
+        setIndex((i) => Math.min(i + 1, usedImages.length - 1));
         setFade(true);
       }, 400);
     }
@@ -106,13 +158,17 @@ const EndGameScreen = ({ onFinish }) => {
 
   return (
     <div className="endgame-screen">
-      {/* Balise audio pour wasteland.mp3 */}
-      <audio ref={audioRef} src={wastelandSound} preload="auto" />
+      {/* Balise audio pour son principal */}
+      <audio ref={mainAudioRef} src={mainAudio} preload="auto" />
+      {/* Son guitare uniquement pour Gutz */}
+      {isGutz && (
+        <audio ref={guitareAudioRef} src={soloGuitare} preload="auto" />
+      )}
       {!showEpilogue && (
         <>
           <div className="endgame-image-wrapper">
             <img
-              src={images[index]}
+              src={usedImages[index]}
               alt={`Fin ${index + 1}`}
               className={`endgame-img${fade ? " fade-in" : " fade-out"}`}
             />
@@ -122,10 +178,10 @@ const EndGameScreen = ({ onFinish }) => {
           </div>
           <div className="endgame-controls">
             <button className="endgame-btn" onClick={handleNext}>
-              {index < images.length - 1 ? "Suivant" : "Voir la conclusion"}
+              {index < usedImages.length - 1 ? "Suivant" : "Voir la conclusion"}
             </button>
             <div className="endgame-progress">
-              {index + 1} / {images.length}
+              {index + 1} / {usedImages.length}
             </div>
           </div>
         </>

@@ -2,7 +2,7 @@
   "id": "380",
   "title": "Chapitre 380",
   "text": "Enfin, vous apercevez **Waco** à l’horizon. À mesure que les remparts de la ville se dessinent sur le ciel, le soulagement vous envahit. Les portes de la cité s’ouvrent devant vous, et à peine avez-vous franchi le seuil que la clameur éclate : la foule accourt, les visages illuminés de sourires et mouillés de larmes. La scène semble irréelle, presque trop belle pour être vraie. Pourtant, c’est bien la réalité : la mission est un succès. Ce n’est qu’à cet instant que vous en prenez conscience. Le précieux pétrole rapporté n’est pas seulement une ressource, il devient, en un instant, le symbole d’un avenir nouveau, la promesse d’une renaissance pour Waco et ses habitants.\n Grâce à votre courage, le premier pas vers la reconstruction du monde peut enfin s’accomplir. Les retrouvailles avec vos proches, les rires, les étreintes et les remerciements résonneront longtemps sous le ciel de la ville. Pourtant, au fond de vous, une certitude s’impose : ce n’était que le début. D’autres missions vous attendent, vous le savez. L’adrénaline du combat coule encore dans vos veines, ce feu indomptable qui refuse de s’éteindre. Le monde reste vaste, brisé, semé d’ombres… et vous êtes prêt à y replonger. Car désormais, vous n’êtes plus seulement un survivant : vous êtes un éclaireur, **un combattant de l’autoroute.**",
-  "image": "/images/chap1.jpg",
+  "image": "/images/chapter380.webp",
   "choices": [
     { "label": "Savoure la victoire", "next": "398" }
   ]

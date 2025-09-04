@@ -6,12 +6,13 @@ import skarrImg from "../../assets/images/skarr.webp";
 import nyxImg from "../../assets/images/nyx.webp";
 import gutzImg from "../../assets/images/gutz.webp";
 import "./Home.scss";
-import ChapterContext from "../../context/ChapterContext"; // Ajout pour récupérer selectCharacter
+import ChapterContext from "../../context/ChapterContext";
+import VisitorCounter from "../../components/VisitorCounter/VisitorCounter";
 
 const Home = () => {
   const navigate = useNavigate();
   const [showCards, setShowCards] = useState(false);
-  const { selectCharacter } = useContext(ChapterContext); // Ajout
+  const { selectCharacter } = useContext(ChapterContext);
 
   // Cette fonction enregistre le nom du personnage dans le localStorage,
   // efface l'ancienne fiche, et force la notification du context
@@ -37,6 +38,7 @@ const Home = () => {
           className="home__image"
         />
         <h1 className="home__title">Le Livre Dont Vous Êtes Le Héros</h1>
+        <VisitorCounter />
         <p className="home__intro">
           Plongez dans l'aventure et faites vos choix pour écrire votre histoire
           !

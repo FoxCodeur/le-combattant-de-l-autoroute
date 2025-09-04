@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2rem auto 0 auto;
+  background: #ffcc00;
+  border: 3px solid #000;
+  border-radius: 8px;
+  padding: 0.3em 1.1em 0.3em 0.7em;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  color: #222;
+  box-shadow: 2px 2px 0 #000, 4px 4px 0 #fffde4;
+  width: fit-content;
+  user-select: none;
+  gap: 0.7em;
+}
+
+.visitor-counter__icon {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  filter: drop-shadow(1px 1px 1px #fff);
+}
+
+.visitor-counter__text {
+  letter-spacing: 0.02em;
+}

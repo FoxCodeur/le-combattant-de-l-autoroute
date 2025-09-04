@@ -825,7 +825,11 @@ const Chapter = () => {
           </div>
 
           {id === "398" ? (
-            <EndGameScreen onFinish={handleNewGame} />
+            // Modification ici : on passe le nom du personnage à EndGameScreen
+            <EndGameScreen
+              onFinish={handleNewGame}
+              character={characterData?.nom}
+            />
           ) : (
             <section
               className={`chapter-text ${id === "0" ? "first-chapter" : ""}`}

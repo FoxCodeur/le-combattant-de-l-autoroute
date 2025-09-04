@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Ta configuration (copie-colle celle de la console)
+// Ta configuration Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCrx1IPZXayRWT2vT1Klon-LwxTmX-1UCz8",
   authDomain: "livre-jeu-compteur.firebaseapp.com",

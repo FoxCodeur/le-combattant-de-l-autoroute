@@ -1,25 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./VisitorCounter.scss";
 
-// Utilise un identifiant unique pour ton livre-jeu
-const COUNTER_ID = "foxcodeur_livre_jeu";
+const NAMESPACE = "foxcodeur-livre-jeu";
+const KEY = "visites";
 
 function VisitorCounter() {
   const [visits, setVisits] = useState(null);
-  const [error, setError] = useState(false);
 
   useEffect(() => {
-    // TinyCounter API : incrémente et récupère la valeur
-    fetch(`https://api.tinycounter.com/count?key=${COUNTER_ID}`)
+    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
       .then((res) => res.json())
-      .then((data) => {
-        if (typeof data.count === "number") {
-          setVisits(data.count);
-        } else {
-          setError(true);
-        }
-      })
-      .catch(() => setError(true));
+      .then((data) => setVisits(data.value));
   }, []);
 
   return (
@@ -27,9 +18,7 @@ function VisitorCounter() {
       <span className="visitor-counter__icon" role="img" aria-label="👥">
         👥
       </span>
-      {error ? (
-        <span className="visitor-counter__text">Compteur indisponible</span>
-      ) : visits === null ? (
+      {visits === null ? (
         "Chargement..."
       ) : (
         <span className="visitor-counter__text">

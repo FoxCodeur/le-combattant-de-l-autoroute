@@ -1,8 +1,8 @@
+@use "../../styles/mixins" as *;
+
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2rem;
+  @include flex-between-center;
+  padding: 0.4rem 2rem;
   background: linear-gradient(90deg, #181a1b 60%, #23272b 100%);
   color: #ffd600;
   border-top: 3px solid #ffd600;
@@ -11,23 +11,18 @@
   width: 100%;
 
   .footer__section {
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
   }
 
   .footer__logo img {
     height: 100px;
     width: auto;
-    filter: drop-shadow(0 2px 4px #0008);
-    border-radius: 6px;
-    background: #232323;
-    padding: 4px;
+    border-radius: 4px;
   }
 
   .footer__center {
     flex: 1;
-    justify-content: center;
-    display: flex;
+    @include flex-justify-center;
     a {
       color: #ffd600;
       text-decoration: none;
@@ -45,35 +40,38 @@
     }
   }
 
-  .footer__socials a {
-    color: #ffd600;
-    margin-left: 1rem;
-    font-size: 1.45rem;
-    transition: color 0.2s, transform 0.2s;
-    &:hover {
-      color: #ffa500;
-      transform: translateY(-2px) scale(1.18);
-      text-shadow: 0 2px 8px #ffd60033;
-    }
-    &[aria-label="LinkedIn"]:hover {
-      color: #0077b5;
-    }
-    &[aria-label="GitHub"]:hover {
-      color: #333;
+  .footer__socials {
+    @include flex-align-center;
+    a {
+      color: #ffd600;
+      margin-left: 1rem;
+      font-size: 1.45rem;
+      transition: color 0.2s, transform 0.2s;
+      &:hover {
+        color: #ffa500;
+        transform: translateY(-2px) scale(1.18);
+        text-shadow: 0 2px 8px #ffd60033;
+      }
+      &[aria-label="LinkedIn"]:hover {
+        color: #0077b5;
+      }
+      &[aria-label="GitHub"]:hover {
+        color: #333;
+      }
     }
   }
 
   @media (max-width: 700px) {
-    flex-direction: column;
+    @include flex-column;
     gap: 1.1rem;
     padding: 1.1rem 1rem;
 
     .footer__center {
-      justify-content: center;
+      @include flex-justify-center;
       margin: 0.3em 0;
     }
     .footer__socials {
-      justify-content: center;
+      @include flex-justify-center;
       margin-top: 0.4rem;
     }
   }

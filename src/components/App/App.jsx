@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import routesConfig from "../../config/routesConfig"; // Assurez-vous que ce chemin est correct
-import Footer from "../Footer/Footer"; // Assurez-vous que ce chemin est correct
+import routesConfig from "../../config/routesConfig";
+import Footer from "../Footer/Footer";
 import "./App.scss";
 
 const App = () => {

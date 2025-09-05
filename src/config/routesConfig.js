@@ -1,15 +1,19 @@
-// src/routes/routesConfig.jsx
 import Chapter from "../pages/Chapter/Chapter";
 import Home from "../pages/home/Home";
+import MentionsLegales from "../pages/MentionsLegales/MentionsLegales";
 
 const routesConfig = [
   {
     path: "/",
-    element: Home, // Juste la référence du composant, pas de JSX ici
+    element: Home,
   },
   {
-    path: "/chapitre/:id", // Route dynamique
-    element: Chapter, // Juste la référence du composant, pas de JSX ici
+    path: "/chapitre/:id",
+    element: Chapter,
+  },
+  {
+    path: "/mentions-legales",
+    element: MentionsLegales,
   },
 ];
 

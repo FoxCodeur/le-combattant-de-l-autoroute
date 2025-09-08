@@ -1,0 +1,9 @@
+{
+  "id": "409",
+  "title": "Chapitre 409",
+  "text": "Vos réflexes prennent le dessus. D’un geste sûr, vous dégainez votre revolver et pressez la détente. La balle heurte la créature en plein front : un jet noir éclabousse le mur tandis que le zombie s’écroule à vos pieds, la mâchoire figée dans un rictus de faim éternelle. Sans perdre une seconde, écœuré et le cœur battant, vous reculez pour quitter la pièce, refusant de croiser à nouveau le regard du cadavre. C’est alors que vous comprenez pourquoi la porte était piégée : une seule seconde d’hésitation et vous auriez pu y laisser la vie. Un juron de colère vous échappe. Il aurait vraiment mieux valu ne jamais l’ouvrir.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "353" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "405",
+  "title": "Chapitre 405",
+  "text": "vos réflexes prennent le dessus. Dans un mouvement adroit, vous saisissez votre revolver. Vous pressez la détente. La balle heurte la créature en pleine tête ; un jet noir éclabousse le mur. Le corps s’effondre à vos pieds, inerte, la mâchoire encore ouverte dans un rictus de faim. Vous ne perdez pas une seconde. Dégouté, le cœur battant, vous quittez la pièce à reculons, évitant de regarder le cadavre. Vous comprenez alors pourquoi la porte était piégée – cette erreur aurait pu vous coûter cher. Vous lachez un juron de colère : il aurait mieux valu ne jamais l’ouvrir.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "409" }
+  ]
+}

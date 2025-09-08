@@ -1,0 +1,18 @@
+{
+  "id": "410",
+  "title": "Chapitre 410",
+  "text": "Il y a quelque minutes vous avez croisé plusieurs véhicules abandonnés, peut être que l'un d'eux contient encore de l'essence. Il y a peu d'espoir en vérité, mais vous n'avez pas le choix.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal à votre score de Chance, test réussi. Sinon, vous échouez."
+  },
+  "choices": [
+    { "label": "Test reussi...", "next": "411" },
+    { "label": "Test echoue...", "next": "394" }
+  ]
+}

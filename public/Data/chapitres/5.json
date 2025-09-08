@@ -1,7 +1,7 @@
 {
   "id": "5",
   "title": "Chapitre 5",
-  "text": "Le motel est plongé dans l'obscurité. Toutes les fenêtres sont closes et la porte d'entrée est verrouillée.",
+  "text": "Le bâtiment est plongé dans l'obscurité. Toutes les fenêtres sont closes et la porte d'entrée est verrouillée.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si l'envie vous prend de forcer la serrure...", "next": "241" },

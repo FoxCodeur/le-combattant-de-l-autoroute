@@ -1,0 +1,14 @@
+{
+  "id": "399",
+  "title": "Chapitre 399",
+  "text": "Et ce qui devait arriver, arriva. La chaîne finit par céder. La créature bondit, gueule ouverte, bras tendus. Dans la précipitation, vous faites un pas arrière, heurtez le mur. Votre main cherche le revolver dans le holster. Déjà, l'autre s’abat sur vous, ses doigts aggripent votre veste. Vous n’avez plus le choix. Il faut agir, maintenant.",
+  "image": "/images/chap1.jpg",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 1
+  },
+  "choices": [
+    { "label": "Si vous obtenez 1, 2 ou 3...", "next": "406" },
+    { "label": "Si vous obtenez 4, 5 ou 6...", "next": "407" }
+  ]
+}

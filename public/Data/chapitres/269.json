@@ -16,8 +16,8 @@
     "ennemis": [
       {
         "nom": "COLOSSUS REX",
-        "habilete": 11,
-        "endurance": 16,
+        "habilete": 9,
+        "endurance": 14,
         "image": "/images/ch269Ennemi.webp"
       }
     ],

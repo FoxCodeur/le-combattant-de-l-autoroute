@@ -1,7 +1,7 @@
 {
   "id": "246",
   "title": "Chapitre 246",
-  "text": "Maintenant, que comptez vous faire ?",
+  "text": "Vous regagnez votre véhicule afin de faire un point sur la situation. Maintenant, que comptez vous faire ?",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous ne l'avez pas encore fait, vous pouvez inspecter le supermarche...", "next": "112" },

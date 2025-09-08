@@ -1,13 +1,18 @@
 {
   "id": "233",
   "title": "Chapitre 233",
-  "text": "Après avoir soigné votre blessure, vous examinez la pièce, mais vous ne trouvez que des détritus et des vieux meubles poussiéreux. La pièce était piégée uniquement dans le but de décourager d'éventuels intrus. [danger]Vous perdez 1 point de CHANCE.[/danger]",
-  "image": "/images/chap1.jpg",
-  "modificateursNarratifs": {
-    "chance": -1
+  "text": "[danger]Vous perdez 1 point de CHANCE.[/danger]Alors que vous pénétrez dans la pièce, l’effarement vous saisit. À jute quelques mètres, une silhouette humaine est attachée à une chaîne, la peau livide, le visage ravagé. Le zombie ou ce qui semble en être un vous scrute avec avidité. Sa bouche entrouverte laisse échapper un filet de bave, tandis que ses bras s’agitent. Sa poitrine se soulève dans un effort désespéré, révélant des plaies suppurantes. La corde qui le retient par la gorge se ressere aussitôt dans sa chair, mais il continue de tirer dessus avec une force animale. Un frisson vous parcourt l’échine. Durant l'espace d'une seconde, tout vous revient : Les souvenirs d’avant la fin du monde, avant l’épidémie. Vous revoyez les rues animées, la lumière du jour sur des visages familiers, la vie ordinaire avant que la grippe asiatique ne transforme la civilisation en cauchemar. Ce monstre attaché ici doit être l’une des premières victimes, abandonné par ceux qui avaient encore l’espoir de le guérir, ou tout du moins de le contenir… Aujourd’hui, il n’est plus qu’une menace. Soudain, alors que vous reculez pour battre en retraite, la créature émet un couinement et tire avec force sur sa chaîne. Le métal gémit sous la pression. Le mieux est de partir, au plus vite. **Le doute s'empare de vous, et s'il parvenait à faire céder la chaine ?**",
+  "image": "/images/chapter233.webp",
+  "diceRoll": {
+    "required": true,
+    "numberOfDice": 2
+  },
+  "testChance": {
+    "required": true,
+    "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal, test réussi. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Si vous ne l'avez pas encore fait, vous pouvez ouvrir la porte de la pièce du fond...", "next": "185" },
-    { "label": "si vous preferez quitter la maison...", "next": "246" }
+    { "label": "Test reussi...", "next": "409" },
+    { "label": "Test echoue...", "next": "399" }
   ]
 }

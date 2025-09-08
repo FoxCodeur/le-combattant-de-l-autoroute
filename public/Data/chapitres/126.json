@@ -1,7 +1,7 @@
 {
   "id": "126",
   "title": "Chapitre 126",
-  "text": "Vous traversez la rue en courant et vous vous aplatissez contre le mur d'un immeuble, vous attendant, a tout instant, à entendre claquer une autre détonation. Le coeur battant la chamade, vous rampez prudemment jusqu'à l'angle du bâtiment et vous scrutez les alentours : personne en vue dans l'étroite ruelle. Alors que vous avancez à découvert, vous entendez soudain une voix crier :\n **« Un seul pas de plus et t'es un homme mort ! Maintenant, réponds : d’où est-ce que tu viens, exactement ? »**",
+  "text": "Vous traversez la rue en courant et vous vous aplatissez contre le mur d'un immeuble, vous attendant, a tout instant, à entendre claquer une autre détonation. Le coeur battant la chamade, vous avancez prudemment jusqu'à l'angle du bâtiment et vous scrutez les alentours : personne en vue dans l'étroite ruelle. Alors que vous avancez à découvert, vous entendez soudain une voix crier :\n **« Un seul pas de plus et j'te crève ! Maintenant, réponds : d’où est-ce que tu viens ? »**",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Si vous desirez avouer que vous etes de Waco...", "next": "274" },

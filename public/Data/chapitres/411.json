@@ -1,0 +1,9 @@
+{
+  "id": "411",
+  "title": "Chapitre 411",
+  "text": "Un miracle vient de se produire ! Vos mains en tremblent d’excitation tant c'était improbable. En effet, vous venez de découvrir, dans la benne d’un pick-up, un jerricane contenant encore un peu d’essence. C'est si peu, mais cela devrait suffire. À l’intérieur du véhicule, le conducteur gît, affalé contre le volant, la mort ayant à peine eu le temps de le marquer de son empreinte. Le choc de cette vision vous glace le sang, mais l’urgence reprend le dessus : Vous vous emparez du précieux bidon, jettez un dernier regard aux lieux, puis vous éloignez à grandes enjambées, le cœur battant et l’adrénaline bourdonnant dans les veines.",
+  "image": "/images/chap1.jpg",
+  "choices": [
+    { "label": "Next...", "next": "197" }
+  ]
+}

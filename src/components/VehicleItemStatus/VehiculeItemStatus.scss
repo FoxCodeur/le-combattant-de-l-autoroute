@@ -1,0 +1,94 @@
+.vehicle-item-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(180deg, #fcfcfa 70%, #d4cfc0 100%);
+  border: 2.5px solid #9e9475;
+  border-radius: 11px;
+  padding: 3px 13px 3px 7px;
+  box-shadow: 1px 1px 0 #bbb, 0 4px 8px 1px #c7c2b3;
+  min-width: 65px;
+  min-height: 47px;
+  font-size: 1.07rem;
+  position: relative;
+  transition: box-shadow 0.15s;
+
+  &:hover {
+    box-shadow: 0 0 16px 2px #ffd700, 1px 1px 0 #bbb, 0 4px 8px 1px #b4a46a;
+    z-index: 2;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    max-width: 200px;
+    background: #222;
+    color: #ffe16a;
+    text-align: center;
+    border-radius: 7px;
+    padding: 6px 12px;
+    position: absolute;
+    z-index: 10;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-size: 0.95rem;
+    font-family: "Oswald", monospace;
+    box-shadow: 0 2px 12px #111;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .tooltip:hover .tooltiptext,
+  .tooltip:focus .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @media (pointer: coarse) {
+    .tooltip:active .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .vehicle-item-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 7px;
+    border: 2px solid #121212;
+    background: #f0e8c6;
+    box-shadow: 0 1px 4px #ceb57a;
+    padding: 1.5px;
+    transition: filter 0.12s;
+  }
+  &:hover .vehicle-item-icon {
+    filter: brightness(1.14) drop-shadow(0 0 5px #ffe16a);
+  }
+
+  .vehicle-item-label {
+    display: none;
+  }
+  .vehicle-item-value {
+    background: #222;
+    color: #ffe16a;
+    border-radius: 7px;
+    padding: 10px 5px;
+    margin-left: 0.3rem;
+    font-size: 1.22rem;
+    min-width: 22px;
+    text-align: center;
+    font-family: "Digital-7", "Oswald", monospace;
+    border: 2px solid #e6b550;
+    box-shadow: 0 1px 3px #c1b077;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.5px;
+  }
+}

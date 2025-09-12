@@ -1,27 +1,13 @@
 {
   "id": "96",
   "title": "Chapitre 96",
-  "text": "Les kilomètres défilent et la jauge d'essence indique que le réservoir est à nouveau presque vide.",
+  "text": "Les kilomètres défilent et la jauge d'essence indique que le réservoir a encore bien diminué. Quelle plaie ! Vous n'espérez qu'une chose, atteindre votre destination au plus vite !",
   "image": "/images/chap1.jpg",
   "choices": [
     {
-      "label": "Si vous disposez d'un jerricane plein d'essence...",
-      "next": "180",
-      "condition": {
-        "item": "bidon_Essence",
-        "hasItem": true
-      },
-      "modificateursNarratifs": {
-        "bidon_Essence": -1
-      }
-    },
-    {
-      "label": "Si vous n'avez pas pu vous procurer un bidon d'essence recemment...",
-      "next": "364",
-      "condition": {
-        "item": "bidon_Essence",
-        "hasItem": false
-      }
+      "label": "Next...",
+      "next": "180"
+      
     }
   ]
 }

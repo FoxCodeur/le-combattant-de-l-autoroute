@@ -1,7 +1,7 @@
 {
   "id": "180",
   "title": "Chapitre 180",
-  "text": "Vous vider le contenu du jerricane d'essence dans le réservoir de l'Interceptor, mais vous savez pertinemment que vous n'aurez pas assez de carburant pour aller jusqu'à **HollyFrontier**. Vous vous demandez avec anxiété comment vous pourrez vous ravitailler dans cette région sauvage et désertique, et c'est avec un sentiment d'inquiétude grandissant que vous reprenez la route.",
+  "text": "Vous videz le contenu d'un jerricane d'essence qu'il vous reste dans le réservoir de l'Interceptor, mais vous savez pertinemment que vous n'aurez pas assez de carburant pour aller jusqu'à **HollyFrontier**. Vous vous demandez avec anxiété comment vous pourrez vous ravitailler dans cette région sauvage et désertique, et c'est avec un sentiment d'inquiétude grandissant que vous reprenez la route.",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
     "bidon_Essence": -1

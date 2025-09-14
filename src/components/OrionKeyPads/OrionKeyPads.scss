@@ -1,0 +1,123 @@
+.orion-keypad {
+  position: relative;
+  width: 340px;
+  height: 390px;
+  margin: 0 auto;
+  user-select: none;
+
+  .orion-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    // Pour déboguer le placement des overlays, active la bordure ci-dessous :
+    // border: 2px solid red;
+    // box-sizing: border-box;
+  }
+
+  // ---- Placement précis pour chaque touche (valeurs affinées) ----
+  // Ligne 1 (1 2 3)
+  .key-1,
+  .key-1.key-btn {
+    left: 50px;
+    top: 95px;
+    width: 46px;
+    height: 51px;
+  }
+  .key-2,
+  .key-2.key-btn {
+    left: 102px;
+    top: 80px;
+    width: 45px;
+    height: 51px;
+  }
+  .key-3,
+  .key-3.key-btn {
+    left: 205px;
+    top: 80px;
+    width: 46px;
+    height: 51px;
+  }
+  // Ligne 2 (4 5 6)
+  .key-4,
+  .key-4.key-btn {
+    left: 36px;
+    top: 154px;
+    width: 46px;
+    height: 51px;
+  }
+  .key-5,
+  .key-5.key-btn {
+    left: 121px;
+    top: 154px;
+    width: 46px;
+    height: 51px;
+  }
+  .key-6,
+  .key-6.key-btn {
+    left: 205px;
+    top: 154px;
+    width: 46px;
+    height: 51px;
+  }
+  // Ligne 3 (7 8 9)
+  .key-7,
+  .key-7.key-btn {
+    left: 36px;
+    top: 228px;
+    width: 46px;
+    height: 51px;
+  }
+  .key-8,
+  .key-8.key-btn {
+    left: 121px;
+    top: 228px;
+    width: 46px;
+    height: 51px;
+  }
+  .key-9,
+  .key-9.key-btn {
+    left: 205px;
+    top: 228px;
+    width: 46px;
+    height: 51px;
+  }
+  // Ligne 4 (0 ENTER)
+  .key-0,
+  .key-0.key-btn {
+    left: 121px;
+    top: 302px;
+    width: 48px;
+    height: 48px;
+  }
+  .key-enter,
+  .key-enter.key-btn {
+    left: 205px;
+    top: 302px;
+    width: 75px;
+    height: 48px;
+  }
+
+  .key-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    cursor: pointer;
+    // Pour debug :
+    // background: rgba(255,0,0,0.15);
+    // border: 1px dashed blue;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "308",
   "title": "Chapitre 308",
-  "text": "Vous avez fait mouche : le loup est tué net, avant même qu'il ne s'effondre au sol. L'autre loup, terrifié par le coup de feu, disparaît dans les ténèbres",
+  "text": "Vous faites feu. La balle heurte le loup en plein flanc. Il pousse un jappement bref, s’effondre, s’agite un instant sur le sol, puis s’immobilise. L’autre, surpris par la détonation, recule d’un bond, grogne, puis, comprenant le danger, disparaît dans l’ombre et s’éloigne au plus vite. Inutile de gaspiller vos munitions, vous le laisser partir.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "286" }

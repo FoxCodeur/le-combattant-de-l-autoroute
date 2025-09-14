@@ -1,8 +1,8 @@
 {
   "id": "365",
   "title": "Chapitre 365",
-  "text": "Tandis que vous traversez le terre-plein vers le motel, un grognement se fait entendre. Vous vous retournez et apercevez deux paires d'yeux jaunes surpris par le faisceau de votre lampe électrique. Dans la lueur blanche du faisceau, vous distinguez les silhouettes de deux loups qui se ramassent sur eux-mêmes, prêts à bondir. Vous dégainez rapidement et visez le plus proche.",
-  "image": "/images/chap1.jpg",
+  "text": "Tandis que vous traversez l'allée vers l'entrepot, un grognement se fait entendre. Là, juste à quelques pas de vous, deux paires d'yeux jaunes sont surpris par le faisceau de votre lampe électrique. Dans la lueur du faisceau, vous distinguez les silhouettes de deux loups qui se ramassent sur eux-mêmes, prêts à bondir. Vous dégainez aussitôt et visez le plus proche.",
+  "image": "/images/chapter365.webp",
   "diceRoll": {
     "required": true,
     "numberOfDice": 2

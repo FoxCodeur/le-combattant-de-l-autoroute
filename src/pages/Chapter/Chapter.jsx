@@ -49,6 +49,8 @@ import { GiCharacter } from "react-icons/gi";
 import { FcRules } from "react-icons/fc";
 import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
 import EndGameScreen from "../../components/EndGameScreen/EndGameScreen";
+import OrionKeypad from "../../components/OrionKeyPads/OrionKeyPads";
+import pageTurnSound from "../../assets/sons/page-turned.mp3"; // AJOUT DU SON
 
 // Mapping pour l'affichage
 const VEHICLE_ITEMS = [
@@ -271,7 +273,15 @@ const Chapter = () => {
     return text.replace(/\{hero\}/gi, characterData.nom);
   };
 
+  // Fonction pour jouer le son de page tournée
+  const playPageTurnSound = () => {
+    const audio = new Audio(pageTurnSound);
+    audio.volume = 0.6; // ajuste le volume si besoin (0.0 - 1.0)
+    audio.play();
+  };
+
   const handleChoiceClick = (choice) => {
+    playPageTurnSound(); // <<< Joue le son
     let updatedCharacter = characterData;
 
     if (choice.modificateursNarratifs) {
@@ -825,7 +835,6 @@ const Chapter = () => {
           </div>
 
           {id === "398" ? (
-            // Modification ici : on passe le nom du personnage à EndGameScreen
             <EndGameScreen
               onFinish={handleNewGame}
               character={characterData?.nom}
@@ -836,6 +845,19 @@ const Chapter = () => {
             >
               {renderFormattedText(getPersonalizedText(chapterData.text))}
             </section>
+          )}
+
+          {/* === Ajout du composant clavier ORION pour le chapitre 412 === */}
+          {id === "412" && (
+            <div
+              style={{
+                margin: "2rem auto",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <OrionKeypad />
+            </div>
           )}
 
           <div className="chapter-stats-row">

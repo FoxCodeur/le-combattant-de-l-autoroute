@@ -1,0 +1,9 @@
+{
+  "id": "412",
+  "title": "Chapitre 412",
+  "text": "**En fouillant dans le sac à dos**, l’espoir retombe vite : en effet tout ce qui aurait pu servir a été pillé depuis longtemps. Quelques vêtements, une gourde vide… Rien de franchement utile. Mais, au fond d’une poche intérieure, votre main rencontre un carnet écorné. Vous l’ouvrez : sur la première page, une phrase griffonnée attire tout de suite votre attention : «**Trois sœurs alignées, chacune partage le même poids dans la constellation…**» Vous relevez la tête vers la porte blindée, dont le système d’ouverture semble réclamer un code. Un mot clignote sur le clavier numérique : **« ORION »**. Le décor autour de vous – les graffitis, le projecteur, le symbole radioactif – n’offre aucune piste. Pourtant, ces quelques phrases dans le carnet résonnent dans votre esprit : **trois sœurs alignées… La constellation d’Orion !** Vous en êtes certain le code réside dans cette énigme, c'est certain !",
+  "image": "/images/chapter412.webp",
+  "choices": [
+    { "label": "Comme vous ne trouvez pas le code vous decidez d'aller dormir dans le camion...", "next": "218" }
+  ]
+}

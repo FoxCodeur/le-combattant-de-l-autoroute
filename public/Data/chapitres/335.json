@@ -1,8 +1,8 @@
 {
   "id": "335",
   "title": "Chapitre 335",
-  "text": "L'obscurité est totale ici : vous sortez la lampe électrique et l'allumez pour éclairer votre chemin.",
-  "image": "/images/chap1.jpg",
+  "text": "Vous progressez vers le bâtiment. L’obscurité rend chacun de vos pas incertain, et le silence qui règne accentue quelque peu votre appréhension. Vous sortez votre Maglite et l’allumez. Le faisceau lumineux révèle les fissures du sol et les hautes herbes qui s’infiltrent à travers le bitume craquelé.",
+  "image": "/images/chapter335.webp",
   "diceRoll": {
     "required": true,
     "numberOfDice": 2

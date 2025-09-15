@@ -20,92 +20,90 @@
     position: absolute;
     z-index: 3;
     pointer-events: none;
-    // Pour déboguer le placement des overlays, active la bordure ci-dessous :
     // border: 2px solid red;
-    // box-sizing: border-box;
   }
 
   // ---- Placement précis pour chaque touche (valeurs affinées) ----
   // Ligne 1 (1 2 3)
   .key-1,
   .key-1.key-btn {
-    left: 50px;
+    left: 52px;
     top: 95px;
-    width: 46px;
+    width: 44px;
     height: 51px;
   }
   .key-2,
   .key-2.key-btn {
-    left: 102px;
-    top: 80px;
-    width: 45px;
+    left: 106px;
+    top: 96px;
+    width: 44px;
     height: 51px;
   }
   .key-3,
   .key-3.key-btn {
-    left: 205px;
-    top: 80px;
-    width: 46px;
+    left: 158px;
+    top: 94px;
+    width: 44px;
     height: 51px;
   }
   // Ligne 2 (4 5 6)
   .key-4,
   .key-4.key-btn {
-    left: 36px;
-    top: 154px;
+    left: 49px;
+    top: 156px;
     width: 46px;
     height: 51px;
   }
   .key-5,
   .key-5.key-btn {
-    left: 121px;
-    top: 154px;
+    left: 105px;
+    top: 156px;
     width: 46px;
     height: 51px;
   }
   .key-6,
   .key-6.key-btn {
-    left: 205px;
-    top: 154px;
+    left: 160px;
+    top: 156px;
     width: 46px;
     height: 51px;
   }
   // Ligne 3 (7 8 9)
   .key-7,
   .key-7.key-btn {
-    left: 36px;
-    top: 228px;
+    left: 49px;
+    top: 218px;
     width: 46px;
     height: 51px;
   }
   .key-8,
   .key-8.key-btn {
-    left: 121px;
-    top: 228px;
+    left: 106px;
+    top: 216px;
     width: 46px;
     height: 51px;
   }
   .key-9,
   .key-9.key-btn {
-    left: 205px;
-    top: 228px;
+    left: 160px;
+    top: 218px;
     width: 46px;
     height: 51px;
   }
   // Ligne 4 (0 ENTER)
   .key-0,
   .key-0.key-btn {
-    left: 121px;
-    top: 302px;
-    width: 48px;
+    left: 51px;
+    top: 280px;
+    width: 78px;
     height: 48px;
   }
   .key-enter,
   .key-enter.key-btn {
-    left: 205px;
-    top: 302px;
-    width: 75px;
-    height: 48px;
+    left: 219px;
+    top: 259px;
+    width: 68px;
+    height: 30px;
   }
 
   .key-btn {
@@ -116,8 +114,64 @@
     margin: 0;
     z-index: 2;
     cursor: pointer;
-    // Pour debug :
-    // background: rgba(255,0,0,0.15);
-    // border: 1px dashed blue;
+  }
+
+  // --- LOUPE LUMIÈRES INDICATEURS ----
+  .indicator-lights {
+    position: absolute;
+    left: 242px;
+    top: 301px;
+    width: 38px;
+    height: 14px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+
+    .indicator-light {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #444;
+      box-shadow: 0 0 3px #111;
+      opacity: 0.4;
+      border: 1.5px solid #222;
+      transition: background 0.2s, box-shadow 0.2s, opacity 0.2s;
+
+      &.light-yellow.on {
+        background: #ffe877;
+        opacity: 1;
+        box-shadow: 0 0 8px 3px #ffe877, 0 0 1px 1px #fff;
+        border: 1.5px solid #b9b04a;
+      }
+      &.light-red.on {
+        background: #ff3b3b;
+        opacity: 1;
+        box-shadow: 0 0 8px 3px #ff3b3b, 0 0 1px 1px #fff;
+        border: 1.5px solid #9e2323;
+      }
+    }
+  }
+
+  // --- Affichage du code saisi : à gauche d'ORION ---
+  .keypad-code-dots {
+    position: absolute;
+    left: 80px; // positionné dans l'espace libre à gauche d'ORION
+    top: 66px; // verticalement aligné au "O" de "ORION"
+    width: 42px;
+    height: 28px;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    .dot {
+      font-size: 1.8em;
+      color: #ffe877;
+      text-shadow: 0 0 10px #ffe877, 0 0 1px #fff;
+      width: 12px;
+      text-align: center;
+      line-height: 1;
+    }
   }
 }

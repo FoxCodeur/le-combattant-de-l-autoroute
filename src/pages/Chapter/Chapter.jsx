@@ -50,9 +50,8 @@ import { FcRules } from "react-icons/fc";
 import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
 import EndGameScreen from "../../components/EndGameScreen/EndGameScreen";
 import OrionKeypad from "../../components/OrionKeyPads/OrionKeyPads";
-import pageTurnSound from "../../assets/sons/page-turned.mp3"; // AJOUT DU SON
+import pageTurnSound from "../../assets/sons/page-turned.mp3";
 
-// Mapping pour l'affichage
 const VEHICLE_ITEMS = [
   {
     key: "roquette",
@@ -92,7 +91,6 @@ const VEHICLE_ITEMS = [
   },
 ];
 
-// Composant d'affichage avec infobulle personnalisée
 const VehicleItemStatus = ({ label, value, icon }) => (
   <div className="vehicle-item-status">
     <span className="tooltip">
@@ -276,12 +274,12 @@ const Chapter = () => {
   // Fonction pour jouer le son de page tournée
   const playPageTurnSound = () => {
     const audio = new Audio(pageTurnSound);
-    audio.volume = 0.6; // ajuste le volume si besoin (0.0 - 1.0)
+    audio.volume = 0.6;
     audio.play();
   };
 
   const handleChoiceClick = (choice) => {
-    playPageTurnSound(); // <<< Joue le son
+    playPageTurnSound();
     let updatedCharacter = characterData;
 
     if (choice.modificateursNarratifs) {
@@ -547,6 +545,11 @@ const Chapter = () => {
       if (endurance >= 5) return phase3;
       return phase4;
     }
+  };
+
+  // --- Orion Keypad: redirection chapitre 420 si code correct ---
+  const handleOrionSuccess = () => {
+    navigate("/chapitre/420");
   };
 
   if (id === "358") {
@@ -856,7 +859,7 @@ const Chapter = () => {
                 justifyContent: "center",
               }}
             >
-              <OrionKeypad />
+              <OrionKeypad onSuccess={handleOrionSuccess} />
             </div>
           )}
 

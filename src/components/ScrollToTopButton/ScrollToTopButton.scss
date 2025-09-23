@@ -1,7 +1,8 @@
 .scroll-to-top-btn {
-  position: absolute;
-  right: 13%;
-  bottom: 4%;
+  position: fixed;
+  right: 10rem;
+  bottom: 8rem;
+  transform: translateX(-50%);
   background: none;
   border: none;
   padding: 0;
@@ -17,5 +18,12 @@
 
   &:hover .scroll-to-top-img {
     transform: scale(1.1) rotate(-10deg);
+  }
+}
+
+/* Masquer le bouton en mode mobile */
+@media (max-width: 768px) {
+  .scroll-to-top-btn {
+    display: none;
   }
 }

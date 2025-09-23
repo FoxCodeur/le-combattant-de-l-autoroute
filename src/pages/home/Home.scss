@@ -1,6 +1,10 @@
 @use "../../styles/mixins" as *;
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+// =============================
+// MODIF FoxCodeur: Overlay scrollable sur mobile pour sélectionner tous les personnages
+// =============================
+
 .home {
   @include flex-center;
   min-height: 100vh;
@@ -36,7 +40,7 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 4px 4px 0 #ffcc00,
       8px 8px 0 #000;
     width: 300px;
-    padding: 1.2rem 1rem 1rem 1rem; // padding réduit
+    padding: 1.2rem 1rem 1rem 1rem;
     transition: transform 0.15s, box-shadow 0.15s;
     text-align: center;
     gap: 0.1rem;
@@ -47,7 +51,7 @@
       height: 140px;
       object-fit: cover;
       object-position: top;
-      margin-bottom: 0.7rem; // moins d'espace
+      margin-bottom: 0.7rem;
       border-radius: 8px;
       border: 2px solid #000;
       background: #f6f6f6;
@@ -64,7 +68,7 @@
     p {
       color: #333;
       font-size: 1.05rem;
-      margin-bottom: 1.1rem; // moins d'espace
+      margin-bottom: 1.1rem;
       font-family: inherit;
       font-weight: 600;
       text-align: justify;
@@ -165,10 +169,22 @@
       font-size: 1rem;
     }
 
+    // --- Scrollable cards overlay en mobile ---
+    &__cards-overlay {
+      align-items: flex-start;
+      justify-content: center;
+      overflow-y: auto;
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+      max-height: 100vh;
+      box-sizing: border-box;
+    }
+
     &__cards {
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
+      width: 100%;
     }
 
     &__card {

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import renderFormattedText from "../../utils/renderFormattedText";
 import ChapterContext from "../../context/ChapterContext";
@@ -50,6 +50,9 @@ import { FcRules } from "react-icons/fc";
 import { FaMapMarkedAlt, FaCarSide } from "react-icons/fa";
 import EndGameScreen from "../../components/EndGameScreen/EndGameScreen";
 import OrionKeypad from "../../components/OrionKeyPads/OrionKeyPads";
+
+// === MODIF FoxCodeur : Ajout du son de page tournée à chaque changement de chapitre ===
+import pageTurnedSound from "../../assets/sons/page-turned.mp3";
 
 // Mapping pour l'affichage
 const VEHICLE_ITEMS = [
@@ -128,6 +131,16 @@ const Chapter = () => {
   const { notifications, addNotifications } = useContext(
     StatNotificationContext
   );
+
+  // === MODIF FoxCodeur : Joue le son de page tournée à chaque changement de chapitre ===
+  const audioRef = useRef(null);
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.volume = 0.3;
+      audioRef.current.play().catch(() => {});
+    }
+  }, [id]);
 
   useEffect(() => {
     fetchChapter(id);
@@ -543,6 +556,12 @@ const Chapter = () => {
   if (id === "358") {
     return (
       <div className={`chapter chapter-${id}`}>
+        <audio
+          ref={audioRef}
+          src={pageTurnedSound}
+          preload="auto"
+          style={{ display: "none" }}
+        />
         <StatChangeNotification notifications={notifications} />
 
         <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>
@@ -730,6 +749,12 @@ const Chapter = () => {
       aria-label="Chapitre interactif"
       style={{ position: "relative" }}
     >
+      <audio
+        ref={audioRef}
+        src={pageTurnedSound}
+        preload="auto"
+        style={{ display: "none" }}
+      />
       <StatChangeNotification notifications={notifications} />
 
       <Modal isOpen={isSheetOpen} onClose={() => setIsSheetOpen(false)}>

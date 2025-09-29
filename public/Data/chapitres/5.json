@@ -1,7 +1,7 @@
 {
   "id": "5",
   "title": "Chapitre 5",
-  "text": "Que dissimule ce bâtiment ? À la recherche de réponses, vous inspectez les lieux. Très vite, vous constatez qu’il est impossible d’approcher les fenêtres, toutes barricadées par du verre incassable. La porte d’entrée oppose la même résistance : verrouillée. Vous tendez l’oreille, mais aucun bruit ne s’échappe de l’intérieur, pas le moindre signe de vie. Vous faites le tour du bâtiment, examinez chaque façade, cherchez la moindre faille — en vain. Tout accès est condamné. Que décidez-vous de faire maintenant ?",
+  "text": "Que dissimule ce bâtiment ? À la recherche de réponses, vous inspectez les lieux. Très vite, vous constatez qu’il est impossible d’approcher les fenêtres, toutes barricadées par du verre incassable. La porte d’entrée oppose la même résistance : verrouillée. Vous tendez l’oreille, mais aucun bruit ne s’échappe de l’intérieur, pas le moindre signe de vie. Vous faites le tour du bâtiment, examinez chaque façade, cherchez la moindre faille — en vain. Tout accès est condamné.  Que faites vous ?",
   "image": "/images/chapter5.webp",
   "choices": [
     { "label": "Si l'envie vous prend de forcer la serrure...", "next": "241" },

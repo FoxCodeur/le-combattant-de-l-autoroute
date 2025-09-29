@@ -54,6 +54,9 @@ import OrionKeypad from "../../components/OrionKeyPads/OrionKeyPads";
 // === MODIF FoxCodeur : Ajout du son de page tournée à chaque changement de chapitre ===
 import pageTurnedSound from "../../assets/sons/page-turned.mp3";
 
+// SOUS-COMPOSANT IMAGE ORION PORTABLE
+import OrionPortableImage from "../../components/OrionPortableImage/OrionPortableImage";
+
 // Mapping pour l'affichage
 const VEHICLE_ITEMS = [
   {
@@ -873,9 +876,11 @@ const Chapter = () => {
               }}
             >
               <OrionKeypad onSuccess={() => navigate("/chapitre/420")} />
-              {/* Remplace 420 par le chapitre cible si besoin */}
             </div>
           )}
+
+          {/* === Ajout de l'image Orion Portable pour le chapitre 421 === */}
+          {id === "421" && <OrionPortableImage />}
 
           <div className="chapter-stats-row">
             <div className="stat-with-portrait">

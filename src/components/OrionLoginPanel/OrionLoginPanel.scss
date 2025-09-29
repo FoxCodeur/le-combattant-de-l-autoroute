@@ -1,0 +1,54 @@
+.orion-login-panel {
+  position: absolute;
+  left: 17%;
+  top: 53%;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.orion-login-title {
+  color: #19f5a3;
+  font-size: 1.3rem;
+  font-family: "Orbitron", "Roboto", sans-serif;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #19f5a3;
+  letter-spacing: 2px;
+}
+
+.orion-login-input {
+  width: 90%;
+  padding: 7px 10px;
+  margin-bottom: 15px;
+  font-size: 1.15rem;
+  background: transparent;
+  border: 2px solid #19f5a3;
+  border-radius: 8px;
+  color: #19f5a3;
+  outline: none;
+  text-align: center;
+  box-shadow: 0 0 8px #19f5a3;
+}
+
+.orion-login-btn {
+  width: 90%;
+  padding: 7px 0;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background: transparent;
+  border: 2px solid #19f5a3;
+  border-radius: 8px;
+  color: #19f5a3;
+  cursor: pointer;
+  box-shadow: 0 0 8px #19f5a3;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: #19f5a3;
+    color: #011a13;
+  }
+}

@@ -1,0 +1,47 @@
+.orion-portable-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  user-select: none;
+}
+
+.orion-portable-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.orion-portable-img.visible {
+  opacity: 1;
+  z-index: 2;
+}
+
+.orion-portable-img.fade-out {
+  opacity: 0;
+  z-index: 2;
+}
+
+.orion-portable-img.top {
+  z-index: 4;
+}
+
+.orion-portable-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  text-shadow: 0 2px 8px #000;
+  z-index: 5;
+  bottom: 12%;
+}

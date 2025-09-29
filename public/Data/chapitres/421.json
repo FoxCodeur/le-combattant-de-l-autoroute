@@ -1,0 +1,11 @@
+{
+  "id": "421",
+  "title": "Chapitre 421",
+  "text": "Peut-être y a-t-il des indices dans cet ordinateur portable qui pourraient vous permettre d'ouvrir la porte. Avant toute chose, vous allez essayer de vous y connecter.",
+  "image": "/images/chapter421.webp",
+  "choices": [
+    { "label": "Vous inspectez la porte...", "next": "425" },
+    { "label": "Le rouleau de papier...", "next": "422" },
+    { "label": "Vous retournez à l'exterieur pour dormir dans le camion...", "next": "218" }
+  ]
+}

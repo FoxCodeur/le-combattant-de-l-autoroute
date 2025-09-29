@@ -1,0 +1,10 @@
+{
+  "id": "425",
+  "title": "Chapitre 425",
+  "text": "Vous passez vos doigts sur la surface de la porte, scrutant le moindre interstice, mais elle résiste à toutes vos tentatives d'ouverture. Il est évident qu’un moyen de l’ouvrir existe quelque part. Oui mais lequel ?",
+  "image": "/images/chapter425.webp",
+  "choices": [
+    { "label": "Vous inspectez l'ordinateur portable...", "next": "421" },
+    { "label": "Vous retournez à l'exterieur pour dormir dans le camion...", "next": "218" }
+  ]
+}

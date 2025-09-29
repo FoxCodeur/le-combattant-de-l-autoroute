@@ -1,0 +1,10 @@
+{
+  "id": "422",
+  "title": "Chapitre 422",
+  "text": "Pressé d’en découvrir le contenu, vous défaites l’attache du rouleau et examinez les documents qui le compose. La première feuille dévoile une illustration. Le rouleau contient également une seconde feuille, couverte d’une écriture calligraphiée. Vous lisez :\n Au cœur de la forêt, l'oiseau **Quetzalcóatl** et le chien **Xolotl** s’avancent jusqu’au portail de **Xibalta**. Seul l'un des deux pourra rejoindre l'autre monde. Regarde bien, voyageur, car la scène t’offre quatre mystères à déchiffrer. \n**1er indice :**\n Dans la lande, le souffle du maître s’élève parmi les cimes. Je suis le serpent au corps sinueux, paré de plumes et de mystères. Dans le calendrier sacré, parmi vingt, j’occupe une place précise. Trouve mon nom, puis mon chiffre, et tu découvriras le secret du serpent à plumes. Quel est ce nombre ? \n**2ème indice :**\n Sur le sentier qui mène à l’autre monde, le gardien avance en silence. Compte les empreintes laissées sur le sol : c’est le nombre gravé dans la mémoire des esprits, marque discrète de sa présence. \n**3ème indice :**\n Autour de la serrure, les éléments protègent le monde du peuple Aztèque: le vent, la feuille, le feu et enfin, le nuage. Additionne leur essence pour trouver la clé. \n**4ème indice :**\n Dans l’ombre, le jumeau veille. Gardien des mondes cachés, il ne marche jamais très loin de son frère : deux astres liés, deux destins entrelacés. Trouve le chiffre qui unit les deux frères. ",
+  "image": "/images/chapter422.webp",
+  "choices": [
+    { "label": "Vous inspectez l'ordinateur portable...", "next": "421" },
+    { "label": "Vous retournez à l'exterieur pour dormir dans le camion...", "next": "218" }
+  ]
+}

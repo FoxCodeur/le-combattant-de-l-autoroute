@@ -4,7 +4,7 @@
   "text": "Vous roulez à vitesse de croisière depuis un bon moment, lorsque vous apercevez un poteau indicateur signalant une piste étroite menant à Rocville. une agglomération située dans les environs.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "vous desirez vous diriger vers le sud, en passant par Roc-ville...", "next": "157" },
-    { "label": "Si vous preferez garder la même direction et continuer a rouler vers l'est...", "next": "45" }
+    { "label": "vous desirez vous diriger vers le sud, en passant par Axtell...", "next": "157" },
+    { "label": "Si vous preferez garder la meme direction et continuer a rouler vers l'est...", "next": "45" }
   ]
 }

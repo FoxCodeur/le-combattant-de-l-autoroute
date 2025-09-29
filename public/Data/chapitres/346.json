@@ -1,10 +1,10 @@
 {
   "id": "346",
   "title": "Chapitre 346",
-  "text": "Par miracle, l’essieu a tenu bon. En quelques instants, vous remplacez la roue de secours, jetant un dernier regard soucieux à l'Interceptor. Bientôt, vous reprenez la route à vive allure, le cœur battant encore sous l’effet de l’adrénaline. Tout en conduisant, vous ne pouvez vous empêcher de secouer la tête, songeant à la folie de ce monde où chaque instant peut basculer. Devant vous, la poussière du chemin se dissipe, révélant un vieux panneau indicateur : une flèche y pointe vers une piste de terre étroite menant **à la bourgade de Rocville**.",
+  "text": "Par miracle, l’essieu a tenu bon. En quelques instants, vous remplacez la roue de secours, jetant un dernier regard soucieux à l'Interceptor. Bientôt, vous reprenez la route à vive allure, le cœur battant encore sous l’effet de l’adrénaline. Tout en conduisant, vous ne pouvez vous empêcher de secouer la tête, songeant à la folie de ce monde où chaque instant peut basculer. Devant vous, la poussière du chemin se dissipe, révélant un vieux panneau indicateur : une flèche y pointe vers une piste de terre étroite menant **à la bourgade d'Axtell**.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous souhaitez vous diriger vers Rocville...", "next": "157" },
+    { "label": "Si vous souhaitez vous diriger vers Axtell...", "next": "157" },
     { "label": "Si vous preferez continuer tout droit...", "next": "45" }
   ]
 }

@@ -12,7 +12,7 @@
     "description": "Tentez votre Chance. Si le total des deux dés est inférieur ou égal à votre score de Chance, test réussi. Sinon, vous échouez."
   },
   "choices": [
-    { "label": "Test reussi...", "next": "395" },
+    { "label": "Test reussi...", "next": "426" },
     { "label": "Test echoue...", "next": "394" }
   ]
 }

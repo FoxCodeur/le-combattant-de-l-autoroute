@@ -660,7 +660,11 @@ const Chapter = () => {
               {renderFormattedText(getPersonalizedText(chapterData.text))}
             </section>
 
-            <div className="chapter-stats-row">
+            {/* RaceGame358 placé avant la ligne des stats */}
+            <RaceGame358 chapterData={chapterData} navigate={navigate} />
+
+            {/* MODIF: Masquer la ligne des stats sur le chapitre 358 */}
+            <div className="chapter-stats-row" style={{ display: "none" }}>
               <StatBox
                 label="Endurance"
                 value={characterData?.caractéristiques?.endurance ?? 0}
@@ -728,8 +732,6 @@ const Chapter = () => {
               }
               aria-label="Commencer une nouvelle partie"
             />
-
-            <RaceGame358 chapterData={chapterData} navigate={navigate} />
           </article>
         ) : (
           !loading &&

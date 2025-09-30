@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import DiceRoll from "../DiceRoll/DiceRoll";
+import motorCarSound from "../../assets/sons/motorCar.mp3";
 import "./RaceGame358.scss";
 
 const MAX_SCORE = 24;
@@ -120,6 +121,9 @@ const RaceGame358 = ({ chapterData, navigate }) => {
   const [isRolling, setIsRolling] = useState(false);
   const [raceFinished, setRaceFinished] = useState(false);
 
+  // Ajout du ref pour le son
+  const motorCarAudioRef = useRef(null);
+
   const currentVehicle = raceStep % 2 === 0 ? "Jaguar Type-E" : "Interceptor";
 
   useEffect(() => {
@@ -161,9 +165,20 @@ const RaceGame358 = ({ chapterData, navigate }) => {
     raceStep,
   ]);
 
+  // Joue le son à chaque lancement du dé
+  const playMotorCarSound = () => {
+    if (motorCarAudioRef.current) {
+      motorCarAudioRef.current.currentTime = 0; // Reset pour rejouer
+      motorCarAudioRef.current.play();
+    }
+  };
+
   const handleRaceRoll = (score) => {
     setIsRolling(false);
     if (raceFinished) return;
+    // Joue le son ici
+    playMotorCarSound();
+
     if (raceStep % 2 === 0) {
       const newScore = jaguarScore + score;
       setJaguarScore(newScore);
@@ -188,6 +203,14 @@ const RaceGame358 = ({ chapterData, navigate }) => {
 
   return (
     <section className="race-game358">
+      {/* Balise audio cachée */}
+      <audio
+        ref={motorCarAudioRef}
+        src={motorCarSound}
+        preload="auto"
+        style={{ display: "none" }}
+      />
+
       <h2>
         Course&nbsp;: <span className="vehicule-name">Jaguar Type-E</span> vs{" "}
         <span className="vehicule-name">Interceptor</span>

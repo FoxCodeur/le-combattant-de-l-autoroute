@@ -4,7 +4,41 @@
   "text": "Au dernier moment, vous parvenez à éviter la **Type-E** de justesse, puis vous accélérez à fond de nouveau. Dans le rétroviseur, vous apercevez trois bolides lancées à votre poursuite.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "S'il vous reste encore une boite de clous ou un bidon d'huile...", "next": "328" },
-    { "label": "Si vous n'avez plus ni huile ni clous...", "next": "284" }
+    {
+      "label": "S'il vous reste encore des clous...",
+      "next": "328",
+      "condition": {
+        "item": "clous",
+        "hasItem": true,
+        "where": "interceptor"
+      }
+    },
+    {
+      "label": "S'il vous reste encore de l'huile...",
+      "next": "328",
+      "condition": {
+        "item": "huile",
+        "hasItem": true,
+        "where": "interceptor"
+      }
+    },
+    {
+      "label": "Si vous n'avez plus ni huile ni clous...",
+      "next": "284",
+      "condition": {
+        "item": "clous",
+        "hasItem": false,
+        "where": "interceptor"
+      }
+    },
+    {
+      "label": "Si vous n'avez plus ni huile ni clous...",
+      "next": "284",
+      "condition": {
+        "item": "huile",
+        "hasItem": false,
+        "where": "interceptor"
+      }
+    }
   ]
 }

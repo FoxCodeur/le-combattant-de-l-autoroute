@@ -5,7 +5,7 @@
   "image": "/images/chap1.jpg",
   "choices": [
     {
-      "label": "Si vous avez un coup de poing américain sur vous...",
+      "label": "Si vous avez un coup de poing americain sur vous...",
       "next": "273",
       "condition": {
         "item": "coup_De_PoingAmericain",

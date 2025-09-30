@@ -4,7 +4,7 @@
   "text": "Vous êtes en train de négocier un virage serré lorsque vous percevez soudain un grondement inquiétant. Tout à coup, une pluie de pierres s'abat sur la route devant vous, suivie de près par un éboulement de blocs de rocher ! Il vous est difficile d'apercevoir la paroi entière du canyon à travers votre étroit pare-brise, mais vous n'ignorez pas que ces chutes de pierres sont les signes avant-coureurs d'un glissement de terrain.",
   "image": "/images/chap1.jpg",
   "choices": [
-    { "label": "Si vous desirez piler, dans l'espoir d'eviter les blocs de rocher qui s'écrasent sur la route...", "next": "314" },
+    { "label": "Si vous desirez piler, dans l'espoir d'eviter les blocs de rocher qui s'ecrasent sur la route...", "next": "314" },
     { "label": "Si vous preferez accelerer a fond et traverser au plus vite cette zone dangereuse...", "next": "71" }
   ]
 }

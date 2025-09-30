@@ -17,7 +17,7 @@
       {
         "nom": "VOITURE BLINDEE",
         "puissance": 9,
-        "blindage": 20,
+        "blindage": 16,
         "image": "/images/ch290Ennemi1.webp"
       }
     ],

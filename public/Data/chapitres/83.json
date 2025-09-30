@@ -16,8 +16,8 @@
     "ennemis": [
       {
         "nom": "Hélicoptère",
-        "puissance": 8,
-        "blindage": 11,
+        "puissance": 7,
+        "blindage": 10,
         "image": "/images/chapter83.webp"
       }
     ],

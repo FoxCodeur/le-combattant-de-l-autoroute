@@ -1,10 +1,11 @@
 {
   "id": "276",
   "title": "Chapitre 276",
-  "text": "Vous quittez la route et vous garez l'Interceptor derrière un bosquet de buissons. Lorsque vous arrêtez votre moteur, vous réalisez tout d'un coup combien les lieux sont silencieux et vous vous demandez avec inquiétude si quelqu'un vous a entendu vous arrêter. Vous décidez de ne pas vous endormir avant que l'obscurité soit totale. Pour passer le temps, vous mangez votre repas du soir déjà préparé. Quand finalement, vous êtes certain que personne ne peut vous trouver, vous vous étendez pour dormir. Vous vous réveillez tôt le lendemain matin, parfaitement en forme après cette nuit de repos. [success]Ajoutez 2 points à votre total d'ENDURANCE.[/success] Et sans perdre de temps, vous rejoignez la route pour vous diriger vers le sud",
+  "text": "Vous quittez la route et vous garez l'Interceptor derrière un bosquet de buissons. Lorsque vous arrêtez votre moteur, vous réalisez tout d'un coup combien les lieux sont silencieux et vous vous demandez avec inquiétude si quelqu'un vous a entendu vous arrêter. Vous décidez de ne pas vous endormir avant que l'obscurité soit totale. Pour passer le temps, vous mangez votre repas du soir déjà préparé. Quand finalement, vous êtes certain que personne ne peut vous trouver, vous vous étendez pour dormir. Vous vous réveillez tôt le lendemain matin, parfaitement en forme après cette nuit de repos. [success]+2 points en ENDURANCE.[/success] Vous profitez de l'occasion pour effectuer quelques réparations sur le véhicule, ce qui n'est pas du luxe[success]+2 points BLINDAGE.[/success]. Et sans perdre de temps, vous rejoignez la route pour vous diriger vers le sud",
   "image": "/images/chap1.jpg",
   "modificateursNarratifs": {
-    "endurance": 2
+    "endurance": 2,
+    "blindage": 4
   },
   "choices": [
     { "label": "Next...", "next": "128" }

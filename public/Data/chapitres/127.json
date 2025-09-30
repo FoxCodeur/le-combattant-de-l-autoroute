@@ -3,6 +3,9 @@
   "title": "Chapitre 127",
   "text": "Vous appuyez sur le bouton qui commande le largage des clous et vous regardez la boîte rebondir derrière vous. Elle s'ouvre soudain en éclatant, éparpillant une multitude de pointes acérées sur la chaussée. Jetez un dé.",
   "image": "/images/chap1.jpg",
+  "modificateursNarratifs": {
+    "clous": -1
+  },
   "diceRoll": {
     "required": true,
     "numberOfDice": 1

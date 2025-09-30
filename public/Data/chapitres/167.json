@@ -17,7 +17,7 @@
       {
         "nom": "Chevrolet rouge",
         "puissance": 8,
-        "blindage": 15,
+        "blindage": 12,
         "image": "/images/ch167Ennemi.webp"
       }
     ],

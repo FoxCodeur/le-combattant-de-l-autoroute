@@ -9,11 +9,19 @@
       "next": "2",
       "modificateursNarratifs": {
         "trousse_Secours": -1
+      },
+      "condition": {
+        "item": "trousse_Secours",
+        "hasItem": true
       }
     },
     {
       "label": "Si vous avez utilise toute votre pharmacie...",
-      "next": "357"
+      "next": "357",
+      "condition": {
+        "item": "trousse_Secours",
+        "hasItem": false
+      }
     }
   ]
 }

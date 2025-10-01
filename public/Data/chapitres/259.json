@@ -8,13 +8,15 @@
       "label": "Si vous voulez vous acquittez du droit de passage...",
       "next": "369",
       "modificateursNarratifs": {
-        "équipement": {
-      "credits": -200
-    }
+        "credits": -100
+      },
+      "condition": {
+        "item": "credits",
+        "hasItem": true
       }
     },
     {
-      "label": "Si vous croyez a vos, chances dans un duel au pistolet...",
+      "label": "Si vous croyez a vos chances dans un duel au pistolet...",
       "next": "291"
     }
   ]

@@ -1,117 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import DiceRoll from "../DiceRoll/DiceRoll";
 import motorCarSound from "../../assets/sons/motorCar.mp3";
+import jaguarImg from "../../assets/images/jaguar.webp";
+import interceptorImg from "../../assets/images/interceptorCurse.webp";
 import "./RaceGame358.scss";
 
 const MAX_SCORE = 24;
-
-// SVG Jaguar icon (style voiture sportive jaune)
-const JaguarIcon = () => (
-  <svg
-    width="40"
-    height="24"
-    viewBox="0 0 40 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect
-      x="5"
-      y="10"
-      width="30"
-      height="7"
-      rx="3"
-      fill="#FFD700"
-      stroke="#AA8800"
-      strokeWidth="1.5"
-    />
-    <rect
-      x="12"
-      y="6"
-      width="16"
-      height="8"
-      rx="3"
-      fill="#FFFACD"
-      stroke="#999"
-      strokeWidth="1"
-    />
-    <circle cx="12" cy="19" r="3" fill="#444" stroke="#222" strokeWidth="1" />
-    <circle cx="28" cy="19" r="3" fill="#444" stroke="#222" strokeWidth="1" />
-    <rect
-      x="29"
-      y="12"
-      width="4"
-      height="3"
-      rx="1.2"
-      fill="#FFD700"
-      stroke="#AA8800"
-      strokeWidth="1"
-    />
-    <rect
-      x="7"
-      y="12"
-      width="4"
-      height="3"
-      rx="1.2"
-      fill="#FFD700"
-      stroke="#AA8800"
-      strokeWidth="1"
-    />
-    <ellipse cx="20" cy="11" rx="7" ry="2" fill="#bba70a" opacity="0.28" />
-  </svg>
-);
-
-// SVG Interceptor icon (style voiture musclée bleue)
-const InterceptorIcon = () => (
-  <svg
-    width="40"
-    height="24"
-    viewBox="0 0 40 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect
-      x="5"
-      y="10"
-      width="30"
-      height="7"
-      rx="3"
-      fill="#37a9ff"
-      stroke="#1b65a4"
-      strokeWidth="1.5"
-    />
-    <rect
-      x="13"
-      y="7"
-      width="14"
-      height="7"
-      rx="2.5"
-      fill="#e0f6ff"
-      stroke="#999"
-      strokeWidth="1"
-    />
-    <circle cx="13" cy="19" r="3" fill="#222" stroke="#111" strokeWidth="1" />
-    <circle cx="27" cy="19" r="3" fill="#222" stroke="#111" strokeWidth="1" />
-    <rect
-      x="31"
-      y="12"
-      width="4"
-      height="3"
-      rx="1.2"
-      fill="#37a9ff"
-      stroke="#1b65a4"
-      strokeWidth="1"
-    />
-    <rect
-      x="5"
-      y="12"
-      width="4"
-      height="3"
-      rx="1.2"
-      fill="#37a9ff"
-      stroke="#1b65a4"
-      strokeWidth="1"
-    />
-    <ellipse cx="20" cy="11" rx="7" ry="2" fill="#37a9ff" opacity="0.18" />
-  </svg>
-);
 
 const RaceGame358 = ({ chapterData, navigate }) => {
   const [raceStep, setRaceStep] = useState(0);
@@ -155,7 +49,6 @@ const RaceGame358 = ({ chapterData, navigate }) => {
         }
       }, 1600);
     }
-    // eslint-disable-next-line
   }, [
     jaguarScore,
     interceptorScore,
@@ -238,7 +131,11 @@ const RaceGame358 = ({ chapterData, navigate }) => {
                 className="race-car-img jaguar"
                 style={{ left: carLeft(jaguarScore) }}
               >
-                <JaguarIcon />
+                <img
+                  src={jaguarImg}
+                  alt="Jaguar Type-E"
+                  className="car-image"
+                />
               </div>
             </div>
           </div>
@@ -264,7 +161,11 @@ const RaceGame358 = ({ chapterData, navigate }) => {
                 className="race-car-img interceptor"
                 style={{ left: carLeft(interceptorScore) }}
               >
-                <InterceptorIcon />
+                <img
+                  src={interceptorImg}
+                  alt="Interceptor"
+                  className="car-image"
+                />
               </div>
             </div>
           </div>

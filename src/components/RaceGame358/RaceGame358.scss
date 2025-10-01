@@ -4,7 +4,6 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   padding: 2rem 1.5rem;
   margin: 2rem auto;
-  max-width: 480px;
   color: #f3f3f3;
   font-family: "Share Tech Mono", "Consolas", monospace;
 
@@ -73,15 +72,12 @@
       height: 100%;
       transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       border-radius: 14px 0 0 14px;
-    }
-
-    .race-bar-inner.jaguar {
-      background: linear-gradient(90deg, #ffe066, #ffd700 80%);
-      box-shadow: 0 0 8px #ffe066;
-    }
-    .race-bar-inner.interceptor {
-      background: linear-gradient(90deg, #b3e7ff, #37a9ff 80%);
-      box-shadow: 0 0 8px #37a9ff;
+      &.jaguar {
+        background: linear-gradient(90deg, #ffe066, #ffd700 80%);
+      }
+      &.interceptor {
+        background: linear-gradient(90deg, #b3e7ff, #37a9ff 80%);
+      }
     }
 
     .race-bar-score {
@@ -100,22 +96,23 @@
 
     .race-car-track {
       position: relative;
-      height: 30px;
+      height: 70px; // Agrandi pour accommoder les grandes images
       width: 100%;
     }
+
     .race-car-img {
       position: absolute;
-      top: 0;
-      width: 40px;
-      height: 24px;
+      top: 4px;
+      width: 150px;
       transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       pointer-events: none;
       z-index: 2;
-      &.jaguar {
-        filter: drop-shadow(0 2px 6px #ffd70066);
-      }
-      &.interceptor {
-        filter: drop-shadow(0 2px 6px #37a9ff66);
+
+      .car-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
       }
     }
   }

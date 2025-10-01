@@ -3,9 +3,6 @@
   "title": "Chapitre 240",
   "text": "**[payment]Vous sortez 200 Crédits de votre poche[/payment]** et les tendez à l'homme balafré. Il s'en saisit prestement, un sourire narquois aux lèvres : **« Décidément, il y a encore des pigeons dans ce monde ! Allez, grimpe dans ton bolide et écoute bien. Voici les règles du jeu : il faut suivre la piste de terre sur huit kilomètres jusqu'à la bâtisse blanche, puis tu fais demi-tour pour revenir au point de départ. Tu vois, il n'y a rien de compliqué, à part qu'il faut survivre. N'oublies jamais que dans cette course, tout est permis, excepté les armes à feu et les lance-roquettes »** Une fois les explications achevées vous prenez tous deux place chacun dans son véhicule et tournez la clé de contact. Le moteur rugit avec puissance. Vous roulez au ralenti aux côtés de la Ford jaune éclatant de votre rival, vous dirigeant vers la ligne de départ. Impossible d'ignorer l'arsenal impressionnant de son véhicule : deux mitrailleuses lourdes et un lance-grenades trônent sur sa carrosserie. Une jeune femme se dresse entre les deux machines de guerre, brandissant un drapeau blanc. Dans un geste vif, celle-ci l'abaisse d'un coup sec. Le signal de départ vient d'être donné. ",
   "image": "/images/chap1.jpg",
-  "modificateursNarratifs": {
-    "credits": -200
-  },
   "diceRoll": {
     "required": true,
     "numberOfDice": 2

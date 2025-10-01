@@ -10,6 +10,10 @@
       "modificateursNarratifs": {
         "credits": -100,
         "trousse_Secours": -2
+      },
+      "condition": {
+        "item": "credits",
+        "hasItem": true
       }
     },
     {
@@ -18,4 +22,3 @@
     }
   ]
 }
-

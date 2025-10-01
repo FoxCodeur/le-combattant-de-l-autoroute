@@ -2,7 +2,7 @@
   "id": "334",
   "title": "Chapitre 334",
   "text": "Vous avez encore un kilomètre à parcourir avant de franchir la ligne d'arrivée et vous êtes toujours aux prises avec la Ford qui est toujours à votre hauteur. Un peu plus loin, la route se rétrécit. Il n'y a plus qu'une seule voie maintenant qui passe sur un pont enjambant un fleuve.",
-  "image": "/images/chap1.jpg",
+  "image": "/images/chapter334.webp",
   "choices": [
     { "label": "Si vous desirez garder la pedale d'accelerateur collee au plancher...", "next": "35" },
     { "label": "Si, au contraire, vous preferez lever le pied et permettre ainsi a la Ford de passer en tete...", "next": "239" }

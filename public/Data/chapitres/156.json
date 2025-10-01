@@ -1,7 +1,7 @@
 {
   "id": "156",
   "title": "Chapitre 156",
-  "text": "**« C'est bien ce que je croyais avoir compris**, dit l'homme aux tatouages, **mais je n'ai jamais entendu parler de cette bande-là. J'espère que tes camarades ne sont pas tous aussi bons pilotes que toi ! Enfin, j'espère avoir le plaisir de te revoir un jour, mais je dois aller rejoindre les autres, maintenant. A la prochaine ! »** A votre grand soulagement, vous le voyez s'éloigner et vous repartez sur la piste cahoteuse avant de rejoindre la grande route où vous pourrez tournez à droite, vers le sud",
+  "text": "**« C'est bien ce que je croyais avoir compris**, dit l'homme aux tatouages, **mais je n'ai jamais entendu parler de cette bande-là. J'espère que tes camarades ne sont pas tous aussi bons pilotes que toi ! Enfin, j'espère avoir le plaisir de te revoir un jour, mais je dois aller rejoindre les autres, maintenant. A la prochaine ! »** A votre grand soulagement, vous le voyez s'éloigner et vous repartez sur la piste cahoteuse avant de rejoindre la grande route où vous pourrez tournez à droite, vers le sud.",
   "image": "/images/chap1.jpg",
   "choices": [
     { "label": "Next...", "next": "207" }
